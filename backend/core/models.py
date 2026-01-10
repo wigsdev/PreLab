@@ -89,8 +89,15 @@ class ExamAttempt(models.Model):
     """
     Registro de un intento de examen realizado por un usuario.
     """
+    EXAM_TYPE_CHOICES = [
+        ('COURSE', 'Por Curso'),
+        ('INTEGRAL', 'Simulacro Integral'),
+    ]
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='exam_attempts')
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='attempts', null=True, blank=True)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name='attempts', null=True, blank=True)
+    exam_type = models.CharField(max_length=20, choices=EXAM_TYPE_CHOICES, default='COURSE')
     score = models.FloatField(help_text="Puntaje obtenido (ej. 14.5)")
     correct_count = models.IntegerField(help_text="Cantidad de respuestas correctas")
     total_questions = models.IntegerField(help_text="Total de preguntas en el examen")
