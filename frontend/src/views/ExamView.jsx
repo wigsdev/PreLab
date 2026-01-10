@@ -4,9 +4,10 @@ import QuestionCard from '../components/QuestionCard';
 import ResultsCard from '../components/ResultsCard';
 import ProgressBar from '../components/ProgressBar';
 import ReviewList from '../components/ReviewList';
-import Timer from '../components/Timer'; // Import UI
+import Timer from '../components/Timer';
+import QuestionSkeleton from '../components/ui/QuestionSkeleton'; // Skeleton Import
 import { useExamEngine } from '../hooks/useExamEngine';
-import { useTimer } from '../hooks/useTimer'; // Import Hook
+import { useTimer } from '../hooks/useTimer';
 import { Loader2, ArrowLeft, Flame } from 'lucide-react';
 
 export default function ExamView() {
@@ -14,7 +15,7 @@ export default function ExamView() {
     const navigate = useNavigate();
     const [isReviewing, setIsReviewing] = useState(false);
     const courseId = searchParams.get('course');
-    const topicId = searchParams.get('topic'); // Optional future proofing
+    const topicId = searchParams.get('topic');
     const mode = searchParams.get('mode') || 'standard';
 
     const {
@@ -29,23 +30,12 @@ export default function ExamView() {
         startExam,
         handleNext,
         finishExam,
-        resetExam // Aunque startExam reinicia, a veces es útil tener reset explícito
+        resetExam
     } = useExamEngine();
 
-    // Timer Configuration
-    const initialTime = mode === 'simulation' ? 1800 : 600; // 30 mins vs 10 mins
-
-    // We need to access setIsFinished from useExamEngine but it's internal.
-    // Instead we can user a forced finish callback.
-    // Wait, useExamEngine doesn't support "forceFinish". Let's assume we can just ignore for now
-    // or better, if time is up, we just set isFinished(true) locally? 
-    // No, useExamEngine owns the state.
-    // Option: Add 'finishExam' to useExamEngine.
-
-    // For now let's just use the timer for display and force navigate/finish.
+    const initialTime = mode === 'simulation' ? 1800 : 600;
 
     const { timeLeft, startTimer, stopTimer, formatTime } = useTimer(initialTime, () => {
-        // Time Up Callback
         finishExam();
     });
 
@@ -58,14 +48,20 @@ export default function ExamView() {
     }, [loading, isFinished, isReviewing]);
 
     useEffect(() => {
-        // Si no hay params, carga random general (o error si prefieres)
         startExam({ courseId, topicId, mode });
     }, [courseId, topicId, mode]);
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center text-slate-500 gap-2">
-                <Loader2 className="animate-spin" /> Preparando preguntas...
+            <div className="min-h-screen py-8 px-4 flex flex-col items-center justify-start max-w-md mx-auto">
+                {/* Skeleton Header */}
+                <div className="w-full mb-6 flex justify-between items-center animate-pulse">
+                    <div className="h-8 w-8 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+                    <div className="h-6 w-16 bg-slate-200 dark:bg-slate-700 rounded"></div>
+                </div>
+                <div className="w-full flex-1 flex items-center justify-center">
+                    <QuestionSkeleton />
+                </div>
             </div>
         );
     }
@@ -73,12 +69,12 @@ export default function ExamView() {
     if (error) {
         return (
             <div className="min-h-screen flex items-center justify-center p-4">
-                <div className="bg-red-50 text-red-600 p-4 rounded-lg border border-red-200 max-w-sm text-center">
+                <div className="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 p-4 rounded-lg border border-red-200 dark:border-red-800 max-w-sm text-center">
                     <p className="font-bold">Error</p>
                     <p className="text-sm mt-1">{error}</p>
                     <button
                         onClick={() => navigate('/')}
-                        className="mt-4 text-sm font-semibold bg-white border border-red-200 px-3 py-1 rounded hover:bg-gray-50"
+                        className="mt-4 text-sm font-semibold bg-white dark:bg-slate-800 border border-red-200 dark:border-red-700 px-3 py-1 rounded hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
                     >
                         Volver al inicio
                     </button>
@@ -92,11 +88,11 @@ export default function ExamView() {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center text-center p-6">
                 <div>
-                    <h2 className="text-xl font-bold text-slate-800">No se encontraron preguntas</h2>
-                    <p className="text-slate-500 mt-2">Intenta con otro curso o tema.</p>
+                    <h2 className="text-xl font-bold text-slate-800 dark:text-white">No se encontraron preguntas</h2>
+                    <p className="text-slate-500 dark:text-slate-400 mt-2">Intenta con otro curso o tema.</p>
                     <button
                         onClick={() => navigate('/')}
-                        className="mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700"
+                        className="mt-6 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 shadow-lg shadow-indigo-200 dark:shadow-none"
                     >
                         Volver al inicio
                     </button>
@@ -106,18 +102,18 @@ export default function ExamView() {
     }
 
     return (
-        <div className="min-h-screen py-8 px-4 flex flex-col items-center justify-start max-w-md mx-auto">
+        <div className="w-full max-w-2xl mx-auto pt-4 pb-2 px-4 flex flex-col h-[calc(100vh-70px)] justify-start">
 
             {/* Header View - Back Button & Progress */}
             {!isFinished && (
-                <header className="w-full mb-6 flex justify-between items-center">
+                <header className="w-full mb-4 flex justify-between items-center shrink-0">
                     <div className="flex items-center gap-2">
                         <button
                             onClick={() => navigate('/')}
-                            className="p-2 -ml-2 text-slate-400 hover:text-slate-700 transition-colors rounded-full hover:bg-slate-100"
+                            className="p-1.5 -ml-2 text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"
                             title="Salir del examen"
                         >
-                            <ArrowLeft size={20} />
+                            <ArrowLeft size={18} />
                         </button>
 
                         <Timer
@@ -126,19 +122,19 @@ export default function ExamView() {
                         />
                     </div>
 
-                    <div className="text-right flex items-center gap-4">
+                    <div className="text-right flex items-center gap-3">
                         {streak > 1 && (
                             <div className="flex items-center gap-1 text-orange-500 font-bold animate-in bounce-in duration-300">
-                                <Flame className="w-6 h-6 fill-orange-500" />
-                                <span className="text-2xl">x{streak}</span>
+                                <Flame className="w-5 h-5 fill-orange-500" />
+                                <span className="text-xl">x{streak}</span>
                             </div>
                         )}
 
                         <div>
-                            <span className="text-3xl font-black text-blue-600">
+                            <span className="text-2xl font-black text-indigo-600 dark:text-indigo-400">
                                 {currentIndex + 1}
                             </span>
-                            <span className="text-sm text-slate-400 font-bold">
+                            <span className="text-xs text-slate-400 dark:text-slate-500 font-bold">
                                 /{questions.length}
                             </span>
                         </div>
@@ -147,7 +143,7 @@ export default function ExamView() {
             )}
 
             {/* Main Content */}
-            <main className="w-full flex-1 flex items-center justify-center">
+            <main className="w-full mb-6">
                 {isFinished ? (
                     isReviewing ? (
                         <ReviewList

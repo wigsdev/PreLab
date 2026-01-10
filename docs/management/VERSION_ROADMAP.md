@@ -59,21 +59,32 @@ Objetivos:
 
 [x] Pantalla de "Resultados": Resumen al final del micro-simulacro (Ej: 8/10 correctas).
 
-🔐 FASE 3: Identidad y Persistencia
-Objetivo: Diferenciar usuarios y preparar el terreno para monetizar.
+🔐 FASE 3: Identidad y Experiencia
+Objetivo: Diferenciar usuarios y pulir la interfaz antes de lógica compleja.
 
 📦 v0.5.0: "Identity" (Usuarios)
 Peso: 🔴 Alto (Seguridad)
 
 Objetivos:
 
-[ ] Modelo de Usuario Custom (Email como ID).
+[x] Modelo de Usuario Custom (Email como ID).
 
-[ ] Autenticación JWT (Login/Registro/Logout).
+[x] Autenticación JWT (Login/Registro/Logout).
 
-[ ] Protección de rutas en Frontend (Redirección al Login).
+[x] Protección de rutas en Frontend (Redirección al Login).
 
-📦 v0.6.0: "Memory" (Historial)
+📦 v0.6.0: "The Experience" (Dark Mode & UI)
+Peso: 🟡 Medio (Frontend Styles)
+
+Objetivos:
+
+[ ] Sistema de Modo Oscuro (Tailwind).
+
+[ ] Navbar Global Responsivo.
+
+[ ] Feedback Visual (Skeletons y Transiciones).
+
+📦 v0.7.0: "Memory" (Historial)
 Peso: 🟡 Medio (Backend Logic)
 
 Objetivos:

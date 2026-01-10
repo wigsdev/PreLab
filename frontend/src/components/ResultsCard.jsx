@@ -41,19 +41,19 @@ export default function ResultsCard({ score, totalQuestions, onRetry, onHome, on
     }, [percentage]);
 
     let message = "Sigue practicando 😐";
-    let colorClass = "text-yellow-600 bg-yellow-50 border-yellow-200";
+    let colorClass = "text-yellow-600 bg-yellow-50 border-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-300 dark:border-yellow-800";
 
     if (percentage >= 80) { // >15 de 20 es 75%
         message = "¡Eres un genio! 🚀";
-        colorClass = "text-green-600 bg-green-50 border-green-200";
+        colorClass = "text-green-600 bg-green-50 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800";
     } else if (percentage < 50) {
-        colorClass = "text-red-600 bg-red-50 border-red-200";
+        colorClass = "text-red-600 bg-red-50 border-red-200 dark:bg-red-900/30 dark:text-red-300 dark:border-red-800";
     }
 
     return (
-        <div className="w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl overflow-hidden animate-in zoom-in duration-300">
+        <div className="w-full max-w-sm mx-auto bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-none overflow-hidden animate-in zoom-in duration-300 transition-colors">
             <div className="p-8 text-center">
-                <h2 className="text-2xl font-black text-slate-800 mb-6">Resultados</h2>
+                <h2 className="text-2xl font-black text-slate-800 dark:text-white mb-6">Resultados</h2>
 
                 {/* Círculo de Nota */}
                 <div className={clsx(
@@ -75,7 +75,7 @@ export default function ResultsCard({ score, totalQuestions, onRetry, onHome, on
                 <div className="space-y-3">
                     <button
                         onClick={onRetry}
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-blue-600/20 active:scale-95 transition-all flex items-center justify-center gap-2"
+                        className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-indigo-600 dark:hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-blue-600/20 dark:shadow-none active:scale-95 transition-all flex items-center justify-center gap-2"
                     >
                         <RotateCcw className="w-5 h-5" />
                         Intentar de nuevo
@@ -83,7 +83,7 @@ export default function ResultsCard({ score, totalQuestions, onRetry, onHome, on
 
                     <button
                         onClick={onReview}
-                        className="w-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold py-3 px-6 rounded-xl border border-indigo-200 active:scale-95 transition-all flex items-center justify-center gap-2"
+                        className="w-full bg-indigo-50 hover:bg-indigo-100 dark:bg-slate-700 dark:hover:bg-slate-600 text-indigo-700 dark:text-indigo-300 font-bold py-3 px-6 rounded-xl border border-indigo-200 dark:border-slate-600 active:scale-95 transition-all flex items-center justify-center gap-2"
                     >
                         <BookOpen className="w-5 h-5" />
                         Revisar Examen
@@ -91,7 +91,7 @@ export default function ResultsCard({ score, totalQuestions, onRetry, onHome, on
 
                     <button
                         onClick={onHome} // Navegación controlada por el padre
-                        className="w-full bg-white hover:bg-slate-50 text-slate-700 font-bold py-3 px-6 rounded-xl border border-gray-200 active:scale-95 transition-all flex items-center justify-center gap-2"
+                        className="w-full bg-white hover:bg-slate-50 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-slate-200 text-slate-700 font-bold py-3 px-6 rounded-xl border border-gray-200 dark:border-slate-600 active:scale-95 transition-all flex items-center justify-center gap-2"
                     >
                         <Home className="w-5 h-5" />
                         Volver al Inicio

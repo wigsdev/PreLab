@@ -24,72 +24,72 @@ export default function QuestionCard({ question, onNext }) {
     const getOptionStyle = (option) => {
         if (!isAnswered) {
             // Estado inicial: gris claro, hover azulito
-            return "border-gray-200 hover:border-blue-300 hover:bg-blue-50";
+            return "border-gray-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-slate-700 dark:text-slate-200";
         }
 
         if (option.is_correct) {
             // Siempre marcar la correcta en verde
-            return "border-green-500 bg-green-50 text-green-800 font-medium";
+            return "border-green-500 bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-300 font-medium";
         }
 
         if (selectedOptionId === option.id && !option.is_correct) {
             // Si elegí esta y es incorrecta: rojo
-            return "border-red-500 bg-red-50 text-red-800";
+            return "border-red-500 bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300";
         }
 
         // Las demás quedan gris suave
-        return "border-gray-100 opacity-50";
+        return "border-gray-100 dark:border-slate-800 opacity-50 text-slate-500 dark:text-slate-600";
     };
 
     return (
-        <div className="w-full max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+        <div className="w-full max-w-none mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-lg dark:shadow-none border border-gray-100 dark:border-slate-700 transition-colors duration-300 flex flex-col">
 
             {/* 1. Header: Dificultad y Tema */}
-            <div className="bg-slate-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center">
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <div className="bg-slate-50 dark:bg-slate-900/50 px-4 py-2.5 border-b border-gray-100 dark:border-slate-700 flex justify-between items-center transition-colors shrink-0">
+                <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                     {question.topic_name}
                 </span>
                 <span className={clsx(
-                    "text-xs px-2 py-1 rounded-full font-semibold border",
-                    question.difficulty === 'BASICO' ? "bg-green-100 text-green-700 border-green-200" :
-                        question.difficulty === 'INTERMEDIO' ? "bg-yellow-100 text-yellow-700 border-yellow-200" :
-                            "bg-red-100 text-red-700 border-red-200"
+                    "text-[10px] px-2 py-0.5 rounded-full font-semibold border",
+                    question.difficulty === 'BASICO' ? "bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800" :
+                        question.difficulty === 'INTERMEDIO' ? "bg-yellow-100 text-yellow-700 border-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-300 dark:border-yellow-800" :
+                            "bg-red-100 text-red-700 border-red-200 dark:bg-red-900/30 dark:text-red-300 dark:border-red-800"
                 )}>
                     {question.difficulty}
                 </span>
             </div>
 
             {/* 2. Cuerpo: Enunciado e Imagen */}
-            <div className="p-6">
-                <p className="text-lg text-slate-800 font-medium leading-relaxed mb-6">
+            <div className="p-5 flex-1 overflow-y-auto custom-scrollbar">
+                <p className="text-base text-slate-800 dark:text-slate-100 font-medium leading-relaxed mb-4">
                     {question.statement}
                 </p>
 
                 {question.image && (
-                    <div className="mb-6 rounded-lg overflow-hidden border border-gray-200">
+                    <div className="mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-slate-700">
                         <img
                             src={question.image}
                             alt="Pregunta"
-                            className="w-full h-auto object-cover"
+                            className="w-full h-auto max-h-40 object-contain bg-slate-50 dark:bg-slate-900"
                         />
                     </div>
                 )}
 
                 {/* 3. Opciones (Thumb Zone) */}
-                <div className="space-y-3">
+                <div className="space-y-2">
                     {shuffledOptions.map((option) => (
                         <button
                             key={option.id}
                             onClick={() => handleSelect(option.id)}
                             disabled={isAnswered}
                             className={clsx(
-                                "w-full text-left p-4 rounded-lg border-2 transition-all duration-200 relative flex items-center justify-between",
+                                "w-full text-left px-4 py-3 rounded-lg border transition-all duration-200 relative flex items-center justify-between text-sm",
                                 getOptionStyle(option)
                             )}
                         >
-                            <span className="pr-8">{option.text}</span>
-                            {isAnswered && option.is_correct && <CheckCircle className="w-5 h-5 text-green-600" />}
-                            {isAnswered && selectedOptionId === option.id && !option.is_correct && <XCircle className="w-5 h-5 text-red-600" />}
+                            <span className="pr-6">{option.text}</span>
+                            {isAnswered && option.is_correct && <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 shrink-0" />}
+                            {isAnswered && selectedOptionId === option.id && !option.is_correct && <XCircle className="w-4 h-4 text-red-600 dark:text-red-400 shrink-0" />}
                         </button>
                     ))}
                 </div>
@@ -97,10 +97,10 @@ export default function QuestionCard({ question, onNext }) {
 
             {/* 4. Feedback y Botón Siguiente */}
             {isAnswered && (
-                <div className="bg-slate-50 p-6 border-t border-gray-100 animate-in fade-in slide-in-from-bottom-2 duration-300">
-                    <div className="mb-4">
-                        <h4 className="text-sm font-bold text-slate-700 mb-1">Explicación:</h4>
-                        <p className="text-sm text-slate-600 leading-relaxed">
+                <div className="bg-slate-50 dark:bg-slate-900/50 p-4 border-t border-gray-100 dark:border-slate-700 animate-in fade-in slide-in-from-bottom-2 duration-300 transition-colors shrink-0">
+                    <div className="mb-3">
+                        <h4 className="text-xs font-bold text-slate-700 dark:text-slate-200 mb-0.5">Explicación:</h4>
+                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
                             {question.explanation || "No hay explicación disponible para esta pregunta."}
                         </p>
                     </div>
@@ -114,10 +114,10 @@ export default function QuestionCard({ question, onNext }) {
                             setSelectedOptionId(null);
                             onNext(wasCorrect, selectedOptionId);
                         }}
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md shadow-blue-600/20 active:scale-95 transition-all flex items-center justify-center gap-2"
+                        className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-indigo-600 dark:hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-lg shadow-md shadow-blue-600/20 dark:shadow-none active:scale-95 transition-all flex items-center justify-center gap-2 text-sm"
                     >
                         Siguiente Pregunta
-                        <ArrowRight className="w-5 h-5" />
+                        <ArrowRight className="w-4 h-4" />
                     </button>
                 </div>
             )}

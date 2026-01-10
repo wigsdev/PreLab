@@ -1,0 +1,37 @@
+import { useState, useEffect } from 'react';
+
+/**
+ * Hook to manage Dark/Light theme.
+ * Checks localStorage first, then system preference.
+ * Applies 'dark' class to the HTML root element.
+ */
+export default function useTheme() {
+    const [theme, setTheme] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                return storedTheme;
+            }
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+            }
+        }
+        return 'light';
+    });
+
+    useEffect(() => {
+        const root = window.document.documentElement;
+        if (theme === 'dark') {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    };
+
+    return { theme, toggleTheme };
+}
