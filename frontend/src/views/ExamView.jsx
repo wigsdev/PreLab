@@ -155,6 +155,9 @@ export default function ExamView() {
                         <ResultsCard
                             score={score}
                             totalQuestions={questions.length}
+                            topicId={topicId}
+                            courseId={courseId}
+                            mode={mode}
                             onRetry={() => {
                                 setIsReviewing(false);
                                 startExam({ courseId, topicId, mode });

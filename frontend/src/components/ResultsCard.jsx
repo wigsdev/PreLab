@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import confetti from 'canvas-confetti';
 
-export default function ResultsCard({ score, totalQuestions, topicId, onRetry, onHome, onReview }) {
+export default function ResultsCard({ score, totalQuestions, topicId, courseId, mode, onRetry, onHome, onReview }) {
     const { user } = useAuth();
     const [saveStatus, setSaveStatus] = useState('idle'); // idle, saving, success, error
     const hasSaved = useRef(false); // Prevents Run-Twice in Strict Mode
@@ -21,8 +21,10 @@ export default function ResultsCard({ score, totalQuestions, topicId, onRetry, o
                 date: new Date().toISOString(),
                 score: score,
                 total: totalQuestions,
-                topic: topicId, // Backend espera ID de tema (o null para simulacro general)
-                correct_count: score, // Simplificación: asumimos score = correctas por ahora (ajustar si hay puntajes parciales)
+                topic: topicId ? topicId : null,
+                course: courseId ? courseId : null,
+                exam_type: mode === 'simulation' ? 'INTEGRAL' : 'COURSE',
+                correct_count: score, // Simplificación
                 total_questions: totalQuestions
             };
 
