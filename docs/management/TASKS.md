@@ -7,9 +7,10 @@
 - [x] Instalar Django y DRF.
 
 ## Prioridad Alta (Backend)
-- [ ] Crear modelo `Curso` y `Tema`.
-- [ ] Crear modelo `Pregunta` con soporte RichText/Markdown.
-- [ ] Configurar Admin para cargar preguntas fácilmente.
+- [x] Crear modelo `Curso` y `Tema`.
+- [x] Crear modelo `Pregunta` con soporte RichText/Markdown.
+- [x] Configurar Admin para cargar preguntas fácilmente.
+- [x] Crear API REST Básica (ReadOnly).
 
 ## Prioridad Media (Frontend)
 - [ ] Inicializar proyecto React + Vite.

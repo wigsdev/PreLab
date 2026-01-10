@@ -48,3 +48,66 @@ Entregable: Proporcióname el bloque de código con los comandos listos para cop
 *   **Dependencias:** ⚠️ Faltantes.
     *   En implementación actual falta: `django-cors-headers` (Crítico para v0.3.0) y `Pillow` (Crítico para v0.2.0 soporte imágenes).
     *   Acción Correctiva: Se instalarán inmediatamente.
+
+## 📚 v0.2.0: "The Librarian" (Base de Datos & Admin)
+
+**Objetivo:** Implementación del Core del negocio (Modelos y Admin avanzado).
+
+```markdown
+🟡 PROMPT: Base de Datos y Admin Panel (v0.2.0)
+Rol: Actúa como un Arquitecto de Software experto en Django y Modelado de Datos.
+
+Contexto: Ya tenemos el proyecto config creado y el entorno virtual activo. Ahora necesitamos implementar la lógica de negocio "Core" para un sistema de exámenes.
+
+Objetivo (Task):
+1. Crear la aplicación core.
+2. Definir los Modelos (Tablas) en models.py.
+3. Configurar un Admin Panel avanzado en admin.py para cargar preguntas masivamente de forma fácil.
+
+Instrucciones Paso a Paso:
+
+Paso 1: Comandos de Terminal (Bash)
+- Crear la app llamada core.
+
+Paso 2: Código para core/models.py
+- Entidades: Universidad, Curso, Tema, Pregunta (con dificultad y explicación), Opcion.
+- Requisito: __str__ legible.
+
+Paso 3: Código para core/admin.py
+- Usa admin.TabularInline para Opcion.
+- Filtros y búsqueda en PreguntaAdmin.
+
+Paso 4: Registro y Migración
+- Registrar 'core' en settings.py.
+- Comandos para makemigrations, migrate y createsuperuser.
+
+```markdown
+🔵 PROMPT: Construcción de la API REST (v0.2.1)
+Rol: Actúa como un Backend Developer especialista en Django REST Framework (DRF).
+
+Estado Actual: Ya tenemos la app core con los modelos (Curso, Tema, Pregunta, Opcion) creados y migrados. Ya tenemos preguntas cargadas en la base de datos a través del Admin.
+
+Objetivo: Crear los "endpoints" (puntos de acceso) para que el Frontend (React) pueda consultar estos datos. Por ahora, solo necesitamos leer datos (GET).
+
+Instrucciones Paso a Paso:
+
+1. Serializers (core/serializers.py):
+   - Crea un archivo serializers.py en la app core.
+   - Necesito un OpcionSerializer (que muestre solo el texto y si es correcta o no).
+   - Necesito un PreguntaSerializer que incluya:
+     - Los campos básicos (enunciado, imagen, etc.).
+     - Importante: Debe incluir las opciones relacionadas (Nested Serializer) para que cuando pida una pregunta, vengan sus opciones ahí mismo.
+   - Necesito TemaSerializer y CursoSerializer.
+
+2. Vistas (core/views.py):
+   - Vamos a usar ReadOnlyModelViewSet de DRF (porque por ahora el usuario no va a editar preguntas, solo leerlas).
+   - Crea vistas para Curso, Tema y Pregunta.
+   - Filtros: Asegúrate de que en la vista de Pregunta se pueda filtrar por tema (ej: ?tema=5).
+
+3. Rutas (urls.py):
+   - Crea un archivo core/urls.py.
+   - Usa DefaultRouter para registrar las rutas automáticamente.
+   - Dime cómo conectar estas rutas en el urls.py principal del proyecto (config/urls.py) usando include().
+
+Entregable: Código limpio para los 3 archivos (serializers.py, views.py, urls.py) y una explicación breve de qué es un "Nested Serializer".
+```
