@@ -45,4 +45,14 @@ export const saveExamResult = async (examData) => {
     }
 };
 
+export const getExamHistory = async () => {
+    try {
+        const response = await api.get('/history/');
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching exam history:", error);
+        throw error;
+    }
+};
+
 export default api;

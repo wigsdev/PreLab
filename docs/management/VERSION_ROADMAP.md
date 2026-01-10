@@ -78,22 +78,37 @@ Peso: 🟡 Medio (Frontend Styles)
 
 Objetivos:
 
-[ ] Sistema de Modo Oscuro (Tailwind).
+[x] Sistema de Modo Oscuro (Tailwind).
 
-[ ] Navbar Global Responsivo.
+[x] Navbar Global Responsivo.
 
-[ ] Feedback Visual (Skeletons y Transiciones).
+[x] Feedback Visual (Skeletons y Transiciones).
 
-📦 v0.7.0: "Memory" (Historial)
-Peso: 🟡 Medio (Backend Logic)
+📦 v0.7.0: "The Memory" (Historial & Cloud Persistence)
+Peso: � Terminada (Backend Logic)
 
 Objetivos:
 
-[ ] Modelo IntentoExamen en DB.
+[x] Modelo ExamAttempt en DB.
 
-[ ] Endpoint para guardar resultados (POST).
+[x] Endpoint para guardar resultados (POST).
 
-[ ] Dashboard de Alumno: "Mis últimos exámenes".
+[x] Integración de servicio en ResultsCard (Frontend).
+
+[x] Manejo de "Double Save" (Strict Mode Fix).
+
+📦 v0.8.0: "The Analytics" (User Dashboard)
+Peso: 🟢 Terminada (Frontend/UX)
+
+Objetivos:
+
+[x] Endpoint GET /api/history/ (Backend).
+
+[x] DashboardView con Cards de Estadísticas (Frontend).
+
+[x] Historial de Exámenes scrolleable (Timeline).
+
+[x] Rutas Protegidas (PrivateRoute).
 
 🚀 FASE 4: Pulido y Despegue (Pre-Producción)
 Objetivo: Que la app se vea profesional y esté en internet.

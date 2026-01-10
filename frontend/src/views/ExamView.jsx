@@ -102,7 +102,7 @@ export default function ExamView() {
     }
 
     return (
-        <div className="w-full max-w-2xl mx-auto pt-4 pb-2 px-4 flex flex-col h-[calc(100vh-70px)] justify-start">
+        <div className="w-full max-w-2xl mx-auto pt-4 pb-2 px-4 flex flex-col min-h-[calc(100vh-70px)] justify-start">
 
             {/* Header View - Back Button & Progress */}
             {!isFinished && (

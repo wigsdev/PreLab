@@ -194,3 +194,97 @@ Paso 3: Integración en App.jsx Actualiza el archivo principal para orquestar to
 
 Entregable: Código de useExamEngine.js, ResultsCard.jsx y la actualización de App.jsx. Explícame brevemente cómo funciona el localStorage en este contexto.
 ```
+## 🔐 v0.5.0: "Identity" (Autenticación JWT)
+
+**Objetivo:** Gestión de usuarios y seguridad.
+
+```markdown
+🟣 PROMPT: Sistema de Autenticación (v0.5.0)
+Objetivo: Implementar sistema de usuarios con JWT.
+Stack: Django REST Framework SimpleJWT + React Context.
+Requerimientos:
+- Backend: Modelo CustomUser (email como user), endpoints /token y /register.
+- Frontend: AuthContext para manejar tokens en localStorage.
+- UI: Pantallas LoginView y RegisterView.
+- Routing: Rutas protegidas (PrivateRoute simulado o redirección).
+```
+
+## 🎨 v0.6.0: "The Experience" (UI Polish & Dark Mode)
+
+**Objetivo:** Mejorar la UX y añadir tema oscuro.
+
+```markdown
+🔵 PROMPT: Dark Mode y UI Kit (v0.6.0)
+Objetivo: Implementar cambio de tema y mejorar componentes visuales.
+Requerimientos:
+- Tailwind: Configurar 'darkMode: class'.
+- Hook: useTheme para persistencia en localStorage.
+- UI: Navbar responsivo con toggle de tema.
+- Feedback: Skeletons de carga (QuestionSkeleton).
+```
+
+## 💾 v0.7.0: "The Memory" (Persistencia Cloud)
+
+**Objetivo:** Guardar resultados en base de datos.
+
+```markdown
+🟤 PROMPT: Persistencia de Historial (v0.7.0)
+Objetivo: Endpoint y lógica para guardar exámenes de usuarios logueados.
+Requerimientos:
+- Backend: Modelo ExamAttempt (user, score, topic).
+- API: Endpoint POST /api/history/ securizado.
+- Frontend: Modificar ResultsCard para enviar datos si hay usuario.
+- Fix: Manejar doble mount de React Query/Strict Mode (useRef flag).
+```
+
+## 📊 v0.8.0: "The Analytics" (Dashboard)
+
+**Objetivo:** Visualización de progreso y estadísticas.
+
+```markdown
+📊 PROMPT: Dashboard de Estudiante y Visualización de Datos (v0.8.0)
+Rol: Actúa como un Senior React Developer especializado en Dashboards y visualización de datos.
+
+Estado Actual:
+Backend: Endpoint GET /api/historial/ devuelve la lista de exámenes del usuario.
+Frontend: Login funciona, pero no hay una pantalla "privada" donde el usuario vea su progreso.
+
+Objetivo (Task): Crear la página de Perfil/Dashboard (src/pages/Dashboard.jsx) que muestre las estadísticas del usuario y su historial de exámenes.
+
+Instrucciones Paso a Paso:
+
+Paso 1: Servicio de Fetching (src/services/api.js)
+Agrega la función getExamHistory() a nuestro servicio de API.
+Debe hacer un GET al endpoint de historial enviando el token de autenticación.
+
+Paso 2: Componente Dashboard.jsx (Diseño Mobile First)
+Crea la página con esta estructura visual:
+
+Header de Perfil:
+Un saludo: "Hola, [Email del usuario]".
+
+Tarjetas de Resumen (Stats): 3 cuadros pequeños en fila mostrando:
+"Exámenes" (Total jugados).
+"Promedio" (Nota media).
+"Mejor Nota".
+
+Lista de Historial (Timeline):
+Una lista vertical scrolleable.
+Cada ítem debe ser una tarjeta pequeña (HistoryItem) que muestre:
+Nombre del Tema (ej: "Guerra del Pacífico").
+Nota (ej: "14/20") con color (Verde si >11, Rojo si <11).
+Fecha relativa (ej: "hace 2 horas").
+
+Estado de Carga: Muestra un Skeleton o spinner mientras cargan los datos.
+Estado Vacío: Si no hay exámenes, muestra un dibujo o texto animando a dar el primero.
+
+Paso 3: Protección de Ruta (PrivateRoute)
+Crea un componente src/components/PrivateRoute.jsx.
+Lógica: Si hay usuario (user en AuthContext), renderiza el componente hijo (Dashboard). Si no, redirige a /login.
+Implementa esta protección en App.jsx para la ruta /dashboard.
+
+Entregable:
+Código de Dashboard.jsx (incluyendo la lógica para calcular el promedio simple en el frontend).
+Código de PrivateRoute.jsx.
+Actualización de App.jsx con la nueva ruta protegida.
+```

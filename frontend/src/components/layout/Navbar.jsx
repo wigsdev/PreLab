@@ -35,17 +35,17 @@ export default function Navbar() {
                     {/* User Auth State */}
                     {user ? (
                         <div className="flex items-center gap-3">
-                            <div className="hidden sm:flex flex-col items-end">
-                                <span className="text-sm font-bold text-slate-700 dark:text-slate-200 leading-tight">
-                                    {user.first_name || 'Estudiante'}
-                                </span>
-                                <span className="text-xs text-slate-500 dark:text-slate-500">
-                                    {user.email}
-                                </span>
-                            </div>
-                            <div className="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center text-indigo-700 dark:text-indigo-300 font-bold border border-indigo-200 dark:border-indigo-700">
-                                {user.first_name ? user.first_name[0] : <User size={16} />}
-                            </div>
+                            <Link to="/dashboard" className="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-700 hover:opacity-80 transition-opacity">
+                                <div className="w-9 h-9 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-700 dark:text-indigo-300 font-bold text-sm ring-2 ring-white dark:ring-slate-800">
+                                    {user.first_name ? user.first_name[0] : (user.email?.[0]?.toUpperCase() || 'U')}
+                                </div>
+                                <div className="hidden md:block text-left">
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Hola,</p>
+                                    <p className="text-sm font-bold text-slate-700 dark:text-slate-200 leading-none">
+                                        {user.first_name || "Estudiante"}
+                                    </p>
+                                </div>
+                            </Link>
                             <button
                                 onClick={logout}
                                 className="text-xs text-red-500 hover:text-red-600 font-medium ml-2 dark:text-red-400"
@@ -72,7 +72,7 @@ export default function Navbar() {
                         </div>
                     )}
                 </div>
-            </nav>
-        </header>
+            </nav >
+        </header >
     );
 }
