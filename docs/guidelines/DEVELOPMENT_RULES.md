@@ -48,6 +48,7 @@ Solo para emergencias en producción. Nacen de main y se fusionan a main y devel
 Olvídate de mensajes como "avances", "fix", o "cambios". Usaremos el estándar Conventional Commits para generar historiales legibles y automatizar notas de versión en el futuro.
 
 Formato: <tipo>(<alcance>): <descripción breve>
+**Idioma: Español.**
 
 Tipos permitidos:
 feat: Una nueva funcionalidad (ej. feat(auth): login con google).
