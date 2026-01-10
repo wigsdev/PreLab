@@ -74,7 +74,7 @@ Objetivos:
 [x] Protección de rutas en Frontend (Redirección al Login).
 
 📦 v0.6.0: "The Experience" (Dark Mode & UI)
-Peso: 🟡 Medio (Frontend Styles)
+Peso: 🟢 Terminada (Frontend Styles)
 
 Objetivos:
 
@@ -85,7 +85,7 @@ Objetivos:
 [x] Feedback Visual (Skeletons y Transiciones).
 
 📦 v0.7.0: "The Memory" (Historial & Cloud Persistence)
-Peso: � Terminada (Backend Logic)
+Peso: 🟢 Terminada (Backend Logic)
 
 Objetivos:
 
@@ -110,10 +110,31 @@ Objetivos:
 
 [x] Rutas Protegidas (PrivateRoute).
 
+📦 v0.9.0: "Creator Panel" (Settings & Admin)
+Peso: 🟢 Terminada (Admin Features)
+
+Objetivos:
+
+[x] Update UserSerializer (Avatar/Password).
+[x] AuthContext Profile Fetch.
+[x] Creator Settings (CreateQuestionView).
+[x] Fixed Login/Redirect Loops.
+
+📦 v0.9.1: "The Admin Powerhouse" (Management)
+Peso: 🟢 Terminada (Admin Features)
+
+Objetivos:
+
+[x] Admin Layout & Sidebar.
+[x] Question List View (DataGrid).
+[x] Question Filtering (Backend).
+[x] Analytics View (Trends & Tables).
+[x] Exam Logic Fixes (Course vs Integral).
+
 🚀 FASE 4: Pulido y Despegue (Pre-Producción)
 Objetivo: Que la app se vea profesional y esté en internet.
 
-📦 v0.9.0: "Release Candidate" (Pre-Producción)
+📦 v0.9.5: "Release Candidate" (DevOps & Deploy)
 Peso: 🟡 Medio (DevOps)
 
 Objetivos:
@@ -142,6 +163,6 @@ Cada vez que hables con tu agente para pedir código, dile en qué versión est�
 
 Ejemplo:
 
-"Agente, actualmente estamos en la v0.1.0. Necesito que generes el código para..."
+"Agente, actualmente estamos en la v0.9.5. Necesito que generes el código para..."
 
-Cuando termines todas las tareas de la v0.1.0, haces un: git checkout -b release/v0.1.0 -> git push -> Fusionas a main -> Y etiquetas git tag v0.1.0.
+Cuando termines todas las tareas de la v0.9.5, haces un: git checkout -b release/v0.9.5 -> git push -> Fusionas a main -> Y etiquetas git tag v0.9.5.
