@@ -52,3 +52,12 @@ class QuestionAdmin(admin.ModelAdmin):
     def short_statement(self, obj):
         return obj.statement[:50] + "..." if len(obj.statement) > 50 else obj.statement
     short_statement.short_description = 'Enunciado'
+
+from .models import ExamAttempt
+
+@admin.register(ExamAttempt)
+class ExamAttemptAdmin(admin.ModelAdmin):
+    list_display = ('user', 'score', 'total_questions', 'topic', 'created_at')
+    list_filter = ('user', 'topic', 'created_at')
+    search_fields = ('user__email', 'user__first_name', 'user__last_name')
+    readonly_fields = ('created_at',)

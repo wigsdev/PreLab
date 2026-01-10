@@ -24,3 +24,13 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = ['id', 'name', 'code']
+
+from .models import ExamAttempt
+
+class ExamAttemptSerializer(serializers.ModelSerializer):
+    topic_name = serializers.CharField(source='topic.name', read_only=True)
+
+    class Meta:
+        model = ExamAttempt
+        fields = ['id', 'topic', 'topic_name', 'score', 'correct_count', 'total_questions', 'created_at']
+        read_only_fields = ['user', 'created_at']

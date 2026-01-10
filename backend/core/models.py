@@ -82,3 +82,24 @@ class Option(models.Model):
     def __str__(self):
         prefix = "✅" if self.is_correct else "❌"
         return f"{prefix} {self.text}"
+
+from django.conf import settings
+
+class ExamAttempt(models.Model):
+    """
+    Registro de un intento de examen realizado por un usuario.
+    """
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='exam_attempts')
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name='attempts', null=True, blank=True)
+    score = models.FloatField(help_text="Puntaje obtenido (ej. 14.5)")
+    correct_count = models.IntegerField(help_text="Cantidad de respuestas correctas")
+    total_questions = models.IntegerField(help_text="Total de preguntas en el examen")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Intento de Examen"
+        verbose_name_plural = "Intentos de Examen"
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"{self.user} - {self.score}/{self.total_questions} ({self.created_at.strftime('%Y-%m-%d %H:%M')})"

@@ -61,3 +61,22 @@ class QuestionViewSet(viewsets.ReadOnlyModelViewSet):
             
         serializer = self.get_serializer(questions, many=True)
         return Response(serializer.data)
+
+from .models import ExamAttempt
+from .serializers import ExamAttemptSerializer
+
+class ExamAttemptViewSet(viewsets.ModelViewSet):
+    """
+    Vista CRUD para intentos de examen.
+    Seguridad: Solo el usuario dueño puede ver sus propios intentos.
+    """
+    serializer_class = ExamAttemptSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        # Filtrar solo los intentos del usuario autenticado
+        return ExamAttempt.objects.filter(user=self.request.user).order_by('-created_at')
+
+    def perform_create(self, serializer):
+        # Asignar usuario automáticamente al crear
+        serializer.save(user=self.request.user)

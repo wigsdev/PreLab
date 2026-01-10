@@ -1,26 +1,49 @@
-import { useEffect } from 'react';
-import { RotateCcw, Home, BookOpen } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
+import { RotateCcw, Home, BookOpen, UserPlus, CheckCircle, Loader2 } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import { saveExamResult } from '../services/api';
+import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import confetti from 'canvas-confetti';
 
-export default function ResultsCard({ score, totalQuestions, onRetry, onHome, onReview }) {
+export default function ResultsCard({ score, totalQuestions, topicId, onRetry, onHome, onReview }) {
+    const { user } = useAuth();
+    const [saveStatus, setSaveStatus] = useState('idle'); // idle, saving, success, error
+    const hasSaved = useRef(false); // Prevents Run-Twice in Strict Mode
 
     // Lógica de Persistencia (Side Effect)
     useEffect(() => {
-        const saveResult = () => {
+        const saveResult = async () => {
+            if (hasSaved.current) return;
+            hasSaved.current = true;
+
             const historyItem = {
                 date: new Date().toISOString(),
                 score: score,
                 total: totalQuestions,
+                topic: topicId, // Backend espera ID de tema (o null para simulacro general)
+                correct_count: score, // Simplificación: asumimos score = correctas por ahora (ajustar si hay puntajes parciales)
+                total_questions: totalQuestions
             };
 
-            // Leer historial existente
-            const storedHistory = localStorage.getItem('guest_history');
-            let history = storedHistory ? JSON.parse(storedHistory) : [];
-
-            // Agregar nuevo resultado y guardar
-            history.push(historyItem);
-            localStorage.setItem('guest_history', JSON.stringify(history));
+            if (user) {
+                // Modo Autenticado: Guardar en Nube
+                setSaveStatus('saving');
+                try {
+                    await saveExamResult(historyItem);
+                    setSaveStatus('success');
+                } catch (error) {
+                    console.error("Error saving to cloud:", error);
+                    setSaveStatus('error');
+                    // Optional: revert hasSaved if we want to retry, but usually we don't for auto-save
+                }
+            } else {
+                // Modo Invitado: Guardar en LocalStorage
+                const storedHistory = localStorage.getItem('guest_history');
+                let history = storedHistory ? JSON.parse(storedHistory) : [];
+                history.push(historyItem);
+                localStorage.setItem('guest_history', JSON.stringify(history));
+            }
         };
 
         saveResult();
@@ -69,6 +92,38 @@ export default function ResultsCard({ score, totalQuestions, onRetry, onHome, on
                 {/* Mensaje */}
                 <div className={clsx("py-2 px-4 rounded-lg border font-bold mb-8", colorClass)}>
                     {message}
+                </div>
+
+                {/* Feedback de Guardado (Auth) o CTA (Guest) */}
+                <div className="mb-6">
+                    {user ? (
+                        <div className={`p-3 rounded-lg flex items-center justify-center gap-2 text-sm font-medium transition-colors ${saveStatus === 'saving' ? 'bg-slate-50 text-slate-500 dark:bg-slate-700/50 dark:text-slate-400' :
+                            saveStatus === 'success' ? 'bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400' :
+                                saveStatus === 'error' ? 'bg-red-50 text-red-600 dark:bg-red-900/20 dark:text-red-400' : ''
+                            }`}>
+                            {saveStatus === 'saving' && <><Loader2 className="w-4 h-4 animate-spin" /> Guardando resultado...</>}
+                            {saveStatus === 'success' && <><CheckCircle className="w-4 h-4" /> Resultado guardado en tu nube personal</>}
+                            {saveStatus === 'error' && "No se pudo guardar en la nube (Error de red)"}
+                        </div>
+                    ) : (
+                        <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800 p-4 rounded-xl text-left">
+                            <p className="text-xs text-indigo-800 dark:text-indigo-300 mb-2 font-semibold flex items-center gap-1">
+                                <UserPlus className="w-3.5 h-3.5" />
+                                Modo Invitado
+                            </p>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-3 leading-snug">
+                                Este resultado solo vive en este dispositivo. Crea una cuenta gratis para guardar tu progreso histórico.
+                            </p>
+                            <div className="flex gap-2">
+                                <Link to="/register" className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 px-3 rounded-lg text-center transition-colors">
+                                    Crear Cuenta
+                                </Link>
+                                <Link to="/login" className="flex-1 bg-white hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold py-2 px-3 rounded-lg text-center transition-colors">
+                                    Ya tengo una
+                                </Link>
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Botones de Acción */}
