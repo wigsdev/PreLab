@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import { UserPlus, Mail, Lock, User, Loader2, ArrowLeft } from 'lucide-react';
+import { UserPlus, Mail, Lock, User, Loader2, ArrowLeft, Eye, EyeOff, Check, X, AlertCircle } from 'lucide-react';
 
 export default function RegisterView() {
     const navigate = useNavigate();
@@ -11,8 +11,31 @@ export default function RegisterView() {
         first_name: '',
         last_name: ''
     });
+    const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    const [passwordValidations, setPasswordValidations] = useState({
+        length: false,
+        number: false,
+        uppercase: false,
+        lowercase: false
+    });
+
+    const validatePassword = (password) => {
+        setPasswordValidations({
+            length: password.length >= 8,
+            number: /\d/.test(password),
+            uppercase: /[A-Z]/.test(password),
+            lowercase: /[a-z]/.test(password)
+        });
+    };
+
+    const handlePasswordChange = (e) => {
+        const password = e.target.value;
+        setFormData({ ...formData, password });
+        validatePassword(password);
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -103,16 +126,46 @@ export default function RegisterView() {
 
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2">Contraseña</label>
-                            <div className="relative">
-                                <Lock className="absolute left-3 top-3 text-slate-400 w-5 h-5" />
+                            <div className="relative mb-2">
+                                <Lock className="absolute left-3 top-3 text-slate-400 w-5 h-5 z-10" />
                                 <input
-                                    type="password"
+                                    type={showPassword ? "text" : "password"}
                                     required
-                                    className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all font-medium text-slate-700"
+                                    className={`w-full pl-10 pr-12 py-3 bg-slate-50 border rounded-xl focus:outline-none focus:ring-2 transition-all font-medium text-slate-700
+                                        ${Object.values(passwordValidations).every(Boolean)
+                                            ? 'border-emerald-200 focus:ring-emerald-500'
+                                            : 'border-slate-200 focus:ring-indigo-500'}`}
                                     placeholder="••••••••"
                                     value={formData.password}
-                                    onChange={e => setFormData({ ...formData, password: e.target.value })}
+                                    onChange={handlePasswordChange}
                                 />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-3 top-3 text-slate-400 hover:text-slate-600 focus:outline-none transition-colors"
+                                >
+                                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                </button>
+                            </div>
+
+                            {/* Password Requirements Checklist */}
+                            <div className="grid grid-cols-2 gap-2 text-xs text-slate-500 pl-1">
+                                <div className={`flex items-center gap-1.5 ${passwordValidations.length ? 'text-emerald-600' : ''}`}>
+                                    {passwordValidations.length ? <Check size={14} /> : <div className="w-3.5 h-3.5 border border-slate-300 rounded-full" />}
+                                    <span>Mínimo 8 caracteres</span>
+                                </div>
+                                <div className={`flex items-center gap-1.5 ${passwordValidations.number ? 'text-emerald-600' : ''}`}>
+                                    {passwordValidations.number ? <Check size={14} /> : <div className="w-3.5 h-3.5 border border-slate-300 rounded-full" />}
+                                    <span>Incluye número</span>
+                                </div>
+                                <div className={`flex items-center gap-1.5 ${passwordValidations.uppercase ? 'text-emerald-600' : ''}`}>
+                                    {passwordValidations.uppercase ? <Check size={14} /> : <div className="w-3.5 h-3.5 border border-slate-300 rounded-full" />}
+                                    <span>Mayúscula</span>
+                                </div>
+                                <div className={`flex items-center gap-1.5 ${passwordValidations.lowercase ? 'text-emerald-600' : ''}`}>
+                                    {passwordValidations.lowercase ? <Check size={14} /> : <div className="w-3.5 h-3.5 border border-slate-300 rounded-full" />}
+                                    <span>Minúscula</span>
+                                </div>
                             </div>
                         </div>
 
