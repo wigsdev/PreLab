@@ -20,6 +20,18 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
     - Endpoints optimizados para listar y filtrar preguntas (para admins).
     - Validaciones de permisos `IsAdminUser`.
 
+### Changed
+- **Exam Logic:**
+    - `ResultsCard.jsx` ahora envía `exam_type` ('COURSE' o 'INTEGRAL') y el ID del curso.
+    - `ExamView.jsx` pasa correctamente las props de contexto al guardar resultados.
+- **Data Models:**
+    - Actualizado modelo `ExamAttempt` para incluir relación con `Course`.
+
+### Fixed
+- Error 500 en Analytics por variable `topic` nula (ahora se maneja `course` como fallback).
+- Crash en `Navbar` por `AuthContext` undefined (se agregó valor por defecto).
+- Orden de URLs en backend para evitar conflictos con routers.
+
 ## [v0.9.0] - Creator Panel & Settings - 2026-01-09
 ### Added
 - **Content Creation:**
@@ -78,18 +90,6 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
     - Modo Revisión para ver respuestas correctas/incorrectas.
 - **Routing:**
     - Configuración de React Router (SPA).
-
-### Changed
-- **Exam Logic:**
-    - `ResultsCard.jsx` ahora envía `exam_type` ('COURSE' o 'INTEGRAL') y el ID del curso.
-    - `ExamView.jsx` pasa correctamente las props de contexto al guardar resultados.
-- **Data Models:**
-    - Actualizado modelo `ExamAttempt` para incluir relación con `Course`.
-
-### Fixed
-- Error 500 en Analytics por variable `topic` nula (ahora se maneja `course` como fallback).
-- Crash en `Navbar` por `AuthContext` undefined (se agregó valor por defecto).
-- Orden de URLs en backend para evitar conflictos con routers.
 
 ## [v0.3.0] - First Playable - 2026-01-09
 

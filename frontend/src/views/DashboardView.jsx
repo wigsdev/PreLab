@@ -16,12 +16,19 @@ import {
 } from 'lucide-react';
 import clsx from 'clsx';
 
+import AdminDashboard from './admin/AdminDashboard'; // [NEW]
+
 export default function DashboardView() {
     const { user } = useAuth();
     const navigate = useNavigate();
     const [history, setHistory] = useState([]);
     const [loading, setLoading] = useState(true);
     const [stats, setStats] = useState({ total: 0, average: 0, best: 0 });
+
+    // Redirect to Admin Dashboard if staff
+    if (user?.is_staff) {
+        return <AdminDashboard />;
+    }
 
     useEffect(() => {
         const fetchHistory = async () => {
