@@ -109,5 +109,48 @@ Instrucciones Paso a Paso:
    - Usa DefaultRouter para registrar las rutas automáticamente.
    - Dime cómo conectar estas rutas en el urls.py principal del proyecto (config/urls.py) usando include().
 
+   - Dime cómo conectar estas rutas en el urls.py principal del proyecto (config/urls.py) usando include().
+
 Entregable: Código limpio para los 3 archivos (serializers.py, views.py, urls.py) y una explicación breve de qué es un "Nested Serializer".
+```
+
+## 🎨 v0.3.0: "First Playable" (Frontend React)
+
+**Objetivo:** Inicialización de React + Vite y creación de la primera experiencia de usuario (Resolver una pregunta).
+
+```markdown
+🔴 PROMPT: Frontend Mobile First (v0.3.0)
+Rol: Actúa como un Senior Frontend Developer experto en React y UX Mobile.
+
+Estado Actual:
+Backend: Django API listo y corriendo en http://127.0.0.1:8000/api/.
+Frontend: Carpeta frontend/ vacía.
+
+Objetivo (Task): Inicializar la aplicación React y construir la interfaz de usuario para resolver un simulacro.
+
+Instrucciones Paso a Paso:
+
+Paso 1: Inicialización (Terminal) Dame los comandos de Bash para:
+- Navegar a la carpeta raíz.
+- Crear el proyecto React usando Vite dentro de la carpeta frontend (si la carpeta ya existe, usa la opción para instalar en el directorio actual o borra y crea).
+- Instalar dependencias clave: axios (para consumir la API), clsx (para clases condicionales) y lucide-react (para íconos ligeros).
+- Instalar y configurar Tailwind CSS (dame los comandos para generar el tailwind.config.js y qué debo poner en index.css).
+
+Paso 2: Componente QuestionCard (El Corazón de la App) Crea el archivo src/components/QuestionCard.jsx.
+- Diseño: Debe ocupar todo el ancho del móvil.
+- Opciones: Deben ser botones grandes verticales (min-height: 48px para la "Thumb Zone").
+- Lógica Visual:
+  - Si el usuario toca una opción:
+    - Si es correcta: Pinta el borde de verde 🟢.
+    - Si es incorrecta: Pinta el borde de rojo 🔴 y muestra cuál era la correcta.
+  - Feedback: Inmediatamente después de responder, muestra un cuadro con el texto de la explicacion (feedback educativo).
+- Props: Debe recibir el objeto question y una función onNext para pasar a la siguiente.
+
+Paso 3: Integración Básica (App.jsx) Modifica src/App.jsx para probar esto:
+- Usa useEffect y axios para traer preguntas de tu API.
+- Muestra la QuestionCard con la primera pregunta recibida.
+- Agrega un botón "Siguiente" que solo aparezca después de responder.
+
+Entregable:
+Script de instalación, config de tailwind, QuestionCard.jsx y App.jsx.
 ```
