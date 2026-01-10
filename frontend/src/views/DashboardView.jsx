@@ -1,12 +1,24 @@
 import { useEffect, useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { getExamHistory } from '../services/api';
-import { Trophy, Clock, BarChart3, Calendar, ArrowRight, BookOpen } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import useTheme from '../hooks/useTheme';
+import {
+    BookOpen,
+    BarChart3,
+    Trophy,
+    Clock,
+    Calendar,
+    ChevronRight,
+    Loader2,
+    Plus,
+    ArrowRight
+} from 'lucide-react';
 import clsx from 'clsx';
 
 export default function DashboardView() {
     const { user } = useAuth();
+    const navigate = useNavigate();
     const [history, setHistory] = useState([]);
     const [loading, setLoading] = useState(true);
     const [stats, setStats] = useState({ total: 0, average: 0, best: 0 });
@@ -155,6 +167,16 @@ export default function DashboardView() {
                         ))}
                     </div>
                 </>
+            )}
+            {/* Admin Floating Button */}
+            {user?.is_staff && (
+                <button
+                    onClick={() => navigate('/admin/create')}
+                    className="fixed bottom-6 right-6 p-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg hover:shadow-indigo-500/30 transition-all z-50 group"
+                    title="Crear Pregunta"
+                >
+                    <Plus size={24} className="group-hover:rotate-90 transition-transform" />
+                </button>
             )}
         </div>
     );
