@@ -1,0 +1,1302 @@
+[
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "¿Cuál es el sinónimo de 'Lóbrego'?",
+        "difficulty": "AVANZADO",
+        "explanation": "Lóbrego significa oscuro o tenebroso.",
+        "options": [
+            {
+                "text": "Claro",
+                "is_correct": false
+            },
+            {
+                "text": "Oscuro",
+                "is_correct": true
+            },
+            {
+                "text": "Alegre",
+                "is_correct": false
+            },
+            {
+                "text": "Limpio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "PÁGINA es a LIBRO como...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Parte es a todo: La tecla es parte del piano.",
+        "options": [
+            {
+                "text": "LUZ es a SOL",
+                "is_correct": false
+            },
+            {
+                "text": "TECLA es a PIANO",
+                "is_correct": true
+            },
+            {
+                "text": "AUTO es a RUEDA",
+                "is_correct": false
+            },
+            {
+                "text": "AGUA es a VASO",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Oraciones Incompletas",
+        "statement": "El ________ es una virtud que pocos poseen.",
+        "difficulty": "BASICO",
+        "explanation": "Contexto ético.",
+        "options": [
+            {
+                "text": "dinero",
+                "is_correct": false
+            },
+            {
+                "text": "altruismo",
+                "is_correct": true
+            },
+            {
+                "text": "vicio",
+                "is_correct": false
+            },
+            {
+                "text": "cansancio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Comprensión Lectora",
+        "statement": "¿Qué título es más adecuado para un texto sobre el cuidado del agua?",
+        "difficulty": "BASICO",
+        "explanation": "Debe englobar el tema central.",
+        "options": [
+            {
+                "text": "Los peces del mar",
+                "is_correct": false
+            },
+            {
+                "text": "Importancia del ahorro hídrico",
+                "is_correct": true
+            },
+            {
+                "text": "La lluvia",
+                "is_correct": false
+            },
+            {
+                "text": "Agua mineral",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Antónimos",
+        "statement": "Antónimo de 'Cándido'",
+        "difficulty": "AVANZADO",
+        "explanation": "Cándido es inocente; Astuto es malicioso o hábil.",
+        "options": [
+            {
+                "text": "Inocente",
+                "is_correct": false
+            },
+            {
+                "text": "Astuto",
+                "is_correct": true
+            },
+            {
+                "text": "Blanco",
+                "is_correct": false
+            },
+            {
+                "text": "Puro",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Efímero'",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Que dura poco tiempo.",
+        "options": [
+            {
+                "text": "Duradero",
+                "is_correct": false
+            },
+            {
+                "text": "Fugaz",
+                "is_correct": true
+            },
+            {
+                "text": "Eterno",
+                "is_correct": false
+            },
+            {
+                "text": "Fuerte",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "MÉDICO es a HOSPITAL como...",
+        "difficulty": "BASICO",
+        "explanation": "Agente - Lugar.",
+        "options": [
+            {
+                "text": "ABOGADO es a JUICIO",
+                "is_correct": false
+            },
+            {
+                "text": "PROFESOR es a ESCUELA",
+                "is_correct": true
+            },
+            {
+                "text": "POLICÍA es a PISTOLA",
+                "is_correct": false
+            },
+            {
+                "text": "ALCADE es a CIUDAD",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Término Excluido",
+        "statement": "¿Qué palabra no pertenece al grupo? (Muebles)",
+        "difficulty": "BASICO",
+        "explanation": "Ventana es una abertura, no un mueble.",
+        "options": [
+            {
+                "text": "Silla",
+                "is_correct": false
+            },
+            {
+                "text": "Mesa",
+                "is_correct": false
+            },
+            {
+                "text": "Ventana",
+                "is_correct": true
+            },
+            {
+                "text": "Sillón",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Antónimos",
+        "statement": "Antónimo de 'Altruista'",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Egoísta es quien piensa solo en sí mismo.",
+        "options": [
+            {
+                "text": "Generoso",
+                "is_correct": false
+            },
+            {
+                "text": "Egoísta",
+                "is_correct": true
+            },
+            {
+                "text": "Amale",
+                "is_correct": false
+            },
+            {
+                "text": "Solidario",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Conectores Lógicos",
+        "statement": "Estudió mucho, ________ aprobó el examen.",
+        "difficulty": "BASICO",
+        "explanation": "Conector de consecuencia.",
+        "options": [
+            {
+                "text": "pero",
+                "is_correct": false
+            },
+            {
+                "text": "por lo tanto",
+                "is_correct": true
+            },
+            {
+                "text": "sin embargo",
+                "is_correct": false
+            },
+            {
+                "text": "porque",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Plan de Redacción",
+        "statement": "Ordena: I. Se levanta II. Desayuna III. Se despierta IV. Va al colegio",
+        "difficulty": "BASICO",
+        "explanation": "III - I - II - IV.",
+        "options": [
+            {
+                "text": "I - II - III - IV",
+                "is_correct": false
+            },
+            {
+                "text": "III - I - II - IV",
+                "is_correct": true
+            },
+            {
+                "text": "IV - III - II - I",
+                "is_correct": false
+            },
+            {
+                "text": "II - III - I - IV",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Dadivoso'",
+        "difficulty": "AVANZADO",
+        "explanation": "Que da con generosidad.",
+        "options": [
+            {
+                "text": "Tacaño",
+                "is_correct": false
+            },
+            {
+                "text": "Generoso",
+                "is_correct": true
+            },
+            {
+                "text": "Pobre",
+                "is_correct": false
+            },
+            {
+                "text": "Rico",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "PINTOR es a BROCHA como...",
+        "difficulty": "BASICO",
+        "explanation": "Agente - Instrumento.",
+        "options": [
+            {
+                "text": "ESCRITOR es a LIBRO",
+                "is_correct": false
+            },
+            {
+                "text": "CARPINTERO es a MARTILLO",
+                "is_correct": true
+            },
+            {
+                "text": "PROFESOR es a AULA",
+                "is_correct": false
+            },
+            {
+                "text": "MÉDICO es a PACIENTE",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Antónimos",
+        "statement": "Antónimo de 'Basto'",
+        "difficulty": "AVANZADO",
+        "explanation": "Basto es grosero; Refinado es elegante.",
+        "options": [
+            {
+                "text": "Amplio",
+                "is_correct": false
+            },
+            {
+                "text": "Refinado",
+                "is_correct": true
+            },
+            {
+                "text": "Tosco",
+                "is_correct": false
+            },
+            {
+                "text": "Grande",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Oraciones Incompletas",
+        "statement": "La ________ de la cosecha alegró a los campesinos.",
+        "difficulty": "BASICO",
+        "explanation": "Abundancia es positivo para campesinos.",
+        "options": [
+            {
+                "text": "pérdida",
+                "is_correct": false
+            },
+            {
+                "text": "abundancia",
+                "is_correct": true
+            },
+            {
+                "text": "lluvia",
+                "is_correct": false
+            },
+            {
+                "text": "sequía",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Inocuo'",
+        "difficulty": "AVANZADO",
+        "explanation": "Que no hace daño.",
+        "options": [
+            {
+                "text": "Venenoso",
+                "is_correct": false
+            },
+            {
+                "text": "Inofensivo",
+                "is_correct": true
+            },
+            {
+                "text": "Peligroso",
+                "is_correct": false
+            },
+            {
+                "text": "Mortal",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "PERRERA es a PERRO como...",
+        "difficulty": "BASICO",
+        "explanation": "Lugar - Sujeto.",
+        "options": [
+            {
+                "text": "NIDO es a PÁJARO",
+                "is_correct": false
+            },
+            {
+                "text": "ESTABLO es a CABALLO",
+                "is_correct": true
+            },
+            {
+                "text": "CASA es a PERSONA",
+                "is_correct": false
+            },
+            {
+                "text": "AGUA es a PEZ",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Término Excluido",
+        "statement": "¿Qué palabra no es un sentimiento?",
+        "difficulty": "BASICO",
+        "explanation": "Pensamiento es un proceso cognitivo, no un sentimiento.",
+        "options": [
+            {
+                "text": "Amor",
+                "is_correct": false
+            },
+            {
+                "text": "Odio",
+                "is_correct": false
+            },
+            {
+                "text": "Pensamiento",
+                "is_correct": true
+            },
+            {
+                "text": "Tristeza",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Antónimos",
+        "statement": "Antónimo de 'Prólogo'",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Prólogo es inicio; Epílogo es final.",
+        "options": [
+            {
+                "text": "Inicio",
+                "is_correct": false
+            },
+            {
+                "text": "Epílogo",
+                "is_correct": true
+            },
+            {
+                "text": "Índice",
+                "is_correct": false
+            },
+            {
+                "text": "Capítulo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Oraciones Eliminadas",
+        "statement": "¿Qué oración no guarda relación? I. El león es carnívoro. II. Vive en África. III. Es el rey de la selva. IV. Mi gato toma leche.",
+        "difficulty": "BASICO",
+        "explanation": "La IV habla de un gato, rompe el tema del león.",
+        "options": [
+            {
+                "text": "I",
+                "is_correct": false
+            },
+            {
+                "text": "IV",
+                "is_correct": true
+            },
+            {
+                "text": "II",
+                "is_correct": false
+            },
+            {
+                "text": "III",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Belicoso'",
+        "difficulty": "AVANZADO",
+        "explanation": "Agresivo, guerrero.",
+        "options": [
+            {
+                "text": "Pacífico",
+                "is_correct": false
+            },
+            {
+                "text": "Agresivo",
+                "is_correct": true
+            },
+            {
+                "text": "Amigable",
+                "is_correct": false
+            },
+            {
+                "text": "Bello",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "NIEVE es a BLANCO como...",
+        "difficulty": "BASICO",
+        "explanation": "Sustantivo - Característica.",
+        "options": [
+            {
+                "text": "AGUA es a LÍQUIDO",
+                "is_correct": false
+            },
+            {
+                "text": "CARBÓN es a NEGRO",
+                "is_correct": true
+            },
+            {
+                "text": "CIELO es a GRIS",
+                "is_correct": false
+            },
+            {
+                "text": "PASTO es a SECO",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Antónimos",
+        "statement": "Antónimo de 'Dilapidar'",
+        "difficulty": "AVANZADO",
+        "explanation": "Dilapidar es gastar; Ahorrar es guardar.",
+        "options": [
+            {
+                "text": "Gastar",
+                "is_correct": false
+            },
+            {
+                "text": "Ahorrar",
+                "is_correct": true
+            },
+            {
+                "text": "Comprar",
+                "is_correct": false
+            },
+            {
+                "text": "Vender",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Etimología",
+        "statement": "¿Qué significa el prefijo 'BIO'?",
+        "difficulty": "BASICO",
+        "explanation": "Vida.",
+        "options": [
+            {
+                "text": "Tierra",
+                "is_correct": false
+            },
+            {
+                "text": "Vida",
+                "is_correct": true
+            },
+            {
+                "text": "Animal",
+                "is_correct": false
+            },
+            {
+                "text": "Planta",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Etimología",
+        "statement": "¿Qué significa el sufijo 'CIDA'?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Que mata (Homicida, Insecticida).",
+        "options": [
+            {
+                "text": "Que come",
+                "is_correct": false
+            },
+            {
+                "text": "Que mata",
+                "is_correct": true
+            },
+            {
+                "text": "Que estudia",
+                "is_correct": false
+            },
+            {
+                "text": "Que ama",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Óbito'",
+        "difficulty": "AVANZADO",
+        "explanation": "Muerte, fallecimiento.",
+        "options": [
+            {
+                "text": "Nacimiento",
+                "is_correct": false
+            },
+            {
+                "text": "Muerte",
+                "is_correct": true
+            },
+            {
+                "text": "Vida",
+                "is_correct": false
+            },
+            {
+                "text": "Enfermedad",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Conectores",
+        "statement": "No trajo su libro, ________ no pudo estudiar.",
+        "difficulty": "BASICO",
+        "explanation": "Consecuencia.",
+        "options": [
+            {
+                "text": "sin embargo",
+                "is_correct": false
+            },
+            {
+                "text": "por ende",
+                "is_correct": true
+            },
+            {
+                "text": "porque",
+                "is_correct": false
+            },
+            {
+                "text": "pero",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "ESCAMAS es a PEZ como...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Cubierta - Animal.",
+        "options": [
+            {
+                "text": "PELOS es a CALVO",
+                "is_correct": false
+            },
+            {
+                "text": "PLUMAS es a AVE",
+                "is_correct": true
+            },
+            {
+                "text": "PIEL es a HUMANO",
+                "is_correct": false
+            },
+            {
+                "text": "LANA es a OBJETO",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Cima'",
+        "difficulty": "BASICO",
+        "explanation": "Parte más alta.",
+        "options": [
+            {
+                "text": "Abismo",
+                "is_correct": false
+            },
+            {
+                "text": "Cumbre",
+                "is_correct": true
+            },
+            {
+                "text": "Sima",
+                "is_correct": false
+            },
+            {
+                "text": "Valle",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Antónimos",
+        "statement": "Antónimo de 'Sima'",
+        "difficulty": "AVANZADO",
+        "explanation": "Sima es abismo profundo; Cima es lo alto.",
+        "options": [
+            {
+                "text": "Hoyo",
+                "is_correct": false
+            },
+            {
+                "text": "Cima",
+                "is_correct": true
+            },
+            {
+                "text": "Pozo",
+                "is_correct": false
+            },
+            {
+                "text": "Cueva",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Oraciones Incompletas",
+        "statement": "El río se ________ por las lluvias torrenciales.",
+        "difficulty": "BASICO",
+        "explanation": "Desbordó es lo lógico.",
+        "options": [
+            {
+                "text": "secó",
+                "is_correct": false
+            },
+            {
+                "text": "desbordó",
+                "is_correct": true
+            },
+            {
+                "text": "calentó",
+                "is_correct": false
+            },
+            {
+                "text": "congeló",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Término Excluido",
+        "statement": "Grupo: PLANETAS",
+        "difficulty": "BASICO",
+        "explanation": "La Luna es un satélite.",
+        "options": [
+            {
+                "text": "Marte",
+                "is_correct": false
+            },
+            {
+                "text": "Luna",
+                "is_correct": true
+            },
+            {
+                "text": "Júpiter",
+                "is_correct": false
+            },
+            {
+                "text": "Venus",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Erudito'",
+        "difficulty": "AVANZADO",
+        "explanation": "Sabio, instruido.",
+        "options": [
+            {
+                "text": "Ignorante",
+                "is_correct": false
+            },
+            {
+                "text": "Sabio",
+                "is_correct": true
+            },
+            {
+                "text": "Rico",
+                "is_correct": false
+            },
+            {
+                "text": "Famoso",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "ABEJA es a ENJAMBRE como...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Individuo - Colectivo.",
+        "options": [
+            {
+                "text": "PERRO es a JAURÍA",
+                "is_correct": true
+            },
+            {
+                "text": "OVEJA es a LANA",
+                "is_correct": false
+            },
+            {
+                "text": "PEZ es a PECERA",
+                "is_correct": false
+            },
+            {
+                "text": "PAJARO es a NIDO",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Comprensión",
+        "statement": "¿Qué es inferir?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Deducir información no explícita.",
+        "options": [
+            {
+                "text": "Leer rápido",
+                "is_correct": false
+            },
+            {
+                "text": "Deducir",
+                "is_correct": true
+            },
+            {
+                "text": "Copiar",
+                "is_correct": false
+            },
+            {
+                "text": "Resumir",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Antónimos",
+        "statement": "Antónimo de 'Gélido'",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Gélido es muy frío; Tórrido es muy caliente.",
+        "options": [
+            {
+                "text": "Frío",
+                "is_correct": false
+            },
+            {
+                "text": "Tórrido",
+                "is_correct": true
+            },
+            {
+                "text": "Helado",
+                "is_correct": false
+            },
+            {
+                "text": "Fresco",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Diáfano'",
+        "difficulty": "AVANZADO",
+        "explanation": "Claro, transparente.",
+        "options": [
+            {
+                "text": "Opaco",
+                "is_correct": false
+            },
+            {
+                "text": "Transparente",
+                "is_correct": true
+            },
+            {
+                "text": "Oscuro",
+                "is_correct": false
+            },
+            {
+                "text": "Sucio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "CORAZÓN es a AMOR como...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Símbolo - Concepto.",
+        "options": [
+            {
+                "text": "CEREBRO es a PENSAR",
+                "is_correct": false
+            },
+            {
+                "text": "PALOMA es a PAZ",
+                "is_correct": true
+            },
+            {
+                "text": "ROJO es a SANGRE",
+                "is_correct": false
+            },
+            {
+                "text": "BANDERA es a TELA",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Ortografía",
+        "statement": "Palabra escrita incorrectamente:",
+        "difficulty": "BASICO",
+        "explanation": "Hueso se escribe con H.",
+        "options": [
+            {
+                "text": "Huevo",
+                "is_correct": false
+            },
+            {
+                "text": "Ueso",
+                "is_correct": true
+            },
+            {
+                "text": "Hierba",
+                "is_correct": false
+            },
+            {
+                "text": "Hielo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Conectores",
+        "statement": "Salió temprano, ________ llegó tarde.",
+        "difficulty": "BASICO",
+        "explanation": "Contraste.",
+        "options": [
+            {
+                "text": "y",
+                "is_correct": false
+            },
+            {
+                "text": "sin embargo",
+                "is_correct": true
+            },
+            {
+                "text": "además",
+                "is_correct": false
+            },
+            {
+                "text": "también",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Furtivo'",
+        "difficulty": "AVANZADO",
+        "explanation": "Escondido, oculto.",
+        "options": [
+            {
+                "text": "Público",
+                "is_correct": false
+            },
+            {
+                "text": "Oculto",
+                "is_correct": true
+            },
+            {
+                "text": "Rápido",
+                "is_correct": false
+            },
+            {
+                "text": "Lento",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Etimología",
+        "statement": "¿Qué significa 'CARDIO'?",
+        "difficulty": "BASICO",
+        "explanation": "Corazón.",
+        "options": [
+            {
+                "text": "Cabeza",
+                "is_correct": false
+            },
+            {
+                "text": "Corazón",
+                "is_correct": true
+            },
+            {
+                "text": "Riñón",
+                "is_correct": false
+            },
+            {
+                "text": "Pulmón",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Antónimos",
+        "statement": "Antónimo de 'Genuino'",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Falso, apócrifo.",
+        "options": [
+            {
+                "text": "Verdadero",
+                "is_correct": false
+            },
+            {
+                "text": "Falso",
+                "is_correct": true
+            },
+            {
+                "text": "Auténtico",
+                "is_correct": false
+            },
+            {
+                "text": "Original",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "ARQUITECTO es a PLANOS como...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Profesional - Producto.",
+        "options": [
+            {
+                "text": "ABOGADO es a LEYES",
+                "is_correct": false
+            },
+            {
+                "text": "MÚSICO es a PARTITURA",
+                "is_correct": true
+            },
+            {
+                "text": "DOCTOR es a HOSPITAL",
+                "is_correct": false
+            },
+            {
+                "text": "COCINERO es a OLLA",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Vasto'",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Extenso, amplio.",
+        "options": [
+            {
+                "text": "Pequeño",
+                "is_correct": false
+            },
+            {
+                "text": "Extenso",
+                "is_correct": true
+            },
+            {
+                "text": "Basto",
+                "is_correct": false
+            },
+            {
+                "text": "Corto",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Parónimos",
+        "statement": "Diferencia entre 'Absorber' y 'Absolver'",
+        "difficulty": "AVANZADO",
+        "explanation": "Absorber = atraer fluidos; Absolver = perdonar.",
+        "options": [
+            {
+                "text": "Son iguales",
+                "is_correct": false
+            },
+            {
+                "text": "Chupar / Perdonar",
+                "is_correct": true
+            },
+            {
+                "text": "Perdonar / Chupar",
+                "is_correct": false
+            },
+            {
+                "text": "Ninguna",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Término Excluido",
+        "statement": "Grupo: FELINOS",
+        "difficulty": "BASICO",
+        "explanation": "El lobo es un canino.",
+        "options": [
+            {
+                "text": "Tigre",
+                "is_correct": false
+            },
+            {
+                "text": "Lobo",
+                "is_correct": true
+            },
+            {
+                "text": "Gato",
+                "is_correct": false
+            },
+            {
+                "text": "León",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Comprensión",
+        "statement": "Idea principal de un texto es...",
+        "difficulty": "BASICO",
+        "explanation": "Lo fundamental.",
+        "options": [
+            {
+                "text": "Un detalle",
+                "is_correct": false
+            },
+            {
+                "text": "Lo más importante",
+                "is_correct": true
+            },
+            {
+                "text": "El título",
+                "is_correct": false
+            },
+            {
+                "text": "El final",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Sinónimos",
+        "statement": "Sinónimo de 'Nocivo'",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Dañino.",
+        "options": [
+            {
+                "text": "Bueno",
+                "is_correct": false
+            },
+            {
+                "text": "Dañino",
+                "is_correct": true
+            },
+            {
+                "text": "Nuevo",
+                "is_correct": false
+            },
+            {
+                "text": "Viejo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Razonamiento Verbal",
+        "course_code": "rv",
+        "topic_name": "Analogías",
+        "statement": "GUANTE es a MANO como...",
+        "difficulty": "BASICO",
+        "explanation": "Prenda - Parte del cuerpo.",
+        "options": [
+            {
+                "text": "SOMBRERO es a CABEZA",
+                "is_correct": true
+            },
+            {
+                "text": "PIE es a CALCETÍN",
+                "is_correct": false
+            },
+            {
+                "text": "CAMISA es a BOTÓN",
+                "is_correct": false
+            },
+            {
+                "text": "ANILLO es a DEDO",
+                "is_correct": false
+            }
+        ]
+    }
+]

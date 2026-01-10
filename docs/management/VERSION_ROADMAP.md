@@ -53,11 +53,11 @@ Peso: 🟡 Medio (Lógica Frontend/Backend)
 
 Objetivos:
 
-[ ] Modo Invitado: Guardar racha en localStorage del navegador.
+[x] Modo Invitado: Guardar racha en localStorage del navegador.
 
-[ ] Algoritmo de "Aleatoriedad": Que las preguntas no salgan siempre en el mismo orden.
+[x] Algoritmo de "Aleatoriedad": Que las preguntas no salgan siempre en el mismo orden.
 
-[ ] Pantalla de "Resultados": Resumen al final del micro-simulacro (Ej: 8/10 correctas).
+[x] Pantalla de "Resultados": Resumen al final del micro-simulacro (Ej: 8/10 correctas).
 
 🔐 FASE 3: Identidad y Persistencia
 Objetivo: Diferenciar usuarios y preparar el terreno para monetizar.

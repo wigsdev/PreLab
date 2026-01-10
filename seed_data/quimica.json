@@ -1,0 +1,1172 @@
+[
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Átomo",
+        "statement": "¿Qué partícula tiene carga negativa?",
+        "difficulty": "BASICO",
+        "explanation": "Los electrones tienen carga negativa y orbitan el núcleo.",
+        "options": [
+            {
+                "text": "Protón",
+                "is_correct": false
+            },
+            {
+                "text": "Electrón",
+                "is_correct": true
+            },
+            {
+                "text": "Neutrón",
+                "is_correct": false
+            },
+            {
+                "text": "Fotón",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Tabla Periódica",
+        "statement": "¿Cuál es el símbolo químico del Oro?",
+        "difficulty": "BASICO",
+        "explanation": "Au (del latín Aurum).",
+        "options": [
+            {
+                "text": "Ag",
+                "is_correct": false
+            },
+            {
+                "text": "Au",
+                "is_correct": true
+            },
+            {
+                "text": "Or",
+                "is_correct": false
+            },
+            {
+                "text": "Fe",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Enlaces Químicos",
+        "statement": "¿Qué tipo de enlace comparte electrones?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El enlace covalente implica compartir pares de electrones.",
+        "options": [
+            {
+                "text": "Iónico",
+                "is_correct": false
+            },
+            {
+                "text": "Covalente",
+                "is_correct": true
+            },
+            {
+                "text": "Metálico",
+                "is_correct": false
+            },
+            {
+                "text": "Puente de Hidrógeno",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Reacciones",
+        "statement": "¿Qué produce la combustión completa de un hidrocarburo?",
+        "difficulty": "AVANZADO",
+        "explanation": "Dióxido de carbono (CO2) y agua (H2O).",
+        "options": [
+            {
+                "text": "CO y H2O",
+                "is_correct": false
+            },
+            {
+                "text": "CO2 y H2O",
+                "is_correct": true
+            },
+            {
+                "text": "C y H2",
+                "is_correct": false
+            },
+            {
+                "text": "CO2 y O2",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Estado de la Materia",
+        "statement": "¿Cómo se llama el paso de sólido a gas directamente?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Sublimación.",
+        "options": [
+            {
+                "text": "Fusión",
+                "is_correct": false
+            },
+            {
+                "text": "Sublimación",
+                "is_correct": true
+            },
+            {
+                "text": "Evaporación",
+                "is_correct": false
+            },
+            {
+                "text": "Condensación",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Átomo",
+        "statement": "¿Qué partícula reside en el núcleo y no tiene carga?",
+        "difficulty": "BASICO",
+        "explanation": "El neutrón.",
+        "options": [
+            {
+                "text": "Protón",
+                "is_correct": false
+            },
+            {
+                "text": "Neutrón",
+                "is_correct": true
+            },
+            {
+                "text": "Electrón",
+                "is_correct": false
+            },
+            {
+                "text": "Positrón",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Tabla Periódica",
+        "statement": "¿Qué elemento es el más abundante en el universo?",
+        "difficulty": "BASICO",
+        "explanation": "El Hidrógeno (H).",
+        "options": [
+            {
+                "text": "Oxígeno",
+                "is_correct": false
+            },
+            {
+                "text": "Hidrógeno",
+                "is_correct": true
+            },
+            {
+                "text": "Carbono",
+                "is_correct": false
+            },
+            {
+                "text": "Helio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Nomenclatura",
+        "statement": "¿Qué fórmula corresponde al agua?",
+        "difficulty": "BASICO",
+        "explanation": "H2O.",
+        "options": [
+            {
+                "text": "H2O2",
+                "is_correct": false
+            },
+            {
+                "text": "H2O",
+                "is_correct": true
+            },
+            {
+                "text": "HO",
+                "is_correct": false
+            },
+            {
+                "text": "OH",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Ácidos y Bases",
+        "statement": "¿Qué pH inidica una sustancia neutra?",
+        "difficulty": "BASICO",
+        "explanation": "pH 7 es neutro (como el agua pura).",
+        "options": [
+            {
+                "text": "0",
+                "is_correct": false
+            },
+            {
+                "text": "7",
+                "is_correct": true
+            },
+            {
+                "text": "14",
+                "is_correct": false
+            },
+            {
+                "text": "1",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Tabla Periódica",
+        "statement": "¿Qué grupo de elementos es conocido como Gases Nobles?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El Grupo 18 (VIII A).",
+        "options": [
+            {
+                "text": "Halógenos",
+                "is_correct": false
+            },
+            {
+                "text": "Gases Nobles",
+                "is_correct": true
+            },
+            {
+                "text": "Alcalinos",
+                "is_correct": false
+            },
+            {
+                "text": "Lantánidos",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Enlaces Químicos",
+        "statement": "¿Qué enlace se forma entre un metal y un no metal?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Enlace Iónico (transferencia de electrones).",
+        "options": [
+            {
+                "text": "Covalente",
+                "is_correct": false
+            },
+            {
+                "text": "Iónico",
+                "is_correct": true
+            },
+            {
+                "text": "Metálico",
+                "is_correct": false
+            },
+            {
+                "text": "Van der Waals",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Estados de la Materia",
+        "statement": "¿En qué estado las partículas están más separadas?",
+        "difficulty": "BASICO",
+        "explanation": "En el estado gaseoso.",
+        "options": [
+            {
+                "text": "Sólido",
+                "is_correct": false
+            },
+            {
+                "text": "Gaseoso",
+                "is_correct": true
+            },
+            {
+                "text": "Líquido",
+                "is_correct": false
+            },
+            {
+                "text": "Plasma",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Química Orgánica",
+        "statement": "¿Qué elemento es fundamental en la química orgánica?",
+        "difficulty": "BASICO",
+        "explanation": "El Carbono.",
+        "options": [
+            {
+                "text": "Oxígeno",
+                "is_correct": false
+            },
+            {
+                "text": "Carbono",
+                "is_correct": true
+            },
+            {
+                "text": "Nitrógeno",
+                "is_correct": false
+            },
+            {
+                "text": "Silicio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Átomo",
+        "statement": "¿Qué define el número atómico (Z)?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El número de protones.",
+        "options": [
+            {
+                "text": "Electrones + Neutrones",
+                "is_correct": false
+            },
+            {
+                "text": "Número de protones",
+                "is_correct": true
+            },
+            {
+                "text": "Masa atómica",
+                "is_correct": false
+            },
+            {
+                "text": "Número de neutrones",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Tabla Periódica",
+        "statement": "¿Cuál es el símbolo del Hierro?",
+        "difficulty": "BASICO",
+        "explanation": "Fe (Ferrum).",
+        "options": [
+            {
+                "text": "Hi",
+                "is_correct": false
+            },
+            {
+                "text": "Fe",
+                "is_correct": true
+            },
+            {
+                "text": "Ir",
+                "is_correct": false
+            },
+            {
+                "text": "F",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Reacciones",
+        "statement": "¿Qué sucede en una oxidación?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Pérdida de electrones.",
+        "options": [
+            {
+                "text": "Ganancia de electrones",
+                "is_correct": false
+            },
+            {
+                "text": "Pérdida de electrones",
+                "is_correct": true
+            },
+            {
+                "text": "Ganancia de protones",
+                "is_correct": false
+            },
+            {
+                "text": "Pérdida de neutrones",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Soluciones",
+        "statement": "¿Qué es el soluto?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La sustancia que se disuelve (está en menor cantidad).",
+        "options": [
+            {
+                "text": "El líquido",
+                "is_correct": false
+            },
+            {
+                "text": "La sustancia disuelta",
+                "is_correct": true
+            },
+            {
+                "text": "El vaso",
+                "is_correct": false
+            },
+            {
+                "text": "La mezcla total",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Ácidos y Bases",
+        "statement": "¿Cuál es una característica de los ácidos?",
+        "difficulty": "BASICO",
+        "explanation": "Sabor agrio.",
+        "options": [
+            {
+                "text": "Sabor amargo",
+                "is_correct": false
+            },
+            {
+                "text": "Sabor agrio",
+                "is_correct": true
+            },
+            {
+                "text": "Tacto jabonoso",
+                "is_correct": false
+            },
+            {
+                "text": "pH alto",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Gases",
+        "statement": "¿Qué ley relaciona presión y volumen (temperatura constante)?",
+        "difficulty": "AVANZADO",
+        "explanation": "Ley de Boyle (inversamente proporcionales).",
+        "options": [
+            {
+                "text": "Ley de Charles",
+                "is_correct": false
+            },
+            {
+                "text": "Ley de Boyle",
+                "is_correct": true
+            },
+            {
+                "text": "Ley de Gay-Lussac",
+                "is_correct": false
+            },
+            {
+                "text": "Ley de Avogadro",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Radioactividad",
+        "statement": "¿Qué científica descubrió el Radio?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Marie Curie.",
+        "options": [
+            {
+                "text": "Newton",
+                "is_correct": false
+            },
+            {
+                "text": "Marie Curie",
+                "is_correct": true
+            },
+            {
+                "text": "Einstein",
+                "is_correct": false
+            },
+            {
+                "text": "Bohr",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Química Orgánica",
+        "statement": "¿Cuál es el alcano más simple?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El Metano (CH4).",
+        "options": [
+            {
+                "text": "Etano",
+                "is_correct": false
+            },
+            {
+                "text": "Metano",
+                "is_correct": true
+            },
+            {
+                "text": "Propano",
+                "is_correct": false
+            },
+            {
+                "text": "Butano",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Nomenclatura",
+        "statement": "¿Qué es el NaCl?",
+        "difficulty": "BASICO",
+        "explanation": "Cloruro de Sodio (sal de mesa).",
+        "options": [
+            {
+                "text": "Azúcar",
+                "is_correct": false
+            },
+            {
+                "text": "Sal de mesa",
+                "is_correct": true
+            },
+            {
+                "text": "Lejía",
+                "is_correct": false
+            },
+            {
+                "text": "Vinagre",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Estados de la Materia",
+        "statement": "¿Qué es la condensación?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Paso de gas a líquido.",
+        "options": [
+            {
+                "text": "Sólido a Gas",
+                "is_correct": false
+            },
+            {
+                "text": "Gas a Líquido",
+                "is_correct": true
+            },
+            {
+                "text": "Líquido a Sólido",
+                "is_correct": false
+            },
+            {
+                "text": "Líquido a Gas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Átomo",
+        "statement": "¿Qué es un isótopo?",
+        "difficulty": "AVANZADO",
+        "explanation": "Átomos del mismo elemento con diferente número de neutrones.",
+        "options": [
+            {
+                "text": "Diferentes protones",
+                "is_correct": false
+            },
+            {
+                "text": "Mismo elemento, diferente masa",
+                "is_correct": true
+            },
+            {
+                "text": "Diferentes electrones",
+                "is_correct": false
+            },
+            {
+                "text": "Diferente elemento",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Tabla Periódica",
+        "statement": "¿Qué elemento tiene el símbolo O?",
+        "difficulty": "BASICO",
+        "explanation": "Oxígeno.",
+        "options": [
+            {
+                "text": "Osmium",
+                "is_correct": false
+            },
+            {
+                "text": "Oxígeno",
+                "is_correct": true
+            },
+            {
+                "text": "Oro",
+                "is_correct": false
+            },
+            {
+                "text": "Oganesón",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Reacciones",
+        "statement": "¿Qué acelera una reacción sin consumirse?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El catalizador.",
+        "options": [
+            {
+                "text": "Reactivo",
+                "is_correct": false
+            },
+            {
+                "text": "Catalizador",
+                "is_correct": true
+            },
+            {
+                "text": "Producto",
+                "is_correct": false
+            },
+            {
+                "text": "Inhibidor",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Enlaces",
+        "statement": "¿Qué elemento es más electronegativo?",
+        "difficulty": "AVANZADO",
+        "explanation": "El Flúor.",
+        "options": [
+            {
+                "text": "Oxígeno",
+                "is_correct": false
+            },
+            {
+                "text": "Flúor",
+                "is_correct": true
+            },
+            {
+                "text": "Cloro",
+                "is_correct": false
+            },
+            {
+                "text": "Francio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Mol",
+        "statement": "¿Qué es el número de Avogadro?",
+        "difficulty": "AVANZADO",
+        "explanation": "6.022 x 10^23.",
+        "options": [
+            {
+                "text": "3.1416",
+                "is_correct": false
+            },
+            {
+                "text": "6.022 x 10^23",
+                "is_correct": true
+            },
+            {
+                "text": "9.8 m/s",
+                "is_correct": false
+            },
+            {
+                "text": "100",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Química Orgánica",
+        "statement": "¿Qué grupo funcional tienen los alcoholes?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El grupo Hidroxilo (-OH).",
+        "options": [
+            {
+                "text": "Carbonilo",
+                "is_correct": false
+            },
+            {
+                "text": "Hidroxilo",
+                "is_correct": true
+            },
+            {
+                "text": "Amino",
+                "is_correct": false
+            },
+            {
+                "text": "Carboxilo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Tabla Periódica",
+        "statement": "¿Qué metal es líquido a temperatura ambiente?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El Mercurio (Hg).",
+        "options": [
+            {
+                "text": "Plomo",
+                "is_correct": false
+            },
+            {
+                "text": "Mercurio",
+                "is_correct": true
+            },
+            {
+                "text": "Galio",
+                "is_correct": false
+            },
+            {
+                "text": "Bromo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Ácidos",
+        "statement": "¿Qué ácido está en el estómago?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Ácido clorhídrico (HCl).",
+        "options": [
+            {
+                "text": "Sulfúrico",
+                "is_correct": false
+            },
+            {
+                "text": "Clorhídrico",
+                "is_correct": true
+            },
+            {
+                "text": "Nítrico",
+                "is_correct": false
+            },
+            {
+                "text": "Cítrico",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Estados",
+        "statement": "¿Punto de ebullición del agua al nivel del mar?",
+        "difficulty": "BASICO",
+        "explanation": "100 grados Celsius.",
+        "options": [
+            {
+                "text": "0 C",
+                "is_correct": false
+            },
+            {
+                "text": "100 C",
+                "is_correct": true
+            },
+            {
+                "text": "50 C",
+                "is_correct": false
+            },
+            {
+                "text": "200 C",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Átomo",
+        "statement": "¿Qué modelo atómico se conoce como 'budín de pasas'?",
+        "difficulty": "AVANZADO",
+        "explanation": "Modelo de Thomson.",
+        "options": [
+            {
+                "text": "Dalton",
+                "is_correct": false
+            },
+            {
+                "text": "Thomson",
+                "is_correct": true
+            },
+            {
+                "text": "Rutherford",
+                "is_correct": false
+            },
+            {
+                "text": "Bohr",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Nomenclatura",
+        "statement": "¿Cómo se llama el Fe2O3?",
+        "difficulty": "AVANZADO",
+        "explanation": "Óxido Férrico (o de hierro III).",
+        "options": [
+            {
+                "text": "Óxido ferroso",
+                "is_correct": false
+            },
+            {
+                "text": "Óxido férrico",
+                "is_correct": true
+            },
+            {
+                "text": "Hidróxido de hierro",
+                "is_correct": false
+            },
+            {
+                "text": "Sal de hierro",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Tabla Periódica",
+        "statement": "¿Cuántos periodos tiene la tabla periódica?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "7 periodos.",
+        "options": [
+            {
+                "text": "5",
+                "is_correct": false
+            },
+            {
+                "text": "7",
+                "is_correct": true
+            },
+            {
+                "text": "18",
+                "is_correct": false
+            },
+            {
+                "text": "9",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Química Orgánica",
+        "statement": "¿Qué es el benceno?",
+        "difficulty": "AVANZADO",
+        "explanation": "Un hidrocarburo aromático.",
+        "options": [
+            {
+                "text": "Un alcohol",
+                "is_correct": false
+            },
+            {
+                "text": "Un hidrocarburo aromático",
+                "is_correct": true
+            },
+            {
+                "text": "Un éter",
+                "is_correct": false
+            },
+            {
+                "text": "Un ácido",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Reacciones",
+        "statement": "La ley de conservación de la masa la propuso...",
+        "difficulty": "AVANZADO",
+        "explanation": "Lavoisier ('La materia no se crea ni se destruye').",
+        "options": [
+            {
+                "text": "Proust",
+                "is_correct": false
+            },
+            {
+                "text": "Lavoisier",
+                "is_correct": true
+            },
+            {
+                "text": "Dalton",
+                "is_correct": false
+            },
+            {
+                "text": "Avogadro",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Atmósfera",
+        "statement": "¿Qué gas es el más abundante en el aire?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El Nitrógeno (78%).",
+        "options": [
+            {
+                "text": "Oxígeno",
+                "is_correct": false
+            },
+            {
+                "text": "Nitrógeno",
+                "is_correct": true
+            },
+            {
+                "text": "Argón",
+                "is_correct": false
+            },
+            {
+                "text": "CO2",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Estructura",
+        "statement": "¿Qué forma tiene la molécula de agua?",
+        "difficulty": "AVANZADO",
+        "explanation": "Angular.",
+        "options": [
+            {
+                "text": "Lineal",
+                "is_correct": false
+            },
+            {
+                "text": "Angular",
+                "is_correct": true
+            },
+            {
+                "text": "Plana",
+                "is_correct": false
+            },
+            {
+                "text": "Tetraédrica",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Química Nuclear",
+        "statement": "¿Qué es la fusión nuclear?",
+        "difficulty": "AVANZADO",
+        "explanation": "Unión de núcleos ligeros (ocurre en el Sol).",
+        "options": [
+            {
+                "text": "Ruptura de núcleos",
+                "is_correct": false
+            },
+            {
+                "text": "Unión de núcleos",
+                "is_correct": true
+            },
+            {
+                "text": "Emisión de electrones",
+                "is_correct": false
+            },
+            {
+                "text": "Combustión",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Densidad",
+        "statement": "¿Por qué flota el hielo en agua?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Porque es menos denso que el agua líquida.",
+        "options": [
+            {
+                "text": "Es más denso",
+                "is_correct": false
+            },
+            {
+                "text": "Es menos denso",
+                "is_correct": true
+            },
+            {
+                "text": "Tiene aire",
+                "is_correct": false
+            },
+            {
+                "text": "Magia",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Enlaces",
+        "statement": "¿Cuántos electrones comparten en un enlace doble?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "4 electrones (2 pares).",
+        "options": [
+            {
+                "text": "2",
+                "is_correct": false
+            },
+            {
+                "text": "4",
+                "is_correct": true
+            },
+            {
+                "text": "6",
+                "is_correct": false
+            },
+            {
+                "text": "8",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Elementos",
+        "statement": "¿Qué elemento tiene símbolo 'K'?",
+        "difficulty": "BASICO",
+        "explanation": "Potasio (Kalium).",
+        "options": [
+            {
+                "text": "Kriptón",
+                "is_correct": false
+            },
+            {
+                "text": "Potasio",
+                "is_correct": true
+            },
+            {
+                "text": "Calcio",
+                "is_correct": false
+            },
+            {
+                "text": "Kelvin",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Mezclas",
+        "statement": "¿Qué es una aleación?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Mezcla homogénea de metales (ej: bronce).",
+        "options": [
+            {
+                "text": "Un compuesto químico",
+                "is_correct": false
+            },
+            {
+                "text": "Una mezcla de metales",
+                "is_correct": true
+            },
+            {
+                "text": "Un isótopo",
+                "is_correct": false
+            },
+            {
+                "text": "Un gas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Química",
+        "course_code": "quim",
+        "topic_name": "Química Orgánica",
+        "statement": "¿Fórmula de la glucosa?",
+        "difficulty": "AVANZADO",
+        "explanation": "C6H12O6.",
+        "options": [
+            {
+                "text": "C12H22O11",
+                "is_correct": false
+            },
+            {
+                "text": "C6H12O6",
+                "is_correct": true
+            },
+            {
+                "text": "CH4",
+                "is_correct": false
+            },
+            {
+                "text": "C2H5OH",
+                "is_correct": false
+            }
+        ]
+    }
+]

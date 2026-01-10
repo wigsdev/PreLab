@@ -154,3 +154,43 @@ Paso 3: Integración Básica (App.jsx) Modifica src/App.jsx para probar esto:
 Entregable:
 Script de instalación, config de tailwind, QuestionCard.jsx y App.jsx.
 ```
+
+## 🧠 v0.4.0: "The Engine" (Lógica de Sesión)
+
+**Objetivo:** Implementación del "Game Loop" (Inicio -> Jugar -> Resultados) y persistencia local.
+
+```markdown
+🟡 PROMPT: Lógica del Motor de Examen y Persistencia (v0.4.0)
+Rol: Actúa como un Senior React Developer especializado en "State Management" (Gestión de Estado).
+
+Estado Actual:
+Backend: API entrega preguntas.
+Frontend: Tenemos QuestionCard.jsx mostrando una pregunta individual.
+
+Objetivo (Task): Implementar la lógica completa de un "Micro-Simulacro" (10 preguntas) y la pantalla de Resultados.
+
+Instrucciones Paso a Paso:
+
+Paso 1: Custom Hook (useExamEngine.js) Necesito que separemos la lógica de la vista. Crea un hook personalizado src/hooks/useExamEngine.js que maneje:
+- Estados: questions (array), currentIndex (int), score (int), isFinished (bool), loading (bool).
+- Funciones:
+  - startExam(temaId): Llama a la API, mezcla las preguntas (shuffle) y toma solo 10.
+  - submitAnswer(isCorrect): Actualiza el puntaje y avanza al siguiente índice. Si es la última, marca isFinished = true.
+  - resetExam(): Reinicia todo para jugar de nuevo.
+
+Paso 2: Componente de Resultados (ResultsCard.jsx) Crea src/components/ResultsCard.jsx.
+- Debe mostrarse cuando isFinished sea true.
+- Diseño Mobile: Un círculo grande con la nota final (ej: "14/20").
+- Mensaje Dinámico:
+  - Si nota < 10: "Sigue practicando 😐"
+  - Si nota > 15: "¡Eres un genio! 🚀"
+- Persistencia (Clave): Al renderizarse, este componente debe guardar el resultado en el localStorage del navegador bajo la clave guest_history (para que el invitado vea su progreso luego).
+- Botones: "Intentar de nuevo" y "Volver al Inicio".
+
+Paso 3: Integración en App.jsx Actualiza el archivo principal para orquestar todo:
+- Si loading: Muestra un spinner o texto "Cargando...".
+- Si !isFinished: Muestra QuestionCard.
+- Si isFinished: Muestra ResultsCard.
+
+Entregable: Código de useExamEngine.js, ResultsCard.jsx y la actualización de App.jsx. Explícame brevemente cómo funciona el localStorage en este contexto.
+```

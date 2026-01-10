@@ -1,0 +1,1302 @@
+[
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Cuál es la unidad básica de la vida?",
+        "difficulty": "BASICO",
+        "explanation": "La célula es la unidad estructural y funcional de los seres vivos.",
+        "options": [
+            {
+                "text": "Átomo",
+                "is_correct": false
+            },
+            {
+                "text": "Célula",
+                "is_correct": true
+            },
+            {
+                "text": "Tejido",
+                "is_correct": false
+            },
+            {
+                "text": "Órgano",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Dónde se encuentra el ADN en una célula eucariota?",
+        "difficulty": "BASICO",
+        "explanation": "En el núcleo celular.",
+        "options": [
+            {
+                "text": "Mitocondria",
+                "is_correct": false
+            },
+            {
+                "text": "Núcleo",
+                "is_correct": true
+            },
+            {
+                "text": "Citoplasma",
+                "is_correct": false
+            },
+            {
+                "text": "Ribosoma",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Qué órgano bombea sangre al cuerpo?",
+        "difficulty": "BASICO",
+        "explanation": "El corazón actúa como una bomba.",
+        "options": [
+            {
+                "text": "Pulmón",
+                "is_correct": false
+            },
+            {
+                "text": "Corazón",
+                "is_correct": true
+            },
+            {
+                "text": "Hígado",
+                "is_correct": false
+            },
+            {
+                "text": "Riñón",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Ecología",
+        "statement": "¿Qué es un ecosistema?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Interacción entre seres vivos (biótico) y su medio ambiente (abiótico).",
+        "options": [
+            {
+                "text": "Conjunto de plantas",
+                "is_correct": false
+            },
+            {
+                "text": "Comunidad biológica y su medio físico",
+                "is_correct": true
+            },
+            {
+                "text": "Un bosque",
+                "is_correct": false
+            },
+            {
+                "text": "Solo los animales",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Botánica",
+        "statement": "¿Qué proceso usan las plantas para crear su alimento?",
+        "difficulty": "BASICO",
+        "explanation": "La fotosíntesis usa luz solar para convertir CO2 en glucosa.",
+        "options": [
+            {
+                "text": "Respiración",
+                "is_correct": false
+            },
+            {
+                "text": "Fotosíntesis",
+                "is_correct": true
+            },
+            {
+                "text": "Digestión",
+                "is_correct": false
+            },
+            {
+                "text": "Fermentación",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Qué organelo es responsable de la respiración celular?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La mitocondria produce ATP.",
+        "options": [
+            {
+                "text": "Lisosoma",
+                "is_correct": false
+            },
+            {
+                "text": "Mitocondria",
+                "is_correct": true
+            },
+            {
+                "text": "Golgi",
+                "is_correct": false
+            },
+            {
+                "text": "Vacuola",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Quién es considerado el padre de la genética?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Gregor Mendel.",
+        "options": [
+            {
+                "text": "Darwin",
+                "is_correct": false
+            },
+            {
+                "text": "Mendel",
+                "is_correct": true
+            },
+            {
+                "text": "Watson",
+                "is_correct": false
+            },
+            {
+                "text": "Crick",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Evolución",
+        "statement": "¿Quién propuso la teoría de la selección natural?",
+        "difficulty": "BASICO",
+        "explanation": "Charles Darwin.",
+        "options": [
+            {
+                "text": "Lamarck",
+                "is_correct": false
+            },
+            {
+                "text": "Darwin",
+                "is_correct": true
+            },
+            {
+                "text": "Pasteur",
+                "is_correct": false
+            },
+            {
+                "text": "Fleming",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Taxonomía",
+        "statement": "¿Cuál es el reino de los hongos?",
+        "difficulty": "BASICO",
+        "explanation": "Reino Fungi.",
+        "options": [
+            {
+                "text": "Plantae",
+                "is_correct": false
+            },
+            {
+                "text": "Fungi",
+                "is_correct": true
+            },
+            {
+                "text": "Animalia",
+                "is_correct": false
+            },
+            {
+                "text": "Protista",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Qué célula transporta oxígeno en la sangre?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los glóbulos rojos o eritrocitos.",
+        "options": [
+            {
+                "text": "Leucocito",
+                "is_correct": false
+            },
+            {
+                "text": "Eritrocito",
+                "is_correct": true
+            },
+            {
+                "text": "Plaqueta",
+                "is_correct": false
+            },
+            {
+                "text": "Neurona",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Bioquímica",
+        "statement": "¿Cuál es la biomolécula principal fuente de energía?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los glúcidos o carbohidratos.",
+        "options": [
+            {
+                "text": "Lípidos",
+                "is_correct": false
+            },
+            {
+                "text": "Glúcidos",
+                "is_correct": true
+            },
+            {
+                "text": "Proteínas",
+                "is_correct": false
+            },
+            {
+                "text": "Ácidos Nucleicos",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Qué diferencia a la célula vegetal de la animal?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La pared celular y cloroplastos.",
+        "options": [
+            {
+                "text": "Núcleo",
+                "is_correct": false
+            },
+            {
+                "text": "Pared celular",
+                "is_correct": true
+            },
+            {
+                "text": "Membrana",
+                "is_correct": false
+            },
+            {
+                "text": "Citoplasma",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Cuántos cromosomas tiene el ser humano?",
+        "difficulty": "BASICO",
+        "explanation": "46 cromosomas (23 pares).",
+        "options": [
+            {
+                "text": "23",
+                "is_correct": false
+            },
+            {
+                "text": "46",
+                "is_correct": true
+            },
+            {
+                "text": "48",
+                "is_correct": false
+            },
+            {
+                "text": "92",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Ecología",
+        "statement": "¿Qué es la fotosíntesis?",
+        "difficulty": "BASICO",
+        "explanation": "Proceso de crear alimento con luz.",
+        "options": [
+            {
+                "text": "Respirar oxígeno",
+                "is_correct": false
+            },
+            {
+                "text": "Crear glucosa con luz",
+                "is_correct": true
+            },
+            {
+                "text": "Comer insectos",
+                "is_correct": false
+            },
+            {
+                "text": "Absorber agua",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Qué sistema defiende al cuerpo de infecciones?",
+        "difficulty": "BASICO",
+        "explanation": "El sistema inmunológico.",
+        "options": [
+            {
+                "text": "Digestivo",
+                "is_correct": false
+            },
+            {
+                "text": "Inmunológico",
+                "is_correct": true
+            },
+            {
+                "text": "Nervioso",
+                "is_correct": false
+            },
+            {
+                "text": "Óseo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Qué es la mitosis?",
+        "difficulty": "AVANZADO",
+        "explanation": "División celular que genera dos células idénticas.",
+        "options": [
+            {
+                "text": "Muerte celular",
+                "is_correct": false
+            },
+            {
+                "text": "División celular somática",
+                "is_correct": true
+            },
+            {
+                "text": "Fusión celular",
+                "is_correct": false
+            },
+            {
+                "text": "Creación de gametos",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Qué base nitrogenada NO está en el ADN?",
+        "difficulty": "AVANZADO",
+        "explanation": "El Uracilo es exclusivo del ARN.",
+        "options": [
+            {
+                "text": "Adenina",
+                "is_correct": false
+            },
+            {
+                "text": "Uracilo",
+                "is_correct": true
+            },
+            {
+                "text": "Timina",
+                "is_correct": false
+            },
+            {
+                "text": "Guanina",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Botánica",
+        "statement": "¿Qué parte de la planta absorbe agua?",
+        "difficulty": "BASICO",
+        "explanation": "La raíz.",
+        "options": [
+            {
+                "text": "Hoja",
+                "is_correct": false
+            },
+            {
+                "text": "Raíz",
+                "is_correct": true
+            },
+            {
+                "text": "Tallo",
+                "is_correct": false
+            },
+            {
+                "text": "Flor",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Cuál es el hueso más largo del cuerpo humano?",
+        "difficulty": "BASICO",
+        "explanation": "El fémur.",
+        "options": [
+            {
+                "text": "Húmero",
+                "is_correct": false
+            },
+            {
+                "text": "Fémur",
+                "is_correct": true
+            },
+            {
+                "text": "Tibia",
+                "is_correct": false
+            },
+            {
+                "text": "Radio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Ecología",
+        "statement": "¿Qué nivel trófico ocupan los herbívoros?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Consumidores primarios.",
+        "options": [
+            {
+                "text": "Productores",
+                "is_correct": false
+            },
+            {
+                "text": "Consumidores primarios",
+                "is_correct": true
+            },
+            {
+                "text": "Descomponedores",
+                "is_correct": false
+            },
+            {
+                "text": "Consumidores secundarios",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Qué es la ósmosis?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El paso de agua a través de una membrana semipermeable.",
+        "options": [
+            {
+                "text": "Transporte de iones",
+                "is_correct": false
+            },
+            {
+                "text": "Transporte de agua",
+                "is_correct": true
+            },
+            {
+                "text": "Gasto de energía",
+                "is_correct": false
+            },
+            {
+                "text": "Difusión de gases",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Qué determina el sexo del bebé?",
+        "difficulty": "BASICO",
+        "explanation": "El cromosoma sexual aportado por el padre (X o Y).",
+        "options": [
+            {
+                "text": "La madre",
+                "is_correct": false
+            },
+            {
+                "text": "El padre",
+                "is_correct": true
+            },
+            {
+                "text": "El azar",
+                "is_correct": false
+            },
+            {
+                "text": "La temperatura",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Qué órgano produce insulina?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El páncreas.",
+        "options": [
+            {
+                "text": "Hígado",
+                "is_correct": false
+            },
+            {
+                "text": "Páncreas",
+                "is_correct": true
+            },
+            {
+                "text": "Bazo",
+                "is_correct": false
+            },
+            {
+                "text": "Estómago",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Taxonomía",
+        "statement": "¿Cómo se escribe el nombre científico del ser humano?",
+        "difficulty": "BASICO",
+        "explanation": "Homo sapiens.",
+        "options": [
+            {
+                "text": "homo Sapiens",
+                "is_correct": false
+            },
+            {
+                "text": "Homo sapiens",
+                "is_correct": true
+            },
+            {
+                "text": "Humanus",
+                "is_correct": false
+            },
+            {
+                "text": "Sapiens homo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Botánica",
+        "statement": "¿Qué es el xilema?",
+        "difficulty": "AVANZADO",
+        "explanation": "Tejido que transporta savia bruta (agua y sales).",
+        "options": [
+            {
+                "text": "Savia elaborada",
+                "is_correct": false
+            },
+            {
+                "text": "Savia bruta",
+                "is_correct": true
+            },
+            {
+                "text": "Corteza",
+                "is_correct": false
+            },
+            {
+                "text": "Raíz secundaria",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Bioquímica",
+        "statement": "¿Qué vitamina previene el escorbuto?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La vitamina C.",
+        "options": [
+            {
+                "text": "A",
+                "is_correct": false
+            },
+            {
+                "text": "C",
+                "is_correct": true
+            },
+            {
+                "text": "D",
+                "is_correct": false
+            },
+            {
+                "text": "B12",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Qué son los ribosomas?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Organelos encargados de sintetizar proteínas.",
+        "options": [
+            {
+                "text": "Sintetizan lípidos",
+                "is_correct": false
+            },
+            {
+                "text": "Sintetizan proteínas",
+                "is_correct": true
+            },
+            {
+                "text": "Digieren desechos",
+                "is_correct": false
+            },
+            {
+                "text": "Empaquetan proteínas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Evolución",
+        "statement": "¿Qué es un fósil?",
+        "difficulty": "BASICO",
+        "explanation": "Restos o huellas de organismos antiguos.",
+        "options": [
+            {
+                "text": "Una roca rara",
+                "is_correct": false
+            },
+            {
+                "text": "Resto orgánico antiguo",
+                "is_correct": true
+            },
+            {
+                "text": "Un hueso nuevo",
+                "is_correct": false
+            },
+            {
+                "text": "Una pintura rupestre",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Dónde ocurre la fecundación humana?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "En las trompas de Falopio.",
+        "options": [
+            {
+                "text": "Útero",
+                "is_correct": false
+            },
+            {
+                "text": "Trompas de Falopio",
+                "is_correct": true
+            },
+            {
+                "text": "Ovario",
+                "is_correct": false
+            },
+            {
+                "text": "Vagina",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Qué es un alelo?",
+        "difficulty": "AVANZADO",
+        "explanation": "Cada una de las formas alternativas de un gen.",
+        "options": [
+            {
+                "text": "Un cromosoma",
+                "is_correct": false
+            },
+            {
+                "text": "Una variante de un gen",
+                "is_correct": true
+            },
+            {
+                "text": "Una proteína",
+                "is_correct": false
+            },
+            {
+                "text": "Un nucleótido",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Ecología",
+        "statement": "¿Qué es el calentamiento global?",
+        "difficulty": "BASICO",
+        "explanation": "Aumento de la temperatura media terrestre.",
+        "options": [
+            {
+                "text": "Enfriamiento",
+                "is_correct": false
+            },
+            {
+                "text": "Aumento de temperatura",
+                "is_correct": true
+            },
+            {
+                "text": "Lluvia ácida",
+                "is_correct": false
+            },
+            {
+                "text": "Agujero de ozono",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Cuál es la función del núcleo?",
+        "difficulty": "BASICO",
+        "explanation": "Controlar las actividades celulares y contener ADN.",
+        "options": [
+            {
+                "text": "Producir energía",
+                "is_correct": false
+            },
+            {
+                "text": "Controlar la célula",
+                "is_correct": true
+            },
+            {
+                "text": "Almacenar agua",
+                "is_correct": false
+            },
+            {
+                "text": "Crear pared celular",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Cuántos sentidos tiene el ser humano tradicionalmente?",
+        "difficulty": "BASICO",
+        "explanation": "Cinco: vista, oído, olfato, gusto, tacto.",
+        "options": [
+            {
+                "text": "4",
+                "is_correct": false
+            },
+            {
+                "text": "5",
+                "is_correct": true
+            },
+            {
+                "text": "6",
+                "is_correct": false
+            },
+            {
+                "text": "7",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Bioquímica",
+        "statement": "¿Qué son las enzimas?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Catalizadores biológicos (proteínas) que aceleran reacciones.",
+        "options": [
+            {
+                "text": "Grasas",
+                "is_correct": false
+            },
+            {
+                "text": "Catalizadores biológicos",
+                "is_correct": true
+            },
+            {
+                "text": "Azúcares",
+                "is_correct": false
+            },
+            {
+                "text": "Vitaminas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Botánica",
+        "statement": "¿Qué pigmento da color verde a las plantas?",
+        "difficulty": "BASICO",
+        "explanation": "La clorofila.",
+        "options": [
+            {
+                "text": "Caroteno",
+                "is_correct": false
+            },
+            {
+                "text": "Clorofila",
+                "is_correct": true
+            },
+            {
+                "text": "Melanina",
+                "is_correct": false
+            },
+            {
+                "text": "Hemoglobina",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Taxonomía",
+        "statement": "¿A qué clase pertenecen los perros?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Mammalia (Mamíferos).",
+        "options": [
+            {
+                "text": "Reptilia",
+                "is_correct": false
+            },
+            {
+                "text": "Mammalia",
+                "is_correct": true
+            },
+            {
+                "text": "Aves",
+                "is_correct": false
+            },
+            {
+                "text": "Amphibia",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Qué es una mutación?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Un cambio en la secuencia del ADN.",
+        "options": [
+            {
+                "text": "Mejora genética",
+                "is_correct": false
+            },
+            {
+                "text": "Cambio en el ADN",
+                "is_correct": true
+            },
+            {
+                "text": "Enfermedad",
+                "is_correct": false
+            },
+            {
+                "text": "Clonación",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Qué conecta el músculo al hueso?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El tendón.",
+        "options": [
+            {
+                "text": "Ligamento",
+                "is_correct": false
+            },
+            {
+                "text": "Tendón",
+                "is_correct": true
+            },
+            {
+                "text": "Cartílago",
+                "is_correct": false
+            },
+            {
+                "text": "Articulación",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Ecología",
+        "statement": "¿Qué es la biodiversidad?",
+        "difficulty": "BASICO",
+        "explanation": "Variedad de vida en un lugar.",
+        "options": [
+            {
+                "text": "Cantidad de bosques",
+                "is_correct": false
+            },
+            {
+                "text": "Variedad de especies",
+                "is_correct": true
+            },
+            {
+                "text": "Número de animales",
+                "is_correct": false
+            },
+            {
+                "text": "Clima",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Qué son los lisosomas?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Organelos digestivos.",
+        "options": [
+            {
+                "text": "Productores de energía",
+                "is_correct": false
+            },
+            {
+                "text": "Digestores celulares",
+                "is_correct": true
+            },
+            {
+                "text": "Transportadores",
+                "is_correct": false
+            },
+            {
+                "text": "Almacenes",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Bioquímica",
+        "statement": "¿Qué molécula almacena energía a corto plazo?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El ATP (Adenosín Trifosfato).",
+        "options": [
+            {
+                "text": "ADN",
+                "is_correct": false
+            },
+            {
+                "text": "ATP",
+                "is_correct": true
+            },
+            {
+                "text": "ARN",
+                "is_correct": false
+            },
+            {
+                "text": "GTP",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Cuál es el órgano más grande del cuerpo?",
+        "difficulty": "BASICO",
+        "explanation": "La piel.",
+        "options": [
+            {
+                "text": "Hígado",
+                "is_correct": false
+            },
+            {
+                "text": "Piel",
+                "is_correct": true
+            },
+            {
+                "text": "Intestino",
+                "is_correct": false
+            },
+            {
+                "text": "Pulmón",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Qué es un gen?",
+        "difficulty": "BASICO",
+        "explanation": "Segmento de ADN que codifica información.",
+        "options": [
+            {
+                "text": "Toda la célula",
+                "is_correct": false
+            },
+            {
+                "text": "Segmento de ADN",
+                "is_correct": true
+            },
+            {
+                "text": "Un nucleótido",
+                "is_correct": false
+            },
+            {
+                "text": "Una proteína",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Evolución",
+        "statement": "¿Qué es la adaptación?",
+        "difficulty": "BASICO",
+        "explanation": "Rasgo que mejora la supervivencia.",
+        "options": [
+            {
+                "text": "Morir joven",
+                "is_correct": false
+            },
+            {
+                "text": "Rasgo ventajoso",
+                "is_correct": true
+            },
+            {
+                "text": "Cambio de clima",
+                "is_correct": false
+            },
+            {
+                "text": "Extinción",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Célula",
+        "statement": "¿Qué célula no tiene núcleo definido?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La célula procariota (bacterias).",
+        "options": [
+            {
+                "text": "Eucariota",
+                "is_correct": false
+            },
+            {
+                "text": "Procariota",
+                "is_correct": true
+            },
+            {
+                "text": "Animal",
+                "is_correct": false
+            },
+            {
+                "text": "Vegetal",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Sistemas del Cuerpo",
+        "statement": "¿Qué hace el sistema nervioso?",
+        "difficulty": "BASICO",
+        "explanation": "Controla y coordina el cuerpo mediante señales.",
+        "options": [
+            {
+                "text": "Bombea sangre",
+                "is_correct": false
+            },
+            {
+                "text": "Transmite señales",
+                "is_correct": true
+            },
+            {
+                "text": "Digiere comida",
+                "is_correct": false
+            },
+            {
+                "text": "Sostiene músculos",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Botánica",
+        "statement": "¿Qué es un estoma?",
+        "difficulty": "AVANZADO",
+        "explanation": "Poro en las hojas para intercambio gaseoso.",
+        "options": [
+            {
+                "text": "Raíz",
+                "is_correct": false
+            },
+            {
+                "text": "Poro en hoja",
+                "is_correct": true
+            },
+            {
+                "text": "Fruto",
+                "is_correct": false
+            },
+            {
+                "text": "Semilla",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Ecología",
+        "statement": "¿Qué es un depredador?",
+        "difficulty": "BASICO",
+        "explanation": "Animal que caza a otros.",
+        "options": [
+            {
+                "text": "Come plantas",
+                "is_correct": false
+            },
+            {
+                "text": "Caza presas",
+                "is_correct": true
+            },
+            {
+                "text": "Descompone materia",
+                "is_correct": false
+            },
+            {
+                "text": "Produce comida",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Bioquímica",
+        "statement": "¿Qué es el agua?",
+        "difficulty": "BASICO",
+        "explanation": "Solvente universal de la vida.",
+        "options": [
+            {
+                "text": "Soluto",
+                "is_correct": false
+            },
+            {
+                "text": "Solvente universal",
+                "is_correct": true
+            },
+            {
+                "text": "Elemento",
+                "is_correct": false
+            },
+            {
+                "text": "Mezcla",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Biología",
+        "course_code": "bio",
+        "topic_name": "Genética",
+        "statement": "¿Qué es el fenotipo?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La expresión física de los genes (lo que se ve).",
+        "options": [
+            {
+                "text": "Los genes internos",
+                "is_correct": false
+            },
+            {
+                "text": "La apariencia física",
+                "is_correct": true
+            },
+            {
+                "text": "El ADN",
+                "is_correct": false
+            },
+            {
+                "text": "El núcleo",
+                "is_correct": false
+            }
+        ]
+    }
+]

@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import clsx from 'clsx';
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 export default function QuestionCard({ question, onNext }) {
     const [selectedOptionId, setSelectedOptionId] = useState(null);
     const [isAnswered, setIsAnswered] = useState(false);
+
+    const shuffledOptions = useMemo(() => {
+        const opts = [...question.options];
+        for (let i = opts.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [opts[i], opts[j]] = [opts[j], opts[i]];
+        }
+        return opts;
+    }, [question.id, question.options]); // Re-shuffle only if question changes
 
     const handleSelect = (optionId) => {
         if (isAnswered) return;
@@ -68,7 +77,7 @@ export default function QuestionCard({ question, onNext }) {
 
                 {/* 3. Opciones (Thumb Zone) */}
                 <div className="space-y-3">
-                    {question.options.map((option) => (
+                    {shuffledOptions.map((option) => (
                         <button
                             key={option.id}
                             onClick={() => handleSelect(option.id)}
@@ -98,9 +107,12 @@ export default function QuestionCard({ question, onNext }) {
 
                     <button
                         onClick={() => {
+                            const selectedOption = question.options.find(opt => opt.id === selectedOptionId);
+                            const wasCorrect = selectedOption?.is_correct || false;
+
                             setIsAnswered(false);
                             setSelectedOptionId(null);
-                            onNext();
+                            onNext(wasCorrect, selectedOptionId);
                         }}
                         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md shadow-blue-600/20 active:scale-95 transition-all flex items-center justify-center gap-2"
                     >

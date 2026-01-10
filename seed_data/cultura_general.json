@@ -1,0 +1,1172 @@
+[
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Geografía",
+        "statement": "¿Cuál es el río más largo del mundo?",
+        "difficulty": "BASICO",
+        "explanation": "El río Amazonas.",
+        "options": [
+            {
+                "text": "Nilo",
+                "is_correct": false
+            },
+            {
+                "text": "Amazonas",
+                "is_correct": true
+            },
+            {
+                "text": "Yangtsé",
+                "is_correct": false
+            },
+            {
+                "text": "Misisipi",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Actualidad",
+        "statement": "¿Cuál es la moneda oficial del Reino Unido?",
+        "difficulty": "BASICO",
+        "explanation": "La Libra Esterlina.",
+        "options": [
+            {
+                "text": "Euro",
+                "is_correct": false
+            },
+            {
+                "text": "Libra Esterlina",
+                "is_correct": true
+            },
+            {
+                "text": "Dólar",
+                "is_correct": false
+            },
+            {
+                "text": "Franco",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Arte",
+        "statement": "¿Quién pintó 'El Guernica'?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Pablo Picasso.",
+        "options": [
+            {
+                "text": "Dalí",
+                "is_correct": false
+            },
+            {
+                "text": "Picasso",
+                "is_correct": true
+            },
+            {
+                "text": "Van Gogh",
+                "is_correct": false
+            },
+            {
+                "text": "Goya",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Literatura",
+        "statement": "¿Quién ganó el Premio Nobel de Literatura en 2010 (Peruano)?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Mario Vargas Llosa.",
+        "options": [
+            {
+                "text": "Gabriel García Márquez",
+                "is_correct": false
+            },
+            {
+                "text": "Mario Vargas Llosa",
+                "is_correct": true
+            },
+            {
+                "text": "Pablo Neruda",
+                "is_correct": false
+            },
+            {
+                "text": "Octavio Paz",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Ciencia",
+        "statement": "¿Cuál es el planeta rojo?",
+        "difficulty": "BASICO",
+        "explanation": "Marte.",
+        "options": [
+            {
+                "text": "Júpiter",
+                "is_correct": false
+            },
+            {
+                "text": "Marte",
+                "is_correct": true
+            },
+            {
+                "text": "Venus",
+                "is_correct": false
+            },
+            {
+                "text": "Saturno",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Historia",
+        "statement": "¿Quién fue el primer presidente de EEUU?",
+        "difficulty": "BASICO",
+        "explanation": "George Washington.",
+        "options": [
+            {
+                "text": "Lincoln",
+                "is_correct": false
+            },
+            {
+                "text": "Washington",
+                "is_correct": true
+            },
+            {
+                "text": "Jefferson",
+                "is_correct": false
+            },
+            {
+                "text": "Kennedy",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Geografía",
+        "statement": "¿Capital de Australia?",
+        "difficulty": "AVANZADO",
+        "explanation": "Canberra (no Sídney).",
+        "options": [
+            {
+                "text": "Sídney",
+                "is_correct": false
+            },
+            {
+                "text": "Canberra",
+                "is_correct": true
+            },
+            {
+                "text": "Melbourne",
+                "is_correct": false
+            },
+            {
+                "text": "Perth",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Deportes",
+        "statement": "¿Quién es conocido como 'O Rei' en fútbol?",
+        "difficulty": "BASICO",
+        "explanation": "Pelé.",
+        "options": [
+            {
+                "text": "Maradona",
+                "is_correct": false
+            },
+            {
+                "text": "Pelé",
+                "is_correct": true
+            },
+            {
+                "text": "Messi",
+                "is_correct": false
+            },
+            {
+                "text": "Ronaldo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Música",
+        "statement": "¿Quién es el 'Rey del Pop'?",
+        "difficulty": "BASICO",
+        "explanation": "Michael Jackson.",
+        "options": [
+            {
+                "text": "Elvis Presley",
+                "is_correct": false
+            },
+            {
+                "text": "Michael Jackson",
+                "is_correct": true
+            },
+            {
+                "text": "Prince",
+                "is_correct": false
+            },
+            {
+                "text": "Freddie Mercury",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Cine",
+        "statement": "¿Qué película ganó más Oscars (junto a Titanic y Ben-Hur)?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El Señor de los Anillos: El Retorno del Rey.",
+        "options": [
+            {
+                "text": "Avatar",
+                "is_correct": false
+            },
+            {
+                "text": "El Retorno del Rey",
+                "is_correct": true
+            },
+            {
+                "text": "La La Land",
+                "is_correct": false
+            },
+            {
+                "text": "El Padrino",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Historia",
+        "statement": "¿En qué país comenzó la Revolución Industrial?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Inglaterrra.",
+        "options": [
+            {
+                "text": "Francia",
+                "is_correct": false
+            },
+            {
+                "text": "Inglaterra",
+                "is_correct": true
+            },
+            {
+                "text": "Alemania",
+                "is_correct": false
+            },
+            {
+                "text": "EEUU",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Geografía",
+        "statement": "¿Cuál es el país más grande del mundo?",
+        "difficulty": "BASICO",
+        "explanation": "Rusia.",
+        "options": [
+            {
+                "text": "China",
+                "is_correct": false
+            },
+            {
+                "text": "Rusia",
+                "is_correct": true
+            },
+            {
+                "text": "Canadá",
+                "is_correct": false
+            },
+            {
+                "text": "EEUU",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Ciencia",
+        "statement": "¿Quién formuló la teoría de la relatividad?",
+        "difficulty": "BASICO",
+        "explanation": "Albert Einstein.",
+        "options": [
+            {
+                "text": "Newton",
+                "is_correct": false
+            },
+            {
+                "text": "Einstein",
+                "is_correct": true
+            },
+            {
+                "text": "Tesla",
+                "is_correct": false
+            },
+            {
+                "text": "Hawking",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Literatura",
+        "statement": "Autor de 'Hamlet'",
+        "difficulty": "BASICO",
+        "explanation": "Shakespeare.",
+        "options": [
+            {
+                "text": "Cervantes",
+                "is_correct": false
+            },
+            {
+                "text": "Shakespeare",
+                "is_correct": true
+            },
+            {
+                "text": "Goethe",
+                "is_correct": false
+            },
+            {
+                "text": "Dante",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Mitología",
+        "statement": "¿Quién es el dios del trueno en la mitología nórdica?",
+        "difficulty": "BASICO",
+        "explanation": "Thor.",
+        "options": [
+            {
+                "text": "Odín",
+                "is_correct": false
+            },
+            {
+                "text": "Thor",
+                "is_correct": true
+            },
+            {
+                "text": "Loki",
+                "is_correct": false
+            },
+            {
+                "text": "Freya",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Geografía",
+        "statement": "¿En qué continente está Egipto?",
+        "difficulty": "BASICO",
+        "explanation": "África.",
+        "options": [
+            {
+                "text": "Asia",
+                "is_correct": false
+            },
+            {
+                "text": "África",
+                "is_correct": true
+            },
+            {
+                "text": "Europa",
+                "is_correct": false
+            },
+            {
+                "text": "Oceanía",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Arte",
+        "statement": "¿Autor de 'La noche estrellada'?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Vincent van Gogh.",
+        "options": [
+            {
+                "text": "Monet",
+                "is_correct": false
+            },
+            {
+                "text": "Van Gogh",
+                "is_correct": true
+            },
+            {
+                "text": "Da Vinci",
+                "is_correct": false
+            },
+            {
+                "text": "Rembrandt",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Ciencia",
+        "statement": "¿Símbolo químico del agua?",
+        "difficulty": "BASICO",
+        "explanation": "H2O.",
+        "options": [
+            {
+                "text": "CO2",
+                "is_correct": false
+            },
+            {
+                "text": "H2O",
+                "is_correct": true
+            },
+            {
+                "text": "O2",
+                "is_correct": false
+            },
+            {
+                "text": "H2",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Historia",
+        "statement": "¿En qué año cayó el Muro de Berlín?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1989.",
+        "options": [
+            {
+                "text": "1945",
+                "is_correct": false
+            },
+            {
+                "text": "1989",
+                "is_correct": true
+            },
+            {
+                "text": "1991",
+                "is_correct": false
+            },
+            {
+                "text": "1961",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Deportes",
+        "statement": "¿Dónde fueron los JJ.OO. de 2016?",
+        "difficulty": "BASICO",
+        "explanation": "Río de Janeiro.",
+        "options": [
+            {
+                "text": "Londres",
+                "is_correct": false
+            },
+            {
+                "text": "Río",
+                "is_correct": true
+            },
+            {
+                "text": "Tokio",
+                "is_correct": false
+            },
+            {
+                "text": "Pekín",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Tecnología",
+        "statement": "¿Quién fundó Microsoft?",
+        "difficulty": "BASICO",
+        "explanation": "Bill Gates (y Paul Allen).",
+        "options": [
+            {
+                "text": "Steve Jobs",
+                "is_correct": false
+            },
+            {
+                "text": "Bill Gates",
+                "is_correct": true
+            },
+            {
+                "text": "Mark Zuckerberg",
+                "is_correct": false
+            },
+            {
+                "text": "Elon Musk",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Religión",
+        "statement": "¿Cuál es el libro sagrado del Islam?",
+        "difficulty": "BASICO",
+        "explanation": "El Corán.",
+        "options": [
+            {
+                "text": "Biblia",
+                "is_correct": false
+            },
+            {
+                "text": "Corán",
+                "is_correct": true
+            },
+            {
+                "text": "Torá",
+                "is_correct": false
+            },
+            {
+                "text": "Vedas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Geografía",
+        "statement": "¿Cuál es el océano más grande?",
+        "difficulty": "BASICO",
+        "explanation": "El Pacífico.",
+        "options": [
+            {
+                "text": "Atlántico",
+                "is_correct": false
+            },
+            {
+                "text": "Pacífico",
+                "is_correct": true
+            },
+            {
+                "text": "Índico",
+                "is_correct": false
+            },
+            {
+                "text": "Ártico",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Cine",
+        "statement": "¿Quién dirige 'Jurassic Park'?",
+        "difficulty": "BASICO",
+        "explanation": "Steven Spielberg.",
+        "options": [
+            {
+                "text": "Lucas",
+                "is_correct": false
+            },
+            {
+                "text": "Spielberg",
+                "is_correct": true
+            },
+            {
+                "text": "Cameron",
+                "is_correct": false
+            },
+            {
+                "text": "Nolan",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Animales",
+        "statement": "¿Cuál es el animal terrestre más rápido?",
+        "difficulty": "BASICO",
+        "explanation": "Guepardo.",
+        "options": [
+            {
+                "text": "León",
+                "is_correct": false
+            },
+            {
+                "text": "Guepardo",
+                "is_correct": true
+            },
+            {
+                "text": "Gacela",
+                "is_correct": false
+            },
+            {
+                "text": "Tigre",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Cuerpo Humano",
+        "statement": "¿Cuántos huesos tiene el cuerpo humano adulto?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "206.",
+        "options": [
+            {
+                "text": "100",
+                "is_correct": false
+            },
+            {
+                "text": "206",
+                "is_correct": true
+            },
+            {
+                "text": "300",
+                "is_correct": false
+            },
+            {
+                "text": "500",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Idioma",
+        "statement": "¿Cuál es el idioma más hablado del mundo (nativos)?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Chino Mandarín.",
+        "options": [
+            {
+                "text": "Inglés",
+                "is_correct": false
+            },
+            {
+                "text": "Chino Mandarín",
+                "is_correct": true
+            },
+            {
+                "text": "Español",
+                "is_correct": false
+            },
+            {
+                "text": "Hindi",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Astronomía",
+        "statement": "¿Qué es la Vía Láctea?",
+        "difficulty": "BASICO",
+        "explanation": "Nuestra galaxia.",
+        "options": [
+            {
+                "text": "Un planeta",
+                "is_correct": false
+            },
+            {
+                "text": "Una galaxia",
+                "is_correct": true
+            },
+            {
+                "text": "Una estrella",
+                "is_correct": false
+            },
+            {
+                "text": "Un cometa",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Política",
+        "statement": "¿Dónde está la sede de la ONU?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Nueva York.",
+        "options": [
+            {
+                "text": "Ginebra",
+                "is_correct": false
+            },
+            {
+                "text": "Nueva York",
+                "is_correct": true
+            },
+            {
+                "text": "París",
+                "is_correct": false
+            },
+            {
+                "text": "Washington",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Gastronomía",
+        "statement": "¿De qué país es originario el sushi?",
+        "difficulty": "BASICO",
+        "explanation": "Japón.",
+        "options": [
+            {
+                "text": "China",
+                "is_correct": false
+            },
+            {
+                "text": "Japón",
+                "is_correct": true
+            },
+            {
+                "text": "Corea",
+                "is_correct": false
+            },
+            {
+                "text": "Tailandia",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Música",
+        "statement": "¿Quién compuso la Novena Sinfonía?",
+        "difficulty": "BASICO",
+        "explanation": "Beethoven.",
+        "options": [
+            {
+                "text": "Mozart",
+                "is_correct": false
+            },
+            {
+                "text": "Beethoven",
+                "is_correct": true
+            },
+            {
+                "text": "Bach",
+                "is_correct": false
+            },
+            {
+                "text": "Chopin",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Literatura",
+        "statement": "Personaje principal de 'Don Quijote'",
+        "difficulty": "BASICO",
+        "explanation": "Alonso Quijano (Don Quijote).",
+        "options": [
+            {
+                "text": "Sancho Panza",
+                "is_correct": false
+            },
+            {
+                "text": "Don Quijote",
+                "is_correct": true
+            },
+            {
+                "text": "Dulcinea",
+                "is_correct": false
+            },
+            {
+                "text": "Rocinante",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Filosofía",
+        "statement": "'Sólo sé que no sé nada' lo dijo...",
+        "difficulty": "BASICO",
+        "explanation": "Sócrates.",
+        "options": [
+            {
+                "text": "Platón",
+                "is_correct": false
+            },
+            {
+                "text": "Sócrates",
+                "is_correct": true
+            },
+            {
+                "text": "Aristóteles",
+                "is_correct": false
+            },
+            {
+                "text": "Descartes",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Juegos",
+        "statement": "¿Cuántas casillas tiene un tablero de ajedrez?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "64 (8x8).",
+        "options": [
+            {
+                "text": "50",
+                "is_correct": false
+            },
+            {
+                "text": "64",
+                "is_correct": true
+            },
+            {
+                "text": "100",
+                "is_correct": false
+            },
+            {
+                "text": "32",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Historia",
+        "statement": "¿Qué civilización construyó Machu Picchu?",
+        "difficulty": "BASICO",
+        "explanation": "Los Incas.",
+        "options": [
+            {
+                "text": "Mayas",
+                "is_correct": false
+            },
+            {
+                "text": "Incas",
+                "is_correct": true
+            },
+            {
+                "text": "Aztecas",
+                "is_correct": false
+            },
+            {
+                "text": "Olmecas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Cómic",
+        "statement": "¿Identidad secreta de Batman?",
+        "difficulty": "BASICO",
+        "explanation": "Bruce Wayne.",
+        "options": [
+            {
+                "text": "Clark Kent",
+                "is_correct": false
+            },
+            {
+                "text": "Bruce Wayne",
+                "is_correct": true
+            },
+            {
+                "text": "Peter Parker",
+                "is_correct": false
+            },
+            {
+                "text": "Tony Stark",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Química",
+        "statement": "¿Número atómico del Carbono?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "6.",
+        "options": [
+            {
+                "text": "12",
+                "is_correct": false
+            },
+            {
+                "text": "6",
+                "is_correct": true
+            },
+            {
+                "text": "8",
+                "is_correct": false
+            },
+            {
+                "text": "14",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Geografía",
+        "statement": "¿Capital de Canadá?",
+        "difficulty": "AVANZADO",
+        "explanation": "Ottawa (no Toronto).",
+        "options": [
+            {
+                "text": "Toronto",
+                "is_correct": false
+            },
+            {
+                "text": "Ottawa",
+                "is_correct": true
+            },
+            {
+                "text": "Montreal",
+                "is_correct": false
+            },
+            {
+                "text": "Vancouver",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Redes Sociales",
+        "statement": "¿Qué red social usa un pájaro azul (históricamente)?",
+        "difficulty": "BASICO",
+        "explanation": "Twitter.",
+        "options": [
+            {
+                "text": "Facebook",
+                "is_correct": false
+            },
+            {
+                "text": "Twitter",
+                "is_correct": true
+            },
+            {
+                "text": "Instagram",
+                "is_correct": false
+            },
+            {
+                "text": "Snapchat",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Historia",
+        "statement": "¿Quién fue Juana de Arco?",
+        "difficulty": "BASICO",
+        "explanation": "Heroína francesa.",
+        "options": [
+            {
+                "text": "Reina de Inglaterra",
+                "is_correct": false
+            },
+            {
+                "text": "Heroína francesa",
+                "is_correct": true
+            },
+            {
+                "text": "Escritora",
+                "is_correct": false
+            },
+            {
+                "text": "Científica",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Deportes",
+        "statement": "¿En qué deporte se usa una raqueta?",
+        "difficulty": "BASICO",
+        "explanation": "Tenis.",
+        "options": [
+            {
+                "text": "Fútbol",
+                "is_correct": false
+            },
+            {
+                "text": "Tenis",
+                "is_correct": true
+            },
+            {
+                "text": "Baloncesto",
+                "is_correct": false
+            },
+            {
+                "text": "Natación",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Actualidad",
+        "statement": "¿Presidente de Rusia (2020s)?",
+        "difficulty": "BASICO",
+        "explanation": "Vladimir Putin.",
+        "options": [
+            {
+                "text": "Gorbachov",
+                "is_correct": false
+            },
+            {
+                "text": "Putin",
+                "is_correct": true
+            },
+            {
+                "text": "Yeltsin",
+                "is_correct": false
+            },
+            {
+                "text": "Medvedev",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Cine",
+        "statement": "¿Qué es 'Pixar'?",
+        "difficulty": "BASICO",
+        "explanation": "Estudio de animación.",
+        "options": [
+            {
+                "text": "Marca de cámaras",
+                "is_correct": false
+            },
+            {
+                "text": "Estudio de animación",
+                "is_correct": true
+            },
+            {
+                "text": "Cine de terror",
+                "is_correct": false
+            },
+            {
+                "text": "Director famoso",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Literatura",
+        "statement": "¿Quién escribió 'Harry Potter'?",
+        "difficulty": "BASICO",
+        "explanation": "J.K. Rowling.",
+        "options": [
+            {
+                "text": "Tolkien",
+                "is_correct": false
+            },
+            {
+                "text": "Rowling",
+                "is_correct": true
+            },
+            {
+                "text": "Martín",
+                "is_correct": false
+            },
+            {
+                "text": "King",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Cultura General",
+        "course_code": "cult-gen",
+        "topic_name": "Biología",
+        "statement": "¿Qué comen los pandas principalmente?",
+        "difficulty": "BASICO",
+        "explanation": "Bambú.",
+        "options": [
+            {
+                "text": "Carne",
+                "is_correct": false
+            },
+            {
+                "text": "Bambú",
+                "is_correct": true
+            },
+            {
+                "text": "Peces",
+                "is_correct": false
+            },
+            {
+                "text": "Frutas",
+                "is_correct": false
+            }
+        ]
+    }
+]

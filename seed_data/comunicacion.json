@@ -1,0 +1,1302 @@
+[
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Cuál es el núcleo del sujeto en la oración 'Los niños juegan en el parque'?",
+        "difficulty": "BASICO",
+        "explanation": "El núcleo del sujeto es el sustantivo principal, en este caso 'niños'.",
+        "options": [
+            {
+                "text": "Los",
+                "is_correct": false
+            },
+            {
+                "text": "juegan",
+                "is_correct": false
+            },
+            {
+                "text": "niños",
+                "is_correct": true
+            },
+            {
+                "text": "parque",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Quién escribió 'Don Quijote de la Mancha'?",
+        "difficulty": "BASICO",
+        "explanation": "Miguel de Cervantes Saavedra.",
+        "options": [
+            {
+                "text": "Lope de Vega",
+                "is_correct": false
+            },
+            {
+                "text": "Miguel de Cervantes",
+                "is_correct": true
+            },
+            {
+                "text": "Garcilaso de la Vega",
+                "is_correct": false
+            },
+            {
+                "text": "Calderón de la Barca",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Qué palabra está escrita correctamente?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "'Decisión' se escribe con c y s.",
+        "options": [
+            {
+                "text": "Decición",
+                "is_correct": false
+            },
+            {
+                "text": "Desición",
+                "is_correct": false
+            },
+            {
+                "text": "Decisión",
+                "is_correct": true
+            },
+            {
+                "text": "Desisión",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Semántica",
+        "statement": "¿Cuál es el sinónimo de 'Efímero'?",
+        "difficulty": "AVANZADO",
+        "explanation": "Efímero significa pasajero o de corta duración.",
+        "options": [
+            {
+                "text": "Eterno",
+                "is_correct": false
+            },
+            {
+                "text": "Pasajero",
+                "is_correct": true
+            },
+            {
+                "text": "Duro",
+                "is_correct": false
+            },
+            {
+                "text": "Antiguo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Comunicación",
+        "statement": "¿Qué elemento de la comunicación es quien recibe el mensaje?",
+        "difficulty": "BASICO",
+        "explanation": "El receptor es quien decodifica el mensaje.",
+        "options": [
+            {
+                "text": "Emisor",
+                "is_correct": false
+            },
+            {
+                "text": "Canal",
+                "is_correct": false
+            },
+            {
+                "text": "Receptor",
+                "is_correct": true
+            },
+            {
+                "text": "Código",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Qué categoría gramatical modifica al sustantivo?",
+        "difficulty": "BASICO",
+        "explanation": "El adjetivo califica o determina al sustantivo.",
+        "options": [
+            {
+                "text": "Verbo",
+                "is_correct": false
+            },
+            {
+                "text": "Adverbio",
+                "is_correct": false
+            },
+            {
+                "text": "Adjetivo",
+                "is_correct": true
+            },
+            {
+                "text": "Pronombre",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿A qué género literario pertenece 'Romeo y Julieta'?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Es una obra dramática (teatro).",
+        "options": [
+            {
+                "text": "Narrativo",
+                "is_correct": false
+            },
+            {
+                "text": "Lírico",
+                "is_correct": false
+            },
+            {
+                "text": "Dramático",
+                "is_correct": true
+            },
+            {
+                "text": "Épico",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Cuál de estas palabras es esdrújula?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Música lleva la mayor fuerza de voz en la antepenúltima sílaba.",
+        "options": [
+            {
+                "text": "Corazón",
+                "is_correct": false
+            },
+            {
+                "text": "Árbol",
+                "is_correct": false
+            },
+            {
+                "text": "Música",
+                "is_correct": true
+            },
+            {
+                "text": "Papel",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Qué es el verbo en una oración?",
+        "difficulty": "BASICO",
+        "explanation": "Es la palabra que indica acción, estado o proceso.",
+        "options": [
+            {
+                "text": "Quien realiza la acción",
+                "is_correct": false
+            },
+            {
+                "text": "La acción misma",
+                "is_correct": true
+            },
+            {
+                "text": "Una cualidad",
+                "is_correct": false
+            },
+            {
+                "text": "Un nexo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Comunicación",
+        "statement": "¿Qué función del lenguaje busca convencer al receptor?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La función apelativa o conativa busca influir en el oyente.",
+        "options": [
+            {
+                "text": "Referencial",
+                "is_correct": false
+            },
+            {
+                "text": "Apelativa",
+                "is_correct": true
+            },
+            {
+                "text": "Emotiva",
+                "is_correct": false
+            },
+            {
+                "text": "Poética",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Quién es el autor de 'Cien años de soledad'?",
+        "difficulty": "BASICO",
+        "explanation": "Gabriel García Márquez, Nobel colombiano.",
+        "options": [
+            {
+                "text": "Mario Vargas Llosa",
+                "is_correct": false
+            },
+            {
+                "text": "Gabriel García Márquez",
+                "is_correct": true
+            },
+            {
+                "text": "Julio Cortázar",
+                "is_correct": false
+            },
+            {
+                "text": "Jorge Luis Borges",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Cuándo se usa la mayúscula?",
+        "difficulty": "BASICO",
+        "explanation": "Al inicio de una oración y en nombres propios.",
+        "options": [
+            {
+                "text": "Siempre después de coma",
+                "is_correct": false
+            },
+            {
+                "text": "En nombres propios",
+                "is_correct": true
+            },
+            {
+                "text": "En todos los sustantivos",
+                "is_correct": false
+            },
+            {
+                "text": "Nunca en medio de frase",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Cuál es un pronombre personal de primera persona?",
+        "difficulty": "BASICO",
+        "explanation": "Yo (singular) o Nosotros (plural).",
+        "options": [
+            {
+                "text": "Tú",
+                "is_correct": false
+            },
+            {
+                "text": "Él",
+                "is_correct": false
+            },
+            {
+                "text": "Nosotros",
+                "is_correct": true
+            },
+            {
+                "text": "Ellos",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Semántica",
+        "statement": "¿Qué es la polisemia?",
+        "difficulty": "AVANZADO",
+        "explanation": "Cuando una palabra tiene múltiples significados.",
+        "options": [
+            {
+                "text": "Un solo significado",
+                "is_correct": false
+            },
+            {
+                "text": "Múltiples significados",
+                "is_correct": true
+            },
+            {
+                "text": "Palabras opuestas",
+                "is_correct": false
+            },
+            {
+                "text": "Palabras que suenan igual",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Qué figura literaria consiste en exagerar la realidad?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La hipérbole es la exageración deliberada.",
+        "options": [
+            {
+                "text": "Metáfora",
+                "is_correct": false
+            },
+            {
+                "text": "Hipérbole",
+                "is_correct": true
+            },
+            {
+                "text": "Símil",
+                "is_correct": false
+            },
+            {
+                "text": "Anáfora",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿En 'Juan come manzanas', qué función cumple 'manzanas'?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Es el Objeto Directo (¿Qué come Juan? Manzanas).",
+        "options": [
+            {
+                "text": "Sujeto",
+                "is_correct": false
+            },
+            {
+                "text": "Objeto Directo",
+                "is_correct": true
+            },
+            {
+                "text": "Objeto Indirecto",
+                "is_correct": false
+            },
+            {
+                "text": "Circunstancial",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Qué palabra lleva tilde diacrítica?",
+        "difficulty": "AVANZADO",
+        "explanation": "'Tú' (pronombre) lleva tilde para diferenciarse de 'tu' (posesivo).",
+        "options": [
+            {
+                "text": "Fui",
+                "is_correct": false
+            },
+            {
+                "text": "Tú",
+                "is_correct": true
+            },
+            {
+                "text": "Ti",
+                "is_correct": false
+            },
+            {
+                "text": "Fe",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Comunicación",
+        "statement": "¿Qué es el canal en la comunicación?",
+        "difficulty": "BASICO",
+        "explanation": "El medio físico por donde viaja el mensaje.",
+        "options": [
+            {
+                "text": "El idioma",
+                "is_correct": false
+            },
+            {
+                "text": "El medio físico",
+                "is_correct": true
+            },
+            {
+                "text": "El entorno",
+                "is_correct": false
+            },
+            {
+                "text": "La intención",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Quién escribió 'La Divina Comedia'?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Dante Alighieri.",
+        "options": [
+            {
+                "text": "Petrarca",
+                "is_correct": false
+            },
+            {
+                "text": "Dante Alighieri",
+                "is_correct": true
+            },
+            {
+                "text": "Bocaccio",
+                "is_correct": false
+            },
+            {
+                "text": "Virgilio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Qué tipo de palabra es 'rápidamente'?",
+        "difficulty": "BASICO",
+        "explanation": "Es un adverbio de modo.",
+        "options": [
+            {
+                "text": "Verbo",
+                "is_correct": false
+            },
+            {
+                "text": "Adverbio",
+                "is_correct": true
+            },
+            {
+                "text": "Sustantivo",
+                "is_correct": false
+            },
+            {
+                "text": "Preposición",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "El plural de 'lápiz' es:",
+        "difficulty": "BASICO",
+        "explanation": "Las palabras terminadas en z cambian a c en plural.",
+        "options": [
+            {
+                "text": "Lápizes",
+                "is_correct": false
+            },
+            {
+                "text": "Lápices",
+                "is_correct": true
+            },
+            {
+                "text": "Lapices",
+                "is_correct": false
+            },
+            {
+                "text": "Lápises",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Semántica",
+        "statement": "¿Qué par de palabras son antónimas?",
+        "difficulty": "BASICO",
+        "explanation": "Blanco y Negro son opuestos.",
+        "options": [
+            {
+                "text": "Coche - Auto",
+                "is_correct": false
+            },
+            {
+                "text": "Blanco - Negro",
+                "is_correct": true
+            },
+            {
+                "text": "Vela - Barco",
+                "is_correct": false
+            },
+            {
+                "text": "Sol - Luna",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Qué es un verso?",
+        "difficulty": "BASICO",
+        "explanation": "Cada una de las líneas que forman un poema.",
+        "options": [
+            {
+                "text": "Un conjunto de oraciones",
+                "is_correct": false
+            },
+            {
+                "text": "Cada línea de un poema",
+                "is_correct": true
+            },
+            {
+                "text": "Un párrafo",
+                "is_correct": false
+            },
+            {
+                "text": "Un capítulo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Cuál es una preposición?",
+        "difficulty": "BASICO",
+        "explanation": "De, para, por, con, etc.",
+        "options": [
+            {
+                "text": "El",
+                "is_correct": false
+            },
+            {
+                "text": "De",
+                "is_correct": true
+            },
+            {
+                "text": "Yo",
+                "is_correct": false
+            },
+            {
+                "text": "Cantar",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Comunicación",
+        "statement": "¿Qué es el código?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El sistema de signos usado (ej: idioma español).",
+        "options": [
+            {
+                "text": "El mensaje",
+                "is_correct": false
+            },
+            {
+                "text": "El sistema de signos",
+                "is_correct": true
+            },
+            {
+                "text": "El papel",
+                "is_correct": false
+            },
+            {
+                "text": "La voz",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Qué obra narra la cólera de Aquiles?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La Ilíada de Homero.",
+        "options": [
+            {
+                "text": "La Odisea",
+                "is_correct": false
+            },
+            {
+                "text": "La Ilíada",
+                "is_correct": true
+            },
+            {
+                "text": "La Eneida",
+                "is_correct": false
+            },
+            {
+                "text": "Edipo Rey",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Qué palabra es aguda?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Café lleva la fuerza de voz en la última sílaba.",
+        "options": [
+            {
+                "text": "Lápiz",
+                "is_correct": false
+            },
+            {
+                "text": "Café",
+                "is_correct": true
+            },
+            {
+                "text": "Mesa",
+                "is_correct": false
+            },
+            {
+                "text": "Teléfono",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Qué modo verbal expresa duda o deseo?",
+        "difficulty": "AVANZADO",
+        "explanation": "El modo Subjuntivo.",
+        "options": [
+            {
+                "text": "Indicativo",
+                "is_correct": false
+            },
+            {
+                "text": "Subjuntivo",
+                "is_correct": true
+            },
+            {
+                "text": "Imperativo",
+                "is_correct": false
+            },
+            {
+                "text": "Infinitivo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Semántica",
+        "statement": "¿Qué significa la palabra 'Autodidacta'?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Persona que se instruye a sí misma.",
+        "options": [
+            {
+                "text": "Que enseña autos",
+                "is_correct": false
+            },
+            {
+                "text": "Que aprende por sí mismo",
+                "is_correct": true
+            },
+            {
+                "text": "Que va a la universidad",
+                "is_correct": false
+            },
+            {
+                "text": "Que no sabe nada",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿A qué especie lírica pertenece un poema de lamento?",
+        "difficulty": "AVANZADO",
+        "explanation": "La elegía expresa dolor o lamento.",
+        "options": [
+            {
+                "text": "Oda",
+                "is_correct": false
+            },
+            {
+                "text": "Elegía",
+                "is_correct": true
+            },
+            {
+                "text": "Himno",
+                "is_correct": false
+            },
+            {
+                "text": "Égloga",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Qué es un diptongo?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Unión de dos vocales en una misma sílaba.",
+        "options": [
+            {
+                "text": "Separación de vocales",
+                "is_correct": false
+            },
+            {
+                "text": "Unión de dos vocales",
+                "is_correct": true
+            },
+            {
+                "text": "Tres vocales juntas",
+                "is_correct": false
+            },
+            {
+                "text": "Dos consonantes juntas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Cuál es correcta?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Exuberante va con x y sin h intercalada.",
+        "options": [
+            {
+                "text": "Exhuberante",
+                "is_correct": false
+            },
+            {
+                "text": "Exuberante",
+                "is_correct": true
+            },
+            {
+                "text": "Esuberante",
+                "is_correct": false
+            },
+            {
+                "text": "Exsuverante",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Comunicación",
+        "statement": "¿Qué es el ruido en comunicación?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Cualquier interferencia que dificulta el mensaje.",
+        "options": [
+            {
+                "text": "Sonido fuerte",
+                "is_correct": false
+            },
+            {
+                "text": "Interferencia",
+                "is_correct": true
+            },
+            {
+                "text": "Silencio",
+                "is_correct": false
+            },
+            {
+                "text": "Gritos",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "El 'Mío Cid' es un cantar de...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Cantar de Gesta (hazañas).",
+        "options": [
+            {
+                "text": "Amor",
+                "is_correct": false
+            },
+            {
+                "text": "Gesta",
+                "is_correct": true
+            },
+            {
+                "text": "Cuna",
+                "is_correct": false
+            },
+            {
+                "text": "Muerte",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Qué pronombre es 'Me' en 'Me duele'?",
+        "difficulty": "AVANZADO",
+        "explanation": "Es un pronombre átono.",
+        "options": [
+            {
+                "text": "Tónico",
+                "is_correct": false
+            },
+            {
+                "text": "Átono",
+                "is_correct": true
+            },
+            {
+                "text": "Posesivo",
+                "is_correct": false
+            },
+            {
+                "text": "Demostrativo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Semántica",
+        "statement": "¿Qué son palabras homófonas?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Suenan igual pero se escriben diferente (Hola/Ola).",
+        "options": [
+            {
+                "text": "Mismo significado",
+                "is_correct": false
+            },
+            {
+                "text": "Suenan igual, escriben distinto",
+                "is_correct": true
+            },
+            {
+                "text": "Se escriben igual",
+                "is_correct": false
+            },
+            {
+                "text": "Son opuestas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Qué movimiento literario exalta los sentimientos sobre la razón?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El Romanticismo.",
+        "options": [
+            {
+                "text": "Realismo",
+                "is_correct": false
+            },
+            {
+                "text": "Romanticismo",
+                "is_correct": true
+            },
+            {
+                "text": "Clasicismo",
+                "is_correct": false
+            },
+            {
+                "text": "Ilustración",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Cuándo se usa 'ha' con h?",
+        "difficulty": "BASICO",
+        "explanation": "Cuando es del verbo haber (ha comido).",
+        "options": [
+            {
+                "text": "Preposición",
+                "is_correct": false
+            },
+            {
+                "text": "Verbo haber",
+                "is_correct": true
+            },
+            {
+                "text": "Interjección",
+                "is_correct": false
+            },
+            {
+                "text": "Nunca",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Cuál es una oración compuesta?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La que tiene más de un verbo conjugado.",
+        "options": [
+            {
+                "text": "Juan corre.",
+                "is_correct": false
+            },
+            {
+                "text": "Juan corre y María salta.",
+                "is_correct": true
+            },
+            {
+                "text": "La casa roja.",
+                "is_correct": false
+            },
+            {
+                "text": "Ven aquí.",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "Autor de 'Crónica de una muerte anunciada'",
+        "difficulty": "BASICO",
+        "explanation": "Gabriel García Márquez.",
+        "options": [
+            {
+                "text": "Borges",
+                "is_correct": false
+            },
+            {
+                "text": "García Márquez",
+                "is_correct": true
+            },
+            {
+                "text": "Sabato",
+                "is_correct": false
+            },
+            {
+                "text": "Allende",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Semántica",
+        "statement": "¿Qué es un eufemismo?",
+        "difficulty": "AVANZADO",
+        "explanation": "Palabra suave para sustituir una malsonante o tabú.",
+        "options": [
+            {
+                "text": "Insulto",
+                "is_correct": false
+            },
+            {
+                "text": "Expresión suave",
+                "is_correct": true
+            },
+            {
+                "text": "Mentira",
+                "is_correct": false
+            },
+            {
+                "text": "Exageración",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Cómo se escribe?",
+        "difficulty": "BASICO",
+        "explanation": "Hormiga va con H.",
+        "options": [
+            {
+                "text": "Ormiga",
+                "is_correct": false
+            },
+            {
+                "text": "Hormiga",
+                "is_correct": true
+            },
+            {
+                "text": "Hormigüa",
+                "is_correct": false
+            },
+            {
+                "text": "Ormigúa",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Qué es la morfología?",
+        "difficulty": "AVANZADO",
+        "explanation": "Estudia la estructura interna de las palabras.",
+        "options": [
+            {
+                "text": "Estudia los sonidos",
+                "is_correct": false
+            },
+            {
+                "text": "Estudia la estructura de palabras",
+                "is_correct": true
+            },
+            {
+                "text": "Estudia las oraciones",
+                "is_correct": false
+            },
+            {
+                "text": "Estudia los significados",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Qué escritor peruano escribió 'Los ríos profundos'?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "José María Arguedas.",
+        "options": [
+            {
+                "text": "Ciro Alegría",
+                "is_correct": false
+            },
+            {
+                "text": "José María Arguedas",
+                "is_correct": true
+            },
+            {
+                "text": "Ribeyro",
+                "is_correct": false
+            },
+            {
+                "text": "Vallejo",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Comunicación",
+        "statement": "El lenguaje de señas es una comunicación...",
+        "difficulty": "BASICO",
+        "explanation": "No verbal, usa gestos.",
+        "options": [
+            {
+                "text": "Verbal",
+                "is_correct": false
+            },
+            {
+                "text": "No verbal",
+                "is_correct": true
+            },
+            {
+                "text": "Escrita",
+                "is_correct": false
+            },
+            {
+                "text": "Oral",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Semántica",
+        "statement": "'Banco' (asiento) y 'Banco' (dinero) son...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Homónimas (se escriben igual, significan distinto).",
+        "options": [
+            {
+                "text": "Sinónimas",
+                "is_correct": false
+            },
+            {
+                "text": "Homónimas",
+                "is_correct": true
+            },
+            {
+                "text": "Parónimas",
+                "is_correct": false
+            },
+            {
+                "text": "Antónimas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "¿Quién escribió 'Romeo y Julieta'?",
+        "difficulty": "BASICO",
+        "explanation": "William Shakespeare.",
+        "options": [
+            {
+                "text": "Cervantes",
+                "is_correct": false
+            },
+            {
+                "text": "Shakespeare",
+                "is_correct": true
+            },
+            {
+                "text": "Dante",
+                "is_correct": false
+            },
+            {
+                "text": "Molière",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Gramática",
+        "statement": "¿Qué artículo es indeterminado?",
+        "difficulty": "BASICO",
+        "explanation": "Un, una, unos, unas.",
+        "options": [
+            {
+                "text": "El",
+                "is_correct": false
+            },
+            {
+                "text": "Un",
+                "is_correct": true
+            },
+            {
+                "text": "La",
+                "is_correct": false
+            },
+            {
+                "text": "Los",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Ortografía",
+        "statement": "¿Qué signo se usa para separar elementos de una lista?",
+        "difficulty": "BASICO",
+        "explanation": "La coma.",
+        "options": [
+            {
+                "text": "Punto",
+                "is_correct": false
+            },
+            {
+                "text": "Coma",
+                "is_correct": true
+            },
+            {
+                "text": "Punto y coma",
+                "is_correct": false
+            },
+            {
+                "text": "Comillas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course_name": "Comunicación",
+        "course_code": "comu",
+        "topic_name": "Literatura",
+        "statement": "El poema 'Masa' termina con la frase: '¡Ay, siguió muriendo!' es de...",
+        "difficulty": "AVANZADO",
+        "explanation": "César Vallejo.",
+        "options": [
+            {
+                "text": "Neruda",
+                "is_correct": false
+            },
+            {
+                "text": "Vallejo",
+                "is_correct": true
+            },
+            {
+                "text": "Chocano",
+                "is_correct": false
+            },
+            {
+                "text": "Eguren",
+                "is_correct": false
+            }
+        ]
+    }
+]
