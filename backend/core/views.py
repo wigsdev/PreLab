@@ -20,14 +20,19 @@ class TopicViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = TopicSerializer
     permission_classes = [permissions.AllowAny]
 
-class QuestionViewSet(viewsets.ReadOnlyModelViewSet):
+class QuestionViewSet(viewsets.ModelViewSet):
     """
-    Vista para listar Preguntas.
-    Soporta filtrado por tema: /api/questions/?topic=1
+    Vista CRUD para Preguntas.
+    Lectura: Pública (AllowAny)
+    Escritura: Solo Admin (IsAdminUser)
     """
     queryset = Question.objects.all().order_by('-created_at')
     serializer_class = QuestionSerializer
-    permission_classes = [permissions.AllowAny]
+
+    def get_permissions(self):
+        if self.action in ['create', 'update', 'partial_update', 'destroy']:
+            return [permissions.IsAdminUser()]
+        return [permissions.AllowAny()]
 
     def get_queryset(self):
         """
