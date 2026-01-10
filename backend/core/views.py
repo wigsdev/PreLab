@@ -36,16 +36,34 @@ class QuestionViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         """
-        Permite filtrar preguntas por ID de tema usando ?topic=ID
+        Filtros Avanzados para Admin:
+        - topic: ID del tema
+        - course: ID del curso
+        - difficulty: 'BASICO', 'INTERMEDIO', 'AVANZADO'
+        - search: Búsqueda parcial en el enunciado
         """
-        queryset = super().get_queryset()
+        # Optimización DB: Traer Topic y Course en la misma consulta
+        queryset = Question.objects.select_related('topic', 'topic__course').order_by('-created_at')
+
+        # Filtro por Tema
         topic_id = self.request.query_params.get('topic')
         if topic_id:
             queryset = queryset.filter(topic_id=topic_id)
 
+        # Filtro por Curso
         course_id = self.request.query_params.get('course')
         if course_id:
             queryset = queryset.filter(topic__course_id=course_id)
+            
+        # Filtro por Dificultad
+        difficulty = self.request.query_params.get('difficulty')
+        if difficulty:
+            queryset = queryset.filter(difficulty=difficulty)
+            
+        # Búsqueda por Texto (Enunciado)
+        search = self.request.query_params.get('search')
+        if search:
+            queryset = queryset.filter(statement__icontains=search)
 
         return queryset
 
@@ -85,3 +103,105 @@ class ExamAttemptViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         # Asignar usuario automáticamente al crear
         serializer.save(user=self.request.user)
+
+from django.contrib.auth import get_user_model
+from django.db.models import Avg, Count
+from django.utils import timezone
+from datetime import timedelta
+from rest_framework.views import APIView
+
+User = get_user_model()
+
+class AnalyticsView(APIView):
+    """
+    Endpoint para métricas del Dashboard Admin.
+    """
+    permission_classes = [permissions.IsAdminUser]
+
+    def get(self, request):
+        # 1. Totales
+        total_students = User.objects.filter(is_staff=False).count()
+        total_exams = ExamAttempt.objects.count()
+        
+        # 2. Promedio General
+        avg_score = ExamAttempt.objects.aggregate(Avg('score'))['score__avg'] or 0
+        
+        # 3. Actividad Semanal (Gráfico de Tendencia)
+        last_week = timezone.now() - timedelta(days=7)
+        exams_this_week = ExamAttempt.objects.filter(created_at__gte=last_week).count()
+        
+        last_7_days = timezone.now() - timedelta(days=6)
+        trend_data = []
+        for i in range(7):
+            day = timezone.now() - timedelta(days=6-i)
+            count = ExamAttempt.objects.filter(
+                created_at__year=day.year,
+                created_at__month=day.month,
+                created_at__day=day.day
+            ).count()
+            trend_data.append({
+                'date': day.strftime('%d/%m'),
+                'count': count
+            })
+
+        # 4. Actividad Reciente (Mejorada)
+        recent_activity = ExamAttempt.objects.select_related('user', 'topic', 'topic__course', 'course').order_by('-created_at')[:5]
+        recent_data = []
+        for attempt in recent_activity:
+            # Lógica para determinar el nombre y tipo del examen
+            if attempt.topic:
+                # Caso: Examen de un Tema Específico
+                exam_name = attempt.topic.course.name
+                exam_detail = attempt.topic.name
+                type_label = "Simulacro" # O "Práctica" si prefieres diferenciar temas específicos
+            elif attempt.course:
+                # Caso: Simulacro por Curso
+                exam_name = attempt.course.name
+                exam_detail = "Todos los temas"
+                type_label = "Simulacro"
+            else:
+                # Caso: Simulacro Integral
+                exam_name = "Integral"
+                exam_detail = "Todas las áreas"
+                type_label = "Simulacro"
+
+            # Personalización adicional para labels
+            if attempt.exam_type == 'INTEGRAL':
+                 type_label = "Integral" # Para diferenciar visualmente el Badge si se desea
+                 exam_name = "Integral"
+
+            recent_data.append({
+                'id': attempt.id,
+                'user': f"{attempt.user.first_name} {attempt.user.last_name}" if attempt.user.first_name else attempt.user.email.split('@')[0],
+                'exam_name': exam_name,
+                'exam_detail': exam_detail,
+                'type_label': type_label,
+                'exam_type': attempt.exam_type,
+                'score': attempt.score,
+                'date': attempt.created_at
+            })
+
+        # 5. Top Estudiantes (Promedio > 0, min 1 examen)
+        top_students_qs = ExamAttempt.objects.values('user__first_name', 'user__last_name', 'user__email').annotate(
+            avg_score=Avg('score'),
+            total_exams=Count('id')
+        ).order_by('-avg_score')[:5]
+        
+        top_students = []
+        for s in top_students_qs:
+            name = f"{s['user__first_name']} {s['user__last_name']}" if s['user__first_name'] else s['user__email'].split('@')[0]
+            top_students.append({
+                'name': name,
+                'avg_score': round(s['avg_score'], 1),
+                'exams': s['total_exams']
+            })
+
+        return Response({
+            'total_students': total_students,
+            'total_exams': total_exams,
+            'average_score': round(avg_score, 1),
+            'exams_this_week': exams_this_week,
+            'trend_data': trend_data,
+            'recent_activity': recent_data,
+            'top_students': top_students
+        })

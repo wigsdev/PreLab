@@ -10,10 +10,11 @@ class QuestionSerializer(serializers.ModelSerializer):
     # Nested Serializer: Incluye las opciones directamente dentro de la pregunta
     options = OptionSerializer(many=True, read_only=True)
     topic_name = serializers.CharField(source='topic.name', read_only=True)
+    course_name = serializers.CharField(source='topic.course.name', read_only=True)
 
     class Meta:
         model = Question
-        fields = ['id', 'statement', 'topic_name', 'difficulty', 'image', 'options', 'explanation']
+        fields = ['id', 'statement', 'topic', 'topic_name', 'course_name', 'difficulty', 'image', 'options', 'explanation', 'created_at']
 
 class TopicSerializer(serializers.ModelSerializer):
     class Meta:
@@ -32,5 +33,5 @@ class ExamAttemptSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ExamAttempt
-        fields = ['id', 'topic', 'topic_name', 'score', 'correct_count', 'total_questions', 'created_at']
+        fields = ['id', 'course', 'topic', 'topic_name', 'exam_type', 'score', 'correct_count', 'total_questions', 'created_at']
         read_only_fields = ['user', 'created_at']
