@@ -78,4 +78,73 @@ export const createQuestion = async (questionData) => {
     }
 };
 
+export const getQuestions = async (params = {}) => {
+    try {
+        const response = await api.get('/questions/', { params });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching questions:", error);
+        throw error;
+    }
+};
+
+export const getQuestion = async (id) => {
+    try {
+        const response = await api.get(`/questions/${id}/`);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching question:", error);
+        throw error;
+    }
+};
+
+export const updateQuestion = async (id, data) => {
+    try {
+        const response = await api.patch(`/questions/${id}/`, data);
+        return response.data;
+    } catch (error) {
+        console.error("Error updating question:", error);
+        throw error;
+    }
+};
+
+export const deleteQuestion = async (id) => {
+    try {
+        await api.delete(`/questions/${id}/`);
+    } catch (error) {
+        console.error("Error deleting question:", error);
+        throw error;
+    }
+};
+
+export const getCourses = async () => {
+    try {
+        const response = await api.get('/courses/');
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching courses:", error);
+        throw error;
+    }
+};
+
+export const getTopics = async () => {
+    try {
+        const response = await api.get('/topics/');
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching topics:", error);
+        throw error;
+    }
+};
+
+export const getAnalytics = async () => {
+    try {
+        const response = await api.get('/analytics/');
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching analytics:", error);
+        throw error;
+    }
+};
+
 export default api;
