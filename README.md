@@ -42,13 +42,14 @@ El objetivo de PreLab es democratizar y modernizar la preparación preuniversita
 ### Backend
 *   **Lenguaje:** Python 3.11+
 *   **Framework:** Django 5.0 & Django REST Framework
-*   **Base de Datos:** PostgreSQL
-*   **Seguridad:** JWT Authentication
+*   **Base de Datos:** SQLite (Dev) / PostgreSQL (Prod)
+*   **Seguridad:** JWT Authentication (SimpleJWT)
 
 ### Frontend
-*   **Librería:** React.js
+*   **Librería:** React.js + Vite
 *   **Estilos:** Tailwind CSS
-*   **Build Tool:** Vite
+*   **Iconos:** Lucide React
+*   **State:** Context API (Auth)
 
 ---
 
