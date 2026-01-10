@@ -19,17 +19,19 @@ api.interceptors.request.use(
             try {
                 const tokens = JSON.parse(storedTokens);
                 if (tokens?.access) {
-                    console.log("🔑 Attaching Token:", tokens.access.substring(0, 10) + "...");
+                    // console.log("🔑 Attaching Token:", tokens.access.substring(0, 10) + "...");
                     config.headers['Authorization'] = `Bearer ${tokens.access}`;
-                } else {
-                    console.warn("⚠️ Tokens parsed but no 'access' property found:", tokens);
                 }
             } catch (e) {
                 console.error("❌ Error parsing auth_tokens:", e);
             }
-        } else {
-            console.warn("⚠️ No 'auth_tokens' found in localStorage");
         }
+
+        // Allow browser to set Content-Type for FormData (multipart/form-data)
+        if (config.data instanceof FormData) {
+            delete config.headers['Content-Type'];
+        }
+
         return config;
     },
     (error) => Promise.reject(error)
@@ -51,6 +53,27 @@ export const getExamHistory = async () => {
         return response.data;
     } catch (error) {
         console.error("Error fetching exam history:", error);
+        throw error;
+    }
+};
+
+// No changes needed if we trust axios auto-detection for FormData
+export const updateProfile = async (userData) => {
+    try {
+        const response = await api.patch('/users/me/', userData);
+        return response.data;
+    } catch (error) {
+        console.error("Error updating profile:", error);
+        throw error;
+    }
+};
+
+export const createQuestion = async (questionData) => {
+    try {
+        const response = await api.post('/questions/', questionData);
+        return response.data;
+    } catch (error) {
+        console.error("Error creating question:", error);
         throw error;
     }
 };

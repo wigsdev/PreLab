@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import { jwtDecode } from 'jwt-decode';
+import api from '../services/api'; // Use our configured api instance
 
 const AuthContext = createContext();
 
@@ -14,25 +14,30 @@ export const AuthProvider = ({ children }) => {
         return savedTokens ? JSON.parse(savedTokens) : null;
     });
 
+    // Function to fetch the latest user data
+    const fetchUser = async () => {
+        try {
+            const response = await api.get('/users/me/');
+            setUser(response.data);
+        } catch (error) {
+            console.error("Failed to fetch user:", error);
+            // If fetch fails (e.g., 401), might want to logout
+            // logout(); 
+        }
+    };
+
     useEffect(() => {
         if (tokens) {
-            try {
-                // Decode token to get user info (email, id, etc.)
-                const decoded = jwtDecode(tokens.access);
-                setUser(decoded);
-
-                // Configure axios interceptor if recommmanded
-                // api.defaults.headers.common['Authorization'] = `Bearer ${tokens.access}`;
-            } catch (error) {
-                console.error("Invalid token:", error);
-                logout();
-            }
+            fetchUser();
+        } else {
+            setUser(null);
         }
         setLoading(false);
     }, [tokens]);
 
     const login = async (email, password) => {
         try {
+            // Login to get tokens
             const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', {
                 email,
                 password
@@ -42,8 +47,11 @@ export const AuthProvider = ({ children }) => {
             setTokens(data);
             localStorage.setItem('auth_tokens', JSON.stringify(data));
 
-            const decoded = jwtDecode(data.access);
-            setUser(decoded);
+            // Immediately fetch user data
+            // We use the raw axios call for login, but fetchUser uses 'api' instance
+            // which reads from localStorage. Since `useEffect` on `tokens` will triggger,
+            // we technically don't need to call it here, but `useEffect` might be async/later.
+            // Let's rely on useEffect [tokens] to trigger the fetch.
 
             return { success: true };
         } catch (error) {
@@ -66,7 +74,8 @@ export const AuthProvider = ({ children }) => {
         tokens,
         login,
         logout,
-        loading
+        loading,
+        fetchUser // Expose this so ProfileView can call it
     };
 
     return (

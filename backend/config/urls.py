@@ -6,7 +6,7 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-from users.views import RegisterView
+from users.views import RegisterView, ManageUserView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,6 +14,7 @@ urlpatterns = [
     path('api/auth/register/', RegisterView.as_view(), name='auth_register'),
     path('api/auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/auth/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/users/me/', ManageUserView.as_view(), name='manage_user'), # [NEW]
 ]
 
 if settings.DEBUG:

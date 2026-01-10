@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import { UserPlus, Mail, Lock, User, Loader2, ArrowLeft, Eye, EyeOff, Check, X, AlertCircle } from 'lucide-react';
+import { UserPlus, Mail, Lock, User, Loader2, ArrowLeft, Eye, EyeOff, Check, X, AlertCircle, Camera } from 'lucide-react';
 
 export default function RegisterView() {
     const navigate = useNavigate();
@@ -11,9 +11,12 @@ export default function RegisterView() {
         first_name: '',
         last_name: ''
     });
+    const [avatarFile, setAvatarFile] = useState(null);
+    const [avatarPreview, setAvatarPreview] = useState(null);
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const fileInputRef = useRef(null);
 
     const [passwordValidations, setPasswordValidations] = useState({
         length: false,
@@ -37,13 +40,30 @@ export default function RegisterView() {
         validatePassword(password);
     };
 
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setAvatarFile(file);
+            setAvatarPreview(URL.createObjectURL(file));
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
         setError(null);
 
+        const dataToSend = new FormData();
+        dataToSend.append('email', formData.email);
+        dataToSend.append('password', formData.password);
+        dataToSend.append('first_name', formData.first_name);
+        dataToSend.append('last_name', formData.last_name);
+        if (avatarFile) {
+            dataToSend.append('avatar', avatarFile);
+        }
+
         try {
-            await axios.post('http://127.0.0.1:8000/api/auth/register/', formData);
+            await axios.post('http://127.0.0.1:8000/api/auth/register/', dataToSend);
             // Registration successful, redirect to login with success message (or auto login)
             navigate('/login', { state: { message: 'Cuenta creada exitosamente. Inicia sesión.' } });
         } catch (err) {
@@ -61,7 +81,7 @@ export default function RegisterView() {
     };
 
     return (
-        <div className="min-h-[80vh] flex items-center justify-center px-4">
+        <div className="min-h-[90vh] flex items-center justify-center px-4 py-8">
             <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-indigo-100 overflow-hidden relative">
                 <button
                     onClick={() => navigate('/')}
@@ -70,7 +90,7 @@ export default function RegisterView() {
                     <ArrowLeft size={24} />
                 </button>
 
-                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 p-8 text-center relative">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 p-8 pt-12 text-center relative">
                     <h2 className="text-3xl font-black text-white mb-2">Crear Cuenta</h2>
                     <p className="text-emerald-100">Únete a PreLab y guarda tu progreso</p>
                 </div>
@@ -83,24 +103,50 @@ export default function RegisterView() {
                     )}
 
                     <form onSubmit={handleSubmit} className="space-y-4">
-                        <div className="grid grid-cols-2 gap-4">
-                            <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2">Nombre</label>
-                                <div className="relative">
-                                    <User className="absolute left-3 top-3 text-slate-400 w-5 h-5" />
-                                    <input
-                                        type="text"
-                                        className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all font-medium text-slate-700"
-                                        placeholder="Tu Nombre"
-                                        value={formData.first_name}
-                                        onChange={e => setFormData({ ...formData, first_name: e.target.value })}
-                                    />
+
+                        {/* Avatar Upload */}
+                        <div className="flex justify-center mb-6">
+                            <div className="relative group cursor-pointer" onClick={() => fileInputRef.current.click()}>
+                                <div className="w-20 h-20 rounded-full bg-slate-100 border-2 border-slate-200 overflow-hidden flex items-center justify-center">
+                                    {avatarPreview ? (
+                                        <img src={avatarPreview} alt="Avatar Preview" className="w-full h-full object-cover" />
+                                    ) : (
+                                        <User className="text-slate-300" size={32} />
+                                    )}
+                                </div>
+                                <div className="absolute inset-0 bg-black/40 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <Camera className="text-white" size={16} />
+                                </div>
+                                <div className="absolute bottom-0 right-0 bg-emerald-500 rounded-full p-1 border-2 border-white">
+                                    <UserPlus size={10} className="text-white" />
                                 </div>
                             </div>
+                            <input
+                                type="file"
+                                ref={fileInputRef}
+                                onChange={handleFileChange}
+                                className="hidden"
+                                accept="image/*"
+                            />
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2">Apellido</label>
+                                <label className="block text-sm font-bold text-slate-700 mb-2">Nombre *</label>
                                 <input
                                     type="text"
+                                    required
+                                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all font-medium text-slate-700"
+                                    placeholder="Nombre"
+                                    value={formData.first_name}
+                                    onChange={e => setFormData({ ...formData, first_name: e.target.value })}
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-bold text-slate-700 mb-2">Apellido *</label>
+                                <input
+                                    type="text"
+                                    required
                                     className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all font-medium text-slate-700"
                                     placeholder="Apellido"
                                     value={formData.last_name}
@@ -110,7 +156,7 @@ export default function RegisterView() {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-slate-700 mb-2">Correo Electrónico</label>
+                            <label className="block text-sm font-bold text-slate-700 mb-2">Correo Electrónico *</label>
                             <div className="relative">
                                 <Mail className="absolute left-3 top-3 text-slate-400 w-5 h-5" />
                                 <input
@@ -125,7 +171,7 @@ export default function RegisterView() {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-slate-700 mb-2">Contraseña</label>
+                            <label className="block text-sm font-bold text-slate-700 mb-2">Contraseña *</label>
                             <div className="relative mb-2">
                                 <Lock className="absolute left-3 top-3 text-slate-400 w-5 h-5 z-10" />
                                 <input
