@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { Lock, Mail, Loader2, Eye, EyeOff } from 'lucide-react';
 
 export default function LoginView() {
@@ -11,6 +11,9 @@ export default function LoginView() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -19,7 +22,7 @@ export default function LoginView() {
         const result = await login(formData.email, formData.password);
 
         if (result.success) {
-            navigate('/');
+            navigate(from, { replace: true });
         } else {
             setError(result.error);
         }
