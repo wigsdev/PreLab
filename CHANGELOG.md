@@ -4,6 +4,93 @@ Todas las modificaciones notables en este proyecto serán documentadas en este a
 
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [v0.9.1] - The Admin Powerhouse - 2026-01-10
+
+### Added
+- **Admin Dashboard & Analytics:**
+    - `AnalyticsView`: Gráficos de tendencias y Top Estudiantes.
+    - Tabla de Actividad Reciente mejorada con distinción visual entre "Simulacro Integral" y "Por Curso".
+    - `AdminLayout`: Layout dedicado con Sidebar de navegación.
+    - `QuestionListView`: Tabla avanzada (DataGrid) para gestión de preguntas.
+    - `QuestionFilter`: Backend filters para búsqueda de preguntas.
+    - `QuestionEditView`: Formulario reutilizable para editar contenido.
+- **Backend Mechanics:**
+    - Soporte para registrar el contexto del curso (`course`) en `ExamAttempt`.
+    - Endpoint `/api/analytics/` optimizado.
+    - Endpoints optimizados para listar y filtrar preguntas (para admins).
+    - Validaciones de permisos `IsAdminUser`.
+
+## [v0.9.0] - Creator Panel & Settings - 2026-01-09
+### Added
+- **Content Creation:**
+    - `CreateQuestionView`: Formulario mobile-first para crear preguntas.
+    - Permisos de Staff/Admin requeridos para endpoints de escritura.
+- **Profile:**
+    - Editor de perfil de usuario (`ProfileView`).
+    - Actualización de `UserSerializer` para manejar avatares y passwords.
+
+## [v0.8.0] - The Analytics (User Dashboard) - 2026-01-08
+### Added
+- **Dashboard:**
+    - `DashboardView` con tarjetas de estadísticas (Total, Promedio, Mejor Nota).
+    - Historial de exámenes en formato Timeline.
+- **Frontend:**
+    - Hook `getExamHistory` para consumir datos de usuario.
+    - Componente `PrivateRoute` para proteger vistas de usuario.
+
+## [v0.7.0] - The Memory (Cloud Persistence) - 2026-01-08
+### Added
+- **Backend:**
+    - Modelo `ExamAttempt` para persistencia de simulacros.
+    - Endpoints CRUD para historial (`/api/history/`).
+- **Frontend:**
+    - Integración de guardado automático al finalizar examen.
+    - Manejo de duplicados en modo estricto de React.
+
+## [v0.6.0] - The Experience (UI Polish) - 2026-01-07
+### Added
+- **UI/UX:**
+    - Sistema de Modo Oscuro global (Tailwind `dark` mode).
+    - `Navbar` responsivo con menú de usuario.
+    - Skeletons de carga para mejorar la experiencia visual (`QuestionSkeleton`).
+
+## [v0.5.1] - Auth Experience Polish - 2026-01-07
+### Added
+- **Auth UI:**
+    - Toggle de visibilidad de contraseña.
+    - Validación visual de requisitos de contraseña (Regex).
+    - Redirección inteligente post-login (`intended` path).
+
+## [v0.5.0] - Identity (Authentication) - 2026-01-07
+### Added
+- **Security:**
+    - Autenticación completa con JWT (Access/Refresh tokens).
+    - Modelo de Usuario personalizado (`CustomUser` usando Email).
+    - Vistas de Login y Registro completamente funcionals.
+    - Persistencia de sesión con `AuthContext`.
+
+## [v0.4.0] - The Engine (Session Logic) - 2026-01-06
+### Added
+- **Exam Core:**
+    - Lógica de estado de examen (Timer, Score, Progreso).
+    - Algoritmo de Shuffle para aleatorizar preguntas y opciones.
+    - `ResultView` con resumen de desempeño.
+    - Modo Revisión para ver respuestas correctas/incorrectas.
+- **Routing:**
+    - Configuración de React Router (SPA).
+
+### Changed
+- **Exam Logic:**
+    - `ResultsCard.jsx` ahora envía `exam_type` ('COURSE' o 'INTEGRAL') y el ID del curso.
+    - `ExamView.jsx` pasa correctamente las props de contexto al guardar resultados.
+- **Data Models:**
+    - Actualizado modelo `ExamAttempt` para incluir relación con `Course`.
+
+### Fixed
+- Error 500 en Analytics por variable `topic` nula (ahora se maneja `course` como fallback).
+- Crash en `Navbar` por `AuthContext` undefined (se agregó valor por defecto).
+- Orden de URLs en backend para evitar conflictos con routers.
+
 ## [v0.3.0] - First Playable - 2026-01-09
 
 ### Added
