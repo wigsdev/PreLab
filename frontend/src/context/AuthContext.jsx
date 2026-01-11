@@ -2,13 +2,13 @@ import { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import api from '../services/api'; // Use our configured api instance
 
-const AuthContext = createContext({
+export const AuthContext = createContext({
     user: null,
     tokens: null,
-    login: () => { },
-    logout: () => { },
+    login: () => {},
+    logout: () => {},
     loading: true,
-    fetchUser: () => { }
+    fetchUser: () => {},
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -27,9 +27,9 @@ export const AuthProvider = ({ children }) => {
             const response = await api.get('/users/me/');
             setUser(response.data);
         } catch (error) {
-            console.error("Failed to fetch user:", error);
+            console.error('Failed to fetch user:', error);
             // If fetch fails (e.g., 401), might want to logout
-            // logout(); 
+            // logout();
         }
     };
 
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
             // Login to get tokens
             const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', {
                 email,
-                password
+                password,
             });
 
             const data = response.data;
@@ -62,10 +62,10 @@ export const AuthProvider = ({ children }) => {
 
             return { success: true };
         } catch (error) {
-            console.error("Login failed:", error);
+            console.error('Login failed:', error);
             return {
                 success: false,
-                error: error.response?.data?.detail || "Error al iniciar sesión"
+                error: error.response?.data?.detail || 'Error al iniciar sesión',
             };
         }
     };
@@ -82,12 +82,8 @@ export const AuthProvider = ({ children }) => {
         login,
         logout,
         loading,
-        fetchUser // Expose this so ProfileView can call it
+        fetchUser, // Expose this so ProfileView can call it
     };
 
-    return (
-        <AuthContext.Provider value={value}>
-            {!loading && children}
-        </AuthContext.Provider>
-    );
+    return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
 };

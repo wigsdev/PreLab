@@ -4,7 +4,7 @@ import django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 django.setup()
 
-from users.models import CustomUser
+from users.models import CustomUser  # noqa: E402
 
 email = "admin@prelab.pe"
 password = "password123"

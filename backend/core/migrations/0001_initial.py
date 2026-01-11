@@ -8,73 +8,182 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Course',
+            name="Course",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('code', models.SlugField(help_text='Código único para URLs (ej. historia-peru)', max_length=20, unique=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                (
+                    "code",
+                    models.SlugField(
+                        help_text="Código único para URLs (ej. historia-peru)",
+                        max_length=20,
+                        unique=True,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Curso',
-                'verbose_name_plural': 'Cursos',
+                "verbose_name": "Curso",
+                "verbose_name_plural": "Cursos",
             },
         ),
         migrations.CreateModel(
-            name='University',
+            name="University",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('items', models.CharField(help_text='Nombre de la universidad', max_length=100)),
-                ('acronym', models.CharField(help_text='Siglas (ej. UNMSM)', max_length=20)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "items",
+                    models.CharField(
+                        help_text="Nombre de la universidad", max_length=100
+                    ),
+                ),
+                (
+                    "acronym",
+                    models.CharField(help_text="Siglas (ej. UNMSM)", max_length=20),
+                ),
             ],
             options={
-                'verbose_name': 'Universidad',
-                'verbose_name_plural': 'Universidades',
+                "verbose_name": "Universidad",
+                "verbose_name_plural": "Universidades",
             },
         ),
         migrations.CreateModel(
-            name='Topic',
+            name="Topic",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200)),
-                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='topics', to='core.course')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                (
+                    "course",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="topics",
+                        to="core.course",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Tema',
-                'verbose_name_plural': 'Temas',
+                "verbose_name": "Tema",
+                "verbose_name_plural": "Temas",
             },
         ),
         migrations.CreateModel(
-            name='Question',
+            name="Question",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('statement', models.TextField(help_text='Enunciado de la pregunta')),
-                ('image', models.ImageField(blank=True, help_text='Imagen opcional (gráficos, geometría)', null=True, upload_to='preguntas/')),
-                ('difficulty', models.CharField(choices=[('BASICO', 'Básico'), ('INTERMEDIO', 'Intermedio'), ('AVANZADO', 'Avanzado')], default='INTERMEDIO', max_length=20)),
-                ('explanation', models.TextField(help_text='Explicación para el feedback (Qué aprendimos)')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('topic', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='questions', to='core.topic')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("statement", models.TextField(help_text="Enunciado de la pregunta")),
+                (
+                    "image",
+                    models.ImageField(
+                        blank=True,
+                        help_text="Imagen opcional (gráficos, geometría)",
+                        null=True,
+                        upload_to="preguntas/",
+                    ),
+                ),
+                (
+                    "difficulty",
+                    models.CharField(
+                        choices=[
+                            ("BASICO", "Básico"),
+                            ("INTERMEDIO", "Intermedio"),
+                            ("AVANZADO", "Avanzado"),
+                        ],
+                        default="INTERMEDIO",
+                        max_length=20,
+                    ),
+                ),
+                (
+                    "explanation",
+                    models.TextField(
+                        help_text="Explicación para el feedback (Qué aprendimos)"
+                    ),
+                ),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                (
+                    "topic",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="questions",
+                        to="core.topic",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Pregunta',
-                'verbose_name_plural': 'Preguntas',
+                "verbose_name": "Pregunta",
+                "verbose_name_plural": "Preguntas",
             },
         ),
         migrations.CreateModel(
-            name='Option',
+            name="Option",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text', models.CharField(help_text='Texto de la alternativa', max_length=500)),
-                ('is_correct', models.BooleanField(default=False, help_text='¿Es la respuesta correcta?')),
-                ('question', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='options', to='core.question')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "text",
+                    models.CharField(
+                        help_text="Texto de la alternativa", max_length=500
+                    ),
+                ),
+                (
+                    "is_correct",
+                    models.BooleanField(
+                        default=False, help_text="¿Es la respuesta correcta?"
+                    ),
+                ),
+                (
+                    "question",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="options",
+                        to="core.question",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Opción',
-                'verbose_name_plural': 'Opciones',
+                "verbose_name": "Opción",
+                "verbose_name_plural": "Opciones",
             },
         ),
     ]

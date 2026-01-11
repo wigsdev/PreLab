@@ -1,0 +1,19 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-8.4.2, pluggy-1.6.0 -- C:\Python313\python.exe
+cachedir: .pytest_cache
+django: version: 6.0.1, settings: config.settings (from ini)
+rootdir: C:\Users\WIGUSA\Documents\GitHub\PreLab\backend
+configfile: pytest.ini
+plugins: anyio-4.11.0, cov-7.0.0, django-4.11.1
+collecting ... collected 8 items
+
+core/tests/test_models.py::TestCoreModels::test_course_creation PASSED   [ 12%]
+core/tests/test_models.py::TestCoreModels::test_topic_creation PASSED    [ 25%]
+core/tests/test_models.py::TestCoreModels::test_question_creation PASSED [ 37%]
+core/tests/test_models.py::TestCoreModels::test_exam_attempt_logic PASSED [ 50%]
+core/tests/test_models.py::TestCoreModels::test_exam_answer_creation PASSED [ 62%]
+core/tests/test_views.py::TestExamAttemptViewSet::test_list_exams_authenticated PASSED [ 75%]
+core/tests/test_views.py::TestExamAttemptViewSet::test_create_exam_attempt PASSED [ 87%]
+core/tests/test_views.py::TestExamAttemptViewSet::test_retrieve_exam_with_missing_data_safe PASSED [100%]
+
+============================== 8 passed in 9.13s ==============================
