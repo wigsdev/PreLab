@@ -4,6 +4,27 @@ Todas las modificaciones notables en este proyecto serán documentadas en este a
 
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [v0.9.3] - UX Polish (Admin Sidebar) - 2026-01-10
+### Changed
+- **Admin UX:**
+    - `AdminLayout` refactorizado para soportar comportamiento híbrido.
+    - **Desktop**: Sidebar colapsable (Toggle Expandir/Colapsar) que empuja el contenido.
+    - **Tablet/Mobile**: Sidebar "Drawer" (Overlay) activado por botón hamburguesa, maximizando espacio.
+    - Breakpoint ajustado (XL) para que tablets usen la experiencia móvil (Drawer).
+    - Lógica de visibilidad de texto mejorada para evitar errores al redimensionar.
+- **Routing:**
+    - Corregida ruta índice `/admin` para redirigir correctamente al Dashboard.
+
+## [v0.9.2] - User Management (Admin) - 2026-01-10
+### Added
+- **Admin Features:**
+    - `UserListView`: Tabla de gestión de usuarios con búsqueda en tiempo real.
+    - Edición de Roles: Modal/Inline para promover usuarios a Staff/Admin.
+    - `UserViewSet`: Endpoints de backend para listar y modificar usuarios (`/api/users/`).
+### Fixed
+- **Dashboard:**
+    - Corregido redirección de usuarios Staff para permitirles acceso a su Dashboard personal en lugar de forzar Admin Panel.
+
 ## [v0.9.1] - The Admin Powerhouse - 2026-01-10
 
 ### Added
