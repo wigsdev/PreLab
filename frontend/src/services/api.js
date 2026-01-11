@@ -57,6 +57,25 @@ export const getExamHistory = async () => {
     }
 };
 
+export const getExamAttempt = async (id) => {
+    try {
+        const response = await api.get(`/history/${id}/`);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching exam attempt:", error);
+        throw error;
+    }
+};
+
+export const createReport = async (reportData) => {
+    try {
+        await api.post('/reports/', reportData);
+    } catch (error) {
+        console.error("Error creating report:", error);
+        throw error;
+    }
+};
+
 // No changes needed if we trust axios auto-detection for FormData
 export const updateProfile = async (userData) => {
     try {

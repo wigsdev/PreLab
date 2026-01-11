@@ -1,10 +1,12 @@
 import { useState, useMemo } from 'react';
 import clsx from 'clsx';
-import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, Flag } from 'lucide-react';
+import ReportModal from './ui/ReportModal';
 
 export default function QuestionCard({ question, onNext }) {
     const [selectedOptionId, setSelectedOptionId] = useState(null);
     const [isAnswered, setIsAnswered] = useState(false);
+    const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
     const shuffledOptions = useMemo(() => {
         const opts = [...question.options];
@@ -42,13 +44,29 @@ export default function QuestionCard({ question, onNext }) {
     };
 
     return (
-        <div className="w-full max-w-none mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-lg dark:shadow-none border border-gray-100 dark:border-slate-700 transition-colors duration-300 flex flex-col">
+        <div className="w-full max-w-none mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-lg dark:shadow-none border border-gray-100 dark:border-slate-700 transition-colors duration-300 flex flex-col relative">
+
+            {/* Modal de Reporte */}
+            <ReportModal
+                questionId={question.id}
+                isOpen={isReportModalOpen}
+                onClose={() => setIsReportModalOpen(false)}
+            />
 
             {/* 1. Header: Dificultad y Tema */}
             <div className="bg-slate-50 dark:bg-slate-900/50 px-4 py-2.5 border-b border-gray-100 dark:border-slate-700 flex justify-between items-center transition-colors shrink-0">
-                <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    {question.topic_name}
-                </span>
+                <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                        {question.topic_name}
+                    </span>
+                    <button
+                        onClick={() => setIsReportModalOpen(true)}
+                        className="text-slate-300 hover:text-red-400 dark:text-slate-600 dark:hover:text-red-400 transition-colors"
+                        title="Reportar Error"
+                    >
+                        <Flag size={12} />
+                    </button>
+                </div>
                 <span className={clsx(
                     "text-[10px] px-2 py-0.5 rounded-full font-semibold border",
                     question.difficulty === 'BASICO' ? "bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800" :

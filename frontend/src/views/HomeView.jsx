@@ -6,6 +6,7 @@ import { BookOpen, FlaskConical, Calculator, Globe2, BrainCircuit, GraduationCap
 
 export default function HomeView() {
     const [courses, setCourses] = useState([]);
+    const [guestHistory, setGuestHistory] = useState([]); // [NEW]
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { user } = useAuth();
@@ -24,7 +25,15 @@ export default function HomeView() {
             }
         };
         fetchCourses();
-    }, []);
+
+        // Load Guest History
+        if (!user) {
+            const stored = localStorage.getItem('guest_history');
+            if (stored) {
+                setGuestHistory(JSON.parse(stored).reverse()); // Newest first
+            }
+        }
+    }, [user]);
 
     const getIconForCourse = (code) => {
         switch (code) {
@@ -78,6 +87,34 @@ export default function HomeView() {
                 <p className="text-slate-500 dark:text-slate-400 font-medium">
                     ¿Qué vamos a aprender hoy?
                 </p>
+
+                {/* Guest History Teaser */}
+                {!user && guestHistory.length > 0 && (
+                    <div className="mt-6 mb-2 p-4 bg-indigo-50 dark:bg-indigo-900/10 border border-indigo-100 dark:border-indigo-800 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 animate-in fade-in slide-in-from-top-2">
+                        <div>
+                            <h4 className="font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-2">
+                                <BrainCircuit className="w-4 h-4" />
+                                Tu Actividad Reciente (Modo Invitado)
+                            </h4>
+                            <p className="text-sm text-indigo-700 dark:text-indigo-400 mt-1">
+                                Has completado {guestHistory.length} prácticas en este dispositivo.
+                            </p>
+                        </div>
+                        <div className="flex gap-2 overflow-x-auto max-w-full pb-1 sm:pb-0">
+                            {guestHistory.slice(0, 3).map((item, idx) => (
+                                <div key={idx} className="shrink-0 flex items-center gap-2 bg-white dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-indigo-100 dark:border-slate-700 shadow-sm">
+                                    <div className={`text-xs font-bold ${item.score >= (item.total_questions * 0.6) ? 'text-green-600' : 'text-red-500'}`}>
+                                        {item.score}/{item.total_questions}
+                                    </div>
+                                    <div className="w-px h-3 bg-slate-200 dark:bg-slate-600"></div>
+                                    <div className="text-[10px] text-slate-500 font-medium uppercase truncate max-w-[80px]">
+                                        {item.course_name || (item.topic ? "Tema" : "Simulacro")}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </section>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 flex-1 h-full">

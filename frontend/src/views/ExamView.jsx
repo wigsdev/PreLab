@@ -158,6 +158,8 @@ export default function ExamView() {
                             topicId={topicId}
                             courseId={courseId}
                             mode={mode}
+                            questions={questions}
+                            userAnswers={userAnswers}
                             onRetry={() => {
                                 setIsReviewing(false);
                                 startExam({ courseId, topicId, mode });

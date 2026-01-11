@@ -110,3 +110,45 @@ class ExamAttempt(models.Model):
 
     def __str__(self):
         return f"{self.user} - {self.score}/{self.total_questions} ({self.created_at.strftime('%Y-%m-%d %H:%M')})"
+
+class ExamAttemptAnswer(models.Model):
+    """
+    Guarda el detalle de cada respuesta marcada por el usuario en un intento.
+    Permite la funcionalidad de 'Revisión de Examen'.
+    """
+    attempt = models.ForeignKey(ExamAttempt, on_delete=models.CASCADE, related_name='answers')
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    selected_option = models.ForeignKey(Option, on_delete=models.CASCADE, null=True, blank=True, help_text="Null si no respondió")
+    is_correct = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = "Respuesta de Intento"
+        verbose_name_plural = "Respuestas de Intento"
+
+    def __str__(self):
+        return f"Intento {self.attempt.id} - Pregunta {self.question.id}"
+
+class QuestionReport(models.Model):
+    """
+    Reportes de errores enviados por los estudiantes.
+    """
+    STATUS_CHOICES = [
+        ('PENDING', 'Pendiente'),
+        ('REVIEWED', 'Revisado'),
+        ('RESOLVED', 'Resuelto'),
+        ('IGNORED', 'Descartado'),
+    ]
+
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='reports')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    reason = models.TextField(help_text="Motivo del reporte")
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='PENDING')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Reporte de Error"
+        verbose_name_plural = "Reportes de Error"
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Reporte {self.id} - {self.question}"

@@ -85,23 +85,81 @@ class QuestionViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(questions, many=True)
         return Response(serializer.data)
 
-from .models import ExamAttempt
-from .serializers import ExamAttemptSerializer
+from .models import ExamAttempt, ExamAttemptAnswer, QuestionReport
+from .serializers import ExamAttemptSerializer, ExamAttemptDetailSerializer, QuestionReportSerializer
+from rest_framework import status
 
 class ExamAttemptViewSet(viewsets.ModelViewSet):
     """
     Vista CRUD para intentos de examen.
     Seguridad: Solo el usuario dueño puede ver sus propios intentos.
     """
-    serializer_class = ExamAttemptSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        # Filtrar solo los intentos del usuario autenticado
         return ExamAttempt.objects.filter(user=self.request.user).order_by('-created_at')
 
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return ExamAttemptDetailSerializer
+        return ExamAttemptSerializer
+
+    def retrieve(self, request, *args, **kwargs):
+        try:
+            instance = self.get_object()
+            serializer = self.get_serializer(instance)
+            return Response(serializer.data)
+        except Exception as e:
+            # En producción, usar logger.error(e)
+            print(f"Error retrieving attempt: {e}") 
+            return Response(
+                {'detail': "Hubo un error al cargar los detalles del examen."}, 
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+    def create(self, request, *args, **kwargs):
+        try:
+            answers_data = request.data.get('answers', [])
+            serializer = self.get_serializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
+            # Asignar usuario y guardar intento
+            attempt = serializer.save(user=self.request.user)
+
+            # Guardar respuestas detalladas si existen
+            if answers_data:
+                answer_objs = []
+                for ans in answers_data:
+                    # Validate IDs are present to avoid IntegrityError (though None is allowed for option)
+                    q_id = ans.get('question_id')
+                    if not q_id:
+                        continue # Skip invalid answers
+                    
+                    answer_objs.append(ExamAttemptAnswer(
+                        attempt=attempt,
+                        question_id=q_id,
+                        selected_option_id=ans.get('selected_option_id'),
+                        is_correct=ans.get('is_correct', False)
+                    ))
+                
+                if answer_objs:
+                    ExamAttemptAnswer.objects.bulk_create(answer_objs)
+
+            headers = self.get_success_headers(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+        except Exception as e:
+            import traceback
+            traceback.print_exc() # Print to server console
+            return Response({'detail': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+class QuestionReportViewSet(viewsets.ModelViewSet):
+    """
+    Endpoint para reportar errores en preguntas.
+    """
+    queryset = QuestionReport.objects.all()
+    serializer_class = QuestionReportSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
     def perform_create(self, serializer):
-        # Asignar usuario automáticamente al crear
         serializer.save(user=self.request.user)
 
 from django.contrib.auth import get_user_model

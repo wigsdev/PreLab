@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import confetti from 'canvas-confetti';
 
-export default function ResultsCard({ score, totalQuestions, topicId, courseId, mode, onRetry, onHome, onReview }) {
+export default function ResultsCard({ score, totalQuestions, topicId, courseId, mode, questions, userAnswers, onRetry, onHome, onReview }) {
     const { user } = useAuth();
     const [saveStatus, setSaveStatus] = useState('idle'); // idle, saving, success, error
     const hasSaved = useRef(false); // Prevents Run-Twice in Strict Mode
@@ -17,6 +17,13 @@ export default function ResultsCard({ score, totalQuestions, topicId, courseId, 
             if (hasSaved.current) return;
             hasSaved.current = true;
 
+            // Construir payload detallado de respuestas
+            const answersPayload = userAnswers.map((ans, index) => ({
+                question_id: questions[index].id,
+                selected_option_id: ans.selectedOptionId,
+                is_correct: ans.isCorrect
+            }));
+
             const historyItem = {
                 date: new Date().toISOString(),
                 score: score,
@@ -25,7 +32,8 @@ export default function ResultsCard({ score, totalQuestions, topicId, courseId, 
                 course: courseId ? courseId : null,
                 exam_type: mode === 'simulation' ? 'INTEGRAL' : 'COURSE',
                 correct_count: score, // Simplificación
-                total_questions: totalQuestions
+                total_questions: totalQuestions,
+                answers: answersPayload // [NEW] Detailed Answers
             };
 
             if (user) {
@@ -44,6 +52,12 @@ export default function ResultsCard({ score, totalQuestions, topicId, courseId, 
                 const storedHistory = localStorage.getItem('guest_history');
                 let history = storedHistory ? JSON.parse(storedHistory) : [];
                 history.push(historyItem);
+
+                // Limitar a los últimos 10 para no llenar localStorage con detales
+                if (history.length > 10) {
+                    history = history.slice(-10);
+                }
+
                 localStorage.setItem('guest_history', JSON.stringify(history));
             }
         };

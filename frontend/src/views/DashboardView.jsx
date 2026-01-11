@@ -143,7 +143,11 @@ export default function DashboardView() {
                     <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-4 px-1">Historial Reciente</h3>
                     <div className="space-y-3">
                         {history.map((attempt) => (
-                            <div key={attempt.id} className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between transition-colors hover:border-indigo-200 dark:hover:border-indigo-900/50 group">
+                            <div
+                                key={attempt.id}
+                                onClick={() => navigate(`/exam/review/${attempt.id}`)}
+                                className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between transition-all hover:border-indigo-200 dark:hover:border-indigo-900/50 hover:shadow-md cursor-pointer group pb-4"
+                            >
                                 <div className="flex items-center gap-4">
                                     <div className={clsx(
                                         "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm",
@@ -154,8 +158,8 @@ export default function DashboardView() {
                                         {attempt.score}
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-slate-800 dark:text-white text-sm line-clamp-1">
-                                            {attempt.topic_name || "Simulacro General"}
+                                        <h4 className="font-semibold text-slate-800 dark:text-white text-sm line-clamp-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                            {attempt.course_name || attempt.topic_name || "Simulacro General"}
                                         </h4>
                                         <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                                             <Calendar className="w-3 h-3" />
@@ -163,10 +167,9 @@ export default function DashboardView() {
                                         </div>
                                     </div>
                                 </div>
-                                {/* Optional: Add arrow or details action later */}
-                                {/* <div className="text-xs text-slate-400 font-medium">
-                                    {attempt.total_questions} pregs
-                                </div> */}
+                                <div className="text-slate-400 group-hover:translate-x-1 transition-transform">
+                                    <ChevronRight size={16} />
+                                </div>
                             </div>
                         ))}
                     </div>
