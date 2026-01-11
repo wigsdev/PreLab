@@ -19,7 +19,7 @@ from .serializers import (
 )
 from rest_framework import status
 from django.contrib.auth import get_user_model
-from django.db.models import Avg, Count
+from django.db.models import Avg, Count, Q
 from django.utils import timezone
 from datetime import timedelta
 from rest_framework.views import APIView
@@ -210,55 +210,70 @@ class AnalyticsView(APIView):
 
     def get(self, request):
         # 1. Totales
-        total_students = User.objects.filter(is_staff=False).count()
+        # "Estrictamente Admin": Si es admin pero tiene intentos, cuenta como estudiante.
+        # Si es admin y no tiene intentos, se excluye.
+        total_students = (
+            User.objects.filter(Q(is_staff=False) | Q(exam_attempts__isnull=False))
+            .distinct()
+            .count()
+        )
         total_exams = ExamAttempt.objects.count()
 
         # 2. Promedio General
         avg_score = ExamAttempt.objects.aggregate(Avg("score"))["score__avg"] or 0
 
-        # 3. Actividad Semanal (Gráfico de Tendencia)
-        last_week = timezone.now() - timedelta(days=7)
-        exams_this_week = ExamAttempt.objects.filter(created_at__gte=last_week).count()
+        # Determine Range (default 7d)
+        range_param = request.query_params.get("range", "7d")
+        if range_param == "30d":
+            days = 30
+        elif range_param == "90d":
+            days = 90
+        else:
+            days = 7
+
+        # 3. Actividad (Gráfico de Tendencia Dinámico)
+        # Usamos localtime para respetar la zona horaria 'America/Lima'
+        today = timezone.localtime(timezone.now()).date()
+        start_date = today - timedelta(days=days - 1)  # Include today
+
+        # Query optimizada: Traer solo lo necesario en el rango
+        attempts_in_range = ExamAttempt.objects.filter(
+            created_at__date__gte=start_date
+        ).values("created_at")
+
+        # Agrupar en memoria (Python) para evitar 30/90 queries
+        counts = {}
+        for attempt in attempts_in_range:
+            # Convertir UTC db time -> Local time -> Date string
+            local_dt = timezone.localtime(attempt["created_at"])
+            date_key = local_dt.strftime("%d/%m")
+            counts[date_key] = counts.get(date_key, 0) + 1
 
         trend_data = []
-        for i in range(7):
-            day = timezone.now() - timedelta(days=6 - i)
-            count = ExamAttempt.objects.filter(
-                created_at__year=day.year,
-                created_at__month=day.month,
-                created_at__day=day.day,
-            ).count()
-            trend_data.append({"date": day.strftime("%d/%m"), "count": count})
+        for i in range(days):
+            current_date = start_date + timedelta(days=i)
+            date_str = current_date.strftime("%d/%m")
+            trend_data.append({"date": date_str, "count": counts.get(date_str, 0)})
 
-        # 4. Actividad Reciente (Mejorada)
+        # 4. Actividad Reciente
         recent_activity = ExamAttempt.objects.select_related(
             "user", "topic", "topic__course", "course"
         ).order_by("-created_at")[:5]
+
         recent_data = []
         for attempt in recent_activity:
-            # Lógica para determinar el nombre y tipo del examen
             if attempt.topic:
-                # Caso: Examen de un Tema Específico
                 exam_name = attempt.topic.course.name
                 exam_detail = attempt.topic.name
-                type_label = "Simulacro"  # O "Práctica" si prefieres diferenciar temas específicos
+                type_label = "Simulacro"
             elif attempt.course:
-                # Caso: Simulacro por Curso
                 exam_name = attempt.course.name
                 exam_detail = "Todos los temas"
                 type_label = "Simulacro"
             else:
-                # Caso: Simulacro Integral
                 exam_name = "Integral"
                 exam_detail = "Todas las áreas"
-                type_label = "Simulacro"
-
-            # Personalización adicional para labels
-            if attempt.exam_type == "INTEGRAL":
-                type_label = (
-                    "Integral"  # Para diferenciar visualmente el Badge si se desea
-                )
-                exam_name = "Integral"
+                type_label = "Integral"
 
             recent_data.append(
                 {
@@ -277,7 +292,8 @@ class AnalyticsView(APIView):
                 }
             )
 
-        # 5. Top Estudiantes (Promedio > 0, min 1 examen)
+        # 5. Top Estudiantes
+        # No filtramos por rol: cualquiera con intentos aparece en el ranking.
         top_students_qs = (
             ExamAttempt.objects.values(
                 "user__first_name", "user__last_name", "user__email"
@@ -306,7 +322,9 @@ class AnalyticsView(APIView):
                 "total_students": total_students,
                 "total_exams": total_exams,
                 "average_score": round(avg_score, 1),
-                "exams_this_week": exams_this_week,
+                "exams_this_week": (
+                    trend_data[-1]["count"] if trend_data else 0
+                ),  # Placeholder compatible
                 "trend_data": trend_data,
                 "recent_activity": recent_data,
                 "top_students": top_students,

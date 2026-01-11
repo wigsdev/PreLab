@@ -12,7 +12,7 @@ const api = axios.create({
 // Interceptor para incluir el token en cada petición
 api.interceptors.request.use(
     (config) => {
-        console.log("🔍 API Interceptor Running for:", config.url);
+        console.log('🔍 API Interceptor Running for:', config.url);
         const storedTokens = localStorage.getItem('auth_tokens');
 
         if (storedTokens) {
@@ -23,7 +23,7 @@ api.interceptors.request.use(
                     config.headers['Authorization'] = `Bearer ${tokens.access}`;
                 }
             } catch (e) {
-                console.error("❌ Error parsing auth_tokens:", e);
+                console.error('❌ Error parsing auth_tokens:', e);
             }
         }
 
@@ -42,7 +42,7 @@ export const saveExamResult = async (examData) => {
         const response = await api.post('/history/', examData);
         return response.data;
     } catch (error) {
-        console.error("Error saving exam result:", error);
+        console.error('Error saving exam result:', error);
         throw error; // Re-lanzar para manejar en el componente
     }
 };
@@ -52,7 +52,7 @@ export const getExamHistory = async () => {
         const response = await api.get('/history/');
         return response.data;
     } catch (error) {
-        console.error("Error fetching exam history:", error);
+        console.error('Error fetching exam history:', error);
         throw error;
     }
 };
@@ -62,7 +62,7 @@ export const getExamAttempt = async (id) => {
         const response = await api.get(`/history/${id}/`);
         return response.data;
     } catch (error) {
-        console.error("Error fetching exam attempt:", error);
+        console.error('Error fetching exam attempt:', error);
         throw error;
     }
 };
@@ -71,7 +71,7 @@ export const createReport = async (reportData) => {
     try {
         await api.post('/reports/', reportData);
     } catch (error) {
-        console.error("Error creating report:", error);
+        console.error('Error creating report:', error);
         throw error;
     }
 };
@@ -82,7 +82,7 @@ export const updateProfile = async (userData) => {
         const response = await api.patch('/users/me/', userData);
         return response.data;
     } catch (error) {
-        console.error("Error updating profile:", error);
+        console.error('Error updating profile:', error);
         throw error;
     }
 };
@@ -92,7 +92,7 @@ export const createQuestion = async (questionData) => {
         const response = await api.post('/questions/', questionData);
         return response.data;
     } catch (error) {
-        console.error("Error creating question:", error);
+        console.error('Error creating question:', error);
         throw error;
     }
 };
@@ -102,7 +102,7 @@ export const getQuestions = async (params = {}) => {
         const response = await api.get('/questions/', { params });
         return response.data;
     } catch (error) {
-        console.error("Error fetching questions:", error);
+        console.error('Error fetching questions:', error);
         throw error;
     }
 };
@@ -112,7 +112,7 @@ export const getQuestion = async (id) => {
         const response = await api.get(`/questions/${id}/`);
         return response.data;
     } catch (error) {
-        console.error("Error fetching question:", error);
+        console.error('Error fetching question:', error);
         throw error;
     }
 };
@@ -122,7 +122,7 @@ export const updateQuestion = async (id, data) => {
         const response = await api.patch(`/questions/${id}/`, data);
         return response.data;
     } catch (error) {
-        console.error("Error updating question:", error);
+        console.error('Error updating question:', error);
         throw error;
     }
 };
@@ -131,7 +131,7 @@ export const deleteQuestion = async (id) => {
     try {
         await api.delete(`/questions/${id}/`);
     } catch (error) {
-        console.error("Error deleting question:", error);
+        console.error('Error deleting question:', error);
         throw error;
     }
 };
@@ -141,7 +141,7 @@ export const getCourses = async () => {
         const response = await api.get('/courses/');
         return response.data;
     } catch (error) {
-        console.error("Error fetching courses:", error);
+        console.error('Error fetching courses:', error);
         throw error;
     }
 };
@@ -151,28 +151,27 @@ export const getTopics = async () => {
         const response = await api.get('/topics/');
         return response.data;
     } catch (error) {
-        console.error("Error fetching topics:", error);
+        console.error('Error fetching topics:', error);
         throw error;
     }
 };
 
-export const getAnalytics = async () => {
+export const getAnalytics = async (params = {}) => {
     try {
-        const response = await api.get('/analytics/');
+        const response = await api.get('/analytics/', { params });
         return response.data;
     } catch (error) {
-        console.error("Error fetching analytics:", error);
+        console.error('Error fetching analytics:', error);
         throw error;
     }
 };
-
 
 export const getUsers = async (params = {}) => {
     try {
         const response = await api.get('/users/management/', { params });
         return response.data;
     } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error('Error fetching users:', error);
         throw error;
     }
 };
@@ -182,7 +181,7 @@ export const updateUserRole = async (id, data) => {
         const response = await api.patch(`/users/management/${id}/`, data);
         return response.data;
     } catch (error) {
-        console.error("Error updating user role:", error);
+        console.error('Error updating user role:', error);
         throw error;
     }
 };
