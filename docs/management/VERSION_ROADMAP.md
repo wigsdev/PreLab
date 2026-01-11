@@ -144,17 +144,17 @@ Objetivos:
 [ ] User Search & Filters.
 
 📦 v0.9.5: "Release Candidate" (DevOps & Deploy)
-Peso: 🟡 Medio (DevOps)
+Peso: 🟢 Terminada (DevOps)
 
 Objetivos:
 
-[ ] Variables de entorno configuradas para Producción (.env).
+[x] Variables de entorno configuradas para Producción (.env/Docker).
 
-[ ] Base de Datos en la nube (ej: Supabase o Railway Postgres).
+[x] Base de Datos robusta (PostgreSQL en Docker).
 
-[ ] Despliegue de Backend (ej: Railway/Render).
+[x] Despliegue de Backend (Docker/Gunicorn/Whitenoise).
 
-[ ] Despliegue de Frontend (ej: Vercel/Netlify).
+[x] Despliegue de Frontend (Docker/Nginx/Multi-stage).
 
 🏆 v1.0.0: "Grand Opening" (PRODUCCIÓN)
 Peso: 🟢 Bajo (Marketing/Finalización)
