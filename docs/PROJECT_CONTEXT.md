@@ -11,11 +11,12 @@
 *   **Stakeholder (Dueño):** Desarrollador en aprendizaje (perfil técnico: Python/JS/Java). Busca código limpio, escalable y educativo.
 
 ## 3. Stack Tecnológico (Definido)
-*   **Backend:** Python con Django + Django REST Framework.
+*   **Infraestructura:** Docker & Docker Compose (Base de la arquitectura).
+*   **Backend:** Python con Django + Django REST Framework + Gunicorn.
     *   *Razón:* Aprovechar el Django Admin para carga rápida de preguntas y la robustez para escalar.
-*   **Frontend:** React.js + Tailwind CSS.
+*   **Frontend:** React.js + Tailwind CSS + Nginx.
     *   *Enfoque:* Diseño Mobile First estricto. La UI debe sentirse como una App nativa.
-*   **Base de Datos:** PostgreSQL.
+*   **Base de Datos:** PostgreSQL 15.
 *   **Autenticación:** JWT (JSON Web Tokens).
 
 ## 4. Requisitos Funcionales del MVP
@@ -37,6 +38,8 @@
 3.  **Código Educativo:** Dado que el dueño está aprendiendo, el código generado debe incluir comentarios explicativos breves sobre por qué se toma una decisión técnica (ej. "Usamos select_related aquí para optimizar la consulta a la BD").
 4.  **Simplicidad:** Para el MVP, priorizar funcionalidad sobre animaciones complejas.
 
-## 6. Estado Actual
-*   **Fase:** Inicio del desarrollo (Setup).
-*   **Siguiente paso:** Configuración de entorno Django y creación de modelos de base de datos.
+## 6. Estado Actual (v1.0.0)
+*   **Fase:** Producción / Despliegue.
+*   **Versión:** v1.0.0 (Dockerizada).
+*   **Hitos:** Backend y Frontend integrados, Admin Panel funcional, CI/CD básico implementado.
+*   **Siguiente paso:** Expansión de cobertura de pruebas y despliegue en nube.
