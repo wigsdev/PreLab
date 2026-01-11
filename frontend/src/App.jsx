@@ -9,8 +9,10 @@ import ExamView from './views/ExamView';
 import DashboardView from './views/DashboardView';
 import ProfileView from './views/ProfileView'; // [NEW]
 import CreateQuestionView from './views/admin/CreateQuestionView';
+import AdminDashboard from './views/admin/AdminDashboard'; // [NEW]
 import EditQuestionView from './views/admin/EditQuestionView'; // [NEW]
 import QuestionListView from './views/admin/QuestionListView';
+import UserListView from './views/admin/UserListView'; // [NEW]
 import LoginView from './views/LoginView';
 import RegisterView from './views/RegisterView';
 import PrivateRoute from './components/PrivateRoute';
@@ -47,10 +49,11 @@ function App() {
               <AdminLayout />
             </PrivateRoute>
           }>
+            <Route index element={<AdminDashboard />} />
             <Route path="create" element={<CreateQuestionView />} />
             <Route path="questions" element={<QuestionListView />} />
             <Route path="questions/:id/edit" element={<EditQuestionView />} />
-            <Route path="users" element={<div className="text-white">Próximamente: Gestión de Usuarios</div>} />
+            <Route path="users" element={<UserListView />} />
           </Route>
         </Routes>
       </AuthProvider>

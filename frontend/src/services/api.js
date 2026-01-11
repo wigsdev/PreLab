@@ -147,4 +147,25 @@ export const getAnalytics = async () => {
     }
 };
 
+
+export const getUsers = async (params = {}) => {
+    try {
+        const response = await api.get('/users/management/', { params });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        throw error;
+    }
+};
+
+export const updateUserRole = async (id, data) => {
+    try {
+        const response = await api.patch(`/users/management/${id}/`, data);
+        return response.data;
+    } catch (error) {
+        console.error("Error updating user role:", error);
+        throw error;
+    }
+};
+
 export default api;

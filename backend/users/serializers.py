@@ -34,4 +34,14 @@ class UserSerializer(serializers.ModelSerializer):
             instance.set_password(password)
 
         instance.save()
-        return instance
+
+class UserManagementSerializer(serializers.ModelSerializer):
+    """
+    Serializer para que los administradores gestionen usuarios.
+    Incluye campos de sistema (is_staff, is_active, etc.)
+    """
+    class Meta:
+        model = CustomUser
+        fields = ('id', 'email', 'first_name', 'last_name', 'avatar', 'is_staff', 'is_active', 'date_joined', 'last_login')
+        read_only_fields = ('id', 'email', 'date_joined', 'last_login')
+

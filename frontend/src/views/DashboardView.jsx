@@ -25,10 +25,7 @@ export default function DashboardView() {
     const [loading, setLoading] = useState(true);
     const [stats, setStats] = useState({ total: 0, average: 0, best: 0 });
 
-    // Redirect to Admin Dashboard if staff
-    if (user?.is_staff) {
-        return <AdminDashboard />;
-    }
+
 
     useEffect(() => {
         const fetchHistory = async () => {
