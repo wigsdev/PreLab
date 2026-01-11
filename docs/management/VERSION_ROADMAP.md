@@ -134,6 +134,15 @@ Objetivos:
 🚀 FASE 4: Pulido y Despegue (Pre-Producción)
 Objetivo: Que la app se vea profesional y esté en internet.
 
+📦 v0.9.2: "The Gatekeeper" (User Management)
+Peso: 🟡 Medio (Admin Features)
+
+Objetivos:
+
+[ ] User List View (Admin Panel).
+[ ] Role Management (Make Admin/Staff).
+[ ] User Search & Filters.
+
 📦 v0.9.5: "Release Candidate" (DevOps & Deploy)
 Peso: 🟡 Medio (DevOps)
 

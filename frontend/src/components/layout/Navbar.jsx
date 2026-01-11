@@ -103,7 +103,7 @@ export default function Navbar() {
                                         {/* Admin Link - Only for Staff */}
                                         {user.is_staff && (
                                             <Link
-                                                to="/admin/create"
+                                                to="/admin"
                                                 onClick={() => setIsOpen(false)}
                                                 className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20 rounded-xl transition-colors bg-amber-50/50 dark:bg-amber-900/10 my-1"
                                             >

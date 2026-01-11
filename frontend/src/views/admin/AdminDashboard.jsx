@@ -43,7 +43,22 @@ export default function AdminDashboard() {
         );
     }
 
-    if (!stats) return null;
+    if (!stats) {
+        return (
+            <div className="max-w-6xl mx-auto px-4 py-8 text-center">
+                <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-2xl border border-red-200 dark:border-red-800 inline-block">
+                    <h3 className="text-lg font-bold text-red-600 dark:text-red-400 mb-2">No se pudieron cargar los datos</h3>
+                    <p className="text-slate-600 dark:text-slate-400 mb-4">Ocurrió un error al contactar el servidor de analíticas.</p>
+                    <button
+                        onClick={() => window.location.reload()}
+                        className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+                    >
+                        Reintentar
+                    </button>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-8 pb-24">
@@ -114,8 +129,9 @@ export default function AdminDashboard() {
                         </div>
 
                         <div className="h-48 flex items-end justify-between gap-2">
-                            {stats.trend_data.map((item, idx) => {
-                                const height = item.count > 0 ? (item.count / Math.max(...stats.trend_data.map(d => d.count)) * 100) : 0;
+                            {(stats.trend_data || []).map((item, idx) => {
+                                const maxVal = Math.max(...(stats.trend_data || []).map(d => d.count), 1); // Avoid division by zero
+                                const height = item.count > 0 ? (item.count / maxVal * 100) : 0;
                                 return (
                                     <div key={idx} className="flex-1 flex flex-col items-center gap-2 group cursor-pointer">
                                         <div className="relative w-full flex justify-center">
@@ -161,7 +177,7 @@ export default function AdminDashboard() {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                                    {stats.recent_activity.map((item) => (
+                                    {(stats.recent_activity || []).map((item) => (
                                         <tr key={item.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
                                             <td className="p-4 pl-6 font-medium text-slate-800 dark:text-slate-200">
                                                 {item.user}
@@ -171,8 +187,8 @@ export default function AdminDashboard() {
                                             </td>
                                             <td className="p-4">
                                                 <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${item.type_label === 'Simulacro'
-                                                        ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
-                                                        : 'bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-400 border border-blue-100 dark:border-blue-900'
+                                                    ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
+                                                    : 'bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-400 border border-blue-100 dark:border-blue-900'
                                                     }`}>
                                                     {item.type_label}
                                                 </span>
@@ -206,7 +222,7 @@ export default function AdminDashboard() {
                             </h3>
                         </div>
                         <div className="space-y-4">
-                            {stats.top_students.map((student, idx) => (
+                            {(stats.top_students || []).map((student, idx) => (
                                 <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                                     <div className="flex items-center gap-3">
                                         <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${idx === 0 ? 'bg-yellow-100 text-yellow-700' :
