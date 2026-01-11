@@ -7,6 +7,7 @@ env/
 .env
 db.sqlite3
 media/
+staticfiles/
 
 # Javascript & React
 node_modules/
