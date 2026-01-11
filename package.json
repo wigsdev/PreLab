@@ -1,7 +1,21 @@
 {
   "devDependencies": {
     "autoprefixer": "^10.4.23",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "frontend/**/*.{js,jsx,json,css,md}": [
+      "cd frontend && npx prettier --write"
+    ],
+    "backend/**/*.py": [
+      "cd backend && black .",
+      "cd backend && flake8 ."
+    ]
   }
 }
