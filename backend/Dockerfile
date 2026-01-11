@@ -17,15 +17,16 @@ RUN apt-get update && apt-get install -y \
     netcat-openbsd \
     gcc \
     libpq-dev \
+    dos2unix \
     && rm -rf /var/lib/apt/lists/*
 
 # Copiar el archivo de requerimientos e instalar dependencias de Python
 COPY requirements.txt /app/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copiar el script de entrada y hacerlo ejecutable
-COPY entrypoint.sh /app/entrypoint.sh
-RUN chmod +x /app/entrypoint.sh
+# Copiar el script de entrada a una ubicación fuera del volumen montado
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN dos2unix /usr/local/bin/entrypoint.sh && chmod +x /usr/local/bin/entrypoint.sh
 
 # Copiar el resto del código del proyecto
 COPY . /app/
@@ -34,4 +35,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Definir el entrypoint
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
