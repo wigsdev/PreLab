@@ -10,11 +10,25 @@
 * Rama desarrollo: `develop` (Aquí se integra todo).
 * Ramas features: `feature/nombre-funcionalidad` (ej: `feature/modelo-preguntas`).
 
-## 3. Estándares
+## 3. Entorno de Desarrollo (Docker) 🐳
+Recomendamos usar Docker para garantizar que todos tengamos el mismo entorno.
+
+1.  **Iniciar:** `docker-compose up --build`
+2.  **Frontend:** http://localhost
+3.  **Backend:** http://localhost:8000/admin
+
+## 4. Tests y Calidad (QA) 🧪
+Antes de enviar un Pull Request, asegúrate de que los tests pasen:
+
+*   **Backend:** `docker-compose exec backend pytest`
+*   **Frontend:** Ver `README.md` (comando `docker run ... node:22-alpine` según tu OS).
+
+## 5. Estándares
 * **Backend:** Seguir PEP8. Usar Type Hints en Python (ej: `def sumar(a: int, b: int) -> int:`).
-* **Frontend:** Componentes funcionales en React. No usar jQuery ni manipulación directa del DOM.
+* **Frontend:** Componentes funcionales en React + Tailwind.
 * **Commits:** Usar Conventional Commits:
     * `feat:` Nueva funcionalidad.
     * `fix:` Corrección de errores.
     * `docs:` Cambios en documentación.
     * `refactor:` Cambios de código que no cambian funcionalidad.
+    * `chore:` Mantenimiento (Docker, Configs).

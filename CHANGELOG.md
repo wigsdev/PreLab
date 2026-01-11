@@ -4,6 +4,45 @@ Todas las modificaciones notables en este proyecto serán documentadas en este a
 
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [v1.1.0] - The Automator (CI/CD) - 2026-01-11
+### Added
+- **Infrastructure:**
+    - Workflow de GitHub Actions (`ci.yml`) para validación de Pull Requests (Linting + Build).
+    - Configuración de `pytest` (Backend) y `vitest` (Frontend) listas para ejecución.
+
+## [v1.0.0] - Grand Opening (Production Ready) - 2026-01-11
+### Added
+- **Docker & DevOps:**
+    - `Dockerfile` Backend (Python 3.12-slim + Gunicorn).
+    - `Dockerfile` Frontend (Node 22-alpine -> Nginx Alpine).
+    - `docker-compose.yml` orquestando Postgres, Backend y Frontend.
+    - Soporte de variables de entorno para configuración flexible.
+- **Backend:**
+    - `Whitenoise` configurado para servir archivos estáticos (Admin panel).
+    - Script `entrypoint.sh` para migraciones automáticas y espera de DB.
+- **Documentation:**
+    - `README.md` totalmente renovado y profesional.
+    - Reorganización de carpeta `docs/`.
+
+## [v0.9.6] - Regional Ops & Analytics Polish - 2026-01-11
+### Changed
+- **Analytics:**
+    - `AnalyticsView` refactorizada para soportar rangos de fechas (7d, 30d, 90d).
+    - Dashboard de Admin actualizado con selectores de rango.
+
+## [v0.9.5] - Quality Assurance (QA) - 2026-01-11
+### Added
+- **Testing:**
+    - Implementación inicial de tests unitarios para modelos clave (`ExamAttempt`, `CustomUser`).
+    - Configuración de Hooks (`husky`, `lint-staged`) para formateo automático.
+
+## [v0.9.4] - The Student Experience - 2026-01-10
+### Added
+- **Features:**
+    - Nueva Landing Page pública ("La Vitrina").
+    - Modo Revisión de Examen (Ver respuestas correctas/incorrectas).
+    - Sistema de Reporte de Preguntas.
+
 ## [v0.9.3] - UX Polish (Admin Sidebar) - 2026-01-10
 ### Changed
 - **Admin UX:**

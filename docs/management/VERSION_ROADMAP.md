@@ -22,11 +22,11 @@ Peso: 🟡 Medio (Modelado de Datos)
 
 Objetivos:
 
-[ ] Modelos creados: Universidad, Curso, Tema, Pregunta, Opcion.
+[x] Modelos creados: Universidad, Curso, Tema, Pregunta, Opcion.
 
-[ ] Admin Panel Optimizado: Personalización del Django Admin para cargar preguntas con imágenes y opciones en una sola pantalla.
+[x] Admin Panel Optimizado: Personalización del Django Admin para cargar preguntas con imágenes y opciones en una sola pantalla.
 
-[ ] API Básica (Solo lectura): Endpoint para listar preguntas por tema.
+[x] API Básica (Solo lectura): Endpoint para listar preguntas por tema.
 
 Resultado: Ya puedes empezar a digitar las preguntas para tu sobrina, aunque ella aún no pueda verlas en una app.
 
@@ -38,13 +38,13 @@ Peso: 🔴 Alto (Frontend & UI)
 
 Objetivos:
 
-[ ] Setup de React + Tailwind.
+[x] Setup de React + Tailwind.
 
-[ ] Diseño Mobile First: Header, Footer y "Card de Pregunta".
+[x] Diseño Mobile First: Header, Footer y "Card de Pregunta".
 
-[ ] Lógica de Examen: Ver pregunta -> Tocar opción -> Feedback inmediato (Correcto/Incorrecto + Explicación).
+[x] Lógica de Examen: Ver pregunta -> Tocar opción -> Feedback inmediato (Correcto/Incorrecto + Explicación).
 
-[ ] Navegación simple: Home -> Elegir Curso -> Elegir Tema -> Jugar.
+[x] Navegación simple: Home -> Elegir Curso -> Elegir Tema -> Jugar.
 
 Estado: Funcional. Tu sobrina ya puede usarlo en tu laptop o red local para estudiar.
 
@@ -135,13 +135,13 @@ Objetivos:
 Objetivo: Que la app se vea profesional y esté en internet.
 
 📦 v0.9.2: "The Gatekeeper" (User Management)
-Peso: 🟡 Medio (Admin Features)
+Peso: 🟢 Terminada (Admin Features)
 
 Objetivos:
 
-[ ] User List View (Admin Panel).
-[ ] Role Management (Make Admin/Staff).
-[ ] User Search & Filters.
+[x] User List View (Admin Panel).
+[x] Role Management (Make Admin/Staff).
+[x] User Search & Filters.
 
 📦 v0.9.5: "Release Candidate" (DevOps & Deploy)
 Peso: 🟢 Terminada (DevOps)
@@ -157,7 +157,7 @@ Objetivos:
 [x] Despliegue de Frontend (Docker/Nginx/Multi-stage).
 
 🏆 v1.0.0: "Grand Opening" (PRODUCCIÓN)
-Peso: 🟢 Bajo (Marketing/Finalización)
+Peso: 🟢 LOW (Finalización)
 
 Objetivos:
 
@@ -165,7 +165,17 @@ Objetivos:
 
 [ ] Google Analytics/Adsense configurado.
 
-[ ] Lanzamiento Oficial.
+[x] Lanzamiento Oficial (Docker Release).
+
+📦 v1.1.0: "The Automator" (CI/CD & QA)
+Peso: 🟢 Terminada (Infrastructure)
+
+Objetivos:
+
+[x] GitHub Actions (CI) para Backend y Frontend.
+[x] Testing Setup (Pytest & Vitest).
+[x] Backend Docker Tests.
+[x] Frontend Docker Tests.
 
 ¿Cómo seguimos el hilo?
 Cada vez que hables con tu agente para pedir código, dile en qué versión estás trabajando.
