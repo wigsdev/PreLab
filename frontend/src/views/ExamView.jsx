@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import QuestionCard from '../components/QuestionCard';
 import ResultsCard from '../components/ResultsCard';
@@ -46,9 +46,24 @@ export default function ExamView() {
         }
     }, [loading, isFinished, isReviewing, startTimer, stopTimer]);
 
+    // Use ref to prevent double-firing in StrictMode or due to re-renders
+    // This is the "Nuclear Option" against infinite loops
+    const hasStartedRef = useRef(false);
+    const [currentParams, setCurrentParams] = useState({ c: null, t: null, m: null });
+
     useEffect(() => {
-        startExam({ courseId, topicId, mode });
-    }, [courseId, topicId, mode, startExam]);
+        // Only run if params changed or never run
+        const paramsChanged =
+            currentParams.c !== courseId || currentParams.t !== topicId || currentParams.m !== mode;
+
+        if (paramsChanged || !hasStartedRef.current) {
+            hasStartedRef.current = true;
+            setCurrentParams({ c: courseId, t: topicId, m: mode });
+
+            // Execute startExam
+            startExam({ courseId, topicId, mode });
+        }
+    }, [courseId, topicId, mode, startExam, currentParams]);
 
     if (loading) {
         return (

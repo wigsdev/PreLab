@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export function useTimer(initialSeconds, onTimeUp) {
     const [timeLeft, setTimeLeft] = useState(initialSeconds);
@@ -25,12 +25,15 @@ export function useTimer(initialSeconds, onTimeUp) {
         }
     }, [timeLeft, isActive, onTimeUp]);
 
-    const startTimer = () => setIsActive(true);
-    const stopTimer = () => setIsActive(false);
-    const resetTimer = (newSeconds) => {
-        setIsActive(false);
-        setTimeLeft(newSeconds || initialSeconds);
-    };
+    const startTimer = useCallback(() => setIsActive(true), []);
+    const stopTimer = useCallback(() => setIsActive(false), []);
+    const resetTimer = useCallback(
+        (newSeconds) => {
+            setIsActive(false);
+            setTimeLeft(newSeconds || initialSeconds);
+        },
+        [initialSeconds]
+    );
 
     const formatTime = (seconds) => {
         const m = Math.floor(seconds / 60);
