@@ -54,23 +54,33 @@ def parse_markdown_to_json(input_file, output_file, course_name, topic_name):
             
             options_raw = options_match.group(1).strip().split('\n')
             options = []
-            valid_option_prefixes = ['a)', 'b)', 'c)', 'd)', 'e)']
+            valid_option_prefixes_lower = ['a)', 'b)', 'c)', 'd)', 'e)']
+            valid_option_prefixes_upper = ['A)', 'B)', 'C)', 'D)', 'E)']
             
             for opt_line in options_raw:
                 opt_line = opt_line.strip()
                 if not opt_line: continue
-                # Remove prefix "a) "
-                for prefix in valid_option_prefixes:
+                # Try lowercase first
+                for prefix in valid_option_prefixes_lower:
                     if opt_line.startswith(prefix):
                         options.append(opt_line[len(prefix):].strip())
                         break
+                else:
+                    # Try uppercase
+                    for prefix in valid_option_prefixes_upper:
+                        if opt_line.startswith(prefix):
+                            options.append(opt_line[len(prefix):].strip())
+                            break
 
-            # Extract Correct Answer
-            correct_match = re.search(r'\*\*Marca Visual:\*\*\s*([a-e-])', q_text)
+            # Extract Correct Answer (support both upper and lower case)
+            correct_match = re.search(r'\*\*Marca Visual:\*\*\s*([a-eA-E-])', q_text)
             correct_char = correct_match.group(1) if correct_match else '-'
             correct_index = -1
-            if correct_char != '-' and 'a' <= correct_char <= 'e':
-                 correct_index = ord(correct_char) - ord('a')
+            if correct_char != '-':
+                if 'a' <= correct_char <= 'e':
+                    correct_index = ord(correct_char) - ord('a')
+                elif 'A' <= correct_char <= 'E':
+                    correct_index = ord(correct_char) - ord('A')
 
             # Extract Solution
             solution_match = re.search(r'\*\*Solución:\*\*\s*(.*?)(\n---|Z)', q_text, re.DOTALL) # Z is end of string fallback
