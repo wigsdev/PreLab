@@ -31,35 +31,37 @@ Instrucciones: Genera un script de Bash (comandos de terminal) secuencial y come
    - Generar el archivo requirements.txt inmediatamente.
 
 4. Inicialización de Django:
-   - Crear el proyecto Django llamado config (usamos "config" para que no choque con el nombre del producto). 
+   - Crear el proyecto Django llamado config (usamos "config" para que no choque con el nombre del producto).
    - Nota: Asegúrate de crearlo en la carpeta actual (.) para no anidar carpetas innecesariamente.
 
 5. Configuración de Git:
    - Volver a la raíz del proyecto.
    - Inicializar repositorio Git (git init).
-   - Crear un archivo .gitignore en la raíz que ignore: venv/, __pycache__/, db.sqlite3, .env, node_modules/ y archivos de sistema (.DS_Store).
+   - Crear un archivo .gitignore en la raíz que ignore: venv/, **pycache**/, db.sqlite3, .env, node_modules/ y archivos de sistema (.DS_Store).
 
 Entregable: Proporcióname el bloque de código con los comandos listos para copiar y pegar en mi terminal (PowerShell o Bash). Al final, explícame brevemente por qué instalamos django-cors-headers.
 ```
 
 ### 🔍 Análisis de Implementación Real vs Prompt
-*   **Estructura:** ✅ Cumple.
-*   **Venv:** Diferencia menor. El prompt sugiere `backend/venv`, implementamos `root/venv` (más cómodo para IDEs en monorepos simples).
-*   **Dependencias:** ⚠️ Faltantes.
-    *   En implementación actual falta: `django-cors-headers` (Crítico para v0.3.0) y `Pillow` (Crítico para v0.2.0 soporte imágenes).
-    *   Acción Correctiva: Se instalarán inmediatamente.
+
+- **Estructura:** ✅ Cumple.
+- **Venv:** Diferencia menor. El prompt sugiere `backend/venv`, implementamos `root/venv` (más cómodo para IDEs en monorepos simples).
+- **Dependencias:** ⚠️ Faltantes.
+  - En implementación actual falta: `django-cors-headers` (Crítico para v0.3.0) y `Pillow` (Crítico para v0.2.0 soporte imágenes).
+  - Acción Correctiva: Se instalarán inmediatamente.
 
 ## 📚 v0.2.0: "The Librarian" (Base de Datos & Admin)
 
 **Objetivo:** Implementación del Core del negocio (Modelos y Admin avanzado).
 
-```markdown
+````markdown
 🟡 PROMPT: Base de Datos y Admin Panel (v0.2.0)
 Rol: Actúa como un Arquitecto de Software experto en Django y Modelado de Datos.
 
 Contexto: Ya tenemos el proyecto config creado y el entorno virtual activo. Ahora necesitamos implementar la lógica de negocio "Core" para un sistema de exámenes.
 
 Objetivo (Task):
+
 1. Crear la aplicación core.
 2. Definir los Modelos (Tablas) en models.py.
 3. Configurar un Admin Panel avanzado en admin.py para cargar preguntas masivamente de forma fácil.
@@ -67,17 +69,21 @@ Objetivo (Task):
 Instrucciones Paso a Paso:
 
 Paso 1: Comandos de Terminal (Bash)
+
 - Crear la app llamada core.
 
 Paso 2: Código para core/models.py
+
 - Entidades: Universidad, Curso, Tema, Pregunta (con dificultad y explicación), Opcion.
-- Requisito: __str__ legible.
+- Requisito: **str** legible.
 
 Paso 3: Código para core/admin.py
+
 - Usa admin.TabularInline para Opcion.
 - Filtros y búsqueda en PreguntaAdmin.
 
 Paso 4: Registro y Migración
+
 - Registrar 'core' en settings.py.
 - Comandos para makemigrations, migrate y createsuperuser.
 
@@ -113,6 +119,7 @@ Instrucciones Paso a Paso:
 
 Entregable: Código limpio para los 3 archivos (serializers.py, views.py, urls.py) y una explicación breve de qué es un "Nested Serializer".
 ```
+````
 
 ## 🎨 v0.3.0: "First Playable" (Frontend React)
 
@@ -131,12 +138,14 @@ Objetivo (Task): Inicializar la aplicación React y construir la interfaz de usu
 Instrucciones Paso a Paso:
 
 Paso 1: Inicialización (Terminal) Dame los comandos de Bash para:
+
 - Navegar a la carpeta raíz.
 - Crear el proyecto React usando Vite dentro de la carpeta frontend (si la carpeta ya existe, usa la opción para instalar en el directorio actual o borra y crea).
 - Instalar dependencias clave: axios (para consumir la API), clsx (para clases condicionales) y lucide-react (para íconos ligeros).
 - Instalar y configurar Tailwind CSS (dame los comandos para generar el tailwind.config.js y qué debo poner en index.css).
 
 Paso 2: Componente QuestionCard (El Corazón de la App) Crea el archivo src/components/QuestionCard.jsx.
+
 - Diseño: Debe ocupar todo el ancho del móvil.
 - Opciones: Deben ser botones grandes verticales (min-height: 48px para la "Thumb Zone").
 - Lógica Visual:
@@ -147,6 +156,7 @@ Paso 2: Componente QuestionCard (El Corazón de la App) Crea el archivo src/comp
 - Props: Debe recibir el objeto question y una función onNext para pasar a la siguiente.
 
 Paso 3: Integración Básica (App.jsx) Modifica src/App.jsx para probar esto:
+
 - Usa useEffect y axios para traer preguntas de tu API.
 - Muestra la QuestionCard con la primera pregunta recibida.
 - Agrega un botón "Siguiente" que solo aparezca después de responder.
@@ -172,6 +182,7 @@ Objetivo (Task): Implementar la lógica completa de un "Micro-Simulacro" (10 pre
 Instrucciones Paso a Paso:
 
 Paso 1: Custom Hook (useExamEngine.js) Necesito que separemos la lógica de la vista. Crea un hook personalizado src/hooks/useExamEngine.js que maneje:
+
 - Estados: questions (array), currentIndex (int), score (int), isFinished (bool), loading (bool).
 - Funciones:
   - startExam(temaId): Llama a la API, mezcla las preguntas (shuffle) y toma solo 10.
@@ -179,6 +190,7 @@ Paso 1: Custom Hook (useExamEngine.js) Necesito que separemos la lógica de la v
   - resetExam(): Reinicia todo para jugar de nuevo.
 
 Paso 2: Componente de Resultados (ResultsCard.jsx) Crea src/components/ResultsCard.jsx.
+
 - Debe mostrarse cuando isFinished sea true.
 - Diseño Mobile: Un círculo grande con la nota final (ej: "14/20").
 - Mensaje Dinámico:
@@ -188,12 +200,14 @@ Paso 2: Componente de Resultados (ResultsCard.jsx) Crea src/components/ResultsCa
 - Botones: "Intentar de nuevo" y "Volver al Inicio".
 
 Paso 3: Integración en App.jsx Actualiza el archivo principal para orquestar todo:
+
 - Si loading: Muestra un spinner o texto "Cargando...".
 - Si !isFinished: Muestra QuestionCard.
 - Si isFinished: Muestra ResultsCard.
 
 Entregable: Código de useExamEngine.js, ResultsCard.jsx y la actualización de App.jsx. Explícame brevemente cómo funciona el localStorage en este contexto.
 ```
+
 ## 🔐 v0.5.0: "Identity" (Autenticación JWT)
 
 **Objetivo:** Gestión de usuarios y seguridad.
@@ -203,6 +217,7 @@ Entregable: Código de useExamEngine.js, ResultsCard.jsx y la actualización de 
 Objetivo: Implementar sistema de usuarios con JWT.
 Stack: Django REST Framework SimpleJWT + React Context.
 Requerimientos:
+
 - Backend: Modelo CustomUser (email como user), endpoints /token y /register.
 - Frontend: AuthContext para manejar tokens en localStorage.
 - UI: Pantallas LoginView y RegisterView.
@@ -217,6 +232,7 @@ Requerimientos:
 🔵 PROMPT: Dark Mode y UI Kit (v0.6.0)
 Objetivo: Implementar cambio de tema y mejorar componentes visuales.
 Requerimientos:
+
 - Tailwind: Configurar 'darkMode: class'.
 - Hook: useTheme para persistencia en localStorage.
 - UI: Navbar responsivo con toggle de tema.
@@ -231,6 +247,7 @@ Requerimientos:
 🟤 PROMPT: Persistencia de Historial (v0.7.0)
 Objetivo: Endpoint y lógica para guardar exámenes de usuarios logueados.
 Requerimientos:
+
 - Backend: Modelo ExamAttempt (user, score, topic).
 - API: Endpoint POST /api/history/ securizado.
 - Frontend: Modificar ResultsCard para enviar datos si hay usuario.

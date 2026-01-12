@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle, Shield, Zap, BookOpen } from 'lucide-react';
 export default function LandingView() {
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
-
             {/* Hero Section */}
             <header className="relative overflow-hidden pt-20 pb-32">
                 {/* Background Blobs */}
@@ -23,13 +22,16 @@ export default function LandingView() {
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 dark:from-white dark:via-indigo-200 dark:to-white animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
-                        Domina tu Ingreso<br />
-                        <span className="text-indigo-600 dark:text-indigo-400">Sin Miedo al Éxito</span>
+                        Domina tu Ingreso
+                        <br />
+                        <span className="text-indigo-600 dark:text-indigo-400">
+                            Sin Miedo al Éxito
+                        </span>
                     </h1>
 
                     <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-                        La plataforma de entrenamiento intensivo para postulantes a la UNI.
-                        Practica con preguntas reales, obtén métricas al instante y asegura tu vacante.
+                        La plataforma de entrenamiento intensivo para postulantes a la UNI. Practica
+                        con preguntas reales, obtén métricas al instante y asegura tu vacante.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
@@ -49,7 +51,10 @@ export default function LandingView() {
                     </div>
 
                     <div className="mt-6 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500">
-                        <Link to="/practice" className="text-sm font-semibold text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 transition-colors">
+                        <Link
+                            to="/practice"
+                            className="text-sm font-semibold text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 transition-colors"
+                        >
                             O prueba una demo sin registrarte
                         </Link>
                     </div>
@@ -66,7 +71,8 @@ export default function LandingView() {
                             </div>
                             <h3 className="text-xl font-bold mb-2">Feedback Inmediato</h3>
                             <p className="text-slate-600 dark:text-slate-400">
-                                Olvídate de esperar. Recibe tu nota y explicaciones detalladas al instante después de cada respuesta.
+                                Olvídate de esperar. Recibe tu nota y explicaciones detalladas al
+                                instante después de cada respuesta.
                             </p>
                         </div>
                         <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow">
@@ -75,7 +81,8 @@ export default function LandingView() {
                             </div>
                             <h3 className="text-xl font-bold mb-2">Simulacros Reales</h3>
                             <p className="text-slate-600 dark:text-slate-400">
-                                Preguntas tipo admisión organizadas por cursos y temas. Entrena con la dificultad real del examen.
+                                Preguntas tipo admisión organizadas por cursos y temas. Entrena con
+                                la dificultad real del examen.
                             </p>
                         </div>
                         <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow">
@@ -84,7 +91,8 @@ export default function LandingView() {
                             </div>
                             <h3 className="text-xl font-bold mb-2">Seguimiento de Progreso</h3>
                             <p className="text-slate-600 dark:text-slate-400">
-                                Tu dashboard personal guarda todo tu historial. Mira cómo mejora tu promedio día tras día.
+                                Tu dashboard personal guarda todo tu historial. Mira cómo mejora tu
+                                promedio día tras día.
                             </p>
                         </div>
                     </div>

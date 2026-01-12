@@ -13,12 +13,12 @@ export default function CreateQuestionView() {
                 statement: formData.text,
                 image: null,
                 explanation: formData.explanation,
-                options: formData.options
+                options: formData.options,
             });
-            toast.success("Pregunta creada con éxito");
+            toast.success('Pregunta creada con éxito');
             navigate('/admin/questions');
         } catch (error) {
-            toast.error("Error al crear la pregunta");
+            toast.error('Error al crear la pregunta');
             throw error;
         }
     };

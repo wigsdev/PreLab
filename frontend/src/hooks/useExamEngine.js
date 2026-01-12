@@ -47,21 +47,22 @@ export function useExamEngine() {
 
             const response = await axios.get(url);
 
-            // En modo simulación, ya vienen ~30 preguntas. 
+            // En modo simulación, ya vienen ~30 preguntas.
             // Igual aplicamos shuffle por si acaso para mezclar el orden de los cursos
             // (aunque backend ya podría haberlo hecho, es seguro hacerlo aquí también).
             // Para modo standard, mantenemos el slice(0, 10).
 
             const shuffled = shuffleArray(response.data);
 
-            const selected = mode === 'simulation'
-                ? shuffled // Usa todas las que trajo (ej. 30)
-                : shuffled.slice(0, 10); // Solo 10 para práctica rápida
+            const selected =
+                mode === 'simulation'
+                    ? shuffled // Usa todas las que trajo (ej. 30)
+                    : shuffled.slice(0, 10); // Solo 10 para práctica rápida
 
             setQuestions(selected);
         } catch (err) {
-            console.error("Error fetching questions:", err);
-            setError("Error al cargar el examen. Revisa tu conexión.");
+            console.error('Error fetching questions:', err);
+            setError('Error al cargar el examen. Revisa tu conexión.');
         } finally {
             setLoading(false);
         }
@@ -69,13 +70,13 @@ export function useExamEngine() {
 
     const submitAnswer = (isCorrect) => {
         if (isCorrect) {
-            setScore(prev => prev + 1);
+            setScore((prev) => prev + 1);
         }
 
         // Pequeño delay para que el usuario vea el feedback visual (verde/rojo) antes de cambiar
         // Opcional: Esto lo maneja la UI con el botón "Siguiente", aquí solo cambiamos el índice.
 
-        // NOTA: Como la QuestionCard tiene un botón de "Siguiente", esta función se llamará 
+        // NOTA: Como la QuestionCard tiene un botón de "Siguiente", esta función se llamará
         // cuando el usuario presione ese botón.
 
         // Mover lógica de avance al botón "Siguiente" fuera del submitAnswer o separar responsabilidades?
@@ -83,32 +84,32 @@ export function useExamEngine() {
         // Lo haremos directo aquí:
 
         if (currentIndex < questions.length - 1) {
-            setCurrentIndex(prev => prev + 1);
+            setCurrentIndex((prev) => prev + 1);
         } else {
             setIsFinished(true);
         }
     };
 
     // Wrapper para separar lógica de "Anotar punto" vs "Siguiente Pregunta"
-    // Para UX, a veces queremos anotar el punto clickeando la opción, 
+    // Para UX, a veces queremos anotar el punto clickeando la opción,
     // pero avanzar clickeando "Siguiente".
     // Ajustaremos para que submitAnswer solo anote el score, y nextQuestion avance.
     // Pero para cumplir estrictamente el Prompt que agrupa la lógica:
 
     const handleNext = (wasCorrect, selectedOptionId) => {
         // Guardamos el resultado de esta pregunta con la opción elegida
-        setUserAnswers(prev => [...prev, { isCorrect: wasCorrect, selectedOptionId }]);
+        setUserAnswers((prev) => [...prev, { isCorrect: wasCorrect, selectedOptionId }]);
 
         // Si el usuario acertó la anterior, sumamos.
         if (wasCorrect) {
-            setScore(s => s + 1);
-            setStreak(s => s + 1); // Aumentar racha
+            setScore((s) => s + 1);
+            setStreak((s) => s + 1); // Aumentar racha
         } else {
             setStreak(0); // Reiniciar racha :(
         }
 
         if (currentIndex < questions.length - 1) {
-            setCurrentIndex(current => current + 1);
+            setCurrentIndex((current) => current + 1);
         } else {
             setIsFinished(true);
         }
@@ -140,6 +141,6 @@ export function useExamEngine() {
         startExam,
         handleNext, // Usamos handleNext en lugar de submitAnswer directo para mayor claridad en UI
         finishExam,
-        resetExam
+        resetExam,
     };
 }

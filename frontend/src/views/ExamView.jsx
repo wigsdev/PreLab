@@ -30,7 +30,7 @@ export default function ExamView() {
         startExam,
         handleNext,
         finishExam,
-        resetExam
+        resetExam,
     } = useExamEngine();
 
     const initialTime = mode === 'simulation' ? 1800 : 600;
@@ -88,8 +88,12 @@ export default function ExamView() {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center text-center p-6">
                 <div>
-                    <h2 className="text-xl font-bold text-slate-800 dark:text-white">No se encontraron preguntas</h2>
-                    <p className="text-slate-500 dark:text-slate-400 mt-2">Intenta con otro curso o tema.</p>
+                    <h2 className="text-xl font-bold text-slate-800 dark:text-white">
+                        No se encontraron preguntas
+                    </h2>
+                    <p className="text-slate-500 dark:text-slate-400 mt-2">
+                        Intenta con otro curso o tema.
+                    </p>
                     <button
                         onClick={() => navigate('/')}
                         className="mt-6 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 shadow-lg shadow-indigo-200 dark:shadow-none"
@@ -103,7 +107,6 @@ export default function ExamView() {
 
     return (
         <div className="w-full max-w-2xl mx-auto pt-4 pb-2 px-4 flex flex-col min-h-[calc(100vh-70px)] justify-start">
-
             {/* Header View - Back Button & Progress */}
             {!isFinished && (
                 <header className="w-full mb-4 flex justify-between items-center shrink-0">
@@ -116,10 +119,7 @@ export default function ExamView() {
                             <ArrowLeft size={18} />
                         </button>
 
-                        <Timer
-                            timeString={formatTime(timeLeft)}
-                            isWarning={timeLeft < 60}
-                        />
+                        <Timer timeString={formatTime(timeLeft)} isWarning={timeLeft < 60} />
                     </div>
 
                     <div className="text-right flex items-center gap-3">
@@ -172,7 +172,9 @@ export default function ExamView() {
                     <QuestionCard
                         key={questions[currentIndex].id}
                         question={questions[currentIndex]}
-                        onNext={(isCorrect, selectedOptionId) => handleNext(isCorrect, selectedOptionId)}
+                        onNext={(isCorrect, selectedOptionId) =>
+                            handleNext(isCorrect, selectedOptionId)
+                        }
                     />
                 )}
             </main>

@@ -10,7 +10,7 @@ export default function ProfileView() {
         first_name: '',
         last_name: '',
         email: '',
-        password: ''
+        password: '',
     });
     const [avatarFile, setAvatarFile] = useState(null);
     const [avatarPreview, setAvatarPreview] = useState(null);
@@ -23,7 +23,7 @@ export default function ProfileView() {
                 first_name: user.first_name || '',
                 last_name: user.last_name || '',
                 email: user.email || '',
-                password: ''
+                password: '',
             });
             setAvatarPreview(user.avatar);
         }
@@ -56,10 +56,12 @@ export default function ProfileView() {
         try {
             await updateProfile(dataToSend);
             await fetchUser(); // Update context
-            toast.success("Perfil actualizado correctamente");
+            toast.success('Perfil actualizado correctamente');
         } catch (error) {
             console.error(error);
-            const msg = error.response?.data ? JSON.stringify(error.response.data) : "Error al actualizar perfil";
+            const msg = error.response?.data
+                ? JSON.stringify(error.response.data)
+                : 'Error al actualizar perfil';
             toast.error(msg);
         } finally {
             setLoading(false);
@@ -72,14 +74,28 @@ export default function ProfileView() {
                 <User className="text-indigo-600 dark:text-indigo-400" /> Mi Perfil
             </h1>
 
-            <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700 rounded-2xl p-6 mb-8">
-
+            <form
+                onSubmit={handleSubmit}
+                className="bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700 rounded-2xl p-6 mb-8"
+            >
                 {/* Avatar Section */}
                 <div className="flex flex-col items-center mb-8">
-                    <div className="relative group cursor-pointer" onClick={() => fileInputRef.current.click()}>
+                    <div
+                        className="relative group cursor-pointer"
+                        onClick={() => fileInputRef.current.click()}
+                    >
                         <div className="w-24 h-24 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg">
                             {avatarPreview ? (
-                                <img src={avatarPreview.startsWith('http') || avatarPreview.startsWith('blob') ? avatarPreview : `http://127.0.0.1:8000${avatarPreview}`} alt="Avatar" className="w-full h-full object-cover" />
+                                <img
+                                    src={
+                                        avatarPreview.startsWith('http') ||
+                                        avatarPreview.startsWith('blob')
+                                            ? avatarPreview
+                                            : `http://127.0.0.1:8000${avatarPreview}`
+                                    }
+                                    alt="Avatar"
+                                    className="w-full h-full object-cover"
+                                />
                             ) : (
                                 <div className="w-full h-full flex items-center justify-center text-slate-400">
                                     <User size={40} />
@@ -103,23 +119,31 @@ export default function ProfileView() {
                 <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase mb-1">Nombre</label>
+                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase mb-1">
+                                Nombre
+                            </label>
                             <input
                                 type="text"
                                 required
                                 value={formData.first_name}
-                                onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
+                                onChange={(e) =>
+                                    setFormData({ ...formData, first_name: e.target.value })
+                                }
                                 className="w-full p-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
                                 placeholder="Tu nombre"
                             />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase mb-1">Apellido</label>
+                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase mb-1">
+                                Apellido
+                            </label>
                             <input
                                 type="text"
                                 required
                                 value={formData.last_name}
-                                onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
+                                onChange={(e) =>
+                                    setFormData({ ...formData, last_name: e.target.value })
+                                }
                                 className="w-full p-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
                                 placeholder="Tu apellido"
                             />
@@ -127,7 +151,9 @@ export default function ProfileView() {
                     </div>
 
                     <div>
-                        <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase mb-1">Email</label>
+                        <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase mb-1">
+                            Email
+                        </label>
                         <input
                             type="email"
                             value={formData.email}

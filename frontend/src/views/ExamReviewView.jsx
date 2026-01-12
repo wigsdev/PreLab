@@ -21,7 +21,7 @@ export default function ExamReviewView() {
                 if (err.response && err.response.data && err.response.data.detail) {
                     setError(`Error: ${err.response.data.detail}`);
                 } else {
-                    setError("No se pudo cargar la revisión del examen.");
+                    setError('No se pudo cargar la revisión del examen.');
                 }
             } finally {
                 setLoading(false);
@@ -43,8 +43,11 @@ export default function ExamReviewView() {
             <div className="min-h-screen flex items-center justify-center p-4">
                 <div className="bg-red-50 text-red-600 p-4 rounded-lg border border-red-200 text-center">
                     <p className="font-bold">Error</p>
-                    <p className="text-sm mt-1">{error || "Intento no encontrado"}</p>
-                    <button onClick={() => navigate('/dashboard')} className="mt-4 text-xs font-bold underline">
+                    <p className="text-sm mt-1">{error || 'Intento no encontrado'}</p>
+                    <button
+                        onClick={() => navigate('/dashboard')}
+                        className="mt-4 text-xs font-bold underline"
+                    >
                         Volver al Dashboard
                     </button>
                 </div>
@@ -84,10 +87,11 @@ export default function ExamReviewView() {
                 </button>
                 <div>
                     <h1 className="text-2xl font-black text-slate-800 dark:text-white">
-                        Revisión: {attempt.course_name || attempt.topic_name || "Simulacro"}
+                        Revisión: {attempt.course_name || attempt.topic_name || 'Simulacro'}
                     </h1>
                     <p className="text-slate-500 text-sm">
-                        Nota: {attempt.score} / {attempt.total_questions} • {new Date(attempt.created_at).toLocaleDateString()}
+                        Nota: {attempt.score} / {attempt.total_questions} •{' '}
+                        {new Date(attempt.created_at).toLocaleDateString()}
                     </p>
                 </div>
             </header>
@@ -105,17 +109,32 @@ export default function ExamReviewView() {
                     </div>
                 ) : (
                     attempt.answers.map((ans, idx) => (
-                        <div key={ans.id} className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div
+                            key={ans.id}
+                            className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm"
+                        >
                             <div className="flex gap-4">
-                                <span className="font-black text-slate-300 text-lg">#{idx + 1}</span>
+                                <span className="font-black text-slate-300 text-lg">
+                                    #{idx + 1}
+                                </span>
                                 <div className="flex-1">
-                                    <p className="font-bold text-slate-800 dark:text-slate-200 mb-4">{ans.question_statement}</p>
+                                    <p className="font-bold text-slate-800 dark:text-slate-200 mb-4">
+                                        {ans.question_statement}
+                                    </p>
 
                                     <div className="space-y-2 text-sm">
-                                        <div className={`p-3 rounded-lg border flex justify-between ${ans.is_correct ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'}`}>
+                                        <div
+                                            className={`p-3 rounded-lg border flex justify-between ${ans.is_correct ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'}`}
+                                        >
                                             <span className="font-semibold">Tu respuesta:</span>
-                                            <span>{ans.selected_option_text || "No respondió"}</span>
-                                            {ans.is_correct ? <CheckCircle size={16} /> : <XCircle size={16} />}
+                                            <span>
+                                                {ans.selected_option_text || 'No respondió'}
+                                            </span>
+                                            {ans.is_correct ? (
+                                                <CheckCircle size={16} />
+                                            ) : (
+                                                <XCircle size={16} />
+                                            )}
                                         </div>
                                         {!ans.is_correct && (
                                             <div className="p-3 rounded-lg bg-slate-50 border border-slate-100 dark:bg-slate-900/50 dark:border-slate-700 text-slate-600 dark:text-slate-400 flex justify-between">
@@ -127,7 +146,8 @@ export default function ExamReviewView() {
                                 </div>
                             </div>
                         </div>
-                    )))}
+                    ))
+                )}
             </div>
         </div>
     );

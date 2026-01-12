@@ -16,7 +16,7 @@ export default function EditQuestionView() {
                 const data = await getQuestion(id);
                 setQuestion(data);
             } catch (error) {
-                toast.error("Error al cargar la pregunta");
+                toast.error('Error al cargar la pregunta');
                 navigate('/admin/questions');
             } finally {
                 setLoading(false);
@@ -31,12 +31,12 @@ export default function EditQuestionView() {
                 topic: formData.topic,
                 statement: formData.text,
                 explanation: formData.explanation,
-                options: formData.options
+                options: formData.options,
             });
-            toast.success("Pregunta actualizada exitosamente");
+            toast.success('Pregunta actualizada exitosamente');
             navigate('/admin/questions');
         } catch (error) {
-            toast.error("Error al actualizar la pregunta");
+            toast.error('Error al actualizar la pregunta');
             throw error;
         }
     };
@@ -49,11 +49,5 @@ export default function EditQuestionView() {
         );
     }
 
-    return (
-        <QuestionForm
-            initialData={question}
-            onSubmit={handleSubmit}
-            isEditing={true}
-        />
-    );
+    return <QuestionForm initialData={question} onSubmit={handleSubmit} isEditing={true} />;
 }

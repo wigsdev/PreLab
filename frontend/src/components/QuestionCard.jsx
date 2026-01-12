@@ -26,26 +26,25 @@ export default function QuestionCard({ question, onNext }) {
     const getOptionStyle = (option) => {
         if (!isAnswered) {
             // Estado inicial: gris claro, hover azulito
-            return "border-gray-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-slate-700 dark:text-slate-200";
+            return 'border-gray-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-slate-700 dark:text-slate-200';
         }
 
         if (option.is_correct) {
             // Siempre marcar la correcta en verde
-            return "border-green-500 bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-300 font-medium";
+            return 'border-green-500 bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-300 font-medium';
         }
 
         if (selectedOptionId === option.id && !option.is_correct) {
             // Si elegí esta y es incorrecta: rojo
-            return "border-red-500 bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300";
+            return 'border-red-500 bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300';
         }
 
         // Las demás quedan gris suave
-        return "border-gray-100 dark:border-slate-800 opacity-50 text-slate-500 dark:text-slate-600";
+        return 'border-gray-100 dark:border-slate-800 opacity-50 text-slate-500 dark:text-slate-600';
     };
 
     return (
         <div className="w-full max-w-none mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-lg dark:shadow-none border border-gray-100 dark:border-slate-700 transition-colors duration-300 flex flex-col relative">
-
             {/* Modal de Reporte */}
             <ReportModal
                 questionId={question.id}
@@ -67,12 +66,16 @@ export default function QuestionCard({ question, onNext }) {
                         <Flag size={12} />
                     </button>
                 </div>
-                <span className={clsx(
-                    "text-[10px] px-2 py-0.5 rounded-full font-semibold border",
-                    question.difficulty === 'BASICO' ? "bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800" :
-                        question.difficulty === 'INTERMEDIO' ? "bg-yellow-100 text-yellow-700 border-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-300 dark:border-yellow-800" :
-                            "bg-red-100 text-red-700 border-red-200 dark:bg-red-900/30 dark:text-red-300 dark:border-red-800"
-                )}>
+                <span
+                    className={clsx(
+                        'text-[10px] px-2 py-0.5 rounded-full font-semibold border',
+                        question.difficulty === 'BASICO'
+                            ? 'bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800'
+                            : question.difficulty === 'INTERMEDIO'
+                              ? 'bg-yellow-100 text-yellow-700 border-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-300 dark:border-yellow-800'
+                              : 'bg-red-100 text-red-700 border-red-200 dark:bg-red-900/30 dark:text-red-300 dark:border-red-800'
+                    )}
+                >
                     {question.difficulty}
                 </span>
             </div>
@@ -101,13 +104,17 @@ export default function QuestionCard({ question, onNext }) {
                             onClick={() => handleSelect(option.id)}
                             disabled={isAnswered}
                             className={clsx(
-                                "w-full text-left px-4 py-3 rounded-lg border transition-all duration-200 relative flex items-center justify-between text-sm",
+                                'w-full text-left px-4 py-3 rounded-lg border transition-all duration-200 relative flex items-center justify-between text-sm',
                                 getOptionStyle(option)
                             )}
                         >
                             <span className="pr-6">{option.text}</span>
-                            {isAnswered && option.is_correct && <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 shrink-0" />}
-                            {isAnswered && selectedOptionId === option.id && !option.is_correct && <XCircle className="w-4 h-4 text-red-600 dark:text-red-400 shrink-0" />}
+                            {isAnswered && option.is_correct && (
+                                <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 shrink-0" />
+                            )}
+                            {isAnswered && selectedOptionId === option.id && !option.is_correct && (
+                                <XCircle className="w-4 h-4 text-red-600 dark:text-red-400 shrink-0" />
+                            )}
                         </button>
                     ))}
                 </div>
@@ -117,15 +124,20 @@ export default function QuestionCard({ question, onNext }) {
             {isAnswered && (
                 <div className="bg-slate-50 dark:bg-slate-900/50 p-4 border-t border-gray-100 dark:border-slate-700 animate-in fade-in slide-in-from-bottom-2 duration-300 transition-colors shrink-0">
                     <div className="mb-3">
-                        <h4 className="text-xs font-bold text-slate-700 dark:text-slate-200 mb-0.5">Explicación:</h4>
+                        <h4 className="text-xs font-bold text-slate-700 dark:text-slate-200 mb-0.5">
+                            Explicación:
+                        </h4>
                         <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
-                            {question.explanation || "No hay explicación disponible para esta pregunta."}
+                            {question.explanation ||
+                                'No hay explicación disponible para esta pregunta.'}
                         </p>
                     </div>
 
                     <button
                         onClick={() => {
-                            const selectedOption = question.options.find(opt => opt.id === selectedOptionId);
+                            const selectedOption = question.options.find(
+                                (opt) => opt.id === selectedOptionId
+                            );
                             const wasCorrect = selectedOption?.is_correct || false;
 
                             setIsAnswered(false);

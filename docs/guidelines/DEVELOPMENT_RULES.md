@@ -2,7 +2,7 @@
 Proyecto: PreLab (Simulacros Preuniversitarios) Lead Developer: [Tu Nombre]
 
 1. Filosofía del Código (Mindset)
-Antes de escribir una línea, interioriza estos tres principios:
+   Antes de escribir una línea, interioriza estos tres principios:
 
 Mobile First Absoluto: No diseñamos para PC y "luego lo achicamos". Diseñamos para una pantalla de 360px. Si no cabe en el celular, no existe.
 
@@ -15,7 +15,7 @@ Comentarios y Documentación: "Calcula el puntaje basado en ponderado UNI". (Par
 Atomicidad: Una función hace UNA sola cosa. Un archivo tiene UNA sola responsabilidad. Un Commit resuelve UN solo problema.
 
 2. Estrategia de Git (Gitflow Workflow)
-No trabajaremos todo en una sola rama. Usaremos un sistema de ramas estricto para proteger el código que funciona (Producción) del código en desarrollo (Bugs).
+   No trabajaremos todo en una sola rama. Usaremos un sistema de ramas estricto para proteger el código que funciona (Producción) del código en desarrollo (Bugs).
 
 Shutterstock
 
@@ -45,7 +45,7 @@ hotfix/nombre-error:
 Solo para emergencias en producción. Nacen de main y se fusionan a main y develop.
 
 3. Estándar de Commits (Conventional Commits)
-Olvídate de mensajes como "avances", "fix", o "cambios". Usaremos el estándar Conventional Commits para generar historiales legibles y automatizar notas de versión en el futuro.
+   Olvídate de mensajes como "avances", "fix", o "cambios". Usaremos el estándar Conventional Commits para generar historiales legibles y automatizar notas de versión en el futuro.
 
 Formato: <tipo>(<alcance>): <descripción breve>
 **Idioma: Español.**
@@ -69,8 +69,7 @@ Plaintext
 
 feat(ui): agregar componente de tarjeta de pregunta
 fix(backend): corregir error en migracion de usuarios
-docs(readme): actualizar instrucciones de instalacion
-4. Flujo de Trabajo (The Workflow)
+docs(readme): actualizar instrucciones de instalacion 4. Flujo de Trabajo (The Workflow)
 Cada vez que te sientes a programar, sigue este ritual:
 
 Sincronizar: git checkout develop -> git pull origin develop.
@@ -92,20 +91,22 @@ Autoevaluación: Revisa tus propios cambios. Si ves código comentado o print() 
 Acepta el Merge.
 
 5. Estándares de Código (Python/Django & React)
-Backend (Python/Django)
-PEP8: Respetar los espacios y la indentación.
+   Backend (Python/Django)
+   PEP8: Respetar los espacios y la indentación.
 
 Type Hints: Obligatorio tipar los argumentos y retornos. Ayuda a entender el código meses después.
 
 Python
 
 # Mal
+
 def calcular(a, b):
-    return a + b
+return a + b
 
 # Bien (Production Ready)
-def calcular_puntaje(correctas: int, incorrectas: int) -> float:
-    return (correctas * 20) - (incorrectas * 1.5)
+
+def calcular*puntaje(correctas: int, incorrectas: int) -> float:
+return (correctas * 20) - (incorrectas \_ 1.5)
 Settings: NUNCA subir claves secretas (SECRET_KEY, DB passwords) al repositorio. Usar siempre variables de entorno (.env).
 
 Frontend (React)
@@ -116,7 +117,7 @@ Lógica separada: Si un componente tiene mucha lógica matemática, sacar esa l�
 Tailwind: Usar clases utilitarias, pero si una combinación se repite mucho, usar @apply en CSS o crear un componente pequeño.
 
 6. Versionamiento (SemVer)
-Cuando el proyecto llegue a producción, usaremos tres números: X.Y.Z (Ej. 1.0.0).
+   Cuando el proyecto llegue a producción, usaremos tres números: X.Y.Z (Ej. 1.0.0).
 
 X (Major): Cambio radical que rompe compatibilidad (ej. Rediseño total de la BD).
 

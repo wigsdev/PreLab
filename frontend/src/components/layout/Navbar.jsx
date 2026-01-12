@@ -2,7 +2,18 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import useTheme from '../../hooks/useTheme';
-import { Sun, Moon, LogIn, UserPlus, User, LayoutDashboard, Settings, LogOut, ChevronDown, ShieldCheck } from 'lucide-react';
+import {
+    Sun,
+    Moon,
+    LogIn,
+    UserPlus,
+    User,
+    LayoutDashboard,
+    Settings,
+    LogOut,
+    ChevronDown,
+    ShieldCheck,
+} from 'lucide-react';
 
 export default function Navbar() {
     const { user, logout } = useAuth();
@@ -18,9 +29,9 @@ export default function Navbar() {
                 setIsOpen(false);
             }
         }
-        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside);
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [dropdownRef]);
 
@@ -29,10 +40,15 @@ export default function Navbar() {
             <nav className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Logo Area */}
                 <div className="flex flex-col">
-                    <Link to="/" className="text-2xl font-black text-slate-900 dark:text-white tracking-tighter hover:opacity-80 transition-opacity">
+                    <Link
+                        to="/"
+                        className="text-2xl font-black text-slate-900 dark:text-white tracking-tighter hover:opacity-80 transition-opacity"
+                    >
                         PreLab<span className="text-indigo-600 dark:text-indigo-400">_</span>
                     </Link>
-                    <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">Simulacros de admisión</span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">
+                        Simulacros de admisión
+                    </span>
                 </div>
 
                 {/* Actions Area */}
@@ -57,16 +73,33 @@ export default function Navbar() {
                             >
                                 <div className="w-9 h-9 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-700 dark:text-indigo-300 font-bold text-sm ring-2 ring-white dark:ring-slate-800 overflow-hidden">
                                     {user.avatar ? (
-                                        <img src={user.avatar.startsWith('http') ? user.avatar : `http://127.0.0.1:8000${user.avatar}`} alt="Avatar" className="w-full h-full object-cover" />
+                                        <img
+                                            src={
+                                                user.avatar.startsWith('http')
+                                                    ? user.avatar
+                                                    : `http://127.0.0.1:8000${user.avatar}`
+                                            }
+                                            alt="Avatar"
+                                            className="w-full h-full object-cover"
+                                        />
                                     ) : (
-                                        <span>{user.first_name ? user.first_name[0] : (user.email?.[0]?.toUpperCase() || 'U')}</span>
+                                        <span>
+                                            {user.first_name
+                                                ? user.first_name[0]
+                                                : user.email?.[0]?.toUpperCase() || 'U'}
+                                        </span>
                                     )}
                                 </div>
                                 <div className="hidden md:block text-left">
-                                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Hola,</p>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                                        Hola,
+                                    </p>
                                     <p className="text-sm font-bold text-slate-700 dark:text-slate-200 leading-none flex items-center gap-1">
                                         {user.first_name || user.email.split('@')[0]}
-                                        <ChevronDown size={14} className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+                                        <ChevronDown
+                                            size={14}
+                                            className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                                        />
                                     </p>
                                 </div>
                             </button>
@@ -74,11 +107,14 @@ export default function Navbar() {
                             {/* Dropdown Menu */}
                             {isOpen && (
                                 <div className="absolute right-0 top-full mt-2 w-64 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden transform origin-top-right transition-all animate-in fade-in zoom-in-95 duration-200">
-
                                     {/* Header Mobile Only (shows name if hidden in navbar) */}
                                     <div className="md:hidden px-4 py-3 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
-                                        <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold">Sesión iniciada como</p>
-                                        <p className="font-bold text-slate-800 dark:text-white truncate">{user.email}</p>
+                                        <p className="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold">
+                                            Sesión iniciada como
+                                        </p>
+                                        <p className="font-bold text-slate-800 dark:text-white truncate">
+                                            {user.email}
+                                        </p>
                                     </div>
 
                                     <div className="p-2">
@@ -117,7 +153,10 @@ export default function Navbar() {
 
                                     <div className="p-2">
                                         <button
-                                            onClick={() => { setIsOpen(false); logout(); }}
+                                            onClick={() => {
+                                                setIsOpen(false);
+                                                logout();
+                                            }}
                                             className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-xl transition-colors text-left"
                                         >
                                             <LogOut size={18} />
@@ -146,7 +185,7 @@ export default function Navbar() {
                         </div>
                     )}
                 </div>
-            </nav >
-        </header >
+            </nav>
+        </header>
     );
 }

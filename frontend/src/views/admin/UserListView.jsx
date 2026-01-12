@@ -20,10 +20,10 @@ export default function UserListView() {
         setLoading(true);
         try {
             const data = await getUsers({ search: debouncedSearch });
-            setUsers(data); // DRF ModelViewSet list returns array or results if paginated? 
-            // Standard DRF ModelViewSet returns list directly if no pagination configured, 
+            setUsers(data); // DRF ModelViewSet list returns array or results if paginated?
+            // Standard DRF ModelViewSet returns list directly if no pagination configured,
             // or { count, next, previous, results } if pagination is on.
-            // Assuming default list for now or we will check structure. 
+            // Assuming default list for now or we will check structure.
             // Given QuestionListView used pagination, likely this endpoint might too.
             // But let's assume raw list for simplicity first or handle results.
 
@@ -33,7 +33,7 @@ export default function UserListView() {
                 setUsers(data.results);
             }
         } catch (error) {
-            toast.error("Error cargando usuarios");
+            toast.error('Error cargando usuarios');
         } finally {
             setLoading(false);
         }
@@ -53,23 +53,30 @@ export default function UserListView() {
 
         try {
             const updatedUser = await updateUserRole(user.id, { is_staff: newIsStaff });
-            setUsers(users.map(u => u.id === updatedUser.id ? updatedUser : u));
-            toast.success(newIsStaff ? "Usuario ascendido a Admin" : "Usuario degradado a Estudiante");
+            setUsers(users.map((u) => (u.id === updatedUser.id ? updatedUser : u)));
+            toast.success(
+                newIsStaff ? 'Usuario ascendido a Admin' : 'Usuario degradado a Estudiante'
+            );
         } catch (error) {
-            toast.error(error.response?.data?.detail || "Error actualizando rol");
+            toast.error(error.response?.data?.detail || 'Error actualizando rol');
         }
     };
 
     const handleStatusToggle = async (user) => {
         const newIsActive = !user.is_active;
-        if (!window.confirm(`¿${newIsActive ? 'Reactivar' : 'Desactivar'} acceso a ${user.first_name}?`)) return;
+        if (
+            !window.confirm(
+                `¿${newIsActive ? 'Reactivar' : 'Desactivar'} acceso a ${user.first_name}?`
+            )
+        )
+            return;
 
         try {
             const updatedUser = await updateUserRole(user.id, { is_active: newIsActive });
-            setUsers(users.map(u => u.id === updatedUser.id ? updatedUser : u));
-            toast.success(newIsActive ? "Usuario reactivado" : "Usuario desactivado");
+            setUsers(users.map((u) => (u.id === updatedUser.id ? updatedUser : u)));
+            toast.success(newIsActive ? 'Usuario reactivado' : 'Usuario desactivado');
         } catch (error) {
-            toast.error("Error cambiando estado");
+            toast.error('Error cambiando estado');
         }
     };
 
@@ -77,13 +84,20 @@ export default function UserListView() {
         <div className="space-y-6">
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
                 <div>
-                    <h1 className="text-2xl font-bold text-slate-800 dark:text-white">Gestión de Usuarios</h1>
-                    <p className="text-slate-500 dark:text-slate-400">Administra roles y acceso a la plataforma</p>
+                    <h1 className="text-2xl font-bold text-slate-800 dark:text-white">
+                        Gestión de Usuarios
+                    </h1>
+                    <p className="text-slate-500 dark:text-slate-400">
+                        Administra roles y acceso a la plataforma
+                    </p>
                 </div>
 
                 {/* Search */}
                 <div className="relative w-full sm:w-64">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                    <Search
+                        className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+                        size={18}
+                    />
                     <input
                         type="text"
                         placeholder="Buscar por nombre o email..."
@@ -111,16 +125,25 @@ export default function UserListView() {
                         <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                             {loading ? (
                                 <tr>
-                                    <td colSpan="6" className="px-6 py-12 text-center text-slate-500">
+                                    <td
+                                        colSpan="6"
+                                        className="px-6 py-12 text-center text-slate-500"
+                                    >
                                         <div className="flex flex-col items-center gap-2">
-                                            <Loader2 className="animate-spin text-indigo-500" size={24} />
+                                            <Loader2
+                                                className="animate-spin text-indigo-500"
+                                                size={24}
+                                            />
                                             <p>Cargando usuarios...</p>
                                         </div>
                                     </td>
                                 </tr>
                             ) : users.length === 0 ? (
                                 <tr>
-                                    <td colSpan="6" className="px-6 py-12 text-center text-slate-500">
+                                    <td
+                                        colSpan="6"
+                                        className="px-6 py-12 text-center text-slate-500"
+                                    >
                                         <div className="flex flex-col items-center gap-2">
                                             <div className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center">
                                                 <User className="text-slate-400" size={24} />
@@ -131,12 +154,21 @@ export default function UserListView() {
                                 </tr>
                             ) : (
                                 users.map((user) => (
-                                    <tr key={user.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                    <tr
+                                        key={user.id}
+                                        className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                                    >
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
-                                                <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-white ${user.is_staff ? 'bg-indigo-500' : 'bg-slate-400'}`}>
+                                                <div
+                                                    className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-white ${user.is_staff ? 'bg-indigo-500' : 'bg-slate-400'}`}
+                                                >
                                                     {user.avatar ? (
-                                                        <img src={user.avatar} className="w-full h-full object-cover rounded-full" alt="" />
+                                                        <img
+                                                            src={user.avatar}
+                                                            className="w-full h-full object-cover rounded-full"
+                                                            alt=""
+                                                        />
                                                     ) : (
                                                         user.first_name?.[0]?.toUpperCase() || 'U'
                                                     )}
@@ -152,19 +184,29 @@ export default function UserListView() {
                                             {user.email}
                                         </td>
                                         <td className="px-6 py-4">
-                                            <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${user.is_staff
-                                                    ? 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-900/20 dark:text-indigo-300 dark:border-indigo-800'
-                                                    : 'bg-slate-50 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700'
-                                                }`}>
-                                                {user.is_staff ? <ShieldAlert size={12} /> : <User size={12} />}
+                                            <span
+                                                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${
+                                                    user.is_staff
+                                                        ? 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-900/20 dark:text-indigo-300 dark:border-indigo-800'
+                                                        : 'bg-slate-50 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700'
+                                                }`}
+                                            >
+                                                {user.is_staff ? (
+                                                    <ShieldAlert size={12} />
+                                                ) : (
+                                                    <User size={12} />
+                                                )}
                                                 {user.is_staff ? 'Admin' : 'Estudiante'}
                                             </span>
                                         </td>
                                         <td className="px-6 py-4">
-                                            <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${user.is_active
-                                                    ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-400'
-                                                    : 'bg-red-50 text-red-700 dark:bg-red-900/20 dark:text-red-400'
-                                                }`}>
+                                            <span
+                                                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${
+                                                    user.is_active
+                                                        ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-400'
+                                                        : 'bg-red-50 text-red-700 dark:bg-red-900/20 dark:text-red-400'
+                                                }`}
+                                            >
                                                 {user.is_active ? 'Activo' : 'Inactivo'}
                                             </span>
                                         </td>
@@ -175,23 +217,35 @@ export default function UserListView() {
                                             <div className="flex items-center justify-end gap-2">
                                                 <button
                                                     onClick={() => handleRoleToggle(user)}
-                                                    className={`p-1.5 rounded-lg transition-colors border ${user.is_staff
+                                                    className={`p-1.5 rounded-lg transition-colors border ${
+                                                        user.is_staff
                                                             ? 'text-indigo-600 border-indigo-200 hover:bg-indigo-50 dark:text-indigo-400 dark:border-indigo-900/50 dark:hover:bg-indigo-900/30'
                                                             : 'text-slate-400 border-slate-200 hover:text-indigo-600 hover:border-indigo-200 hover:bg-slate-50 dark:border-slate-700 dark:hover:border-slate-600 dark:hover:bg-slate-800'
-                                                        }`}
-                                                    title={user.is_staff ? "Quitar Admin" : "Hacer Admin"}
+                                                    }`}
+                                                    title={
+                                                        user.is_staff
+                                                            ? 'Quitar Admin'
+                                                            : 'Hacer Admin'
+                                                    }
                                                 >
                                                     <Shield size={16} />
                                                 </button>
                                                 <button
                                                     onClick={() => handleStatusToggle(user)}
-                                                    className={`p-1.5 rounded-lg transition-colors border ${!user.is_active
+                                                    className={`p-1.5 rounded-lg transition-colors border ${
+                                                        !user.is_active
                                                             ? 'text-emerald-600 border-emerald-200 hover:bg-emerald-50 dark:text-emerald-500'
                                                             : 'text-slate-400 border-slate-200 hover:text-red-600 hover:border-red-200 hover:bg-red-50 dark:border-slate-700 dark:hover:border-red-900/50 dark:hover:text-red-400'
-                                                        }`}
-                                                    title={user.is_active ? "Desactivar" : "Activar"}
+                                                    }`}
+                                                    title={
+                                                        user.is_active ? 'Desactivar' : 'Activar'
+                                                    }
                                                 >
-                                                    {user.is_active ? <XCircle size={16} /> : <CheckCircle size={16} />}
+                                                    {user.is_active ? (
+                                                        <XCircle size={16} />
+                                                    ) : (
+                                                        <CheckCircle size={16} />
+                                                    )}
                                                 </button>
                                             </div>
                                         </td>

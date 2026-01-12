@@ -16,7 +16,10 @@ export default function QuestionSkeleton() {
             {/* Options Skeleton */}
             <div className="space-y-4">
                 {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="h-16 w-full bg-slate-100 dark:bg-slate-700/50 rounded-xl border border-slate-200 dark:border-slate-700"></div>
+                    <div
+                        key={i}
+                        className="h-16 w-full bg-slate-100 dark:bg-slate-700/50 rounded-xl border border-slate-200 dark:border-slate-700"
+                    ></div>
                 ))}
             </div>
         </div>

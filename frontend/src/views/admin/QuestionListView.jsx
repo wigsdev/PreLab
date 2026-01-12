@@ -1,12 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-    Search,
-    Edit,
-    Trash2,
-    Plus,
-    AlertCircle
-} from 'lucide-react';
+import { Search, Edit, Trash2, Plus, AlertCircle } from 'lucide-react';
 import { getQuestions, getCourses, getTopics, deleteQuestion } from '../../services/api';
 import toast from 'react-hot-toast';
 
@@ -18,7 +12,7 @@ export default function QuestionListView() {
         search: '',
         difficulty: '',
         course: '',
-        topic: ''
+        topic: '',
     });
 
     // Data for filters
@@ -33,7 +27,7 @@ export default function QuestionListView() {
                 setCourses(coursesData);
                 setTopics(topicsData);
             } catch (error) {
-                console.error("Error loading filters");
+                console.error('Error loading filters');
             }
         };
         loadFilterData();
@@ -53,7 +47,7 @@ export default function QuestionListView() {
             const data = await getQuestions(filters);
             setQuestions(data);
         } catch (error) {
-            toast.error("Error al cargar preguntas");
+            toast.error('Error al cargar preguntas');
         } finally {
             setLoading(false);
         }
@@ -61,22 +55,22 @@ export default function QuestionListView() {
 
     const handleFilterChange = (e) => {
         const { name, value } = e.target;
-        setFilters(prev => ({
+        setFilters((prev) => ({
             ...prev,
             [name]: value,
             // Reset topic if course changes
-            ...(name === 'course' ? { topic: '' } : {})
+            ...(name === 'course' ? { topic: '' } : {}),
         }));
     };
 
     const handleDelete = async (id) => {
-        if (!window.confirm("¿Estás seguro de eliminar esta pregunta?")) return;
+        if (!window.confirm('¿Estás seguro de eliminar esta pregunta?')) return;
         try {
             await deleteQuestion(id);
-            toast.success("Pregunta eliminada");
+            toast.success('Pregunta eliminada');
             fetchQuestions(); // Refresh list
         } catch (error) {
-            toast.error("Error al eliminar");
+            toast.error('Error al eliminar');
         }
     };
 
@@ -86,10 +80,14 @@ export default function QuestionListView() {
 
     const getDifficultyColor = (difficulty) => {
         switch (difficulty) {
-            case 'BASICO': return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
-            case 'INTERMEDIO': return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400';
-            case 'AVANZADO': return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
-            default: return 'bg-slate-100 text-slate-700';
+            case 'BASICO':
+                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
+            case 'INTERMEDIO':
+                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400';
+            case 'AVANZADO':
+                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
+            default:
+                return 'bg-slate-100 text-slate-700';
         }
     };
 
@@ -98,8 +96,12 @@ export default function QuestionListView() {
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                    <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Banco de Preguntas</h1>
-                    <p className="text-slate-500 dark:text-slate-400">Gestiona el contenido del simulacro</p>
+                    <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+                        Banco de Preguntas
+                    </h1>
+                    <p className="text-slate-500 dark:text-slate-400">
+                        Gestiona el contenido del simulacro
+                    </p>
                 </div>
                 <button
                     onClick={() => navigate('/admin/create')}
@@ -143,7 +145,11 @@ export default function QuestionListView() {
                         className="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none max-w-[200px]"
                     >
                         <option value="">Todos los Cursos</option>
-                        {courses.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                        {courses.map((c) => (
+                            <option key={c.id} value={c.id}>
+                                {c.name}
+                            </option>
+                        ))}
                     </select>
 
                     <select
@@ -155,9 +161,12 @@ export default function QuestionListView() {
                     >
                         <option value="">Todos los Temas</option>
                         {topics
-                            .filter(t => !filters.course || t.course === parseInt(filters.course))
-                            .map(t => <option key={t.id} value={t.id}>{t.name}</option>)
-                        }
+                            .filter((t) => !filters.course || t.course === parseInt(filters.course))
+                            .map((t) => (
+                                <option key={t.id} value={t.id}>
+                                    {t.name}
+                                </option>
+                            ))}
                     </select>
                 </div>
             </div>
@@ -178,7 +187,9 @@ export default function QuestionListView() {
                         <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                             {loading ? (
                                 <tr>
-                                    <td colSpan="5" className="p-8 text-center text-slate-500">Cargando...</td>
+                                    <td colSpan="5" className="p-8 text-center text-slate-500">
+                                        Cargando...
+                                    </td>
                                 </tr>
                             ) : questions.length === 0 ? (
                                 <tr>
@@ -191,8 +202,13 @@ export default function QuestionListView() {
                                 </tr>
                             ) : (
                                 questions.map((q) => (
-                                    <tr key={q.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                                        <td className="p-4 text-slate-500 font-mono text-xs">#{q.id}</td>
+                                    <tr
+                                        key={q.id}
+                                        className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                                    >
+                                        <td className="p-4 text-slate-500 font-mono text-xs">
+                                            #{q.id}
+                                        </td>
                                         <td className="p-4 max-w-md">
                                             <p className="line-clamp-2 text-slate-800 dark:text-slate-200 font-medium">
                                                 {q.statement}
@@ -203,11 +219,15 @@ export default function QuestionListView() {
                                                 <span className="text-sm text-slate-900 dark:text-white font-medium">
                                                     {q.topic_name || `Tema ${q.topic}`}
                                                 </span>
-                                                <span className="text-xs text-slate-500">{q.course_name || 'Curso General'}</span>
+                                                <span className="text-xs text-slate-500">
+                                                    {q.course_name || 'Curso General'}
+                                                </span>
                                             </div>
                                         </td>
                                         <td className="p-4">
-                                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getDifficultyColor(q.difficulty)}`}>
+                                            <span
+                                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getDifficultyColor(q.difficulty)}`}
+                                            >
                                                 {q.difficulty}
                                             </span>
                                         </td>

@@ -2,7 +2,17 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { BookOpen, FlaskConical, Calculator, Globe2, BrainCircuit, GraduationCap, Loader2, MessageSquareText, ArrowRight } from 'lucide-react';
+import {
+    BookOpen,
+    FlaskConical,
+    Calculator,
+    Globe2,
+    BrainCircuit,
+    GraduationCap,
+    Loader2,
+    MessageSquareText,
+    ArrowRight,
+} from 'lucide-react';
 
 export default function HomeView() {
     const [courses, setCourses] = useState([]);
@@ -18,8 +28,8 @@ export default function HomeView() {
                 const response = await axios.get('http://127.0.0.1:8000/api/courses/');
                 setCourses(response.data);
             } catch (err) {
-                console.error("Error loading courses:", err);
-                setError("Error al cargar los cursos. Verifica que el backend esté corriendo.");
+                console.error('Error loading courses:', err);
+                setError('Error al cargar los cursos. Verifica que el backend esté corriendo.');
             } finally {
                 setLoading(false);
             }
@@ -37,25 +47,39 @@ export default function HomeView() {
 
     const getIconForCourse = (code) => {
         switch (code) {
-            case 'comu': return <MessageSquareText className="w-8 h-8 text-orange-500" />;
-            case 'rv': return <BookOpen className="w-8 h-8 text-blue-500" />;
-            case 'rm': return <Calculator className="w-8 h-8 text-indigo-500" />;
-            case 'bio': return <FlaskConical className="w-8 h-8 text-green-500" />;
-            case 'quim': return <FlaskConical className="w-8 h-8 text-purple-500" />;
-            case 'cult-gen': return <Globe2 className="w-8 h-8 text-yellow-500" />;
-            default: return <GraduationCap className="w-8 h-8 text-slate-500" />;
+            case 'comu':
+                return <MessageSquareText className="w-8 h-8 text-orange-500" />;
+            case 'rv':
+                return <BookOpen className="w-8 h-8 text-blue-500" />;
+            case 'rm':
+                return <Calculator className="w-8 h-8 text-indigo-500" />;
+            case 'bio':
+                return <FlaskConical className="w-8 h-8 text-green-500" />;
+            case 'quim':
+                return <FlaskConical className="w-8 h-8 text-purple-500" />;
+            case 'cult-gen':
+                return <Globe2 className="w-8 h-8 text-yellow-500" />;
+            default:
+                return <GraduationCap className="w-8 h-8 text-slate-500" />;
         }
     };
 
     const getGradient = (code) => {
         switch (code) {
-            case 'comu': return 'from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 dark:from-orange-900/20 dark:to-orange-900/10 dark:hover:from-orange-900/30';
-            case 'rv': return 'from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 dark:from-blue-900/20 dark:to-blue-900/10 dark:hover:from-blue-900/30';
-            case 'rm': return 'from-indigo-50 to-indigo-100 hover:from-indigo-100 hover:to-indigo-200 dark:from-indigo-900/20 dark:to-indigo-900/10 dark:hover:from-indigo-900/30';
-            case 'bio': return 'from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 dark:from-green-900/20 dark:to-green-900/10 dark:hover:from-green-900/30';
-            case 'quim': return 'from-purple-50 to-purple-100 hover:from-purple-100 hover:to-purple-200 dark:from-purple-900/20 dark:to-purple-900/10 dark:hover:from-purple-900/30';
-            case 'cult-gen': return 'from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 dark:from-yellow-900/20 dark:to-yellow-900/10 dark:hover:from-yellow-900/30';
-            default: return 'from-slate-50 to-slate-100 hover:from-slate-100 hover:to-slate-200 dark:from-slate-800 dark:to-slate-900';
+            case 'comu':
+                return 'from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 dark:from-orange-900/20 dark:to-orange-900/10 dark:hover:from-orange-900/30';
+            case 'rv':
+                return 'from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 dark:from-blue-900/20 dark:to-blue-900/10 dark:hover:from-blue-900/30';
+            case 'rm':
+                return 'from-indigo-50 to-indigo-100 hover:from-indigo-100 hover:to-indigo-200 dark:from-indigo-900/20 dark:to-indigo-900/10 dark:hover:from-indigo-900/30';
+            case 'bio':
+                return 'from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 dark:from-green-900/20 dark:to-green-900/10 dark:hover:from-green-900/30';
+            case 'quim':
+                return 'from-purple-50 to-purple-100 hover:from-purple-100 hover:to-purple-200 dark:from-purple-900/20 dark:to-purple-900/10 dark:hover:from-purple-900/30';
+            case 'cult-gen':
+                return 'from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 dark:from-yellow-900/20 dark:to-yellow-900/10 dark:hover:from-yellow-900/30';
+            default:
+                return 'from-slate-50 to-slate-100 hover:from-slate-100 hover:to-slate-200 dark:from-slate-800 dark:to-slate-900';
         }
     };
 
@@ -102,13 +126,18 @@ export default function HomeView() {
                         </div>
                         <div className="flex gap-2 overflow-x-auto max-w-full pb-1 sm:pb-0">
                             {guestHistory.slice(0, 3).map((item, idx) => (
-                                <div key={idx} className="shrink-0 flex items-center gap-2 bg-white dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-indigo-100 dark:border-slate-700 shadow-sm">
-                                    <div className={`text-xs font-bold ${item.score >= (item.total_questions * 0.6) ? 'text-green-600' : 'text-red-500'}`}>
+                                <div
+                                    key={idx}
+                                    className="shrink-0 flex items-center gap-2 bg-white dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-indigo-100 dark:border-slate-700 shadow-sm"
+                                >
+                                    <div
+                                        className={`text-xs font-bold ${item.score >= item.total_questions * 0.6 ? 'text-green-600' : 'text-red-500'}`}
+                                    >
                                         {item.score}/{item.total_questions}
                                     </div>
                                     <div className="w-px h-3 bg-slate-200 dark:bg-slate-600"></div>
                                     <div className="text-[10px] text-slate-500 font-medium uppercase truncate max-w-[80px]">
-                                        {item.course_name || (item.topic ? "Tema" : "Simulacro")}
+                                        {item.course_name || (item.topic ? 'Tema' : 'Simulacro')}
                                     </div>
                                 </div>
                             ))}
@@ -138,7 +167,8 @@ export default function HomeView() {
                                 Simulacro General
                             </h2>
                             <p className="text-indigo-100 font-medium max-w-xl text-sm leading-tight">
-                                Pon a prueba tus conocimientos con un mix balanceado de 30 preguntas.
+                                Pon a prueba tus conocimientos con un mix balanceado de 30
+                                preguntas.
                             </p>
                         </div>
                         <div className="hidden sm:flex bg-white/20 p-2 rounded-full backdrop-blur-md border border-white/30 group-hover:scale-110 transition-transform">
@@ -147,7 +177,7 @@ export default function HomeView() {
                     </div>
                 </div>
 
-                {courses.map(course => (
+                {courses.map((course) => (
                     <div
                         key={course.id}
                         onClick={() => navigate(`/exam?course=${course.id}`)}
@@ -171,12 +201,14 @@ export default function HomeView() {
                                 {course.name}
                             </h2>
                             <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 mb-2">
-                                {course.description || "Preguntas tipo examen."}
+                                {course.description || 'Preguntas tipo examen.'}
                             </p>
 
                             <div className="mt-auto flex items-center text-xs font-semibold text-slate-800 dark:text-slate-300 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
                                 Iniciar
-                                <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+                                <span className="ml-1 transition-transform group-hover:translate-x-1">
+                                    →
+                                </span>
                             </div>
                         </div>
                     </div>
