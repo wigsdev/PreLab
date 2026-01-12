@@ -30,7 +30,20 @@ DEBUG = os.environ.get("DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(" ")
 
-CORS_ALLOW_ALL_ORIGINS = True  # Development only
+# CORS & CSRF Configuration
+# ------------------------------------------------------------------------------
+# Define ALLOWED_CORS_ORIGINS in your .env or Render dashboard as a comma-separated string
+# Example: https://prelab-frontend.onrender.com,http://localhost:5173
+
+CORS_ALLOWED_ORIGINS = os.environ.get(
+    "ALLOWED_CORS_ORIGINS", "http://localhost:5173"
+).split(",")
+CSRF_TRUSTED_ORIGINS = os.environ.get(
+    "ALLOWED_CORS_ORIGINS", "http://localhost:5173"
+).split(",")
+
+# If you want to allow all for dev (careful in prod):
+# CORS_ALLOW_ALL_ORIGINS = DEBUG
 
 
 # Application definition

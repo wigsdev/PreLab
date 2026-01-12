@@ -1,13 +1,18 @@
 import axios from 'axios';
 
 const getApiUrl = () => {
+    // 1. Priority: Explicit Environment Variable (Render / .env)
     if (import.meta.env.VITE_API_URL) {
         return `${import.meta.env.VITE_API_URL}/api`;
     }
-    // Fallback inteligente para producción si la variable de entorno falla
+
+    // 2. Fallback: Production Environment (Automatic Render URL prediction)
+    // Useful if VITE_API_URL fails to load in build context
     if (import.meta.env.PROD) {
         return 'https://prelab-backend.onrender.com/api';
     }
+
+    // 3. Default: Local Development
     return 'http://127.0.0.1:8000/api';
 };
 
