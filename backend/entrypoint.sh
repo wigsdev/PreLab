@@ -24,6 +24,10 @@ python manage.py collectstatic --noinput
 echo "Verificando superusuario..."
 python manage.py ensure_admin
 
+# Sembrar cursos y temas iniciales (Idempotente)
+echo "Sembrando cursos y temas..."
+python manage.py seed_courses
+
 # Iniciar servidor (Gunicorn para producción)
 echo "Iniciando Gunicorn..."
 exec gunicorn config.wsgi:application --bind 0.0.0.0:8000
