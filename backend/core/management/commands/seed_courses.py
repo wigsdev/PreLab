@@ -102,7 +102,6 @@ class Command(BaseCommand):
                 Topic.objects.get_or_create(
                     course=course,
                     name=topic_name,
-                    defaults={"order": 1},  # Order logic can be improved later
                 )
 
         self.stdout.write(self.style.SUCCESS("Successfully seeded courses and topics!"))
