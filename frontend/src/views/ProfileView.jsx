@@ -88,8 +88,8 @@ export default function ProfileView() {
                             {avatarPreview ? (
                                 <img
                                     src={
-                                        avatarPreview.startsWith('http') ||
-                                        avatarPreview.startsWith('blob')
+                                        avatarPreview?.startsWith('http') ||
+                                        avatarPreview?.startsWith('blob')
                                             ? avatarPreview
                                             : `${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}${avatarPreview}`
                                     }

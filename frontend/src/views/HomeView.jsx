@@ -1,10 +1,26 @@
 import { useEffect, useState } from 'react';
 import { getCourses } from '../services/api';
-
-// ... (imports)
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import {
+    BrainCircuit,
+    ArrowRight,
+    MessageSquareText,
+    BookOpen,
+    Calculator,
+    FlaskConical,
+    Globe2,
+    GraduationCap,
+    Loader2,
+} from 'lucide-react';
 
 export default function HomeView() {
-    // ... (state)
+    const { user } = useAuth();
+    const navigate = useNavigate();
+    const [courses, setCourses] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [guestHistory, setGuestHistory] = useState([]);
 
     useEffect(() => {
         const fetchCourses = async () => {

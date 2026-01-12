@@ -126,7 +126,11 @@ export default function AdminLayout() {
                         <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-700 dark:text-indigo-400 font-bold overflow-hidden shrink-0">
                             {user?.avatar ? (
                                 <img
-                                    src={user.avatar}
+                                    src={
+                                        user.avatar?.startsWith('http')
+                                            ? user.avatar
+                                            : `${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}${user.avatar}`
+                                    }
                                     alt="Avatar"
                                     className="w-full h-full object-cover"
                                 />
