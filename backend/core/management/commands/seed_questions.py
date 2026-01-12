@@ -11,57 +11,73 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Seeding questions...")
 
-        # Path to fixture
-        fixture_path = os.path.join(
-            settings.BASE_DIR, "core", "fixtures", "algebra_questions.json"
-        )
+        fixtures_dir = os.path.join(settings.BASE_DIR, "core", "fixtures")
+        fixture_files = ["algebra_questions.json", "aritmetica_questions.json"]
 
-        if not os.path.exists(fixture_path):
-            self.stdout.write(self.style.ERROR(f"Fixture not found at {fixture_path}"))
-            return
+        total_created = 0
 
-        with open(fixture_path, "r", encoding="utf-8") as f:
-            questions_data = json.load(f)
+        for filename in fixture_files:
+            fixture_path = os.path.join(fixtures_dir, filename)
 
-        count_created = 0
-        for q_data in questions_data:
-            # 1. Get Course and Topic
+            if not os.path.exists(fixture_path):
+                self.stdout.write(self.style.WARNING(f"Fixture not found: {filename}"))
+                continue
+
+            self.stdout.write(f"Processing {filename}...")
+
             try:
-                course = Course.objects.get(name=q_data["course"])
-                topic, _ = Topic.objects.get_or_create(
-                    course=course, name=q_data["topic"]
-                )
-            except Course.DoesNotExist:
-                self.stdout.write(
-                    self.style.WARNING(
-                        f"Course '{q_data['course']}' not found. Skipping."
+                with open(fixture_path, "r", encoding="utf-8") as f:
+                    questions_data = json.load(f)
+            except Exception as e:
+                self.stdout.write(self.style.ERROR(f"Error reading {filename}: {e}"))
+                continue
+
+            count_created_file = 0
+            for q_data in questions_data:
+                # 1. Get Course and Topic
+                try:
+                    course = Course.objects.get(name=q_data["course"])
+                    topic, _ = Topic.objects.get_or_create(
+                        course=course, name=q_data["topic"]
                     )
+                except Course.DoesNotExist:
+                    self.stdout.write(
+                        self.style.WARNING(
+                            f"Course '{q_data['course']}' not found for question. Skipping."
+                        )
+                    )
+                    continue
+
+                # 2. Check existence to avoid duplicates
+                if Question.objects.filter(
+                    statement=q_data["statement"], topic=topic
+                ).exists():
+                    # self.stdout.write(f"Question exists: {q_data['statement'][:30]}...")
+                    continue
+
+                # 3. Create Question
+                question = Question.objects.create(
+                    topic=topic,
+                    statement=q_data["statement"],
+                    difficulty=q_data.get("difficulty", "INTERMEDIO"),
+                    explanation=q_data.get("explanation", ""),
                 )
-                continue
 
-            # 2. Check existence to avoid duplicates
-            if Question.objects.filter(
-                statement=q_data["statement"], topic=topic
-            ).exists():
-                self.stdout.write(f"Question exists: {q_data['statement'][:30]}...")
-                continue
+                # 4. Create Options
+                for opt in q_data["options"]:
+                    Option.objects.create(
+                        question=question,
+                        text=opt["text"],
+                        is_correct=opt["is_correct"],
+                    )
 
-            # 3. Create Question
-            question = Question.objects.create(
-                topic=topic,
-                statement=q_data["statement"],
-                difficulty=q_data.get("difficulty", "INTERMEDIO"),
-                explanation=q_data.get("explanation", ""),
-            )
+                count_created_file += 1
 
-            # 4. Create Options
-            for opt in q_data["options"]:
-                Option.objects.create(
-                    question=question, text=opt["text"], is_correct=opt["is_correct"]
-                )
-
-            count_created += 1
+            self.stdout.write(f"  Added {count_created_file} questions from {filename}")
+            total_created += count_created_file
 
         self.stdout.write(
-            self.style.SUCCESS(f"Successfully created {count_created} questions!")
+            self.style.SUCCESS(
+                f"Seeding complete. Total new questions: {total_created}"
+            )
         )

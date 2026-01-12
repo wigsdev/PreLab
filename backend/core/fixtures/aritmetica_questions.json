@@ -1,0 +1,611 @@
+[
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "¿Cuántas proposiciones lógicas hay en los siguientes enunciados?\n\nI. ¡Viva el Perú!\nII. La célula es la unidad fundamental de los seres vivos\nIII. Las matemáticas son agradables\nIV. $2x - 1 < 100$\nV. Atahualpa descubrió América",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Analizamos cada enunciado:\n    *   **I. ¡Viva el Perú!:** Es una oración exclamativa. No es proposición (no es V ni F).\n    *   **II. La célula es la unidad fundamental de los seres vivos:** Es un enunciado declarativo que puede ser calificado como verdadero o falso. **Es proposición**.\n    *   **III. Las matemáticas son agradables:** Es un enunciado de opinión subjetiva. No es una proposición lógica objetiva.\n    *   **IV. $2x - 1 < 100$:** Es un enunciado abierto (su valor de verdad depende de la variable $x$). No es proposición.\n    *   **V. Atahualpa descubrió América:** Es un enunciado declarativo falso (históricamente incorrecto), pero tiene valor de verdad. **Es proposición**.\n2.  Conteo:\n    Solo II y V son proposiciones.\n    Total = 2.",
+        "options": [
+            {
+                "text": "1",
+                "is_correct": false
+            },
+            {
+                "text": "2",
+                "is_correct": true
+            },
+            {
+                "text": "3",
+                "is_correct": false
+            },
+            {
+                "text": "4",
+                "is_correct": false
+            },
+            {
+                "text": "5",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Sea p: \"Estudio\" y q: \"Apruebo\".\n¿Cuál es la expresión simbólica de: \"No es cierto que si estudio entonces apruebo\"?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Identificamos las partes del enunciado verbal:\n    *   \"si estudio entonces apruebo\": es una condicional ($p \\rightarrow q$).\n    *   \"No es cierto que...\": es una negación externa ($\\sim$).\n2.  Estructura completa:\n    \"No es cierto que (si estudio entonces apruebo)\"\n    $\\sim (p \\rightarrow q)$\n3.  Coincide con la opción c.",
+        "options": [
+            {
+                "text": "$p \\rightarrow q$",
+                "is_correct": false
+            },
+            {
+                "text": "$\\sim p \\rightarrow \\sim q$",
+                "is_correct": false
+            },
+            {
+                "text": "$\\sim(p \\rightarrow q)$",
+                "is_correct": true
+            },
+            {
+                "text": "$\\sim p \\land q$",
+                "is_correct": false
+            },
+            {
+                "text": "$p \\land \\sim q$",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "La proposición: $[r \\land \\sim(p \\rightarrow q)] \\land \\sim[p \\land \\sim(s \\rightarrow q)]$ es verdadera. Los valores de verdad de las proposiciones p, q, r y s son respectivamente:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  El operador principal es $\\land$ (y) y el resultado es Verdadero. Por tanto, ambos corchetes deben ser Verdaderos.\n2.  **Primer Corchete:** $[r \\land \\sim(p \\rightarrow q)] \\equiv V$\n    *   $r \\equiv V$\n    *   $\\sim(p \\rightarrow q) \\equiv V \\Rightarrow (p \\rightarrow q) \\equiv F$.\n    *   Para que un condicional sea falso, el antecedente es V y el consecuente F:\n    *   $p \\equiv V$\n    *   $q \\equiv F$\n3.  **Segundo Corchete:** $\\sim[p \\land \\sim(s \\rightarrow q)] \\equiv V$\n    *   Lo de adentro debe ser Falso: $[p \\land \\sim(s \\rightarrow q)] \\equiv F$.\n    *   Sabemos que $p \\equiv V$. Para que la conjunción ($V \\land \\dots$) sea F, el segundo término debe ser F.\n    *   $\\sim(s \\rightarrow q) \\equiv F \\Rightarrow (s \\rightarrow q) \\equiv V$.\n    *   Sabemos que $q \\equiv F$. Entonces $(s \\rightarrow F) \\equiv V$.\n    *   Para que un condicional sea Verdadero con consecuente Falso, el antecedente ($s$) debe ser Falso.\n    *   $s \\equiv F$.\n4.  **Resumen:**\n    p=V, q=F, r=V, s=F.\n    Opción a.",
+        "options": [
+            {
+                "text": "VFVF",
+                "is_correct": true
+            },
+            {
+                "text": "VFVV",
+                "is_correct": false
+            },
+            {
+                "text": "VFFV",
+                "is_correct": false
+            },
+            {
+                "text": "VFFF",
+                "is_correct": false
+            },
+            {
+                "text": "FFVF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Si la proposición: $[(\\sim p \\lor q) \\rightarrow (q \\leftrightarrow r)] \\lor (q \\land s)$ es falsa, siendo p una proposición verdadera, determine los valores de verdad de q, r, s en ese orden.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  El operador principal es $\\lor$ (o) y el resultado es Falso. Por tanto, ambos términos deben ser Falsos.\n    *   Term 1 (Izquierda): $[(\\sim p \\lor q) \\rightarrow (q \\leftrightarrow r)] \\equiv F$\n    *   Term 2 (Derecha): $(q \\land s) \\equiv F$\n2.  Analizamos Term 1 con el dato $p \\equiv V$:\n    *   $\\sim p \\equiv F$.\n    *   Antecedente: $(\\sim p \\lor q) \\equiv (F \\lor q) \\equiv q$.\n    *   Para que el condicional $q \\rightarrow (q \\leftrightarrow r)$ sea Falso, el antecedente ($q$) debe ser Verdadero y el consecuente Falso.\n    *   $\\Rightarrow q \\equiv V$.\n    *   Consecuente: $(q \\leftrightarrow r) \\equiv F$. Como $q \\equiv V$, para que el bicondicional sea falso, $r$ debe ser diferente.\n    *   $\\Rightarrow r \\equiv F$.\n3.  Analizamos Term 2: $(q \\land s) \\equiv F$.\n    *   Sabemos $q \\equiv V$.\n    *   $V \\land s \\equiv F \\Rightarrow s \\equiv F$.\n4.  **Resumen:**\n    q=V, r=F, s=F.\n    Opción c.",
+        "options": [
+            {
+                "text": "VVV",
+                "is_correct": false
+            },
+            {
+                "text": "VFV",
+                "is_correct": false
+            },
+            {
+                "text": "VFF",
+                "is_correct": true
+            },
+            {
+                "text": "FFV",
+                "is_correct": false
+            },
+            {
+                "text": "FFF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Si la proposición compuesta $(p \\land q) \\rightarrow (\\sim r \\land p)$ es falsa, indicar los valores de verdad de:\nI) $t \\rightarrow q$\nII) $r \\lor s$\nIII) $w \\land \\sim p$",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Condición $(p \\land q) \\rightarrow (\\sim r \\land p) \\equiv F$.\n    *   Antecedente V: $(p \\land q) \\equiv V \\Rightarrow p \\equiv V, q \\equiv V$.\n    *   Consecuente F: $(\\sim r \\land p) \\equiv F$.\n    *   Como $p \\equiv V$, queda $\\sim r \\land V \\equiv F \\Rightarrow \\sim r \\equiv F \\Rightarrow r \\equiv V$.\n    *   Valores: p=V, q=V, r=V.\n2.  Evaluamos las proposiciones pedidas:\n    *   **I) $t \\rightarrow q$:** $t \\rightarrow V$. Un condicional con consecuente verdadero siempre es Verdadero. **(V)**\n    *   **II) $r \\lor s$:** $V \\lor s$. Una disyunción con un verdadero siempre es Verdadera. **(V)**\n    *   **III) $w \\land \\sim p$:** $w \\land \\sim V \\equiv w \\land F$. Una conjunción con un falso siempre es Falsa. **(F)**\n3.  Resultado: VVF.\n    Opción d.",
+        "options": [
+            {
+                "text": "VFV",
+                "is_correct": false
+            },
+            {
+                "text": "FFV",
+                "is_correct": false
+            },
+            {
+                "text": "FVV",
+                "is_correct": false
+            },
+            {
+                "text": "VVF",
+                "is_correct": true
+            },
+            {
+                "text": "FFF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Si: $p \\rightarrow (q \\rightarrow r)$ y $q \\leftrightarrow (p \\rightarrow t)$ son proposiciones falsas, indicar el valor de verdad de las siguientes proposiciones:\nI) $\\sim t \\land (r \\rightarrow w)$\nII) $q \\lor (\\sim r \\leftrightarrow u)$\nIII) $t \\rightarrow (s \\Delta r)$",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Dato 1: $p \\rightarrow (q \\rightarrow r) \\equiv F$.\n    *   $p \\equiv V$.\n    *   $(q \\rightarrow r) \\equiv F \\Rightarrow q \\equiv V, r \\equiv F$.\n    *   Valores parciales: p=V, q=V, r=F.\n2.  Dato 2: $q \\leftrightarrow (p \\rightarrow t) \\equiv F$.\n    *   Reemplazamos valores conocidos: $V \\leftrightarrow (V \\rightarrow t) \\equiv F$.\n    *   Para que el bicondicional sea falso con un lado V, el otro lado debe ser F.\n    *   $(V \\rightarrow t) \\equiv F \\Rightarrow t \\equiv F$.\n    *   Valores finales: p=V, q=V, r=F, t=F.\n3.  Evaluamos I, II, III:\n    *   **I) $\\sim t \\land (r \\rightarrow w)$:**\n        $\\sim F \\land (F \\rightarrow w) \\equiv V \\land V \\equiv V$. **(V)**\n    *   **II) $q \\lor (\\sim r \\leftrightarrow u)$:**\n        $V \\lor (\\dots) \\equiv V$. **(V)**\n    *   **III) $t \\rightarrow (s \\Delta r)$:**\n        $F \\rightarrow (\\dots) \\equiv V$. **(V)**\n4.  Resultado: VVV.\n    Opción a.",
+        "options": [
+            {
+                "text": "VVV",
+                "is_correct": true
+            },
+            {
+                "text": "VVF",
+                "is_correct": false
+            },
+            {
+                "text": "VFV",
+                "is_correct": false
+            },
+            {
+                "text": "FVV",
+                "is_correct": false
+            },
+            {
+                "text": "FFF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Dada la proposición: $\\sim [(r \\lor q) \\rightarrow (r \\rightarrow p)] \\equiv V$, donde se sabe que $q$ es una proposición falsa.\nHalle el valor de verdad de las siguientes proposiciones:\nI. $r \\rightarrow (\\sim p \\lor \\sim q)$\nII. $[r \\leftrightarrow (p \\land q)] \\leftrightarrow (q \\land \\sim p)$\nIII. $(r \\lor \\sim p) \\land (q \\lor p)$",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Del enunciado: $\\sim [\\dots] \\equiv V \\Rightarrow [(r \\lor q) \\rightarrow (r \\rightarrow p)] \\equiv F$.\n    *   Antecedente Verdadero: $(r \\lor q) \\equiv V$. Como $q \\equiv F$, entonces **$r \\equiv V$**.\n    *   Consecuente Falso: $(r \\rightarrow p) \\equiv F$. Como $r \\equiv V$, entonces **$p \\equiv F$**.\n    *   Valores: $p=F, q=F, r=V$.\n2.  Evaluamos las proposiciones:\n    *   **I.** $r \\rightarrow (\\sim p \\lor \\sim q) \\equiv V \\rightarrow (V \\lor V) \\equiv V \\rightarrow V \\equiv \\mathbf{V}$.\n    *   **II.** $[V \\leftrightarrow (F \\land F)] \\leftrightarrow (F \\land V) \\equiv [V \\leftrightarrow F] \\leftrightarrow F \\equiv F \\leftrightarrow F \\equiv \\mathbf{V}$.\n    *   **III.** $(V \\lor V) \\land (F \\lor F) \\equiv V \\land F \\equiv \\mathbf{F}$.\n3.  Resultado: VVF.\n    Opción b.",
+        "options": [
+            {
+                "text": "VVV",
+                "is_correct": false
+            },
+            {
+                "text": "VVF",
+                "is_correct": true
+            },
+            {
+                "text": "VFF",
+                "is_correct": false
+            },
+            {
+                "text": "FFF",
+                "is_correct": false
+            },
+            {
+                "text": "FFV",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Se sabe que $(p \\land q)$ y $(q \\rightarrow t)$ son falsas.\nDe los esquemas moleculares siguientes:\n$A = (\\sim p \\lor t) \\lor \\sim q$\n$B = \\sim [p \\land (\\sim q \\lor \\sim p)]$\n$C = [(p \\rightarrow q) \\land \\sim (q \\land t)] \\leftrightarrow [\\sim p \\lor (q \\land \\sim t)]$\n¿Cuáles son verdaderos?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Valores de verdad:\n    *   $(p \\land q) \\equiv F$.\n    *   $(q \\rightarrow t) \\equiv F \\Rightarrow q \\equiv V, t \\equiv F$.\n    *   Reemplazando $q=V$ en la primera: $(p \\land V) \\equiv F \\Rightarrow p \\equiv F$.\n    *   Valores: **$p=F, q=V, t=F$**.\n2.  Evaluamos esquemas:\n    *   **A**: $(\\sim F \\lor F) \\lor \\sim V \\equiv (V \\lor F) \\lor F \\equiv V \\lor F \\equiv \\mathbf{V}$.\n    *   **B**: $\\sim [F \\land (\\dots)]$. Una conjunción que empieza con Falso es Falsa. Negación de Falso es Verdadero. $\\sim[F] \\equiv \\mathbf{V}$.\n    *   **C**:\n        *   Izquierda: $[(F \\rightarrow V) \\land \\sim (V \\land F)] \\equiv [V \\land \\sim F] \\equiv [V \\land V] \\equiv V$.\n        *   Derecha: $[\\sim F \\lor (\\dots)] \\equiv [V \\lor \\dots] \\equiv V$.\n        *   Total: $V \\leftrightarrow V \\equiv \\mathbf{V}$.\n3.  Los tres (A, B y C) son verdaderos.\n    Opción a.",
+        "options": [
+            {
+                "text": "A, B y C",
+                "is_correct": true
+            },
+            {
+                "text": "A y C",
+                "is_correct": false
+            },
+            {
+                "text": "B y C",
+                "is_correct": false
+            },
+            {
+                "text": "Solo B",
+                "is_correct": false
+            },
+            {
+                "text": "Solo C",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "La proposición $(p \\land q) \\rightarrow (q \\rightarrow r)$ es falsa, y se tienen los esquemas moleculares:\n$A = \\sim(q \\lor r) \\lor (p \\lor q)$\n$B = (p \\lor \\sim q) \\rightarrow (\\sim r \\land q)$\n$C = p \\leftrightarrow \\sim[q \\rightarrow \\sim(p \\rightarrow r)]$\n¿Cuáles son falsos?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Enunciado: $(p \\land q) \\rightarrow (q \\rightarrow r) \\equiv F$.\n    *   Antecedente V: $(p \\land q) \\equiv V \\Rightarrow p \\equiv V, q \\equiv V$.\n    *   Consecuente F: $(q \\rightarrow r) \\equiv F \\Rightarrow q \\equiv V, r \\equiv F$.\n    *   Valores: **$p=V, q=V, r=F$**.\n2.  Evaluamos esquemas:\n    *   **A**: $\\sim(V \\lor F) \\lor (V \\lor V) \\equiv \\sim V \\lor V \\equiv F \\lor V \\equiv \\mathbf{V}$.\n    *   **B**: $(V \\lor F) \\rightarrow (V \\land V) \\equiv V \\rightarrow V \\equiv \\mathbf{V}$.\n    *   **C**:\n        *   Dentro del corchete: $[q \\rightarrow \\sim(p \\rightarrow r)] \\equiv [V \\rightarrow \\sim(V \\rightarrow F)] \\equiv [V \\rightarrow \\sim F] \\equiv [V \\rightarrow V] \\equiv V$.\n        *   Negación del corchete: $\\sim V \\equiv F$.\n        *   Total: $p \\leftrightarrow F \\Rightarrow V \\leftrightarrow F \\equiv \\mathbf{F}$.\n3.  Pregunta \"¿Cuáles son falsos?\".\n    Solo C es falso.\n    Opción c.",
+        "options": [
+            {
+                "text": "solo A",
+                "is_correct": false
+            },
+            {
+                "text": "solo B",
+                "is_correct": false
+            },
+            {
+                "text": "solo C",
+                "is_correct": true
+            },
+            {
+                "text": "A y B",
+                "is_correct": false
+            },
+            {
+                "text": "A, B y C",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Hallar los valores de verdad de p, q, r si se sabe que:\n$\\neg[(p \\rightarrow q) \\lor (r \\rightarrow q)] \\land [(\\neg p \\lor q) \\rightarrow \\neg(q \\rightarrow p)]$ es verdadero.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Operador principal $\\land$ es Verdadero, entonces ambos corchetes son Verdaderos.\n2.  **Primer corchete:** $\\neg[(p \\rightarrow q) \\lor (r \\rightarrow q)] \\equiv V$.\n    *   Lo de adentro es Falso: $[(p \\rightarrow q) \\lor (r \\rightarrow q)] \\equiv F$.\n    *   Para que un $\\lor$ sea falso, ambos deben ser falsos.\n    *   $(p \\rightarrow q) \\equiv F \\Rightarrow \\mathbf{p \\equiv V, q \\equiv F}$.\n    *   $(r \\rightarrow q) \\equiv F$. Como $q \\equiv F$, queda $(r \\rightarrow F) \\equiv F \\Rightarrow \\mathbf{r \\equiv V}$.\n    *   Valores tentativos: p=V, q=F, r=V.\n3.  **Segundo corchete (Verificación):** $[(\\neg p \\lor q) \\rightarrow \\neg(q \\rightarrow p)]$.\n    *   Reemplazamos: $[(\\neg V \\lor F) \\rightarrow \\neg(F \\rightarrow V)]$.\n    *   $[ (F \\lor F) \\rightarrow \\neg(V) ]$.\n    *   $[ F \\rightarrow F ]$.\n    *   $V$. (Verdadero).\n    *   Se cumple la condición.\n4.  Resultado: VFV.\n    Opción a.",
+        "options": [
+            {
+                "text": "VFV",
+                "is_correct": true
+            },
+            {
+                "text": "VFF",
+                "is_correct": false
+            },
+            {
+                "text": "FVV",
+                "is_correct": false
+            },
+            {
+                "text": "FVF",
+                "is_correct": false
+            },
+            {
+                "text": "VVF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Si la proposición $(q \\rightarrow p) \\rightarrow (r \\lor p)$ es falsa, hallar el valor de verdad de cada uno de las siguientes proposiciones (en ese orden):\n$A = (p \\land x) \\rightarrow (m \\leftrightarrow y)$\n$B = (q \\rightarrow n) \\lor (x \\land y)$\n$C = (r \\leftrightarrow p) \\rightarrow (s \\land q)$",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Condición inicial: $(q \\rightarrow p) \\rightarrow (r \\lor p) \\equiv F$.\n    *   Antecedente V: $(q \\rightarrow p) \\equiv V$.\n    *   Consecuente F: $(r \\lor p) \\equiv F$.\n    *   Para que un $\\lor$ sea Falso, ambos deben ser Falsos: **$r \\equiv F, p \\equiv F$**.\n    *   Volviendo al antecedente: $(q \\rightarrow F) \\equiv V$. Para que esto sea Verdadero, el antecedente $q$ debe ser Falso.\n    *   Valores: **$p=F, q=F, r=F$**.\n2.  Evaluamos A, B, C:\n    *   **A:** $(F \\land x) \\rightarrow (\\dots) \\equiv F \\rightarrow (\\dots) \\equiv \\mathbf{V}$. (Falso implica cualquier cosa es Verdadero).\n    *   **B:** $(F \\rightarrow n) \\lor (\\dots) \\equiv V \\lor (\\dots) \\equiv \\mathbf{V}$. (Verdadero o cualquier cosa es Verdadero).\n    *   **C:** $(F \\leftrightarrow F) \\rightarrow (s \\land F) \\equiv V \\rightarrow F \\equiv \\mathbf{F}$.\n3.  Resultado: VVF.\n    Opción b.",
+        "options": [
+            {
+                "text": "VVV",
+                "is_correct": false
+            },
+            {
+                "text": "VVF",
+                "is_correct": true
+            },
+            {
+                "text": "VFF",
+                "is_correct": false
+            },
+            {
+                "text": "FVV",
+                "is_correct": false
+            },
+            {
+                "text": "FFV",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Sabiendo que el valor de verdad de la proposición compuesta:\n$\\{\\sim [(p \\land r) \\rightarrow q] \\land [(p \\lor q) \\Delta s]\\} \\rightarrow [(s \\Delta p) \\rightarrow t]$\nes siempre falso. Determinar el valor de verdad de p, q, r, s, t.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Condicional principal FALSA:\n    *   Antecedente Verdadero.\n    *   Consecuente Falso: $[(s \\Delta p) \\rightarrow t] \\equiv F \\Rightarrow (s \\Delta p) \\equiv V, t \\equiv F$.\n2.  Antecedente Verdadero (Conjunción):\n    *   Parte 1: $\\sim [(p \\land r) \\rightarrow q] \\equiv V \\Rightarrow [(p \\land r) \\rightarrow q] \\equiv F$.\n        *   $(p \\land r) \\equiv V \\Rightarrow p \\equiv V, r \\equiv V$.\n        *   $q \\equiv F$.\n    *   Parte 2: $[(p \\lor q) \\Delta s] \\equiv V$.\n        *   $(V \\lor F) \\Delta s \\equiv V \\Delta s \\equiv V$.\n        *   Para que $V \\Delta s$ sea Verdadero, $s$ debe ser Falso.\n        *   $s \\equiv F$.\n3.  Verificación de $(s \\Delta p) \\equiv (F \\Delta V) \\equiv V$. Correcto.\n4.  Resultado: $p=V, q=F, r=V, s=F, t=F$.\n    Orden: VFVFF.\n    (Opción d).",
+        "options": [
+            {
+                "text": "VVVV",
+                "is_correct": false
+            },
+            {
+                "text": "VVFF",
+                "is_correct": false
+            },
+            {
+                "text": "VFFF",
+                "is_correct": true
+            },
+            {
+                "text": "VFVFF",
+                "is_correct": false
+            },
+            {
+                "text": "FFVV",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Si: $(p \\leftrightarrow q)$ es falsa; los valores de verdad de:\n$M = r \\rightarrow (p \\Delta q)$\n$N = (p \\land q) \\rightarrow s$\n$R = (p \\lor q) \\leftrightarrow (p \\land q)$\nrespectivamente son:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Dato: $(p \\leftrightarrow q) \\equiv F \\Rightarrow p \\neq q$.\n2.  Evaluamos M: $r \\rightarrow (p \\Delta q)$.\n    *   $(p \\Delta q)$: \"p diferente de q\", es Verdadero.\n    *   $r \\rightarrow V \\equiv \\mathbf{V}$.\n3.  Evaluamos N: $(p \\land q) \\rightarrow s$.\n    *   $(p \\land q)$: Como son diferentes, uno es Falso, así que es Falso.\n    *   $F \\rightarrow s \\equiv \\mathbf{V}$.\n4.  Evaluamos R: $(p \\lor q) \\leftrightarrow (p \\land q)$.\n    *   $(p \\lor q) \\equiv V$ (al menos uno es V).\n    *   $(p \\land q) \\equiv F$ (al menos uno es F).\n    *   $V \\leftrightarrow F \\equiv \\mathbf{F}$.\n5.  Resultado: VVF.\n    Opción e.",
+        "options": [
+            {
+                "text": "VVV",
+                "is_correct": false
+            },
+            {
+                "text": "VFV",
+                "is_correct": false
+            },
+            {
+                "text": "FVF",
+                "is_correct": false
+            },
+            {
+                "text": "FVV",
+                "is_correct": false
+            },
+            {
+                "text": "VVF",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Si la proposición compuesta:\n$\\sim [(p \\land \\sim r) \\rightarrow (r \\Delta \\sim q)]$ es verdadera,\nhallar el valor de verdad de las proposiciones p, q y r respectivamente.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Enunciado: $\\sim [\\dots] \\equiv V \\Rightarrow [(p \\land \\sim r) \\rightarrow (r \\Delta \\sim q)] \\equiv F$.\n2.  Antecedente V: $(p \\land \\sim r) \\equiv V \\Rightarrow p \\equiv V, r \\equiv F$.\n3.  Consecuente F: $(r \\Delta \\sim q) \\equiv F$.\n    *   $(F \\Delta \\sim q) \\equiv F$. Deben ser iguales.\n    *   $\\sim q \\equiv F \\Rightarrow q \\equiv V$.\n4.  Resultado: $p=V, q=V, r=F$. (VVF).\n    Opción a.",
+        "options": [
+            {
+                "text": "VVF",
+                "is_correct": true
+            },
+            {
+                "text": "FVV",
+                "is_correct": false
+            },
+            {
+                "text": "VFV",
+                "is_correct": false
+            },
+            {
+                "text": "FVF",
+                "is_correct": false
+            },
+            {
+                "text": "FFV",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Si \"t\" es falsa y la proposición:\n$\\sim \\{(r \\lor s) \\rightarrow [(p \\land \\sim s) \\rightarrow (p \\land \\sim q)]\\} \\Delta (t \\land q)$\nes verdadera, hallar los valores de verdad de \"p\", \"q\", \"r\" y \"s\" respectivamente.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Dato: $t \\equiv F$.\n2.  Prop. Principal: $\\{ \\dots \\} \\Delta (t \\land q) \\equiv V$.\n    *   Lado derecho: $(F \\land q) \\equiv F$.\n    *   Para que $\\dots \\Delta F \\equiv V$, el lado izquierdo debe ser Verdadero.\n    *   $\\sim \\{ \\dots \\} \\equiv V \\Rightarrow \\{ (r \\lor s) \\rightarrow [\\dots] \\} \\equiv F$.\n3.  Condicional Falso:\n    *   Antecedente: $(r \\lor s) \\equiv V$.\n    *   Consecuente: $[(p \\land \\sim s) \\rightarrow (p \\land \\sim q)] \\equiv F$.\n4.  Del Consecuente Falso (segundo condicional):\n    *   Antecedente: $(p \\land \\sim s) \\equiv V \\Rightarrow \\mathbf{p \\equiv V, s \\equiv F}$.\n    *   Consecuente: $(p \\land \\sim q) \\equiv F$. Como $p \\equiv V$, entonces $\\sim q \\equiv F \\Rightarrow \\mathbf{q \\equiv V}$.\n5.  Volviendo al primer Antecedente:\n    *   $(r \\lor s) \\equiv V$. Como $s \\equiv F$, entonces $\\mathbf{r \\equiv V}$.\n6.  Valores: $p=V, q=V, r=V, s=F$.\n    Orden: VVVF.\n    Opción d.",
+        "options": [
+            {
+                "text": "FVFF",
+                "is_correct": false
+            },
+            {
+                "text": "VVFF",
+                "is_correct": false
+            },
+            {
+                "text": "VFFF",
+                "is_correct": false
+            },
+            {
+                "text": "VVVF",
+                "is_correct": false
+            },
+            {
+                "text": "VFVF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Sean: $(p \\land q) \\equiv V$, $(q \\rightarrow t) \\equiv V$ y\n$A = [(p \\lor q) \\land (r \\rightarrow q)] \\rightarrow \\sim t$\n$B = [(\\sim p \\rightarrow w) \\land q]$\n$C = \\sim(w \\lor t) \\rightarrow t$.\nSon verdaderas:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Datos:\n    *   $(p \\land q) \\equiv V \\Rightarrow p \\equiv V, q \\equiv V$.\n    *   $(q \\rightarrow t) \\equiv V \\Rightarrow (V \\rightarrow t) \\equiv V \\Rightarrow t \\equiv V$.\n    *   Valores: $p=V, q=V, t=V$.\n2.  Evaluamos esquemas:\n    *   **A:** $[(V \\lor V) \\land (r \\rightarrow V)] \\rightarrow \\sim V$.\n        *   $[V \\land V] \\rightarrow F$.\n        *   $V \\rightarrow F \\equiv \\mathbf{F}$.\n    *   **B:** $[(\\sim V \\rightarrow w) \\land V]$.\n        *   $[(F \\rightarrow w) \\land V]$.\n        *   $[V \\land V] \\equiv \\mathbf{V}$.\n    *   **C:** $\\sim(w \\lor V) \\rightarrow V$.\n        *   $\\sim(V) \\rightarrow V$.\n        *   $F \\rightarrow V \\equiv \\mathbf{V}$.\n3.  Verdaderas: B y C.\n    Opción c.",
+        "options": [
+            {
+                "text": "Solo A y B",
+                "is_correct": false
+            },
+            {
+                "text": "Solo A y C",
+                "is_correct": false
+            },
+            {
+                "text": "Solo B y C",
+                "is_correct": false
+            },
+            {
+                "text": "Solo A",
+                "is_correct": false
+            },
+            {
+                "text": "Solo B",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Dada la proposición:\n$\\sim [(r \\lor q) \\rightarrow (r \\rightarrow p)] \\equiv V$\ndonde se sabe que q es una proposición falsa. Halle el valor de verdad de las siguientes proposiciones:\nI. $r \\rightarrow (\\sim s \\lor \\sim q)$\nII. $[r \\leftrightarrow (p \\land s)] \\leftrightarrow (q \\land \\sim t)$\nIII. $(t \\lor \\sim p) \\land (q \\lor p)$",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Enunciado equivalente a Pregunta 7. $\\sim[\\dots] \\equiv V \\Rightarrow \\dots \\equiv F$.\n    *   $(r \\lor q) \\equiv V$ (con $q \\equiv F \\Rightarrow r \\equiv V$).\n    *   $(r \\rightarrow p) \\equiv F$ (con $r \\equiv V \\Rightarrow p \\equiv F$).\n    *   Valores: $p=F, q=F, r=V$.\n2.  Evaluamos Items (considerando nuevas variables s, t pueden ser cualquiera):\n    *   **I.** $r \\rightarrow (\\sim s \\lor \\sim q)$.\n        *   $V \\rightarrow (\\sim s \\lor \\sim F) \\equiv V \\rightarrow (\\sim s \\lor V) \\equiv V \\rightarrow V \\equiv \\mathbf{V}$.\n    *   **II.** $[r \\leftrightarrow (p \\land s)] \\leftrightarrow (q \\land \\sim t)$.\n        *   $[V \\leftrightarrow (F \\land s)] \\leftrightarrow (F \\land \\sim t)$.\n        *   $[V \\leftrightarrow F] \\leftrightarrow F$.\n        *   $F \\leftrightarrow F \\equiv \\mathbf{V}$.\n    *   **III.** $(t \\lor \\sim p) \\land (q \\lor p)$.\n        *   $(t \\lor \\sim F) \\land (F \\lor F)$.\n        *   $(t \\lor V) \\land F$.\n        *   $V \\land F \\equiv \\mathbf{F}$.\n3.  Resultado: VVF.\n    Opción b.",
+        "options": [
+            {
+                "text": "VVV",
+                "is_correct": false
+            },
+            {
+                "text": "VVF",
+                "is_correct": false
+            },
+            {
+                "text": "VFF",
+                "is_correct": false
+            },
+            {
+                "text": "FFF",
+                "is_correct": false
+            },
+            {
+                "text": "FFV",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Se definen las proposiciones $p \\# q \\equiv \\sim p \\land q$, $p \\theta q \\equiv p \\lor \\sim q$.\nAdemás la proposición: $\\sim [(q \\# p) \\rightarrow (q \\theta r)]$ es verdadera. Halle los valores de verdad de p, q y r.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Condición: $\\sim [(q \\# p) \\rightarrow (q \\theta r)] \\equiv V \\Rightarrow [(q \\# p) \\rightarrow (q \\theta r)] \\equiv F$.\n2.  Condicional Falso:\n    *   Antecedente V: $(q \\# p) \\equiv V$.\n        *   Definición $\\#$: $\\sim q \\land p \\equiv V$.\n        *   $\\Rightarrow q \\equiv F, p \\equiv V$.\n    *   Consecuente F: $(q \\theta r) \\equiv F$.\n        *   Definición $\\theta$: $q \\lor \\sim r \\equiv F$.\n        *   Reemplazamos $q=F$: $F \\lor \\sim r \\equiv F \\Rightarrow \\sim r \\equiv F \\Rightarrow r \\equiv V$.\n3.  Valores: $p=V, q=F, r=V$.\n    Opción a.",
+        "options": [
+            {
+                "text": "VFV",
+                "is_correct": false
+            },
+            {
+                "text": "FVV",
+                "is_correct": false
+            },
+            {
+                "text": "VVV",
+                "is_correct": false
+            },
+            {
+                "text": "VVF",
+                "is_correct": false
+            },
+            {
+                "text": "FFF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Sabiendo que:\n$p \\sqcap q \\equiv p \\lor \\sim q$ y $p \\circ q \\equiv \\sim p \\land \\sim q$.\nSeñale los valores de las combinaciones (VV, VF, FV, FF) para:\n$(p \\sqcap q) \\circ (p \\circ q)$",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Simplificamos la expresión:\n    *   Sea $A = (p \\sqcap q) = p \\lor \\sim q$.\n    *   Sea $B = (p \\circ q) = \\sim p \\land \\sim q = \\sim(p \\lor q)$ (Ley de Morgan).\n    *   Hallamos $A \\circ B$: Por definición es $\\sim A \\land \\sim B$.\n2.  Calculamos $\\sim A$ y $\\sim B$:\n    *   $\\sim A = \\sim(p \\lor \\sim q) = \\sim p \\land q$.\n    *   $\\sim B = \\sim(\\sim p \\land \\sim q) = p \\lor q$.\n3.  Operamos $\\sim A \\land \\sim B$:\n    *   $(\\sim p \\land q) \\land (p \\lor q)$.\n    *   Distribuimos: $[(\\sim p \\land q) \\land p] \\lor [(\\sim p \\land q) \\land q]$.\n    *   Primer término: $\\sim p \\land p \\land q \\equiv F \\land q \\equiv F$.\n    *   Queda solo el segundo término: $\\sim p \\land q$.\n4.  Tabla de verdad de $\\sim p \\land q$:\n    *   VV (p=V, q=V): $\\sim V \\land V = F \\land V = F$.\n    *   VF (p=V, q=F): $\\sim V \\land F = F \\land F = F$.\n    *   FV (p=F, q=V): $\\sim F \\land V = V \\land V = V$.\n    *   FF (p=F, q=F): $\\sim F \\land F = V \\land F = F$.\n5.  Resultado Final (Columna): FFVF.\n    Opción b.",
+        "options": [
+            {
+                "text": "VVVV",
+                "is_correct": false
+            },
+            {
+                "text": "FFVF",
+                "is_correct": true
+            },
+            {
+                "text": "FFPV",
+                "is_correct": false
+            },
+            {
+                "text": "VFVF",
+                "is_correct": false
+            },
+            {
+                "text": "VVVF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "Si el esquema es F, señale el valor de p, q, r, s y t, en ese orden:\n$[(p \\leftrightarrow q) \\rightarrow (s \\lor p)] \\lor [(q \\Delta r) \\rightarrow (\\sim s \\land t)]$",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  Esquema Disyuntivo ($\\lor$) es Falso $\\Rightarrow$ Ambos términos son falsos.\n2.  **Término 1:** $[(p \\leftrightarrow q) \\rightarrow (s \\lor p)] \\equiv F$.\n    *   Antecedente V: $(p \\leftrightarrow q) \\equiv V \\Rightarrow p \\equiv q$.\n    *   Consecuente F: $(s \\lor p) \\equiv F \\Rightarrow \\mathbf{s \\equiv F, p \\equiv F}$.\n    *   Como $p \\equiv q$, entonces $\\mathbf{q \\equiv F}$.\n3.  **Término 2:** $[(q \\Delta r) \\rightarrow (\\sim s \\land t)] \\equiv F$.\n    *   Antecedente V: $(q \\Delta r) \\equiv V$. Sabemos $q \\equiv F$, así que $F \\Delta r \\equiv V$. Para que esto ocurra, $r$ debe ser diferente de F. $\\Rightarrow \\mathbf{r \\equiv V}$.\n    *   Consecuente F: $(\\sim s \\land t) \\equiv F$. Sabemos $s \\equiv F \\Rightarrow \\sim s \\equiv V$.\n    *   Queda $V \\land t \\equiv F \\Rightarrow \\mathbf{t \\equiv F}$.\n4.  Valores finales:\n    *   p = F\n    *   q = F\n    *   r = V\n    *   s = F\n    *   t = F\n5.  Orden p,q,r,s,t: FFVFF.\n    Opción e.",
+        "options": [
+            {
+                "text": "VVVVV",
+                "is_correct": false
+            },
+            {
+                "text": "FFVVF",
+                "is_correct": false
+            },
+            {
+                "text": "FFFVF",
+                "is_correct": false
+            },
+            {
+                "text": "FFFFF",
+                "is_correct": false
+            },
+            {
+                "text": "FFVFF",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Aritmética",
+        "topic": "Lógica Proposicional",
+        "statement": "¿Sabiendo que la proposición p es verdadera en cuáles de los siguientes casos es suficiente dicha información para determinar el valor de las siguientes proposiciones?\n\nI) $(p \\lor q) \\leftrightarrow (\\sim p \\land \\sim q)$\nII) $(p \\land q) \\rightarrow (p \\lor r)$\nIII) $(p \\rightarrow q) \\rightarrow r$",
+        "difficulty": "INTERMEDIO",
+        "explanation": "",
+        "options": [
+            {
+                "text": "Sólo I",
+                "is_correct": false
+            },
+            {
+                "text": "Sólo II",
+                "is_correct": false
+            },
+            {
+                "text": "I y II",
+                "is_correct": true
+            },
+            {
+                "text": "I y III",
+                "is_correct": false
+            },
+            {
+                "text": "I, II y III",
+                "is_correct": false
+            }
+        ]
+    }
+]
