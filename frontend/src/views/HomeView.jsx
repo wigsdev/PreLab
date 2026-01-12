@@ -1,32 +1,16 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import {
-    BookOpen,
-    FlaskConical,
-    Calculator,
-    Globe2,
-    BrainCircuit,
-    GraduationCap,
-    Loader2,
-    MessageSquareText,
-    ArrowRight,
-} from 'lucide-react';
+import { getCourses } from '../services/api';
+
+// ... (imports)
 
 export default function HomeView() {
-    const [courses, setCourses] = useState([]);
-    const [guestHistory, setGuestHistory] = useState([]); // [NEW]
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const { user } = useAuth();
-    const navigate = useNavigate();
+    // ... (state)
 
     useEffect(() => {
         const fetchCourses = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/courses/');
-                setCourses(response.data);
+                const data = await getCourses();
+                setCourses(data);
             } catch (err) {
                 console.error('Error loading courses:', err);
                 setError('Error al cargar los cursos. Verifica que el backend esté corriendo.');
@@ -35,6 +19,8 @@ export default function HomeView() {
             }
         };
         fetchCourses();
+
+        // ... (rest)
 
         // Load Guest History
         if (!user) {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import api from '../services/api';
 
 export function useExamEngine() {
     const [questions, setQuestions] = useState([]);
@@ -31,21 +31,17 @@ export function useExamEngine() {
         setUserAnswers([]); // Reset answers
         setError(null);
         try {
-            let url = 'http://127.0.0.1:8000/api/questions/';
+            let endpoint = '/questions/';
+            const params = {};
 
             if (mode === 'simulation') {
-                url += 'simulation/';
+                endpoint += 'simulation/';
             } else {
-                const params = [];
-                if (topicId) params.push(`topic=${topicId}`);
-                if (courseId) params.push(`course=${courseId}`);
-
-                if (params.length > 0) {
-                    url += `?${params.join('&')}`;
-                }
+                if (topicId) params.topic = topicId;
+                if (courseId) params.course = courseId;
             }
 
-            const response = await axios.get(url);
+            const response = await api.get(endpoint, { params });
 
             // En modo simulación, ya vienen ~30 preguntas.
             // Igual aplicamos shuffle por si acaso para mezclar el orden de los cursos

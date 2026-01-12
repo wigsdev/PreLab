@@ -1,14 +1,6 @@
 import axios from 'axios';
 
 const getApiUrl = () => {
-    // Debug Production Values
-    console.log('🔍 [Debug] Env Vars:', {
-        VITE_API_URL: import.meta.env.VITE_API_URL,
-        MODE: import.meta.env.MODE,
-        PROD: import.meta.env.PROD,
-        BASE_URL: import.meta.env.BASE_URL,
-    });
-
     // 1. Priority: Explicit Environment Variable (Render / .env)
     if (import.meta.env.VITE_API_URL) {
         return `${import.meta.env.VITE_API_URL}/api`;
@@ -17,7 +9,6 @@ const getApiUrl = () => {
     // 2. Fallback: Production Environment (Automatic Render URL prediction)
     // Useful if VITE_API_URL fails to load in build context
     if (import.meta.env.PROD) {
-        console.warn('⚠️ using hardcoded prod fallback');
         return 'https://prelab-backend.onrender.com/api';
     }
 
