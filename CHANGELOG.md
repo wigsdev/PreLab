@@ -4,6 +4,20 @@ Todas las modificaciones notables en este proyecto serán documentadas en este a
 
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/), y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [v1.2.0] - Production Ready (Render Deployment) - 2026-01-12
+
+### Added
+
+- **Deployment Infrastructure:**
+  - Despliegue completo en Render (Frontend + Backend + DB).
+  - Comando automático `ensure_admin` para crear superusuarios seguro.
+- **Frontend Stability:**
+  - Solución total a hardcoded URLs (uso dinámico de `VITE_API_URL`).
+  - Manejo robusto de errores de autenticación y carga de recursos (WSOD fix).
+  - `Navbar` y `ProfileView` protegidos contra objetos nulos (`user?.avatar`).
+- **DevOps:**
+  - Script `entrypoint.sh` automatizado para migraciones y configuración post-deploy.
+
 ## [v1.1.0] - The Automator (CI/CD) - 2026-01-11
 
 ### Added
