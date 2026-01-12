@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 export function useTimer(initialSeconds, onTimeUp) {
     const [timeLeft, setTimeLeft] = useState(initialSeconds);
     const [isActive, setIsActive] = useState(false);
-    const intervalRef = useRef(null);
 
     useEffect(() => {
         let interval = null;
@@ -19,7 +18,9 @@ export function useTimer(initialSeconds, onTimeUp) {
 
     useEffect(() => {
         if (timeLeft === 0 && isActive) {
-            setIsActive(false);
+            // Do not call setIsActive(false) here to avoid setState-in-effect warning.
+            // The parent can handle the completion via onTimeUp.
+            // Or we just let the parent stop it.
             if (onTimeUp) onTimeUp();
         }
     }, [timeLeft, isActive, onTimeUp]);

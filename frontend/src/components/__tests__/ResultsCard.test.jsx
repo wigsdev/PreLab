@@ -1,6 +1,5 @@
-/* eslint-env jest */
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { vi } from 'vitest';
+import { vi, describe, it, expect } from 'vitest';
 import ResultsCard from '../ResultsCard';
 import { AuthContext } from '../../context/AuthContext';
 import * as api from '../../services/api';
