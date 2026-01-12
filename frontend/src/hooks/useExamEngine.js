@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import api from '../services/api';
 
 export function useExamEngine() {
@@ -22,47 +22,50 @@ export function useExamEngine() {
         return arr;
     };
 
-    const startExam = async ({ topicId = null, courseId = null, mode = 'standard' } = {}) => {
-        setLoading(true);
-        setIsFinished(false);
-        setCurrentIndex(0);
-        setScore(0);
-        setStreak(0);
-        setUserAnswers([]); // Reset answers
-        setError(null);
-        try {
-            let endpoint = '/questions/';
-            const params = {};
+    const startExam = useCallback(
+        async ({ topicId = null, courseId = null, mode = 'standard' } = {}) => {
+            setLoading(true);
+            setIsFinished(false);
+            setCurrentIndex(0);
+            setScore(0);
+            setStreak(0);
+            setUserAnswers([]); // Reset answers
+            setError(null);
+            try {
+                let endpoint = '/questions/';
+                const params = {};
 
-            if (mode === 'simulation') {
-                endpoint += 'simulation/';
-            } else {
-                if (topicId) params.topic = topicId;
-                if (courseId) params.course = courseId;
+                if (mode === 'simulation') {
+                    endpoint += 'simulation/';
+                } else {
+                    if (topicId) params.topic = topicId;
+                    if (courseId) params.course = courseId;
+                }
+
+                const response = await api.get(endpoint, { params });
+
+                // En modo simulación, ya vienen ~30 preguntas.
+                // Igual aplicamos shuffle por si acaso para mezclar el orden de los cursos
+                // (aunque backend ya podría haberlo hecho, es seguro hacerlo aquí también).
+                // Para modo standard, mantenemos el slice(0, 10).
+
+                const shuffled = shuffleArray(response.data);
+
+                const selected =
+                    mode === 'simulation'
+                        ? shuffled // Usa todas las que trajo (ej. 30)
+                        : shuffled.slice(0, 10); // Solo 10 para práctica rápida
+
+                setQuestions(selected);
+            } catch (err) {
+                console.error('Error fetching questions:', err);
+                setError('Error al cargar el examen. Revisa tu conexión.');
+            } finally {
+                setLoading(false);
             }
-
-            const response = await api.get(endpoint, { params });
-
-            // En modo simulación, ya vienen ~30 preguntas.
-            // Igual aplicamos shuffle por si acaso para mezclar el orden de los cursos
-            // (aunque backend ya podría haberlo hecho, es seguro hacerlo aquí también).
-            // Para modo standard, mantenemos el slice(0, 10).
-
-            const shuffled = shuffleArray(response.data);
-
-            const selected =
-                mode === 'simulation'
-                    ? shuffled // Usa todas las que trajo (ej. 30)
-                    : shuffled.slice(0, 10); // Solo 10 para práctica rápida
-
-            setQuestions(selected);
-        } catch (err) {
-            console.error('Error fetching questions:', err);
-            setError('Error al cargar el examen. Revisa tu conexión.');
-        } finally {
-            setLoading(false);
-        }
-    };
+        },
+        []
+    );
 
     // Wrapper para separar lógica de "Anotar punto" vs "Siguiente Pregunta"
     // Para UX, a veces queremos anotar el punto clickeando la opción,
