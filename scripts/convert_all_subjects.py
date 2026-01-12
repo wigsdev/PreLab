@@ -12,6 +12,11 @@ SUBJECT_CONFIG = {
         'course': 'Aritmética',
         'topic': 'Lógica Proposicional',
         'output': 'aritmetica_questions.json'
+    },
+    'BIOLOGIA.md': {
+        'course': 'Biología',
+        'topic': 'Introducción a la Biología',
+        'output': 'biologia_questions.json'
     }
 }
 

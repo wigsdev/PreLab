@@ -1,0 +1,901 @@
+[
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "El nacimiento del término BIOLOGÍA fue gracias a:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El término \"Biología\" fue acuñado de forma independiente por **Jean-Baptiste Lamarck** y Gottfried Reinhold Treviranus alrededor de 1802. Antes se usaban términos como \"historia natural\".",
+        "options": [
+            {
+                "text": "L. Pasteur",
+                "is_correct": false
+            },
+            {
+                "text": "G. Mendel",
+                "is_correct": false
+            },
+            {
+                "text": "R. Koch",
+                "is_correct": false
+            },
+            {
+                "text": "J. Lamarck",
+                "is_correct": true
+            },
+            {
+                "text": "E. Haeckel",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Rama de la Biología cuyos estudios se basan en la herencia y la variación biológica:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La **Genética** es la rama que estudia cómo los caracteres hereditarios se transmiten de generación en generación (herencia) y las diferencias que existen entre individuos (variación).",
+        "options": [
+            {
+                "text": "Zootecnia",
+                "is_correct": false
+            },
+            {
+                "text": "Botánica",
+                "is_correct": false
+            },
+            {
+                "text": "Genética",
+                "is_correct": true
+            },
+            {
+                "text": "Biología Molecular",
+                "is_correct": false
+            },
+            {
+                "text": "Veterinaria",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "_______ es a función, como, _______ es a estructura:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "*   La **Fisiología** estudia el funcionamiento (función) de los seres vivos.\n*   La **Morfología** (o anatomía en un sentido amplio) estudia la forma y estructura.\n    La analogía correcta es Fisiología:Función :: Morfología:Estructura.",
+        "options": [
+            {
+                "text": "Fisiología - Morfología",
+                "is_correct": true
+            },
+            {
+                "text": "Histología - Citología",
+                "is_correct": false
+            },
+            {
+                "text": "Genética - Ecología",
+                "is_correct": false
+            },
+            {
+                "text": "Citología - Histología",
+                "is_correct": false
+            },
+            {
+                "text": "Zoología - Botánica",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "El gallito de las rocas, ave nacional del Perú, es estudiado por la ciencia llamada:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La rama de la zoología encargada del estudio de las aves es la **Ornitología**.\n*   Herpetología: Reptiles y anfibios.\n*   Ictiología: Peces.\n*   Malacología: Moluscos.",
+        "options": [
+            {
+                "text": "Herpetología",
+                "is_correct": false
+            },
+            {
+                "text": "Ictiología",
+                "is_correct": false
+            },
+            {
+                "text": "Anfibología",
+                "is_correct": false
+            },
+            {
+                "text": "Ornitología",
+                "is_correct": true
+            },
+            {
+                "text": "Malacología",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Es la ciencia que estudia a los gusanos parásitos:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La **Helmintología** es la ciencia que estudia a los vernes o gusanos (del griego *helmins* = gusano), especialmente a los parásitos como tenias y lombrices intestinales.\n*   Aracnología: Arañas.\n*   Entomología: Insectos.",
+        "options": [
+            {
+                "text": "Ictiología",
+                "is_correct": false
+            },
+            {
+                "text": "Aracnología",
+                "is_correct": false
+            },
+            {
+                "text": "Helmintología",
+                "is_correct": true
+            },
+            {
+                "text": "Entomología",
+                "is_correct": false
+            },
+            {
+                "text": "Mastozoología",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Las abejas y el \"yuyo\" son estudiados, respectivamente por:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "*   Las abejas (insectos) son estudiadas por la **Entomología**.\n*   El \"yuyo\" (Chondracanthus chamissoi, un alga roja comestible) es estudiado por la **Ficología** (rama de la botánica que estudia las algas).\n    Respuesta: Entomología - Ficología.",
+        "options": [
+            {
+                "text": "Entomología - Ficología",
+                "is_correct": true
+            },
+            {
+                "text": "Virología - Micología",
+                "is_correct": false
+            },
+            {
+                "text": "Malacología - Micología",
+                "is_correct": false
+            },
+            {
+                "text": "Ictiología - Botánica",
+                "is_correct": false
+            },
+            {
+                "text": "Helmintología - Protozoología",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Ciencia que estudia a las plantas que carecen de tejidos conductores y no forman semillas:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La **Briología** estudia a las briofitas (musgos, hepáticas), que son plantas no vasculares (sin tejidos conductores) y que no producen semillas, reproduciéndose por esporas.\n*   Pteridología: Helechos (tienen tejidos conductores).",
+        "options": [
+            {
+                "text": "Pteridología",
+                "is_correct": false
+            },
+            {
+                "text": "Briología",
+                "is_correct": true
+            },
+            {
+                "text": "Palinología",
+                "is_correct": false
+            },
+            {
+                "text": "Carpología",
+                "is_correct": false
+            },
+            {
+                "text": "Ficología",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "La Micología es una ciencia que estudia a:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La **Micología** es la rama de la biología dedicada al estudio de los **hongos** (Reino Fungi).",
+        "options": [
+            {
+                "text": "Hongos",
+                "is_correct": true
+            },
+            {
+                "text": "Musgos",
+                "is_correct": false
+            },
+            {
+                "text": "Hepáticas",
+                "is_correct": false
+            },
+            {
+                "text": "Plantas",
+                "is_correct": false
+            },
+            {
+                "text": "Algas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Se fundamenta en la creación de la vida por una o más divinidades:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La teoría **Creacionista** sostiene que el origen de la vida y del universo se debe a un acto de creación divina, en contraposición a las teorías evolutivas o fisicoquímicas.",
+        "options": [
+            {
+                "text": "Bioquímica",
+                "is_correct": false
+            },
+            {
+                "text": "Cosmozoica",
+                "is_correct": false
+            },
+            {
+                "text": "Creacionista",
+                "is_correct": true
+            },
+            {
+                "text": "De la panspermia",
+                "is_correct": false
+            },
+            {
+                "text": "Biogénesis",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "El Vitalismo, se sustenta en un principio existente en el ambiente llamado:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El Vitalismo (aristotélico) postula la existencia de una \"fuerza vital\" o soplo de vida. Aristóteles llamó a esta fuerza interior que impulsa la vida **Entelequia**.",
+        "options": [
+            {
+                "text": "Biogénesis",
+                "is_correct": false
+            },
+            {
+                "text": "Entelequia",
+                "is_correct": true
+            },
+            {
+                "text": "Proteinoide",
+                "is_correct": false
+            },
+            {
+                "text": "Coacervado",
+                "is_correct": false
+            },
+            {
+                "text": "Panspermia",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Propone que la vida se originó a través de un proceso gradual de formación de moléculas orgánicas, que se acumularon y formaron redes químicas complejas, las cuales dieron origen a las primeras células:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Esta descripción corresponde a la **Teoría Bioquímica** (o Quimiosintética) propuesta por Oparin y Haldane, que explica el origen de la vida a partir de reacciones químicas en la Tierra primitiva (evolución prebiótica).",
+        "options": [
+            {
+                "text": "Biogénesis",
+                "is_correct": false
+            },
+            {
+                "text": "Bioquímica",
+                "is_correct": true
+            },
+            {
+                "text": "Abiogénesis",
+                "is_correct": false
+            },
+            {
+                "text": "Panspermia",
+                "is_correct": false
+            },
+            {
+                "text": "Cosmozoica",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "De la siguiente afirmación: \"Los cabellos que se acumulan en charcos de agua se convierten en serpientes\", se deduce que corresponde a la teoría:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Esta afirmación es un ejemplo clásico de la teoría de la **Abiogénesis** (o Generación Espontánea), que sostenía que la vida podía surgir espontáneamente de materia inerte (barro, agua estancada, pelos, etc.) sin necesidad de progenitores.",
+        "options": [
+            {
+                "text": "Biogénesis",
+                "is_correct": false
+            },
+            {
+                "text": "Bioquímica",
+                "is_correct": false
+            },
+            {
+                "text": "Panspermia",
+                "is_correct": false
+            },
+            {
+                "text": "Cosmozoica",
+                "is_correct": false
+            },
+            {
+                "text": "Abiogénesis",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Se le considera como el \"Padre de la Microbiología Clínica\" por los aportes hechos en el campo de la salud, como por ejemplo la creación de la vacuna contra la rabia:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "**Louis Pasteur** es considerado el padre de la microbiología clínica (y la bacteriología) por sus innumerables aportes, incluyendo la pasteurización, la refutación definitiva de la generación espontánea y el desarrollo de vacunas clave como la de la rabia y el ántrax.",
+        "options": [
+            {
+                "text": "Malpighi",
+                "is_correct": false
+            },
+            {
+                "text": "Hooke",
+                "is_correct": false
+            },
+            {
+                "text": "Pasteur",
+                "is_correct": true
+            },
+            {
+                "text": "Leewenhoek",
+                "is_correct": false
+            },
+            {
+                "text": "Spallanzani",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Es uno de los máximos representantes de las teorías del origen extraterrestre:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Hermann **Richter** (junto con Arrhenius) fue uno de los principales defensores de la teoría de la Panspermia (Origen Extraterrestre), proponiendo que la vida llegó a la Tierra en forma de esporas o gérmenes desde el espacio exterior.",
+        "options": [
+            {
+                "text": "Pasteur",
+                "is_correct": false
+            },
+            {
+                "text": "H. Ritcher",
+                "is_correct": true
+            },
+            {
+                "text": "Spallanzani",
+                "is_correct": false
+            },
+            {
+                "text": "Virchow",
+                "is_correct": false
+            },
+            {
+                "text": "Needham",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Formas inmóviles que fueron observadas por Redi durante su experimento:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "En el experimento de Francesco Redi, observó el ciclo de vida de las moscas: moscas (adulto) -> huevos -> larvas (gusanos, móviles) -> **Pupas** (o capullos, estado inmóvil) -> moscas. Las formas inmóviles que identificó fueron las pupas o capullos.\nRespuesta correcta: b y d.",
+        "options": [
+            {
+                "text": "Moscas",
+                "is_correct": false
+            },
+            {
+                "text": "Capullos",
+                "is_correct": false
+            },
+            {
+                "text": "Larvas",
+                "is_correct": false
+            },
+            {
+                "text": "Pupas",
+                "is_correct": false
+            },
+            {
+                "text": "b y d",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "El experimento de Pasteur sirvió para demostrar que _______ no se generaban espontáneamente:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Pasteur, con sus matraces de cuello de cisne, demostró que los microorganismos (**bacterias** y hongos) que aparecían en los caldos nutritivos provenían del aire contaminado y no surgían espontáneamente de la materia inerte.",
+        "options": [
+            {
+                "text": "Moscas",
+                "is_correct": false
+            },
+            {
+                "text": "Bacterias",
+                "is_correct": true
+            },
+            {
+                "text": "Protozoarios",
+                "is_correct": false
+            },
+            {
+                "text": "Virus",
+                "is_correct": false
+            },
+            {
+                "text": "Peces",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "No corresponde a la Teoría de la Biogénesis:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La Teoría de la Biogénesis sostiene que \"todo ser vivo proviene de otro ser vivo\".\n*   Redi, Spallanzani y Pasteur fueron sus defensores y usaron experimentos (como el cuello de cisne) para demostrarla.\n*   **Aristóteles**, por el contrario, fue el creador y máximo exponente de la teoría de la Abiogénesis o Generación Espontánea.",
+        "options": [
+            {
+                "text": "Redi",
+                "is_correct": false
+            },
+            {
+                "text": "Pasteur",
+                "is_correct": false
+            },
+            {
+                "text": "Cuello de cisne",
+                "is_correct": false
+            },
+            {
+                "text": "Spallanzani",
+                "is_correct": false
+            },
+            {
+                "text": "Aristóteles",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "En la teoría Bioquímica se puede afirmar lo siguiente:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La teoría Bioquímica (Oparin) plantea que la vida surgió en los océanos primitivos (el \"caldo primordial\") tras un largo proceso de **evolución química** y luego prebiótica, favorecido por la energía ambiental y la atmósfera reductora.",
+        "options": [
+            {
+                "text": "La materia orgánica formada fue gracias a los meteoritos",
+                "is_correct": false
+            },
+            {
+                "text": "Los coacervados eran formas primitivas de vida con núcleo y membrana",
+                "is_correct": false
+            },
+            {
+                "text": "La actividad volcánica fue importante porque generó una atmósfera oxidante",
+                "is_correct": false
+            },
+            {
+                "text": "La ausencia de la capa de ozono en la Tierra en los inicios permitió la formación de formas de vida que respiraban oxígeno",
+                "is_correct": false
+            },
+            {
+                "text": "La vida se formó gracias a un proceso de evolución química que ocurrió en el mar",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "De las teorías del origen extraterrestre se puede afirmar lo siguiente:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Una de las principales críticas (antipruebas) a la Panspermia (Origen Extraterrestre) es la dificultad que tendrían los microorganismos o esporas para sobrevivir a la radiación cósmica y, sobre todo, a las temperaturas extremas y la fricción (calcinación) al entrar en la atmósfera terrestre. La opción b describe correctamente esta \"antiprueba\".",
+        "options": [
+            {
+                "text": "La vida proviene de Marte según la teoría Cosmozoica",
+                "is_correct": false
+            },
+            {
+                "text": "Presenta muchas antipruebas como la calcinación de los meteoritos al atravesar la atmósfera terrestre",
+                "is_correct": true
+            },
+            {
+                "text": "Las naves espaciales son mencionadas como una posibilidad de transporte de vida según Ritcher",
+                "is_correct": false
+            },
+            {
+                "text": "Una antiprueba contra lo dicho por Arrhenius es que los gérmenes se destruyeron por el excesivo calor del espacio exterior",
+                "is_correct": false
+            },
+            {
+                "text": "a y b",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "En el origen de la vida sobre la Tierra, la única teoría que ha sido demostrada científicamente es:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La teoría de la **Biogénesis** (\"la vida solo proviene de la vida\") ha sido demostrada científicamente por Redi, Spallanzani y, de manera definitiva, por Pasteur.\n*   Nota: Si bien la teoría Quimiosintética tiene mucha evidencia experimental (Miller-Urey), la Biogénesis es un principio biológico fundamental completamente demostrado para las condiciones actuales de la Tierra.",
+        "options": [
+            {
+                "text": "Quimiosintética",
+                "is_correct": false
+            },
+            {
+                "text": "Abiogénesis",
+                "is_correct": false
+            },
+            {
+                "text": "Biogénesis",
+                "is_correct": true
+            },
+            {
+                "text": "Panspermia",
+                "is_correct": false
+            },
+            {
+                "text": "Creacionista",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Sostiene que es posible que los ratones se pueden originar a partir de ropa sucia y trigo seco:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "**Jean Baptiste Van Helmont** (siglo XVII) propuso una famosa receta para la generación espontánea de ratones: colocar ropa interior sucia (sudada) y granos de trigo en un recipiente oscuro durante 21 días.",
+        "options": [
+            {
+                "text": "Van Helmont",
+                "is_correct": true
+            },
+            {
+                "text": "Pasteur",
+                "is_correct": false
+            },
+            {
+                "text": "Arrhenius",
+                "is_correct": false
+            },
+            {
+                "text": "Redi",
+                "is_correct": false
+            },
+            {
+                "text": "Aristóteles",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "En el experimento de Miller y Urey se puede afirmar que:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El experimento de Miller y Urey simuló las condiciones de la Tierra primitiva y logró sintetizar **compuestos orgánicos** complejos, principalmente **aminoácidos**, demostrando que la evolución química propuesta por Oparin era posible.",
+        "options": [
+            {
+                "text": "Se usó agua fría para demostrar el proceso quimiosintético de la vida",
+                "is_correct": false
+            },
+            {
+                "text": "Los gases utilizados provenían del aire existente en el laboratorio donde se hizo el experimento",
+                "is_correct": false
+            },
+            {
+                "text": "Se usaron electrodos para hacer hervir el agua",
+                "is_correct": false
+            },
+            {
+                "text": "Se obtuvieron como productos del experimento sustancias inorgánicas",
+                "is_correct": false
+            },
+            {
+                "text": "Se pudieron sintetizar aminoácidos y vitaminas",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "No corresponde a las teorías del origen extraterrestre:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La **Atmósfera Reductora** (sin oxígeno libre, rica en metano, amoníaco, hidrógeno) es un concepto clave y una condición necesaria para la teoría **Bioquímica** (Quimiosintética) de Oparin, no para la teoría de la Panspermia.",
+        "options": [
+            {
+                "text": "Meteoritos",
+                "is_correct": false
+            },
+            {
+                "text": "Gérmenes flotantes",
+                "is_correct": false
+            },
+            {
+                "text": "Esporas bacterianas",
+                "is_correct": false
+            },
+            {
+                "text": "Atmósfera reductora",
+                "is_correct": true
+            },
+            {
+                "text": "Radiaciones interestelares",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "La obra titulada \"El origen de la vida\" está relacionada con la teoría:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El libro \"El origen de la vida\" (1924) fue escrito por **Aleksandr Oparin**, quien propuso la teoría **Quimiosintética** (o Bioquímica) sobre el origen de la vida.",
+        "options": [
+            {
+                "text": "Quimiosintética",
+                "is_correct": true
+            },
+            {
+                "text": "Abiogénesis",
+                "is_correct": false
+            },
+            {
+                "text": "Biogénesis",
+                "is_correct": false
+            },
+            {
+                "text": "Panspermia",
+                "is_correct": false
+            },
+            {
+                "text": "Creacionista",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "El ambiente reductor se transformó en oxidante gracias a la actividad de:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La atmósfera primitiva era reductora (sin oxígeno). La aparición de organismos fotosintéticos, específicamente las **Cianobacterias** (algas verdeazules), comenzó a liberar oxígeno libre como subproducto, transformando gradualmente la atmósfera en oxidante y permitiendo luego la vida aeróbica.",
+        "options": [
+            {
+                "text": "Sublimación",
+                "is_correct": false
+            },
+            {
+                "text": "Reducción",
+                "is_correct": false
+            },
+            {
+                "text": "Putrefacción",
+                "is_correct": false
+            },
+            {
+                "text": "Cianobacterias",
+                "is_correct": true
+            },
+            {
+                "text": "Fermentación",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "De las siguientes condiciones existentes en la tierra primitiva descritas por Oparin, señale cuál no corresponde:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Oparin describió una Tierra primitiva con gran turbulencia, incluyendo **intensa actividad volcánica**, lavas y emanaciones de gases. Por lo tanto, decir que había \"Ausencia de actividad volcánica\" es incorrecto.",
+        "options": [
+            {
+                "text": "Ausencia de oxigeno",
+                "is_correct": false
+            },
+            {
+                "text": "Altas temperaturas",
+                "is_correct": false
+            },
+            {
+                "text": "Tormentas eléctricas constantes",
+                "is_correct": false
+            },
+            {
+                "text": "Ausencia de actividad volcánica",
+                "is_correct": true
+            },
+            {
+                "text": "Presencia de gases simples como CH4 y NH3",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Según el método científico, \"supongamos que pones dos rebanadas de pan en el tostador y no se tuesta\", ordene los pasos según a seguir:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Observación:** Ves que el pan no se tuesta.\n2.  **Hipótesis:** (Quizás el enchufe está mal).\n3.  **Experimentación:** Pruebas enchufarlo en otro lado.\n    El orden lógico es Observación -> Hipótesis -> Experimentación.\n    Opción b.",
+        "options": [
+            {
+                "text": "Pregunta – Observación – hipótesis",
+                "is_correct": false
+            },
+            {
+                "text": "Observación – hipótesis – experimentación",
+                "is_correct": true
+            },
+            {
+                "text": "Observación – predicciones – conclusiones",
+                "is_correct": false
+            },
+            {
+                "text": "Predicciones – hipótesis – experimentación",
+                "is_correct": false
+            },
+            {
+                "text": "Pregunta – hipótesis – predicciones",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Cuando decimos que ponemos a prueba, nos referimos a que etapa del método científico:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "\"Poner a prueba\" una hipótesis mediante la reproducción controlada del fenómeno o pruebas empíricas corresponde a la etapa de **Experimentación**.",
+        "options": [
+            {
+                "text": "Pregunta",
+                "is_correct": false
+            },
+            {
+                "text": "Predicción",
+                "is_correct": false
+            },
+            {
+                "text": "Hipótesis",
+                "is_correct": false
+            },
+            {
+                "text": "Observación",
+                "is_correct": false
+            },
+            {
+                "text": "Experimentación",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Dentro de las características del método científico cual es la busca explicaciones basadas en la lógica y fundamenta principios y leyes científicas.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La **Racionalidad** es la característica del método científico que utiliza la razón y la lógica como herramientas esenciales para deducir principios y leyes, evitando explicaciones basadas en dogmas o creencias sin fundamento lógico.",
+        "options": [
+            {
+                "text": "Refutabilidad",
+                "is_correct": false
+            },
+            {
+                "text": "Sistematicidad",
+                "is_correct": false
+            },
+            {
+                "text": "Racionalidad",
+                "is_correct": true
+            },
+            {
+                "text": "Reproductividad",
+                "is_correct": false
+            },
+            {
+                "text": "Objetividad",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Diga verdadero (V) o falso (F) según corresponda sobre el método científico:\n( ) transformar suposiciones subjetivas en hechos objetivos\n( ) evaluar la veracidad o falsedad de una afirmación\n( ) defiende que existen entes inmateriales, absolutos, inmutables\n( ) hacer el control de los medios de producción.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "*   (V) El método científico busca objetividad (hechos probados) a partir de ideas iniciales.\n*   (V) Su función principal es probar (falsar o verificar) hipótesis.\n*   (F) La ciencia se basa en el materialismo metodológico; no trata con entes inmateriales o dogmas inmutables.\n*   (F) El control de medios de producción es un concepto económico/político, no científico.\n    Respuesta: VVFF.",
+        "options": [
+            {
+                "text": "VVFF",
+                "is_correct": true
+            },
+            {
+                "text": "FFVV",
+                "is_correct": false
+            },
+            {
+                "text": "VFVF",
+                "is_correct": false
+            },
+            {
+                "text": "FFFF",
+                "is_correct": false
+            },
+            {
+                "text": "VVVV",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Biología",
+        "topic": "Introducción a la Biología",
+        "statement": "Fase del método científico donde se formulan respuestas \"a priori\":",
+        "difficulty": "INTERMEDIO",
+        "explanation": "",
+        "options": [
+            {
+                "text": "Observación",
+                "is_correct": false
+            },
+            {
+                "text": "Problema",
+                "is_correct": false
+            },
+            {
+                "text": "Hipótesis",
+                "is_correct": true
+            },
+            {
+                "text": "Experimentación",
+                "is_correct": false
+            },
+            {
+                "text": "Conclusión",
+                "is_correct": false
+            }
+        ]
+    }
+]

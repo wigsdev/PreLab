@@ -12,7 +12,11 @@ class Command(BaseCommand):
         self.stdout.write("Seeding questions...")
 
         fixtures_dir = os.path.join(settings.BASE_DIR, "core", "fixtures")
-        fixture_files = ["algebra_questions.json", "aritmetica_questions.json"]
+        fixture_files = [
+            "algebra_questions.json",
+            "aritmetica_questions.json",
+            "biologia_questions.json",
+        ]
 
         total_created = 0
 
