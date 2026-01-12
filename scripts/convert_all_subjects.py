@@ -17,6 +17,11 @@ SUBJECT_CONFIG = {
         'course': 'Biología',
         'topic': 'Introducción a la Biología',
         'output': 'biologia_questions.json'
+    },
+    'GEOMETRIA.md': {
+        'course': 'Geometría',
+        'topic': 'Segmentos de Recta',
+        'output': 'geometria_questions.json'
     }
 }
 
