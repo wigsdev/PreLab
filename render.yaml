@@ -1,11 +1,11 @@
-services:
-  # Database (PostgreSQL)
-  - type: psql
-    name: prelab-db
-    env: docker
+databases:
+  - name: prelab-db
+    databaseName: prelab
+    user: prelab
     plan: free # Optional: Free tier
     ipAllowList: [] # Allow all IPs for now
 
+services:
   # Backend (Django)
   - type: web
     name: prelab-backend
