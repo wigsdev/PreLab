@@ -91,14 +91,7 @@ class Command(BaseCommand):
         for course_info in courses_data:
             course, created = Course.objects.get_or_create(
                 name=course_info["name"],
-                defaults={
-                    "code": course_info["code"],
-                    "university": uni,
-                    "description": (
-                        f"Curso de {course_info['name']} "
-                        "para preparación pre-universitaria."
-                    ),
-                },
+                defaults={"code": course_info["code"]},
             )
 
             action = "Created" if created else "Found"
