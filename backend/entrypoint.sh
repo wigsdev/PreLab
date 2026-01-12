@@ -20,9 +20,9 @@ python manage.py migrate --noinput
 echo "Recolectando archivos estáticos..."
 python manage.py collectstatic --noinput
 
-# Crear superusuario si no existe (Opcional, se puede manejar via script externo o admin)
-# echo "Creando superusuario..."
-# python manage.py shell < create_superuser.py
+# Crear superusuario automático si las variables de entorno están definidas
+echo "Verificando superusuario..."
+python manage.py ensure_admin
 
 # Iniciar servidor (Gunicorn para producción)
 echo "Iniciando Gunicorn..."
