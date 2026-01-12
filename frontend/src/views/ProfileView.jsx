@@ -164,7 +164,7 @@ export default function ProfileView() {
                     </div>
 
                     <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
-                        <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase mb-1 flex items-center gap-1">
+                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase mb-1 flex items-center gap-1">
                             <Lock size={12} /> Cambiar Contraseña
                         </label>
                         <input

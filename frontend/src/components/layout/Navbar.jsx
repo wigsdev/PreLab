@@ -77,7 +77,7 @@ export default function Navbar() {
                                             src={
                                                 user.avatar.startsWith('http')
                                                     ? user.avatar
-                                                    : `http://127.0.0.1:8000${user.avatar}`
+                                                    : `${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}${user.avatar}`
                                             }
                                             alt="Avatar"
                                             className="w-full h-full object-cover"
