@@ -27,7 +27,7 @@ services:
           property: connectionString
       - key: PYTHON_VERSION
         value: 3.12.0
-    startCommand: /usr/local/bin/entrypoint.sh
+    # startCommand removed because Dockerfile ENTRYPOINT handles it.
     healthCheckPath: /admin/login/
 
   # Frontend (React + Nginx)
@@ -40,7 +40,8 @@ services:
     dockerfilePath: frontend/Dockerfile
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: prelab-backend
-          property: url
+        # 'url' property is not supported by Render Blueprint for web services.
+        # This needs to be the PUBLIC URL of the backend.
+        # You will likely need to update this manually in the dashboard after creation
+        # to: https://prelab-backend.onrender.com
+        value: "https://prelab-backend.onrender.com" # Placeholder/Prediction
