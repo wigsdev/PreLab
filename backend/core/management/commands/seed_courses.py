@@ -9,11 +9,12 @@ class Command(BaseCommand):
         self.stdout.write("Seeding data...")
 
         # 1. Ensure University exists (PreLab needs a default context)
+        # Note: Model uses 'items' for name and 'acronym' for code.
         uni, created = University.objects.get_or_create(
-            name="Universidad Nacional de Cajamarca", defaults={"acronym": "UNC"}
+            acronym="UNC", defaults={"items": "Universidad Nacional de Cajamarca"}
         )
         if created:
-            self.stdout.write(self.style.SUCCESS(f"Created University: {uni.name}"))
+            self.stdout.write(self.style.SUCCESS(f"Created University: {uni.items}"))
 
         # 2. Define Courses and their initial Topics
         # Based on user input: 10 courses, 8 with initial topics ready.
