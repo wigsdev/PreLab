@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../services/api';
 import {
     UserPlus,
     Mail,
@@ -76,7 +76,7 @@ export default function RegisterView() {
         }
 
         try {
-            await axios.post('http://127.0.0.1:8000/api/auth/register/', dataToSend);
+            await api.post('/auth/register/', dataToSend);
             // Registration successful, redirect to login with success message (or auto login)
             navigate('/login', {
                 state: { message: 'Cuenta creada exitosamente. Inicia sesión.' },

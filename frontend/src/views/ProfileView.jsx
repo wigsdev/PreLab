@@ -91,7 +91,7 @@ export default function ProfileView() {
                                         avatarPreview.startsWith('http') ||
                                         avatarPreview.startsWith('blob')
                                             ? avatarPreview
-                                            : `http://127.0.0.1:8000${avatarPreview}`
+                                            : `${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}${avatarPreview}`
                                     }
                                     alt="Avatar"
                                     className="w-full h-full object-cover"
