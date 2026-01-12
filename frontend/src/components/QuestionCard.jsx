@@ -2,6 +2,7 @@ import { useState } from 'react';
 import clsx from 'clsx';
 import { CheckCircle, XCircle, ArrowRight, Flag } from 'lucide-react';
 import ReportModal from './ui/ReportModal';
+import MathText from './ui/MathText';
 
 export default function QuestionCard({ question, onNext }) {
     const [selectedOptionId, setSelectedOptionId] = useState(null);
@@ -84,9 +85,9 @@ export default function QuestionCard({ question, onNext }) {
 
             {/* 2. Cuerpo: Enunciado e Imagen */}
             <div className="p-5 flex-1 overflow-y-auto custom-scrollbar">
-                <p className="text-base text-slate-800 dark:text-slate-100 font-medium leading-relaxed mb-4">
-                    {question.statement}
-                </p>
+                <div className="text-base text-slate-800 dark:text-slate-100 font-medium leading-relaxed mb-4">
+                    <MathText text={question.statement} />
+                </div>
 
                 {question.image && (
                     <div className="mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-slate-700">
@@ -110,7 +111,9 @@ export default function QuestionCard({ question, onNext }) {
                                 getOptionStyle(option)
                             )}
                         >
-                            <span className="pr-6">{option.text}</span>
+                            <span className="pr-6 w-full">
+                                <MathText text={option.text} inline />
+                            </span>
                             {isAnswered && option.is_correct && (
                                 <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 shrink-0" />
                             )}
@@ -129,10 +132,14 @@ export default function QuestionCard({ question, onNext }) {
                         <h4 className="text-xs font-bold text-slate-700 dark:text-slate-200 mb-0.5">
                             Explicación:
                         </h4>
-                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
-                            {question.explanation ||
-                                'No hay explicación disponible para esta pregunta.'}
-                        </p>
+                        <div className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
+                            <MathText
+                                text={
+                                    question.explanation ||
+                                    'No hay explicación disponible para esta pregunta.'
+                                }
+                            />
+                        </div>
                     </div>
 
                     <button
