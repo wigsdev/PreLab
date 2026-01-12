@@ -1,0 +1,627 @@
+[
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "¿En qué Edad de la historia se encontraba Europa cuando en los Andes se desarrollaba el Tahuantinsuyo?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El Tahuantinsuyo (Imperio Inca) alcanzó su máximo esplendor entre los siglos XV y XVI (aproximadamente 1438-1533). En Europa, este período corresponde a la **Edad Moderna**, que comenzó con la caída de Constantinopla en 1453 y el descubrimiento de América en 1492.",
+        "options": [
+            {
+                "text": "Edad Antigua",
+                "is_correct": false
+            },
+            {
+                "text": "Edad Media",
+                "is_correct": false
+            },
+            {
+                "text": "Edad Moderna",
+                "is_correct": true
+            },
+            {
+                "text": "Edad Contemporánea",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Florentino Ameghino sostuvo que el hombre apareció en América en la era Terciaria o Cenozoico, período...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Florentino Ameghino propuso la teoría autoctonista, sosteniendo que el hombre se originó en América del Sur durante el período **Mioceno** de la era Terciaria (Cenozoica). Esta teoría ha sido descartada por la ciencia moderna.",
+        "options": [
+            {
+                "text": "Paleozoico",
+                "is_correct": false
+            },
+            {
+                "text": "Mioceno",
+                "is_correct": true
+            },
+            {
+                "text": "Holoceno",
+                "is_correct": false
+            },
+            {
+                "text": "Arcaico",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "El fósil humano más antiguo hallado en América corresponde al:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El **hombre de Pacaicasa** (Ayacucho, Perú) es considerado uno de los restos más antiguos de presencia humana en América, con una antigüedad estimada de aproximadamente 20,000 años. Fue descubierto por Richard MacNeish.",
+        "options": [
+            {
+                "text": "El hombre de Pacaicasa",
+                "is_correct": true
+            },
+            {
+                "text": "Los esqueletos de Paijá",
+                "is_correct": false
+            },
+            {
+                "text": "El hombre de Vizcachani",
+                "is_correct": false
+            },
+            {
+                "text": "Cráneo de los Ángeles",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Sostuvo que el hombre llegó a América por el extremo más meridional de América.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "**Méndez Correa** propuso la teoría del poblamiento por vía australiana, sosteniendo que grupos humanos habrían llegado desde Australia y Tasmania navegando por la Antártida (cuando el clima era más benigno) hasta el extremo sur de América (Tierra del Fuego).",
+        "options": [
+            {
+                "text": "Méndez Correa",
+                "is_correct": true
+            },
+            {
+                "text": "Alex Hrdlicka",
+                "is_correct": false
+            },
+            {
+                "text": "Paul Rivet",
+                "is_correct": false
+            },
+            {
+                "text": "Max Uhle",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Cronista español que en el siglo XVI planteó la posibilidad de un punto de unión entre Asia y América.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "**José de Acosta** (1540-1600), jesuita español, fue uno de los primeros en proponer que los indígenas americanos llegaron desde Asia a través de un paso terrestre en el norte, anticipándose a la teoría del Estrecho de Bering.",
+        "options": [
+            {
+                "text": "Cieza de León",
+                "is_correct": false
+            },
+            {
+                "text": "José de Acosta",
+                "is_correct": true
+            },
+            {
+                "text": "Bernabé Cobo",
+                "is_correct": false
+            },
+            {
+                "text": "Poma de Ayala",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Los restos líticos más antiguos hallados en América del Norte reforzarían la validez de la teoría Inmigracionista:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los restos líticos más antiguos encontrados en América del Norte (como las puntas Clovis) refuerzan la teoría **Asiática** de Alex Hrdlička, que sostiene que los primeros pobladores llegaron desde Asia cruzando el Estrecho de Bering.",
+        "options": [
+            {
+                "text": "Australiana",
+                "is_correct": false
+            },
+            {
+                "text": "Asiática",
+                "is_correct": true
+            },
+            {
+                "text": "Melanesia",
+                "is_correct": false
+            },
+            {
+                "text": "Polinesia",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Antropólogo que demostró la imposibilidad de la teoría autoctonista de Florentino Ameghino, fue:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "**Alex Hrdlička** (antropólogo checo-estadounidense) refutó científicamente la teoría autoctonista de Ameghino, demostrando que el hombre no se originó en América sino que llegó desde Asia a través del Estrecho de Bering.",
+        "options": [
+            {
+                "text": "Méndez Correa",
+                "is_correct": false
+            },
+            {
+                "text": "Thor Heyerdahl",
+                "is_correct": false
+            },
+            {
+                "text": "Alex Hrdlicka",
+                "is_correct": true
+            },
+            {
+                "text": "Paul Rivet",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Fueron excelentes navegantes que aprovechando el corriente transpacífico arribaron a Colima o isla de Cocos:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los **indonesios** (o malayopolinesios) fueron excelentes navegantes que, según Paul Rivet, habrían llegado a América aprovechando la corriente transpacífica (Kuro-Shiwo), arribando a las costas de México (Colima) o Centroamérica.",
+        "options": [
+            {
+                "text": "australianos",
+                "is_correct": false
+            },
+            {
+                "text": "indonesios",
+                "is_correct": true
+            },
+            {
+                "text": "esquimales",
+                "is_correct": false
+            },
+            {
+                "text": "melanesios",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Cual fue el factor geográfico que según Paul Rivet determinó para que los melanésicos arriben a América.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Según Paul Rivet, los melanésicos habrían llegado a América aprovechando la **Corriente Kuroshivo** (o Kuro-Shiwo), una corriente oceánica cálida del Pacífico que fluye desde Japón hacia el este, facilitando la navegación transpacífica.",
+        "options": [
+            {
+                "text": "Enfriamiento glacial",
+                "is_correct": false
+            },
+            {
+                "text": "Estrecho de Bering",
+                "is_correct": false
+            },
+            {
+                "text": "Corriente transpacífica",
+                "is_correct": false
+            },
+            {
+                "text": "Corriente Kuroshivo",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "En que período geológico llegaron las primeras bandas nómadas de Asia a América.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Las primeras migraciones humanas desde Asia a América ocurrieron durante el **Pleistoceno** (última glaciación), cuando el nivel del mar descendió y se formó el puente terrestre de Beringia entre Siberia y Alaska, hace aproximadamente 15,000-40,000 años.",
+        "options": [
+            {
+                "text": "Holoceno",
+                "is_correct": false
+            },
+            {
+                "text": "Cenozoico",
+                "is_correct": false
+            },
+            {
+                "text": "Pleistoceno",
+                "is_correct": true
+            },
+            {
+                "text": "Mioceno",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "En su obra \"El paraíso en el nuevo mundo\" sostuvo que el hombre americano es originario de la selva amazónica.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "**Antonio León de Pinelo** (cronista español del siglo XVII) escribió \"El paraíso en el nuevo mundo\" donde sostuvo que el Jardín del Edén estaba ubicado en la Amazonía y que el hombre se originó en América.",
+        "options": [
+            {
+                "text": "Antonio León de Pinelo",
+                "is_correct": true
+            },
+            {
+                "text": "Hernán de Keyseline",
+                "is_correct": false
+            },
+            {
+                "text": "José Imbillone",
+                "is_correct": false
+            },
+            {
+                "text": "Alex Hrdlicka",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "No corresponde al período Lítico o Pre agrícola, el hombre de.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El hombre de **Guitarrero** corresponde al período Arcaico (Horticultores tempranos), no al Lítico. En Guitarrero se encontraron las primeras evidencias de domesticación de plantas en el Perú (frijoles, pallares), hace aproximadamente 10,000 años.",
+        "options": [
+            {
+                "text": "Toquepala",
+                "is_correct": false
+            },
+            {
+                "text": "Chivateros",
+                "is_correct": false
+            },
+            {
+                "text": "Guitarrero",
+                "is_correct": true
+            },
+            {
+                "text": "Paijá",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Las evidencias más antiguas de la domesticación de plantas, se encontraron en las cuevas del hombre de:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Las evidencias más antiguas de domesticación de plantas en el Perú se encontraron en la cueva de **Guitarrero** (Ancash), donde se hallaron restos de frijoles y pallares cultivados, datados en aproximadamente 10,000 años de antigüedad.",
+        "options": [
+            {
+                "text": "Piquimachay",
+                "is_correct": false
+            },
+            {
+                "text": "Huaca Prieta",
+                "is_correct": false
+            },
+            {
+                "text": "Guitarrero",
+                "is_correct": true
+            },
+            {
+                "text": "Telamachay",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Los restos humanos más antiguos encontrados en el Perú corresponden al hombre de:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los restos humanos más antiguos del Perú fueron encontrados en **Lauricocha** (Huánuco), con una antigüedad aproximada de 10,000 años. Fueron descubiertos por Augusto Cardich.",
+        "options": [
+            {
+                "text": "Lauricocha",
+                "is_correct": true
+            },
+            {
+                "text": "Paijá",
+                "is_correct": false
+            },
+            {
+                "text": "Telamachay",
+                "is_correct": false
+            },
+            {
+                "text": "Chilca",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Los tejidos más antiguos del Perú, corresponden al hombre de:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los tejidos más antiguos del Perú se encontraron en **Huaca Prieta** (La Libertad), con una antigüedad de aproximadamente 4,500 años. Fueron descubiertos por Junius Bird y representan los inicios de la textilería peruana.",
+        "options": [
+            {
+                "text": "Paracas",
+                "is_correct": false
+            },
+            {
+                "text": "Huaca Prieta",
+                "is_correct": true
+            },
+            {
+                "text": "Guitarrero",
+                "is_correct": false
+            },
+            {
+                "text": "Telamachay",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Construyó sus chozas en forma de colmena, asentándose por los poblados de bejucos, el hombre de:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El hombre de **Santo Domingo** (Paracas, Ica) construyó chozas circulares en forma de colmena, utilizando bejucos y materiales vegetales. Este asentamiento corresponde al período Arcaico tardío.",
+        "options": [
+            {
+                "text": "Huaca Prieta",
+                "is_correct": false
+            },
+            {
+                "text": "Paijá",
+                "is_correct": false
+            },
+            {
+                "text": "Santo Domingo",
+                "is_correct": true
+            },
+            {
+                "text": "Guitarrero",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Los vestigios sobre el hombre de guitarrero fueron encontrados por:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los vestigios del hombre de **Guitarrero** fueron encontrados en el **Callejón de Huaylas** (Ancash) por el arqueólogo **Thomas Lynch**, quien descubrió evidencias de domesticación temprana de plantas.",
+        "options": [
+            {
+                "text": "Chicama – Junius Bird",
+                "is_correct": false
+            },
+            {
+                "text": "El Callejón de Huaylas – Thomas Lynch",
+                "is_correct": true
+            },
+            {
+                "text": "Huanta – Richard Mc. Neish",
+                "is_correct": false
+            },
+            {
+                "text": "El Valle del Mantaro – Ramiro Matos",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Son considerados los primeros domesticadores de animales en el Perú antiguo.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "**Telamachay** (Junín) y **Piquimachay** (Ayacucho) son considerados los primeros sitios donde se domesticaron animales en el Perú antiguo, específicamente camélidos (llamas y alpacas), hace aproximadamente 7,000-8,000 años.",
+        "options": [
+            {
+                "text": "Piquimachay y Chivateros",
+                "is_correct": false
+            },
+            {
+                "text": "Telamachay y Guitarrero",
+                "is_correct": false
+            },
+            {
+                "text": "Piquimachay y Toquepala",
+                "is_correct": false
+            },
+            {
+                "text": "Telamachay y Piquimachay",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "En la cueva de Lauricocha, se encontraron los restos del hombre más antiguos de la sierra peruana, y fue descubierto por:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los restos humanos de **Lauricocha** fueron descubiertos por el arqueólogo argentino **Augusto Cardich** en 1958. Estos restos tienen una antigüedad aproximada de 10,000 años y representan los esqueletos humanos más antiguos encontrados en el Perú.",
+        "options": [
+            {
+                "text": "Edward Lanning",
+                "is_correct": false
+            },
+            {
+                "text": "Javier Pulgar",
+                "is_correct": false
+            },
+            {
+                "text": "Augusto Cardich",
+                "is_correct": true
+            },
+            {
+                "text": "Zechi Izumi",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Los primeros esqueletos humanos encontrados en la costa peruana, corresponde al hombre de:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Los primeros esqueletos humanos encontrados en la costa peruana corresponden al hombre de **Paijá** (La Libertad), con una antigüedad aproximada de 10,000 años. Fueron descubiertos por Claude Chauchat.",
+        "options": [
+            {
+                "text": "Huaca Prieta",
+                "is_correct": false
+            },
+            {
+                "text": "Paijá",
+                "is_correct": true
+            },
+            {
+                "text": "Santo Domingo",
+                "is_correct": false
+            },
+            {
+                "text": "Guitarrero",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Sostuvo que los primeros pobladores del Perú, provienen de la Cultura Valdivia de Ecuador.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "**Max Uhle** sostuvo la teoría inmigracionista, planteando que las primeras culturas peruanas (especialmente la costa) tuvieron influencia de culturas mesoamericanas y de la cultura **Valdivia** de Ecuador.",
+        "options": [
+            {
+                "text": "Max Uhle",
+                "is_correct": true
+            },
+            {
+                "text": "Federico Kauffman D.",
+                "is_correct": false
+            },
+            {
+                "text": "Julio C. Tello",
+                "is_correct": false
+            },
+            {
+                "text": "Guillermo Lumbreras",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Las pinturas rupestres de Toquepala fue descubierta, por:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Las pinturas rupestres de **Toquepala** (Tacna) fueron descubiertas por el ingeniero **Miomir Bojovich** en 1960. Estas pinturas representan escenas de caza de camélidos y tienen una antigüedad aproximada de 9,500 años.",
+        "options": [
+            {
+                "text": "Thomas Lynch",
+                "is_correct": false
+            },
+            {
+                "text": "Richard McNeish",
+                "is_correct": false
+            },
+            {
+                "text": "Miomir Bojovich",
+                "is_correct": true
+            },
+            {
+                "text": "Junius Bird",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "El templo el \"Paraíso\" fue construido por el hombre de:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El templo \"El Paraíso\" fue construido por el hombre de **Chuquitanta** (Lima), durante el período Arcaico Tardío (aproximadamente 2000 a.C.). Es uno de los primeros centros ceremoniales de la costa peruana.",
+        "options": [
+            {
+                "text": "Huaca Prieta",
+                "is_correct": false
+            },
+            {
+                "text": "Chuquitanta",
+                "is_correct": true
+            },
+            {
+                "text": "Santo Domingo",
+                "is_correct": false
+            },
+            {
+                "text": "Guitarrero",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "Es considerado el sitio religioso más antiguo de la cultura Andina:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El **Templo de Kotosh** (Huánuco), específicamente el \"Templo de las Manos Cruzadas\", es considerado el sitio religioso más antiguo de la cultura andina, con una antigüedad de aproximadamente 4,000 años (2000 a.C.). Fue descubierto por Julio C. Tello y excavado por Seiichi Izumi.",
+        "options": [
+            {
+                "text": "El Templo el Paraíso",
+                "is_correct": false
+            },
+            {
+                "text": "El templo de Lurín",
+                "is_correct": false
+            },
+            {
+                "text": "El templo de Kotosh",
+                "is_correct": true
+            },
+            {
+                "text": "El templo de Pachacámac",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Humanidades",
+        "topic": "Poblamiento de América",
+        "statement": "El sitio arqueológico donde se encontraron instrumentos líticos, restos humanos y pinturas rupestres.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "",
+        "options": [
+            {
+                "text": "Toquepala",
+                "is_correct": true
+            },
+            {
+                "text": "Chivateros",
+                "is_correct": false
+            },
+            {
+                "text": "Paijá",
+                "is_correct": false
+            },
+            {
+                "text": "Lauricocha",
+                "is_correct": false
+            }
+        ]
+    }
+]

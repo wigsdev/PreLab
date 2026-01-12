@@ -22,6 +22,11 @@ SUBJECT_CONFIG = {
         'course': 'Geometría',
         'topic': 'Segmentos de Recta',
         'output': 'geometria_questions.json'
+    },
+    'HUMANIDADES.md': {
+        'course': 'Humanidades',
+        'topic': 'Poblamiento de América',
+        'output': 'humanidades_questions.json'
     }
 }
 

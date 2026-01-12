@@ -17,6 +17,7 @@ class Command(BaseCommand):
             "aritmetica_questions.json",
             "biologia_questions.json",
             "geometria_questions.json",
+            "humanidades_questions.json",
         ]
 
         total_created = 0
