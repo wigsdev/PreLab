@@ -1,8 +1,17 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL
-    ? `${import.meta.env.VITE_API_URL}/api`
-    : 'http://127.0.0.1:8000/api';
+const getApiUrl = () => {
+    if (import.meta.env.VITE_API_URL) {
+        return `${import.meta.env.VITE_API_URL}/api`;
+    }
+    // Fallback inteligente para producción si la variable de entorno falla
+    if (import.meta.env.PROD) {
+        return 'https://prelab-backend.onrender.com/api';
+    }
+    return 'http://127.0.0.1:8000/api';
+};
+
+const API_URL = getApiUrl();
 
 const api = axios.create({
     baseURL: API_URL,
