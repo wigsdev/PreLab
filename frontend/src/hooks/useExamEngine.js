@@ -68,28 +68,6 @@ export function useExamEngine() {
         }
     };
 
-    const submitAnswer = (isCorrect) => {
-        if (isCorrect) {
-            setScore((prev) => prev + 1);
-        }
-
-        // Pequeño delay para que el usuario vea el feedback visual (verde/rojo) antes de cambiar
-        // Opcional: Esto lo maneja la UI con el botón "Siguiente", aquí solo cambiamos el índice.
-
-        // NOTA: Como la QuestionCard tiene un botón de "Siguiente", esta función se llamará
-        // cuando el usuario presione ese botón.
-
-        // Mover lógica de avance al botón "Siguiente" fuera del submitAnswer o separar responsabilidades?
-        // Según prompt: "Actualiza el puntaje y avanza al siguiente".
-        // Lo haremos directo aquí:
-
-        if (currentIndex < questions.length - 1) {
-            setCurrentIndex((prev) => prev + 1);
-        } else {
-            setIsFinished(true);
-        }
-    };
-
     // Wrapper para separar lógica de "Anotar punto" vs "Siguiente Pregunta"
     // Para UX, a veces queremos anotar el punto clickeando la opción,
     // pero avanzar clickeando "Siguiente".

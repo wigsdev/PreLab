@@ -6,18 +6,23 @@ export function useTimer(initialSeconds, onTimeUp) {
     const intervalRef = useRef(null);
 
     useEffect(() => {
+        let interval = null;
         if (isActive && timeLeft > 0) {
-            intervalRef.current = setInterval(() => {
+            interval = setInterval(() => {
                 setTimeLeft((prev) => prev - 1);
             }, 1000);
-        } else if (timeLeft === 0) {
-            clearInterval(intervalRef.current);
+        }
+        return () => {
+            if (interval) clearInterval(interval);
+        };
+    }, [isActive, timeLeft]);
+
+    useEffect(() => {
+        if (timeLeft === 0 && isActive) {
             setIsActive(false);
             if (onTimeUp) onTimeUp();
         }
-
-        return () => clearInterval(intervalRef.current);
-    }, [isActive, timeLeft, onTimeUp]);
+    }, [timeLeft, isActive, onTimeUp]);
 
     const startTimer = () => setIsActive(true);
     const stopTimer = () => setIsActive(false);

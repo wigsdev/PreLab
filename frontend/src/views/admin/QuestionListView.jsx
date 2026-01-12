@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Edit, Trash2, Plus, AlertCircle } from 'lucide-react';
 import { getQuestions, getCourses, getTopics, deleteQuestion } from '../../services/api';
@@ -26,12 +26,24 @@ export default function QuestionListView() {
                 const [coursesData, topicsData] = await Promise.all([getCourses(), getTopics()]);
                 setCourses(coursesData);
                 setTopics(topicsData);
-            } catch (error) {
+            } catch {
                 console.error('Error loading filters');
             }
         };
         loadFilterData();
     }, []);
+
+    const fetchQuestions = useCallback(async () => {
+        setLoading(true);
+        try {
+            const data = await getQuestions(filters);
+            setQuestions(data);
+        } catch {
+            toast.error('Error al cargar preguntas');
+        } finally {
+            setLoading(false);
+        }
+    }, [filters]);
 
     // Load questions with debounce
     useEffect(() => {
@@ -39,19 +51,7 @@ export default function QuestionListView() {
             fetchQuestions();
         }, 500);
         return () => clearTimeout(timer);
-    }, [filters]);
-
-    const fetchQuestions = async () => {
-        setLoading(true);
-        try {
-            const data = await getQuestions(filters);
-            setQuestions(data);
-        } catch (error) {
-            toast.error('Error al cargar preguntas');
-        } finally {
-            setLoading(false);
-        }
-    };
+    }, [fetchQuestions]);
 
     const handleFilterChange = (e) => {
         const { name, value } = e.target;
@@ -69,7 +69,7 @@ export default function QuestionListView() {
             await deleteQuestion(id);
             toast.success('Pregunta eliminada');
             fetchQuestions(); // Refresh list
-        } catch (error) {
+        } catch {
             toast.error('Error al eliminar');
         }
     };

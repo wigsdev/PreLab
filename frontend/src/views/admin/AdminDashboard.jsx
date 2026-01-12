@@ -15,7 +15,7 @@ export default function AdminDashboard() {
             try {
                 const data = await getAnalytics({ range }); // Pass range param
                 setStats(data);
-            } catch (error) {
+            } catch {
                 console.error('Error loading analytics');
             } finally {
                 setLoading(false);
@@ -354,6 +354,7 @@ function StatCard({ title, value, icon: Icon, color, bg, trend }) {
                 <div
                     className={`p-3 rounded-xl ${bg} ${color} group-hover:scale-110 transition-transform`}
                 >
+                    {/* eslint-disable-next-line no-unused-vars */}
                     <Icon size={24} />
                 </div>
                 {trend && (

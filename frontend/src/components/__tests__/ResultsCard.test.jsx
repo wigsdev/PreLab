@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { vi } from 'vitest';
 import ResultsCard from '../ResultsCard';

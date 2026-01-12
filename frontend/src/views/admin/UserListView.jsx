@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { getUsers, updateUserRole } from '../../services/api';
 import { Search, Loader2, Shield, ShieldAlert, User, CheckCircle, XCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
@@ -16,32 +16,27 @@ export default function UserListView() {
         return () => clearTimeout(timer);
     }, [searchTerm]);
 
-    const fetchUsers = async () => {
+    const fetchUsers = useCallback(async () => {
         setLoading(true);
         try {
             const data = await getUsers({ search: debouncedSearch });
-            setUsers(data); // DRF ModelViewSet list returns array or results if paginated?
             // Standard DRF ModelViewSet returns list directly if no pagination configured,
             // or { count, next, previous, results } if pagination is on.
-            // Assuming default list for now or we will check structure.
-            // Given QuestionListView used pagination, likely this endpoint might too.
-            // But let's assume raw list for simplicity first or handle results.
-
             if (Array.isArray(data)) {
                 setUsers(data);
             } else if (data.results) {
                 setUsers(data.results);
             }
-        } catch (error) {
+        } catch {
             toast.error('Error cargando usuarios');
         } finally {
             setLoading(false);
         }
-    };
+    }, [debouncedSearch]);
 
     useEffect(() => {
         fetchUsers();
-    }, [debouncedSearch]);
+    }, [fetchUsers]);
 
     const handleRoleToggle = async (user) => {
         const newIsStaff = !user.is_staff;
@@ -75,7 +70,7 @@ export default function UserListView() {
             const updatedUser = await updateUserRole(user.id, { is_active: newIsActive });
             setUsers(users.map((u) => (u.id === updatedUser.id ? updatedUser : u)));
             toast.success(newIsActive ? 'Usuario reactivado' : 'Usuario desactivado');
-        } catch (error) {
+        } catch {
             toast.error('Error cambiando estado');
         }
     };

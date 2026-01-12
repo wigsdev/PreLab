@@ -15,7 +15,7 @@ export default function EditQuestionView() {
             try {
                 const data = await getQuestion(id);
                 setQuestion(data);
-            } catch (error) {
+            } catch {
                 toast.error('Error al cargar la pregunta');
                 navigate('/admin/questions');
             } finally {

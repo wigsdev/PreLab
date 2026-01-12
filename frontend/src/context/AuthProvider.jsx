@@ -1,25 +1,17 @@
-import { createContext, useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import api from '../services/api'; // Use our configured api instance
-
-export const AuthContext = createContext({
-    user: null,
-    tokens: null,
-    login: () => {},
-    logout: () => {},
-    loading: true,
-    fetchUser: () => {},
-});
-
-export const useAuth = () => useContext(AuthContext);
+import api from '../services/api';
+import { AuthContext } from './AuthContext';
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
     const [tokens, setTokens] = useState(() => {
         const savedTokens = localStorage.getItem('auth_tokens');
         return savedTokens ? JSON.parse(savedTokens) : null;
     });
+
+    const [user, setUser] = useState(null);
+    // Initialize loading based on whether we have tokens to verify
+    const [loading, setLoading] = useState(!!tokens);
 
     // Function to fetch the latest user data
     const fetchUser = async () => {
@@ -28,8 +20,9 @@ export const AuthProvider = ({ children }) => {
             setUser(response.data);
         } catch (error) {
             console.error('Failed to fetch user:', error);
-            // If fetch fails (e.g., 401), might want to logout
-            // logout();
+            // If 401, mostly handled by interceptor or user remains null
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -38,13 +31,12 @@ export const AuthProvider = ({ children }) => {
             fetchUser();
         } else {
             setUser(null);
+            setLoading(false);
         }
-        setLoading(false);
     }, [tokens]);
 
     const login = async (email, password) => {
         try {
-            // Login to get tokens
             const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', {
                 email,
                 password,
@@ -53,13 +45,6 @@ export const AuthProvider = ({ children }) => {
             const data = response.data;
             setTokens(data);
             localStorage.setItem('auth_tokens', JSON.stringify(data));
-
-            // Immediately fetch user data
-            // We use the raw axios call for login, but fetchUser uses 'api' instance
-            // which reads from localStorage. Since `useEffect` on `tokens` will triggger,
-            // we technically don't need to call it here, but `useEffect` might be async/later.
-            // Let's rely on useEffect [tokens] to trigger the fetch.
-
             return { success: true };
         } catch (error) {
             console.error('Login failed:', error);
@@ -82,7 +67,7 @@ export const AuthProvider = ({ children }) => {
         login,
         logout,
         loading,
-        fetchUser, // Expose this so ProfileView can call it
+        fetchUser,
     };
 
     return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;

@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import clsx from 'clsx';
 import { CheckCircle, XCircle, ArrowRight, Flag } from 'lucide-react';
 import ReportModal from './ui/ReportModal';
@@ -8,14 +8,16 @@ export default function QuestionCard({ question, onNext }) {
     const [isAnswered, setIsAnswered] = useState(false);
     const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
-    const shuffledOptions = useMemo(() => {
+    const [shuffledOptions, setShuffledOptions] = useState(() => question.options);
+
+    useEffect(() => {
         const opts = [...question.options];
         for (let i = opts.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [opts[i], opts[j]] = [opts[j], opts[i]];
         }
-        return opts;
-    }, [question.id, question.options]); // Re-shuffle only if question changes
+        setShuffledOptions(opts);
+    }, [question.id, question.options]);
 
     const handleSelect = (optionId) => {
         if (isAnswered) return;

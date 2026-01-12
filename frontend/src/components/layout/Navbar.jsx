@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import useTheme from '../../hooks/useTheme';
 import {
@@ -18,7 +18,7 @@ import {
 export default function Navbar() {
     const { user, logout } = useAuth();
     const { theme, toggleTheme } = useTheme();
-    const navigate = useNavigate();
+
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 

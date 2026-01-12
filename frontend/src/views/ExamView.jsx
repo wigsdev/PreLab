@@ -30,7 +30,6 @@ export default function ExamView() {
         startExam,
         handleNext,
         finishExam,
-        resetExam,
     } = useExamEngine();
 
     const initialTime = mode === 'simulation' ? 1800 : 600;
@@ -45,11 +44,11 @@ export default function ExamView() {
         } else {
             stopTimer();
         }
-    }, [loading, isFinished, isReviewing]);
+    }, [loading, isFinished, isReviewing, startTimer, stopTimer]);
 
     useEffect(() => {
         startExam({ courseId, topicId, mode });
-    }, [courseId, topicId, mode]);
+    }, [courseId, topicId, mode, startExam]);
 
     if (loading) {
         return (

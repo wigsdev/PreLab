@@ -50,7 +50,7 @@ export default function QuestionForm({ initialData = null, onSubmit, isEditing =
             try {
                 const response = await api.get('/courses/');
                 setCourses(response.data);
-            } catch (error) {
+            } catch {
                 console.error('Error loading courses');
             }
         };
@@ -68,7 +68,7 @@ export default function QuestionForm({ initialData = null, onSubmit, isEditing =
                         (t) => t.course === parseInt(formData.course)
                     );
                     setTopics(filtered);
-                } catch (error) {
+                } catch {
                     console.error('Error loading topics');
                 }
             };
@@ -91,7 +91,7 @@ export default function QuestionForm({ initialData = null, onSubmit, isEditing =
                 try {
                     const response = await api.get(`/topics/${initialData.topic}/`);
                     setFormData((prev) => ({ ...prev, course: response.data.course }));
-                } catch (e) {
+                } catch {
                     console.error('Error resolving course from topic');
                 }
             };
