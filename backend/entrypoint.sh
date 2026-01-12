@@ -28,6 +28,10 @@ python manage.py ensure_admin
 echo "Sembrando cursos y temas..."
 python manage.py seed_courses
 
+# Importar banco de preguntas (Álgebra)
+echo "Importando preguntas de Álgebra..."
+python manage.py seed_questions
+
 # Iniciar servidor (Gunicorn para producción)
 echo "Iniciando Gunicorn..."
 exec gunicorn config.wsgi:application --bind 0.0.0.0:8000
