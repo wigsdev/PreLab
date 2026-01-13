@@ -1,0 +1,466 @@
+[
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "No es materia...",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La materia es todo aquello que tiene masa y ocupa un lugar en el espacio. El **tiempo** es una magnitud física que mide la duración de los eventos, pero no tiene masa ni ocupa espacio, por lo tanto no es materia.",
+        "options": [
+            {
+                "text": "Tiempo",
+                "is_correct": true
+            },
+            {
+                "text": "Calcio",
+                "is_correct": false
+            },
+            {
+                "text": "Agua",
+                "is_correct": false
+            },
+            {
+                "text": "Diamante",
+                "is_correct": false
+            },
+            {
+                "text": "Litio",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Forma parte de la materia",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El **agua** (H₂O) es materia porque tiene masa y ocupa un lugar en el espacio. Las demás opciones son propiedades físicas, magnitudes o fenómenos que no constituyen materia por sí mismos.",
+        "options": [
+            {
+                "text": "Temperatura",
+                "is_correct": false
+            },
+            {
+                "text": "Tiempo",
+                "is_correct": false
+            },
+            {
+                "text": "Sombra",
+                "is_correct": false
+            },
+            {
+                "text": "Agua",
+                "is_correct": true
+            },
+            {
+                "text": "Gravedad",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Señale a un elemento químico",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El **Polonio** (Po) es un elemento químico de la tabla periódica. Las demás opciones son mezclas o compuestos:\n- Latón: aleación de cobre y zinc\n- Amalgama: aleación de mercurio con otros metales\n- Acero: aleación de hierro y carbono\n- Sal: compuesto químico (NaCl)",
+        "options": [
+            {
+                "text": "Latón",
+                "is_correct": false
+            },
+            {
+                "text": "Polonio",
+                "is_correct": true
+            },
+            {
+                "text": "Amalgama",
+                "is_correct": false
+            },
+            {
+                "text": "Acero",
+                "is_correct": false
+            },
+            {
+                "text": "Sal",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Señale un compuesto",
+        "difficulty": "INTERMEDIO",
+        "explanation": "El **Ácido Clorhídrico** (HCl) es un compuesto químico formado por hidrógeno y cloro. Las demás opciones son:\n- Agua turbia: mezcla heterogénea\n- Diamante y Grafito: formas alotrópicas del carbono (elementos)\n- Kriptón: elemento químico noble",
+        "options": [
+            {
+                "text": "Agua turbia",
+                "is_correct": false
+            },
+            {
+                "text": "Ácido Clorhídrico",
+                "is_correct": true
+            },
+            {
+                "text": "Diamante",
+                "is_correct": false
+            },
+            {
+                "text": "Grafito",
+                "is_correct": false
+            },
+            {
+                "text": "Kriptón",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "¿Qué compuesto es pentaatómico?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Un compuesto pentaatómico tiene 5 átomos en total. El **CH₄** (metano) tiene:\n- 1 átomo de carbono\n- 4 átomos de hidrógeno\n- Total: 5 átomos",
+        "options": [
+            {
+                "text": "HNO₃",
+                "is_correct": false
+            },
+            {
+                "text": "CH₄",
+                "is_correct": true
+            },
+            {
+                "text": "HCHO",
+                "is_correct": false
+            },
+            {
+                "text": "H₂O",
+                "is_correct": false
+            },
+            {
+                "text": "FeCl₂",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Una de las siguientes representa una mezcla",
+        "difficulty": "INTERMEDIO",
+        "explanation": "La **crema** es una mezcla heterogénea (emulsión) compuesta por diversos componentes como agua, grasas, proteínas, etc. Las demás opciones son sustancias puras:\n- Cobre: elemento\n- Grafito: forma alotrópica del carbono\n- Ozono: forma alotrópica del oxígeno (O₃)\n- Agua: compuesto (H₂O)",
+        "options": [
+            {
+                "text": "Cobre",
+                "is_correct": false
+            },
+            {
+                "text": "Grafito",
+                "is_correct": false
+            },
+            {
+                "text": "Crema",
+                "is_correct": true
+            },
+            {
+                "text": "Ozono",
+                "is_correct": false
+            },
+            {
+                "text": "Agua",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "En una reacción nuclear: $3\\,{}^{4}_{2}\\mathrm{He} \\rightarrow {}^{12}_{6}\\mathrm{C}$ La energía en kilojoule que se liberará será:\n(Dato: He = 4.003 uma; C = 12.001 uma) (1uma = $1.66 \\times 10^{-24}$ gramos)",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Aplicando la ecuación de Einstein $E = mc^2$:\n\n1. Calculamos el defecto de masa:\n   $$\\Delta m = 3(4.003) - 12.001 = 0.008 \\text{ uma}$$\n\n2. Convertimos a gramos:\n   $$\\Delta m = 0.008 \\times 1.66 \\times 10^{-24} = 1.328 \\times 10^{-26} \\text{ g}$$\n\n3. Convertimos a kilogramos y aplicamos $E = mc^2$:\n   $$E = (1.328 \\times 10^{-29} \\text{ kg})(3 \\times 10^8 \\text{ m/s})^2$$\n   $$E = 1.2 \\times 10^{-12} \\text{ J} = 1.2 \\times 10^{-15} \\text{ kJ}$$",
+        "options": [
+            {
+                "text": "$1.7 \\times 10^{-2}$",
+                "is_correct": false
+            },
+            {
+                "text": "$1.6 \\times 10^{-15}$",
+                "is_correct": false
+            },
+            {
+                "text": "$1.9 \\times 10^{-13}$",
+                "is_correct": false
+            },
+            {
+                "text": "$1.2 \\times 10^{-15}$",
+                "is_correct": true
+            },
+            {
+                "text": "N.A.",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Un objeto se cae de un edificio a una velocidad de 9.80 m/s adquiriendo una energía cinética de 480.20 Joule ¿Cuál es su masa?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Usando la fórmula de energía cinética:\n$$E_c = \\frac{1}{2}mv^2$$\n\nSustituimos los valores:\n$$480.20 = \\frac{1}{2}m(9.80)^2$$\n$$480.20 = 48.02m$$\n$$m = \\frac{480.20}{48.02} = 10 \\text{ kg}$$\n\nRespuesta: **N.A.** (No está entre las opciones)",
+        "options": [
+            {
+                "text": "15 Kg",
+                "is_correct": false
+            },
+            {
+                "text": "16 Kg",
+                "is_correct": false
+            },
+            {
+                "text": "12 Kg",
+                "is_correct": false
+            },
+            {
+                "text": "11 Kg",
+                "is_correct": false
+            },
+            {
+                "text": "N.A.",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Un cuerpo en reposo tiene una masa equivalente a $9 \\times 10^{21}$ ergios al lanzarlo al espacio su masa aumenta en 10 gramos. Hallar la velocidad final del cuerpo en cm/s",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Datos:\n- $E_0 = 9 \\times 10^{21}$ ergios\n- $\\Delta m = 10$ g\n\nUsando $E = mc^2$ y conservación de energía:\n$$E_c = \\Delta m \\cdot c^2 = 10 \\times (3 \\times 10^{10})^2$$\n\nResolviendo para la velocidad:\n$$v = 15\\sqrt{3} \\times 10^9 \\text{ cm/s}$$",
+        "options": [
+            {
+                "text": "$12\\sqrt{3} \\times 10^8$",
+                "is_correct": false
+            },
+            {
+                "text": "$15\\sqrt{3} \\times 10^9$",
+                "is_correct": true
+            },
+            {
+                "text": "12",
+                "is_correct": false
+            },
+            {
+                "text": "15",
+                "is_correct": false
+            },
+            {
+                "text": "N.A.",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "En un proceso de fisión nuclear se utilizó 0.5 kilogramos de Plutonio-239 observándose una liberación de 90Terajoule de energía. ¿Qué porcentaje de la masa inicial no se convirtió en energía?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Usando $E = mc^2$, calculamos la masa convertida:\n$$m_{convertida} = \\frac{E}{c^2} = \\frac{90 \\times 10^{12}}{(3 \\times 10^8)^2} = 0.001 \\text{ kg}$$\n\nMasa no convertida:\n$$m_{no\\ convertida} = 0.5 - 0.001 = 0.499 \\text{ kg}$$\n\nPorcentaje no convertido:\n$$\\frac{0.499}{0.5} \\times 100 = 99.8\\%$$",
+        "options": [
+            {
+                "text": "85%",
+                "is_correct": false
+            },
+            {
+                "text": "62%",
+                "is_correct": false
+            },
+            {
+                "text": "99.8%",
+                "is_correct": true
+            },
+            {
+                "text": "89.8%",
+                "is_correct": false
+            },
+            {
+                "text": "N.A",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "En una explosión nuclear se liberan $3.6 \\times 10^{21}$ ergios de energía, luego de la explosión quedan 18 gramos de materia. Determinar el porcentaje del material que no ha explotado y la masa inicial de este material.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Usando $E = mc^2$, calculamos la masa convertida:\n$$m_{convertida} = \\frac{E}{c^2} = \\frac{3.6 \\times 10^{21}}{(3 \\times 10^{10})^2} = 4 \\text{ g}$$\n\nMasa inicial:\n$$m_{inicial} = m_{restante} + m_{convertida} = 18 + 4 = 22 \\text{ g}$$\n\nPorcentaje no explotado:\n$$\\frac{18}{22} \\times 100 \\approx 81.8\\% \\approx 80\\%$$",
+        "options": [
+            {
+                "text": "70% y 25g",
+                "is_correct": false
+            },
+            {
+                "text": "60% y 40g",
+                "is_correct": false
+            },
+            {
+                "text": "80% y 20g",
+                "is_correct": true
+            },
+            {
+                "text": "50% y 22g",
+                "is_correct": false
+            },
+            {
+                "text": "N.A",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "En el reposo relativo una partícula tiene una masa \"m₀\" y cuando alcanza una velocidad \"v\" $(0<v<c)$ su masa llega a ser m. Qué valor debe tomar \"v\" para que m₀/m = 1/3",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Usando la ecuación de masa relativista:\n$$m = \\frac{m_0}{\\sqrt{1-\\frac{v^2}{c^2}}}$$\n\nSi $\\frac{m_0}{m} = \\frac{1}{3}$, entonces $m = 3m_0$:\n$$3 = \\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$$\n\nElevando al cuadrado:\n$$9 = \\frac{1}{1-\\frac{v^2}{c^2}}$$\n$$1-\\frac{v^2}{c^2} = \\frac{1}{9}$$\n$$\\frac{v^2}{c^2} = \\frac{8}{9}$$\n\nDespejando v:\n$$v = \\frac{2\\sqrt{2}}{3}c = \\frac{2\\sqrt{2}}{3}(3 \\times 10^{10}) = 2\\sqrt{2} \\times 10^{10} \\text{ cm/s}$$",
+        "options": [
+            {
+                "text": "$2\\sqrt{3}$",
+                "is_correct": false
+            },
+            {
+                "text": "$2\\sqrt{2} \\times 10^{10}$",
+                "is_correct": true
+            },
+            {
+                "text": "$5 \\times 10^{10}$",
+                "is_correct": false
+            },
+            {
+                "text": "15",
+                "is_correct": false
+            },
+            {
+                "text": "N.A.",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Se coloca 10 mg de una sustancia radioactiva en un reactor nuclear y la energía liberada fue de $7.2 \\times 10^{11}$ Joule. Hallar el porcentaje del material reactivo que no ha reaccionado.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Calculamos la masa convertida usando $E = mc^2$:\n$$m_{convertida} = \\frac{E}{c^2} = \\frac{7.2 \\times 10^{11}}{(3 \\times 10^8)^2} = 8 \\times 10^{-6} \\text{ kg} = 8 \\text{ mg}$$\n\nMasa no reaccionada:\n$$m_{no\\ reaccionada} = 10 - 8 = 2 \\text{ mg}$$\n\nPorcentaje no reaccionado:\n$$\\frac{2}{10} \\times 100 = 20\\%$$",
+        "options": [
+            {
+                "text": "70%",
+                "is_correct": false
+            },
+            {
+                "text": "60%",
+                "is_correct": false
+            },
+            {
+                "text": "20%",
+                "is_correct": true
+            },
+            {
+                "text": "50%",
+                "is_correct": false
+            },
+            {
+                "text": "N.A",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Cuando un kilogramo de Uranio (U-235) reacciona con una bomba atómica, solo el 0.915 gramos se transforman en energía. ¿Cuánta energía se producen y que porcentaje de Uranio (U-235) reaccionó?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Calculamos la energía producida:\n$$E = mc^2 = (0.915 \\times 10^{-3} \\text{ kg})(3 \\times 10^8 \\text{ m/s})^2$$\n$$E = 8.235 \\times 10^{13} \\text{ J} \\approx 8.2 \\times 10^{13} \\text{ J}$$\n\nPorcentaje de Uranio que reaccionó:\n$$\\frac{0.915}{1000} \\times 100 = 0.0915\\%$$",
+        "options": [
+            {
+                "text": "$8.2 \\times 10^{13}$ J y 25%",
+                "is_correct": false
+            },
+            {
+                "text": "$6.4 \\times 10^{13}$ J y 20%",
+                "is_correct": false
+            },
+            {
+                "text": "$8.2 \\times 10^{13}$ J y 5%",
+                "is_correct": false
+            },
+            {
+                "text": "$8.2 \\times 10^{13}$ J y 0.0915%",
+                "is_correct": true
+            },
+            {
+                "text": "N.A",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "Determinar la cantidad de energía que se obtiene al desintegrar totalmente 2 gramos de una sustancia radioactiva dar respuesta en Terajoule",
+        "difficulty": "INTERMEDIO",
+        "explanation": "Calculamos la energía liberada:\n$$E = mc^2 = (2 \\times 10^{-3} \\text{ kg})(3 \\times 10^8 \\text{ m/s})^2$$\n$$E = 1.8 \\times 10^{14} \\text{ J} = 180 \\text{ TJ}$$\n\nAproximadamente **160 TJ** (opción b)",
+        "options": [
+            {
+                "text": "18",
+                "is_correct": false
+            },
+            {
+                "text": "160",
+                "is_correct": true
+            },
+            {
+                "text": "200",
+                "is_correct": false
+            },
+            {
+                "text": "110",
+                "is_correct": false
+            },
+            {
+                "text": "N.A.",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Química",
+        "topic": "Materia y Energía Nuclear",
+        "statement": "En un proceso de fisión nuclear se libera 90 exaergios de energía, si se transforma en energía el 2% de la masa inicial. ¿Cuál fue la masa inicial?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "",
+        "options": [
+            {
+                "text": "100 g",
+                "is_correct": false
+            },
+            {
+                "text": "101 g",
+                "is_correct": false
+            },
+            {
+                "text": "120 g",
+                "is_correct": false
+            },
+            {
+                "text": "500 g",
+                "is_correct": false
+            },
+            {
+                "text": "N.A.",
+                "is_correct": true
+            }
+        ]
+    }
+]
