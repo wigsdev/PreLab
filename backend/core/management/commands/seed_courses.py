@@ -45,7 +45,7 @@ class Command(BaseCommand):
                 "topics": ["Segmentos y Ángulos", "Triángulos", "Polígonos"],
             },
             {
-                "name": "Educación Cívica y Humanidades",  # Abreviado como Humanidades
+                "name": "Humanidades",
                 "code": "hum",
                 "topics": ["Derechos Humanos", "Constitución Política"],
             },

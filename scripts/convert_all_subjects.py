@@ -27,6 +27,16 @@ SUBJECT_CONFIG = {
         'course': 'Humanidades',
         'topic': 'Poblamiento de América',
         'output': 'humanidades_questions.json'
+    },
+    'QUIMICA.md': {
+        'course': 'Química',
+        'topic': 'Materia y Energía Nuclear',
+        'output': 'quimica_questions.json'
+    },
+    'RAZ_MATEMATICO.md': {
+        'course': 'Razonamiento Matemático',
+        'topic': 'Operadores Matemáticos',
+        'output': 'razonamiento_matematico_questions.json'
     }
 }
 
