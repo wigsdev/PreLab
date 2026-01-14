@@ -20,6 +20,7 @@ class Command(BaseCommand):
             "humanidades_questions.json",
             "quimica_questions.json",
             "razonamiento_matematico_questions.json",
+            "trigonometria_questions.json",
         ]
 
         total_created = 0

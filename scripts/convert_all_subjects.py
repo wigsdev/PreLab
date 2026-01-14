@@ -37,6 +37,11 @@ SUBJECT_CONFIG = {
         'course': 'Razonamiento Matemático',
         'topic': 'Operadores Matemáticos',
         'output': 'razonamiento_matematico_questions.json'
+    },
+    'TRIGONOMETRIA.md': {
+        'course': 'Trigonometría',
+        'topic': 'Sistemas de Medidas Angulares',
+        'output': 'trigonometria_questions.json'
     }
 }
 
