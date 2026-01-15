@@ -16,6 +16,7 @@ class Command(BaseCommand):
             "algebra_questions.json",
             "aritmetica_questions.json",
             "biologia_questions.json",
+            "fisica_questions.json",
             "geometria_questions.json",
             "humanidades_questions.json",
             "quimica_questions.json",
