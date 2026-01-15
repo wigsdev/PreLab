@@ -5,8 +5,8 @@
 ### Pregunta 1
 
 **Enunciado:**
-Si $a \otimes b = b^3 - 2a$
-Calcule $125 \otimes 243$
+Si $a^b \circledR b^a = b^3 - 2a$
+Calcule $125 \circledR 243$
 
 **Opciones:**
 a) 19
@@ -14,29 +14,24 @@ b) 23
 c) 24
 d) 25
 e) 17
+
 **Marca Visual:** e
 
 **Solución:**
 
-Aplicamos la operación definida con $a = 125$ y $b = 243$:
+1.  **Identificamos los valores de $a$ y $b$:**
+    La operación está definida como $a^b \circledR b^a$. Se nos pide calcular $125 \circledR 243$.
+    *   $a^b = 125 \Rightarrow 5^3 = 125$
+    *   $b^a = 243 \Rightarrow 3^5 = 243$
+    De aquí deducimos que **$a = 5$** y **$b = 3$**.
 
-$$125 \otimes 243 = 243^3 - 2(125)$$
+2.  **Aplicamos la regla de definición:**
+    La regla es $b^3 - 2a$. Sustituimos los valores encontrados:
+    *   $3^3 - 2(5)$
+    *   $27 - 10$
+    *   **17**
 
-Calculamos $243^3$:
-- Notamos que $243 = 3^5$
-- Entonces $243^3 = (3^5)^3 = 3^{15}$
-
-Sin embargo, para simplificar, observamos que:
-$$243^3 - 250 = 14348657$$
-
-Pero esto parece incorrecto. Revisemos la operación:
-
-Si la operación es $a \otimes b = b^3 - 2a$, entonces:
-$$125 \otimes 243 = 243^3 - 2(125) = 243^3 - 250$$
-
-Dado que la respuesta es 17, probablemente la operación sea diferente o haya un error en la transcripción.
-
-Asumiendo que la operación correcta da como resultado **17**.
+**Respuesta: 17**
 
 ---
 
