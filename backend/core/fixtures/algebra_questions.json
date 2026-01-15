@@ -53,7 +53,7 @@
             },
             {
                 "text": "13/72",
-                "is_correct": false
+                "is_correct": true
             }
         ]
     },
@@ -240,7 +240,7 @@
         "options": [
             {
                 "text": "7",
-                "is_correct": false
+                "is_correct": true
             },
             {
                 "text": "2",
@@ -314,7 +314,7 @@
             },
             {
                 "text": "4",
-                "is_correct": false
+                "is_correct": true
             }
         ]
     },
@@ -501,7 +501,7 @@
         "options": [
             {
                 "text": "$3\\sqrt{3}$",
-                "is_correct": false
+                "is_correct": true
             },
             {
                 "text": "$\\sqrt{3}$",
@@ -546,7 +546,7 @@
             },
             {
                 "text": "100",
-                "is_correct": false
+                "is_correct": true
             }
         ]
     },
@@ -559,7 +559,7 @@
         "options": [
             {
                 "text": "19",
-                "is_correct": false
+                "is_correct": true
             },
             {
                 "text": "20",
@@ -592,7 +592,7 @@
             },
             {
                 "text": "1",
-                "is_correct": false
+                "is_correct": true
             },
             {
                 "text": "x",
@@ -646,7 +646,7 @@
         "options": [
             {
                 "text": "5",
-                "is_correct": false
+                "is_correct": true
             },
             {
                 "text": "0",

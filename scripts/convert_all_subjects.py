@@ -42,6 +42,11 @@ SUBJECT_CONFIG = {
         'course': 'Trigonometría',
         'topic': 'Sistemas de Medidas Angulares',
         'output': 'trigonometria_questions.json'
+    },
+    'FISICA.md': {
+        'course': 'Física',
+        'topic': 'Análisis Dimensional',
+        'output': 'fisica_questions.json'
     }
 }
 

@@ -1,0 +1,408 @@
+[
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "La cantidad de calor que se entrega a una sustancia para incrementar su temperatura, se calcula:\n$$Q = m C_p \\Delta T$$\nDonde: Q=Calor, m=Masa; Cp=Calor específico\n$\\Delta T$ = Variacion de temperatura\n\nDeterminar las dimensiones de $C_p$.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  ** Análisis de Magnitudes:**\n    *   $Q$ (Calor) es Energía: $[Q] = ML^2T^{-2}$.\n    *   $m$ (Masa): $[m] = M$.\n    *   $\\Delta T$ (Temperatura): $[\\Delta T] = \\theta$.\n2.  **Despeje de $C_p$:**\n    De la fórmula $Q = m C_p \\Delta T$, despejamos $C_p$:\n    $$C_p = \\frac{Q}{m \\Delta T}$$\n3.  **Análisis Dimensional:**\n    $$[C_p] = \\frac{[Q]}{[m][\\Delta T]}$$\n    $$[C_p] = \\frac{ML^2T^{-2}}{M \\cdot \\theta}$$\n    $$[C_p] = L^2T^{-2}\\theta^{-1}$$\n4.  **Revisión de Opciones:**\n    Ninguna de las opciones impresas (a-e) coincide con $L^2T^{-2}\\theta^{-1}$.\n    *   La opción (b) es Energía.\n    *   Hay una nota manuscrita en la imagen (\"f\") con la respuesta correcta: $L^2T^{-2}\\theta^{-1}$.\n    *   Sin embargo, estrictamente hablando, ninguna de las opciones dadas es correcta.",
+        "options": [
+            {
+                "text": "$L^2 T^{-3} \\theta^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$M L^2 T^{-2}$",
+                "is_correct": false
+            },
+            {
+                "text": "$T^{-2} N^{-1} \\theta^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$M L^2 T^{-2} N^{-1} \\theta^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$M L^2 T^{-2} N^{-1} \\theta^{-1}$",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Si la expresión: $(amo)^{UNAS}$ que representa una energía, es dimensionalmente correcta; cuales son las dimensiones de \"S\" a partir de las magnitudes:\nO: (frecuencia)$^2$ ; m: masa ; a = A: Área\nN: Velocidad ; U: Longitud.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Análisis de la Base ($X = amo$):**\n    *   $a$ (Área): $[a] = L^2$.\n    *   $m$ (Masa): $[m] = M$.\n    *   $o$ (Frecuencia$^2$): $[o] = (T^{-1})^2 = T^{-2}$.\n    *   Base $[X] = [a][m][o] = L^2 \\cdot M \\cdot T^{-2} = ML^2T^{-2}$.\n    *   Observamos que la dimensión de la base **es igual a la dimensión de la Energía**.\n\n2.  **Análisis de la Ecuación:**\n    Nos dicen que la expresión $(amo)^{UNAS}$ representa una Energía.\n    $$ [ (amo)^{UNAS} ] = \\text{Energía} $$\n    $$ (ML^2T^{-2})^{[UNAS]} = ML^2T^{-2} $$\n    Para que esto se cumpla, el exponente debe ser igual a la unidad (adimensionalmente 1).\n    $$ [UNAS] = 1 $$\n\n3.  **Despeje de S:**\n    El exponente es el producto de las magnitudes $U, N, A, S$.\n    *   $U$ (Longitud): $L$.\n    *   $N$ (Velocidad): $LT^{-1}$.\n    *   $A$ (Área): $L^2$.\n    *   $S$: Desconocido.\n    \n    Plantemos la ecuación dimensional del exponente:\n    $$ [U][N][A][S] = 1 $$\n    $$ (L)(LT^{-1})(L^2)[S] = 1 $$\n    $$ (L^4 T^{-1}) [S] = 1 $$\n    $$ [S] = \\frac{1}{L^4 T^{-1}} $$\n    $$ [S] = L^{-4} T^{1} $$\n\n4.  **Respuesta:**\n    La dimensión de S es $L^{-4}T$. Esto coincide con la opción **d**.",
+        "options": [
+            {
+                "text": "$L, T^{-3}$",
+                "is_correct": false
+            },
+            {
+                "text": "$L, T^{-2}$",
+                "is_correct": false
+            },
+            {
+                "text": "$L, T$",
+                "is_correct": false
+            },
+            {
+                "text": "$L^{-4} \\cdot T$",
+                "is_correct": true
+            },
+            {
+                "text": "$L, T^{-4}$",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "En un ensayo realizado en el Laboratorio de Física de la UNAS, se pudo observar que cuando un cuerpo cae libremente en el vacío, la relación entre la altura y el tiempo está definido por la ecuación:\n$$h = k g t^{1/k}$$\nSi \"k\" es una constante adimensional, a cuánto equivale?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Análisis Dimensional:**\n    *   $h$ (Altura): $[h] = L$.\n    *   $g$ (Aceleración): $[g] = LT^{-2}$.\n    *   $t$ (Tiempo): $[t] = T$.\n    *   $k$: Adimensional, $[k] = 1$.\n2.  **Ecuación Dimensional:**\n    $$[h] = [k] [g] [t]^{1/k}$$\n    $$L = (1) (LT^{-2}) (T)^{1/k}$$\n    $$L = L T^{-2} T^{1/k}$$\n    $$L = L T^{-2 + 1/k}$$\n3.  **Igualando Exponentes:**\n    Para $T$: $-2 + 1/k = 0$\n    $$1/k = 2 \\Rightarrow k = 1/2$$\n    Respuesta: 1/2.",
+        "options": [
+            {
+                "text": "0",
+                "is_correct": false
+            },
+            {
+                "text": "3/5",
+                "is_correct": false
+            },
+            {
+                "text": "2",
+                "is_correct": false
+            },
+            {
+                "text": "4",
+                "is_correct": false
+            },
+            {
+                "text": "1/2",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Durante un disparo horizontal, el móvil describe una trayectoria gobernada por la ecuación siguiente:\n$$H = \\frac{gd^2}{2v_o^q}$$\nH: altura, g: gravedad terrestre, $v_o$: velocidad inicial, d: distancia de alcance horizontal.\n¿Cuál debe ser el valor de \"q\" para que dicha ecuación sea correcta y entonces dimensionalmente homogénea?",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Análisis Dimensional:**\n    *   $H, d$ (Longitud): $L$.\n    *   $g$ (Aceleración): $LT^{-2}$.\n    *   $v_o$ (Velocidad): $LT^{-1}$.\n2.  **Ecuación:**\n    $$[H] = \\frac{[g][d]^2}{[v_o]^q}$$\n    $$L = \\frac{(LT^{-2})(L^2)}{(LT^{-1})^q}$$\n    $$L = \\frac{L^3 T^{-2}}{L^q T^{-q}}$$\n    $$L^1 = L^{3-q} T^{q-2}$$\n3.  **Igualando Exponentes:**\n    *   Para $L$: $1 = 3 - q \\Rightarrow q = 2$.\n    *   Para $T$: $0 = q - 2 \\Rightarrow q = 2$.\n    Respuesta: 2.",
+        "options": [
+            {
+                "text": "0",
+                "is_correct": false
+            },
+            {
+                "text": "1",
+                "is_correct": false
+            },
+            {
+                "text": "2",
+                "is_correct": true
+            },
+            {
+                "text": "5",
+                "is_correct": false
+            },
+            {
+                "text": "1/2",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Si la siguiente expresión es dimensionalmente homogénea, hallar: $x-3y$\n$$P = q^z R^{-y} S^x$$\nDonde: P = Presión, q = Fuerza, R = Volumen, S = Longitud.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Análisis Dimensional:**\n    *   $P$ (Presión): $ML^{-1}T^{-2}$.\n    *   $q$ (Fuerza): $MLT^{-2}$.\n    *   $R$ (Volumen): $L^3$.\n    *   $S$ (Longitud): $L$.\n2.  **Ecuación:**\n    $$[P] = [q]^z [R]^{-y} [S]^x$$\n    $$ML^{-1}T^{-2} = (MLT^{-2})^z (L^3)^{-y} (L)^x$$\n    $$M^1 L^{-1} T^{-2} = M^z L^{z - 3y + x} T^{-2z}$$\n3.  **Sistema de Ecuaciones:**\n    *   M: $z = 1$.\n    *   T: $-2 = -2z \\Rightarrow z = 1$.\n    *   L: $-1 = z - 3y + x$.\n        Sustituyendo $z=1$:\n        $$-1 = 1 - 3y + x$$\n        $$x - 3y = -2$$\n4.  **Discrepancia:**\n    Ninguna opción coincide con -2. Si asumimos un error en el signo de la pregunta (hallar $3y-x$) la respuesta sería 2 (Opción d). Dado el contexto de exámenes, seleccionaremos la opción que coincide en valor absoluto.\n    Respuesta probable: 2.",
+        "options": [
+            {
+                "text": "5",
+                "is_correct": false
+            },
+            {
+                "text": "4",
+                "is_correct": false
+            },
+            {
+                "text": "3",
+                "is_correct": false
+            },
+            {
+                "text": "2",
+                "is_correct": false
+            },
+            {
+                "text": "1",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Una turbina eólica define su potencia \"P\" según la ecuación:\n$$P = \\frac{1}{2} \\rho \\pi R^2 C_p v^3$$\nEn donde; P: Potencia, $\\rho$: Densidad del aire, R: radio, v: velocidad.\nLas dimensiones de $C_p$ son:",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Magnitudes:**\n    *   $P$ (Potencia): $ML^2T^{-3}$.\n    *   $\\rho$ (Densidad): $ML^{-3}$.\n    *   $R$ (Longitud): $L$.\n    *   $v$ (Velocidad): $LT^{-1}$.\n2.  **Ecuación:**\n    $$[P] = [\\rho] [R]^2 [C_p] [v]^3$$ (1/2 y $\\pi$ son adimensionales)\n    $$ML^2T^{-3} = (ML^{-3}) (L^2) [C_p] (LT^{-1})^3$$\n    $$ML^2T^{-3} = M L^{-1} [C_p] L^3 T^{-3}$$\n    $$ML^2T^{-3} = M L^{2} T^{-3} [C_p]$$\n    $$[C_p] = 1$$\n    Es adimensional. Respuesta: 1.",
+        "options": [
+            {
+                "text": "LT",
+                "is_correct": false
+            },
+            {
+                "text": "1",
+                "is_correct": true
+            },
+            {
+                "text": "ML",
+                "is_correct": false
+            },
+            {
+                "text": "$MLT^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$L^2T^{-2}$",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Si la siguiente ecuación es dimensionalmente homogénea, hallar los valores de \"a-3b\".\n$$m^{1/3} v^2 = k g^a D^b$$\nSiendo: m = Masa, v = Velocidad, k = Número, g = Aceleración de la gravedad, D = Densidad.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Magnitudes:**\n    *   $m$: $M$.\n    *   $v$: $LT^{-1}$.\n    *   $g$: $LT^{-2}$.\n    *   $D$: $ML^{-3}$.\n2.  **Ecuación:**\n    $$[m]^{1/3} [v]^2 = [g]^a [D]^b$$\n    $$M^{1/3} (LT^{-1})^2 = (LT^{-2})^a (ML^{-3})^b$$\n    $$M^{1/3} L^2 T^{-2} = L^a T^{-2a} M^b L^{-3b}$$\n    $$M^{1/3} L^2 T^{-2} = M^b L^{a-3b} T^{-2a}$$\n3.  **Igualando:**\n    *   M: $b = 1/3$.\n    *   T: $-2 = -2a \\Rightarrow a = 1$.\n    *   L (Verificación): $2 = a - 3b$.\n        $1 - 3(1/3) = 1 - 1 = 0 \\neq 2$.\n    *   **Nota:** Existe una inconsistencia en el problema planteado. Sin embargo, matemáticamente se pide \"a-3b\".\n    *   Si usamos la ecuación de L directamente: $a-3b = 2$.\n    *   Si usamos T y M: $a-3b = 0$.\n    *   La marca visual sugiere la opción c) 3? No, parece estar en c. Pero 2 es una deducción directa de la dimensión de longitud. Asumiremos que se busca el exponente de L. La opción b) es 2.\n    *   Evaluando opciones y contexto, si hubo un error de tipeo en $v$ (quizás volumen?), pero $v$ dice Vel.\n    Respuesta sugerida: 2 (Opción b) por consistencia de L, o Inconsistente. (Se dejará indicado).",
+        "options": [
+            {
+                "text": "1",
+                "is_correct": false
+            },
+            {
+                "text": "2",
+                "is_correct": false
+            },
+            {
+                "text": "3",
+                "is_correct": true
+            },
+            {
+                "text": "4",
+                "is_correct": false
+            },
+            {
+                "text": "5",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Si el siguiente quebrado es dimensionalmente homogéneo, hallar las dimensiones de \"B\", sabiendo:\n$$P = \\frac{Ax^2 + Bx + C}{At^2 + Bt + C}$$\n$[A]=LT^{-1}$, $[t]=T$.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Principio de Homogeneidad:** En una suma ($At^2 + Bt + C$), todos los términos tienen la misma dimensión.\n2.  **Análisis del Denominador:**\n    $$[At^2] = [Bt]$$\n    $$[A]T^2 = [B]T$$\n    $$(LT^{-1})T^2 = [B]T$$\n    $$LT = [B]T$$\n    $$[B] = L$$\n    Respuesta: L.",
+        "options": [
+            {
+                "text": "LT",
+                "is_correct": false
+            },
+            {
+                "text": "L",
+                "is_correct": true
+            },
+            {
+                "text": "MLT",
+                "is_correct": false
+            },
+            {
+                "text": "MT",
+                "is_correct": false
+            },
+            {
+                "text": "T",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Determine la dimensión de $\\alpha$ en la siguiente ecuación que es dimensionalmente correcta:\n$$y = \\alpha \\tan(\\theta_0) - \\left[ \\frac{a}{2\\beta^2 \\cos^2(\\theta_0)} \\right] x^2$$\nDonde $x$ e $y$ son los desplazamientos y $a$ es la aceleración.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Homogeneidad:** Todos los términos de una suma/resta deben tener la misma dimensión.\n    $$[y] = [\\alpha \\tan(\\theta_0)]$$\n2.  **Análisis:**\n    *   $[y] = L$ (Desplazamiento).\n    *   $[\\tan(\\theta_0)] = 1$ (Adimensional).\n    *   $L = [\\alpha] (1)$.\n    *   $[\\alpha] = L$.\n    Respuesta: L (Opción b).",
+        "options": [
+            {
+                "text": "$L^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$L$",
+                "is_correct": false
+            },
+            {
+                "text": "$LT$",
+                "is_correct": false
+            },
+            {
+                "text": "$M$",
+                "is_correct": false
+            },
+            {
+                "text": "$LM$",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Hallar la dimensión de x para que la siguiente ecuación sea dimensionalmente correcta:\n$$v x = a^{\\cos 60} + U \\cdot P \\cdot \\ln 100$$\ndonde: v=velocidad lineal y a=aceleración.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Homogeneidad:**\n    $$[vx] = [a^{\\cos 60}]$$\n2.  **Análisis:**\n    *   $\\cos 60 = 1/2$.\n    *   $[a] = LT^{-2}$.\n    *   $[a^{\\cos 60}] = (LT^{-2})^{1/2} = L^{1/2}T^{-1}$.\n    *   $[v] = LT^{-1}$.\n3.  **Despeje:**\n    $$[v][x] = L^{1/2}T^{-1}$$\n    $$(LT^{-1})[x] = L^{1/2}T^{-1}$$\n    $$[x] = \\frac{L^{1/2}T^{-1}}{LT^{-1}}$$\n    $$[x] = L^{-1/2}$$\n    Respuesta: $L^{-1/2}$.",
+        "options": [
+            {
+                "text": "$T^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$L^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$L$",
+                "is_correct": false
+            },
+            {
+                "text": "$L^{-1}T$",
+                "is_correct": false
+            },
+            {
+                "text": "$L^{-1/2}$",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Cuál debe ser las dimensiones de A y B para que la ecuación sea dimensionalmente correcta?\n$$A = \\frac{W \\sin \\theta}{m(B^2 + S)}$$\nsiendo W=trabajo, m=masa y S=área.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Homogeneidad (Denominador):**\n    $$[B^2] = [S]$$\n    $$[B]^2 = L^2 \\Rightarrow [B] = L$$\n2.  **Dimensión de A:**\n    $$[A] = \\frac{[W]}{[m][S]}$$\n    $$[A] = \\frac{ML^2T^{-2}}{M \\cdot L^2}$$\n    $$[A] = T^{-2}$$\n3.  **Resultado:**\n    A: $T^{-2}$, B: $L$.\n    La opción b) muestra $L, T^{-2}$. Asumimos el orden B, A o simplemente el conjunto de valores.\n    Respuesta: b) $L, T^{-2}$.",
+        "options": [
+            {
+                "text": "$L, T^{-3}$",
+                "is_correct": false
+            },
+            {
+                "text": "$L, T^{-2}$",
+                "is_correct": true
+            },
+            {
+                "text": "$L, T$",
+                "is_correct": false
+            },
+            {
+                "text": "$L^{-3}, T$",
+                "is_correct": false
+            },
+            {
+                "text": "$L, T^{-4}$",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "En un experimento del laboratorio de ingeniería de los alimentos se comprobó, que la relación:\n$$pF = (FIA)^{UNAS}$$\nes dimensionalmente correcta, siendo F=fuerza, A=Área, I=Volumen, U=energía, S=longitud. Cuales son las dimensiones de N. (Nota: asumimos 'p' adimensional o parte del nombre, analizamos el exponente que debe ser adimensional).",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Propiedad de Exponentes:** Los exponentes son siempre adimensionales.\n    $$[UNAS] = 1$$\n    $$[U][N][A][S] = 1$$\n2.  **Magnitudes:**\n    *   $U$ (Energía): $ML^2T^{-2}$.\n    *   $A$ (Área): $L^2$.\n    *   $S$ (Longitud): $L$.\n3.  **Despeje:**\n    $$(ML^2T^{-2}) [N] (L^2) (L) = 1$$\n    $$M L^{2+2+1} T^{-2} [N] = 1$$\n    $$M L^5 T^{-2} [N] = 1$$\n    $$[N] = M^{-1} L^{-5} T^2$$\n    Respuesta: $M^{-1} L^{-5} T^2$ (Opción e).",
+        "options": [
+            {
+                "text": "$M^{-1}L^{-5}T^{-2}$",
+                "is_correct": false
+            },
+            {
+                "text": "$M^{-1}L^{5}T^{2}$",
+                "is_correct": false
+            },
+            {
+                "text": "$M^{-1}L^{-5}T^{-3}$",
+                "is_correct": false
+            },
+            {
+                "text": "$M L^{-5}T^{2}$",
+                "is_correct": false
+            },
+            {
+                "text": "$M^{-1}L^{-5}T^{2}$",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Determinar las dimensiones de X para que la relación: $E X = F v \\cos \\theta$ sea dimensionalmente correcta. Se sabe que E=energía cinética, F=Fuerza y v=Velocidad.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "1.  **Ecuación:**\n    $$[E] [X] = [F] [v]$$\n2.  **Magnitudes:**\n    *   $E$: $ML^2T^{-2}$.\n    *   $F$: $MLT^{-2}$.\n    *   $v$: $LT^{-1}$.\n3.  **Despeje:**\n    $$ML^2T^{-2} [X] = (MLT^{-2})(LT^{-1})$$\n    $$ML^2T^{-2} [X] = ML^2 T^{-3}$$\n    $$[X] = \\frac{ML^2 T^{-3}}{ML^2 T^{-2}} = T^{-1}$$\n    Respuesta: $T^{-1}$.",
+        "options": [
+            {
+                "text": "$T^{-2}$",
+                "is_correct": false
+            },
+            {
+                "text": "$T^2$",
+                "is_correct": false
+            },
+            {
+                "text": "$T^{-3}$",
+                "is_correct": false
+            },
+            {
+                "text": "$T^{-1}$",
+                "is_correct": true
+            },
+            {
+                "text": "$L^{-5}T^2$",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "course": "Física",
+        "topic": "Análisis Dimensional",
+        "statement": "Sabiendo que la expresión $pV = nRT$ es dimensionalmente correcta, siendo p=presión, V=volumen, n=Cantidad de sustancia, y T=temperatura, determinar las dimensiones de R.",
+        "difficulty": "INTERMEDIO",
+        "explanation": "",
+        "options": [
+            {
+                "text": "$ML^2T^{-2}N^{-1}\\theta^{-1}$",
+                "is_correct": true
+            },
+            {
+                "text": "$ML^{-2}T^{-2}N^{-1}\\theta^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$ML^2T^{-2}N^{1}\\theta^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$ML^{-2}T^{-2}N^{-1}\\theta^{-1}$",
+                "is_correct": false
+            },
+            {
+                "text": "$ML^2T^{-2}N^{-1}\\theta^{1}$",
+                "is_correct": false
+            }
+        ]
+    }
+]

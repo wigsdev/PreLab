@@ -4,7 +4,7 @@
         "topic": "Segmentos de Recta",
         "statement": "Sobre una recta se tienen los puntos consecutivos A, B y C. Si B es punto medio de $\\overline{AC}$, $AB = x + 3$ y $BC = 5x - 5$; calcula el valor de $\\overline{BC}$.",
         "difficulty": "INTERMEDIO",
-        "explanation": "1.  Como B es punto medio de $\\overline{AC}$, entonces la longitud $AB$ es igual a $BC$.\n    $$AB = BC$$\n2.  Sustituimos las expresiones dadas:\n    $$x + 3 = 5x - 5$$\n3.  Resolvemos para $x$:\n    $$3 + 5 = 5x - x$$\n    $$8 = 4x$$\n    $$x = 2$$\n4.  Calculamos $\\overline{BC}$:\n    $$BC = 5x - 5 = 5(2) - 5 = 10 - 5 = 5$$\n    Respuesta: 5. ",
+        "explanation": "1.  Como B es punto medio de $\\overline{AC}$, entonces la longitud $AB$ es igual a $BC$.\n    $$AB = BC$$\n2.  Sustituimos las expresiones dadas:\n    $$x + 3 = 5x - 5$$\n3.  Resolvemos para $x$:\n    $$3 + 5 = 5x - x$$\n    $$8 = 4x$$\n    $$x = 2$$\n4.  Calculamos $\\overline{BC}$:\n    $$BC = 5x - 5 = 5(2) - 5 = 10 - 5 = 5$$\n    Respuesta: 5.",
         "options": [
             {
                 "text": "1",

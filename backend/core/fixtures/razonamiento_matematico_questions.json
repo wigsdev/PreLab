@@ -2,9 +2,9 @@
     {
         "course": "Razonamiento Matemático",
         "topic": "Operadores Matemáticos",
-        "statement": "Si $a \\otimes b = b^3 - 2a$\nCalcule $125 \\otimes 243$",
+        "statement": "Si $a^b \\circledR b^a = b^3 - 2a$\nCalcule $125 \\circledR 243$",
         "difficulty": "INTERMEDIO",
-        "explanation": "Aplicamos la operación definida con $a = 125$ y $b = 243$:\n\n$$125 \\otimes 243 = 243^3 - 2(125)$$\n\nCalculamos $243^3$:\n- Notamos que $243 = 3^5$\n- Entonces $243^3 = (3^5)^3 = 3^{15}$\n\nSin embargo, para simplificar, observamos que:\n$$243^3 - 250 = 14348657$$\n\nPero esto parece incorrecto. Revisemos la operación:\n\nSi la operación es $a \\otimes b = b^3 - 2a$, entonces:\n$$125 \\otimes 243 = 243^3 - 2(125) = 243^3 - 250$$\n\nDado que la respuesta es 17, probablemente la operación sea diferente o haya un error en la transcripción.\n\nAsumiendo que la operación correcta da como resultado **17**.",
+        "explanation": "1.  **Identificamos los valores de $a$ y $b$:**\n    La operación está definida como $a^b \\circledR b^a$. Se nos pide calcular $125 \\circledR 243$.\n    *   $a^b = 125 \\Rightarrow 5^3 = 125$\n    *   $b^a = 243 \\Rightarrow 3^5 = 243$\n    De aquí deducimos que **$a = 5$** y **$b = 3$**.\n\n2.  **Aplicamos la regla de definición:**\n    La regla es $b^3 - 2a$. Sustituimos los valores encontrados:\n    *   $3^3 - 2(5)$\n    *   $27 - 10$\n    *   **17**\n\n**Respuesta: 17**",
         "options": [
             {
                 "text": "19",
